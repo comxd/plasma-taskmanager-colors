@@ -1,0 +1,504 @@
+# Translation of Task Manager Colors in Arabic
+# Copyright (C) 2026 David DIVERRES
+# This file is distributed under the same license as the colors package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: colors\n"
+"Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
+"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"PO-Revision-Date: 2026-03-06 05:08\n"
+"Last-Translator: David DIVERRES <david@comexpertise.com>\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml
+msgid "General"
+msgstr "عام"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Pick a color"
+msgstr "اختر لونًا"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Used:"
+msgstr "مستخدمة:"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Extracting…"
+msgstr "جارٍ الاستخراج…"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Auto (from icon)"
+msgstr "تلقائي (من الأيقونة)"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
+msgstr "موافق"
+
+#: contents/ui/configGeneral.qml
+msgid "General:"
+msgstr "عام:"
+
+#: contents/ui/configGeneral.qml
+msgid "Enable color overlays"
+msgstr "تفعيل طبقات الألوان"
+
+#: contents/ui/configGeneral.qml
+msgid "Color mode:"
+msgstr "وضع اللون:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "إطار (جميع الجوانب)"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "خط علوي"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "خط سفلي"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "خط يساري"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "خط يميني"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "أعلى + أسفل"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "يسار + يمين"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "وسط │"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "وسط ─"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "خلفية"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "خلفية + إطار"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "قطري \\"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "قطري /"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "قطري ✕"
+
+#: contents/ui/configGeneral.qml
+msgid "Thickness:"
+msgstr "السُمك:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "تلقائي"
+
+#: contents/ui/configGeneral.qml
+msgid "Corner radius:"
+msgstr "نصف قطر الزوايا:"
+
+#: contents/ui/configGeneral.qml
+msgid "Opacity:"
+msgstr "عتامة الخلفية:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "التطبيقات المثبتة:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "ملونة دائمًا"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "فقط عند التشغيل"
+
+#: contents/ui/configGeneral.qml
+msgid "Focus:"
+msgstr "التركيز:"
+
+#: contents/ui/configGeneral.qml
+msgid "Keep color visible on focused task"
+msgstr "إبقاء اللون مرئيًا على المهمة النشطة"
+
+#: contents/ui/configGeneral.qml
+msgid "Colors:"
+msgstr "الألوان:"
+
+#: contents/ui/configGeneral.qml
+msgid "%1 application(s) configured"
+msgstr "تم تكوين %1 تطبيق(ات)"
+
+#: contents/ui/configGeneral.qml
+msgid "No colors configured"
+msgstr "لم يتم تكوين ألوان"
+
+#: contents/ui/configGeneral.qml
+msgid "Click again to confirm"
+msgstr "انقر مرة أخرى للتأكيد"
+
+#: contents/ui/configGeneral.qml
+msgid "Reset all colors"
+msgstr "إعادة تعيين جميع الألوان"
+
+#: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
+msgid "Task Manager Colors"
+msgstr "ألوان مدير المهام"
+
+#: contents/ui/main.qml
+msgid "Applications"
+msgstr "التطبيقات"
+
+#: contents/ui/main.qml
+msgid "Windows (%1)"
+msgstr "النوافذ (%1)"
+
+#: contents/ui/main.qml
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/main.qml
+msgid "About"
+msgstr "حول"
+
+#: contents/ui/main.qml
+msgid "Disabled — toggle switch above to enable"
+msgstr "معطل — فعّل المفتاح أعلاه"
+
+#: contents/ui/main.qml
+msgid "Hide widget from panel"
+msgstr "إخفاء الودجة من اللوحة"
+
+#: contents/ui/main.qml
+msgid "Must be placed in a panel"
+msgstr "يجب وضعه في لوحة"
+
+#: contents/ui/main.qml
+msgid "Disabled"
+msgstr "معطل"
+
+#: contents/ui/main.qml
+msgid "%1 application(s) colored"
+msgstr "تم تلوين %1 تطبيق(ات)"
+
+#: contents/ui/main.qml
+msgid "Click to assign colors"
+msgstr "انقر لتعيين الألوان"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Version %1"
+msgstr "الإصدار %1"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid ""
+"Per-application and per-window color overlays for the Plasma task manager."
+msgstr "طبقات ألوان لكل تطبيق ولكل نافذة لمدير مهام Plasma."
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Author"
+msgstr "المؤلف"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid ""
+"Assign a persistent color to each application. The color applies to all "
+"windows of that application."
+msgstr "تعيين لون دائم لكل تطبيق. يُطبّق اللون على جميع نوافذ هذا التطبيق."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "No tasks detected — open some windows to assign colors."
+msgstr "لم يتم اكتشاف مهام — افتح نوافذ لتعيين الألوان."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "(pinned)"
+msgstr "(مثبت)"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color for: %1"
+msgstr "لون لـ: %1"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Nyan Cat rainbow effect"
+msgstr "تأثير قوس قزح Nyan Cat"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr "إزالة اللون"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Configure the rainbow animation effect. Enable it per-app using the switch "
+"next to each color button in the Applications tab."
+msgstr ""
+"تكوين تأثير الرسوم المتحركة لقوس القزح. فعّله لكل تطبيق باستخدام المفتاح "
+"بجوار كل زر لون في علامة تبويب التطبيقات."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Speed"
+msgstr "السرعة"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Duration of one full rainbow cycle. Lower = faster."
+msgstr "مدة دورة قوس قزح كاملة. أقل = أسرع."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Style"
+msgstr "النمط"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Flat"
+msgstr "مسطّح"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wave"
+msgstr "موجة"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Original"
+msgstr "أصلي"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Color-shifting flat bands."
+msgstr "أشرطة مسطّحة مع تغيّر الألوان."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Faithful to the original Nyan Cat rainbow: constant-width bands with "
+"alternating vertical offset."
+msgstr ""
+"مطابق لقوس قزح Nyan Cat الأصلي: أشرطة بعرض ثابت مع إزاحة رأسية متناوبة."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wavy band edges with flowing animation."
+msgstr "حواف أشرطة متموّجة مع رسوم متحرّكة انسيابية."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Animation FPS"
+msgstr "إطارات الرسوم المتحركة"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Refresh interval in ms. Lower = smoother but more CPU. Default: 150ms (~7 "
+"fps)."
+msgstr ""
+"فاصل التحديث بالميلي ثانية. أقل = أكثر سلاسة لكن استخدام أعلى للمعالج. "
+"الافتراضي: 150مللي ثانية (~7 إطار/ثانية)."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Preview"
+msgstr "معاينة"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure how colors are displayed on task manager entries."
+msgstr "تكوين كيفية عرض الألوان على إدخالات مدير المهام."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Mode"
+msgstr "الوضع"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay is rendered on each task."
+msgstr "كيفية عرض طبقة اللون على كل مهمة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Thickness"
+msgstr "السُمك"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border/line thickness. Auto reads from theme SVG margins."
+msgstr "سُمك الحدود/الخط. التلقائي يقرأ من هوامش SVG للسمة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opacity"
+msgstr "العتامة"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Color overlay intensity."
+msgstr "شدة ملء الخلفية."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corners"
+msgstr "الزوايا"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
+msgstr ""
+"تدوير الزوايا. التلقائي يتطابق مع السمة الحالية. الحد الأقصى = دائرة مثالية."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "السلوك"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "إظهار اللون على المفضلة المثبتة حتى بدون نوافذ مفتوحة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Keep color on focused task"
+msgstr "الاحتفاظ باللون على المهمة النشطة"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
+"line)."
+msgstr "تبقى الطبقة مرئية فوق تمييز تركيز Plasma (80% خلفية + خط تمييز علوي)."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget visibility"
+msgstr "رؤية الودجة"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide widget icon from panel"
+msgstr "إخفاء أيقونة الودجة من اللوحة"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"The widget icon is hidden. Colors continue to work. To show it again: right-"
+"click the panel → Enter Edit Mode → the widget will reappear → right-click "
+"it → uncheck this option. Tip: a global shortcut can open this popup even "
+"when hidden."
+msgstr ""
+"أيقونة الأداة مخفية. تستمر الألوان في العمل. لإظهارها مجدداً: انقر بزر "
+"الماوس الأيمن على اللوحة ← ادخل وضع التحرير ← ستظهر الأداة مجدداً ← انقر بزر "
+"الماوس الأيمن عليها ← ألغِ تحديد هذا الخيار. تلميح: يمكن لاختصار عام فتح هذه "
+"النافذة المنبثقة حتى عندما تكون مخفية."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Hides the widget icon from the panel. Colors continue to work normally in "
+"the background. Also available via right-click on the widget icon. Tip: set "
+"a global shortcut to open this popup even when hidden."
+msgstr ""
+"يخفي أيقونة الأداة من اللوحة. تستمر الألوان في العمل بشكل طبيعي في الخلفية. "
+"متاح أيضاً عبر النقر بزر الماوس الأيمن على أيقونة الأداة. تلميح: عيّن "
+"اختصاراً عاماً لفتح هذه النافذة المنبثقة حتى عندما تكون مخفية."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure Keyboard Shortcut…"
+msgstr "تكوين اختصار لوحة المفاتيح…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Opens the widget configuration dialog where you can set a global shortcut to "
+"toggle this popup."
+msgstr ""
+"يفتح مربع حوار تكوين الأداة حيث يمكنك تعيين اختصار عام لتبديل هذه النافذة "
+"المنبثقة."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid ""
+"Temporarily override the color of a specific window. Overrides are lost when "
+"the window is closed."
+msgstr "تجاوز لون نافذة معينة مؤقتًا. تُفقد التجاوزات عند إغلاق النافذة."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "No windows detected — open some windows to use per-window overrides."
+msgstr "لم يتم اكتشاف نوافذ — افتح نوافذ لاستخدام التجاوزات لكل نافذة."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Window color override"
+msgstr "تجاوز لون النافذة"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset to app color"
+msgstr "إعادة التعيين إلى لون التطبيق"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
+#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
+#~ msgstr ""
+#~ "أيقونة الودجة مخفية. تستمر الألوان في العمل. لإظهارها مرة أخرى: انقر بزر "
+#~ "الماوس الأيمن على اللوحة → ادخل وضع التحرير → ستظهر الودجة مرة أخرى → "
+#~ "انقر بزر الماوس الأيمن عليها → ألغِ تحديد هذا الخيار. تلميح: اختصار عام "
+#~ "(إعداد الودجة → اختصارات لوحة المفاتيح) يمكنه فتح هذه النافذة المنبثقة "
+#~ "حتى عندما تكون مخفية."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. Tip: "
+#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
+#~ "this popup even when hidden."
+#~ msgstr ""
+#~ "يُخفي أيقونة الودجة من اللوحة. تستمر الألوان في العمل بشكل طبيعي في "
+#~ "الخلفية. متاح أيضاً عبر النقر بزر الماوس الأيمن على أيقونة الودجة. تلميح: "
+#~ "عيّن اختصاراً عاماً (إعداد الودجة → اختصارات لوحة المفاتيح) لفتح هذه النافذة "
+#~ "المنبثقة حتى عندما تكون مخفية."
+
+#~ msgid "Wave effect"
+#~ msgstr "تأثير الموجة"
+
+#~ msgid ""
+#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
+#~ "color-shifting effect."
+#~ msgstr ""
+#~ "حواف شريط متموجة مع رسوم متحركة انسيابية. عند الإيقاف، تكون الأشرطة مسطحة "
+#~ "مع تأثير تغيير اللون."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. You can also set a keyboard "
+#~ "shortcut via Configure Widget → Keyboard Shortcuts."
+#~ msgstr ""
+#~ "أيقونة الودجة مخفية. تستمر الألوان في العمل. لإظهارها مرة أخرى: انقر بزر "
+#~ "الماوس الأيمن على اللوحة → ادخل وضع التحرير → ستظهر الودجة مرة أخرى → "
+#~ "انقر بزر الماوس الأيمن عليها → ألغِ تحديد هذا الخيار. يمكنك أيضًا تعيين "
+#~ "اختصار لوحة مفاتيح عبر إعداد الودجة → اختصارات لوحة المفاتيح."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. You "
+#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
+#~ "Keyboard Shortcuts."
+#~ msgstr ""
+#~ "يُخفي أيقونة الودجة من اللوحة. تستمر الألوان في العمل بشكل طبيعي في "
+#~ "الخلفية. متاح أيضاً عبر النقر بزر الماوس الأيمن على أيقونة الودجة. يمكنك "
+#~ "تعيين اختصار لوحة مفاتيح لتبديل الرؤية عبر إعداد الودجة → اختصارات لوحة "
+#~ "المفاتيح."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option."
+#~ msgstr ""
+#~ "أيقونة الودجة مخفية. تستمر الألوان في العمل. لإظهارها مرة أخرى: انقر بزر "
+#~ "الماوس الأيمن على اللوحة → ادخل وضع التحرير → ستظهر الودجة مرة أخرى → "
+#~ "انقر بزر الماوس الأيمن عليها → ألغِ تحديد هذا الخيار."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon."
+#~ msgstr ""
+#~ "يُخفي أيقونة الودجة من اللوحة. تستمر الألوان في العمل بشكل طبيعي في "
+#~ "الخلفية. متاح أيضاً عبر النقر بزر الماوس الأيمن على أيقونة الودجة."
