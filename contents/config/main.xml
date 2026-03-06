@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="isEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- frame, top, bottom, left, right, top+bottom, left+right, center, center-h, background, background+frame, diagonal, diagonal-reverse, diagonal-cross -->
+    <entry name="colorMode" type="String">
+      <default>background</default>
+    </entry>
+    <!-- -1 = auto from theme, 0+ = manual px value -->
+    <entry name="borderRadius" type="Int">
+      <default>0</default>
+    </entry>
+    <!-- true = read border size from theme SVG margins, false = use manual borderWidth -->
+    <entry name="autoBorderWidth" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="borderWidth" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="backgroundOpacity" type="Double">
+      <default>0.55</default>
+    </entry>
+    <!-- Show color overlay even when task has focus (above Plasma's highlight) -->
+    <entry name="showOnFocus" type="Bool">
+      <default>true</default>
+    </entry>
+    <!-- always: color pinned+running, runningOnly: only when window is open -->
+    <entry name="pinnedBehavior" type="String">
+      <default>runningOnly</default>
+    </entry>
+    <!-- Nyan Cat rainbow effect -->
+    <entry name="rainbowSpeed" type="Double">
+      <default>3.0</default>
+    </entry>
+    <!-- flat, wave, original -->
+    <entry name="rainbowStyle" type="String">
+      <default>wave</default>
+    </entry>
+    <!-- Animation update interval in ms (higher = less CPU, lower = smoother) -->
+    <entry name="rainbowFps" type="Int">
+      <default>150</default>
+    </entry>
+    <!-- Hide widget icon from panel (visible only in Edit Mode) -->
+    <entry name="hideWidget" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- JSON: { "appId": "#rrggbb", ... } -->
+    <entry name="appColorMap" type="String">
+      <default>{}</default>
+    </entry>
+  </group>
+</kcfg>

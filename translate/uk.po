@@ -1,0 +1,519 @@
+# Translation of Task Manager Colors in Ukrainian
+# Copyright (C) 2026 David DIVERRES
+# This file is distributed under the same license as the colors package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: colors\n"
+"Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
+"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"PO-Revision-Date: 2026-03-06 05:08\n"
+"Last-Translator: David DIVERRES <david@comexpertise.com>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml
+msgid "General"
+msgstr "Загальні"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Pick a color"
+msgstr "Обрати колір"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Used:"
+msgstr "Використані:"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Extracting…"
+msgstr "Витягування…"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Auto (from icon)"
+msgstr "Авто (з піктограми)"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
+msgstr "OK"
+
+#: contents/ui/configGeneral.qml
+msgid "General:"
+msgstr "Загальні:"
+
+#: contents/ui/configGeneral.qml
+msgid "Enable color overlays"
+msgstr "Увімкнути кольорові накладки"
+
+#: contents/ui/configGeneral.qml
+msgid "Color mode:"
+msgstr "Режим кольору:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "Рамка (всі сторони)"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "Верхня лінія"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "Нижня лінія"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "Ліва лінія"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "Права лінія"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "Верх + Низ"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "Ліво + Право"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "Центр │"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "Центр ─"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "Тло"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "Тло + Рамка"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "Діагональ \\"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "Діагональ /"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "Діагональ ✕"
+
+#: contents/ui/configGeneral.qml
+msgid "Thickness:"
+msgstr "Товщина:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "Авто"
+
+#: contents/ui/configGeneral.qml
+msgid "Corner radius:"
+msgstr "Радіус кутів:"
+
+#: contents/ui/configGeneral.qml
+msgid "Opacity:"
+msgstr "Непрозорість тла:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "Закріплені додатки:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "Завжди кольорові"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "Лише під час виконання"
+
+#: contents/ui/configGeneral.qml
+msgid "Focus:"
+msgstr "Фокус:"
+
+#: contents/ui/configGeneral.qml
+msgid "Keep color visible on focused task"
+msgstr "Зберігати колір на активному завданні"
+
+#: contents/ui/configGeneral.qml
+msgid "Colors:"
+msgstr "Кольори:"
+
+#: contents/ui/configGeneral.qml
+msgid "%1 application(s) configured"
+msgstr "Налаштовано %1 додатків"
+
+#: contents/ui/configGeneral.qml
+msgid "No colors configured"
+msgstr "Кольори не налаштовані"
+
+#: contents/ui/configGeneral.qml
+msgid "Click again to confirm"
+msgstr "Натисніть ще раз для підтвердження"
+
+#: contents/ui/configGeneral.qml
+msgid "Reset all colors"
+msgstr "Скинути всі кольори"
+
+#: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
+msgid "Task Manager Colors"
+msgstr "Кольори менеджера завдань"
+
+#: contents/ui/main.qml
+msgid "Applications"
+msgstr "Додатки"
+
+#: contents/ui/main.qml
+msgid "Windows (%1)"
+msgstr "Вікна (%1)"
+
+#: contents/ui/main.qml
+msgid "Settings"
+msgstr "Налаштування"
+
+#: contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/main.qml
+msgid "About"
+msgstr "Про програму"
+
+#: contents/ui/main.qml
+msgid "Disabled — toggle switch above to enable"
+msgstr "Вимкнено — увімкніть перемикач вище"
+
+#: contents/ui/main.qml
+msgid "Hide widget from panel"
+msgstr "Сховати віджет з панелі"
+
+#: contents/ui/main.qml
+msgid "Must be placed in a panel"
+msgstr "Має бути розміщений на панелі"
+
+#: contents/ui/main.qml
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: contents/ui/main.qml
+msgid "%1 application(s) colored"
+msgstr "Розфарбовано %1 додатків"
+
+#: contents/ui/main.qml
+msgid "Click to assign colors"
+msgstr "Натисніть для призначення кольорів"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Version %1"
+msgstr "Версія %1"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid ""
+"Per-application and per-window color overlays for the Plasma task manager."
+msgstr ""
+"Кольорові накладки по додатках і по вікнах для менеджера завдань Plasma."
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Author"
+msgstr "Автор"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid ""
+"Assign a persistent color to each application. The color applies to all "
+"windows of that application."
+msgstr ""
+"Призначити постійний колір кожному додатку. Колір застосовується до всіх "
+"вікон цього додатку."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "No tasks detected — open some windows to assign colors."
+msgstr "Завдання не виявлено — відкрийте вікна для призначення кольорів."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "(pinned)"
+msgstr "(закріплено)"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color for: %1"
+msgstr "Колір для: %1"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Nyan Cat rainbow effect"
+msgstr "Веселковий ефект Nyan Cat"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr "Видалити колір"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Configure the rainbow animation effect. Enable it per-app using the switch "
+"next to each color button in the Applications tab."
+msgstr ""
+"Налаштувати ефект веселкової анімації. Увімкніть його для кожного додатку за "
+"допомогою перемикача поруч із кожною кнопкою кольору на вкладці Додатки."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Speed"
+msgstr "Швидкість"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Duration of one full rainbow cycle. Lower = faster."
+msgstr "Тривалість одного повного веселкового циклу. Менше = швидше."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Style"
+msgstr "Стиль"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Flat"
+msgstr "Плоский"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wave"
+msgstr "Хвиля"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Original"
+msgstr "Оригінал"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Color-shifting flat bands."
+msgstr "Плоскі смуги зі зміною кольору."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Faithful to the original Nyan Cat rainbow: constant-width bands with "
+"alternating vertical offset."
+msgstr ""
+"Вірна оригінальній веселці Nyan Cat: смуги рівної ширини з чергуванням "
+"вертикального зсуву."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wavy band edges with flowing animation."
+msgstr "Хвилясті краї смуг із плавною анімацією."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Animation FPS"
+msgstr "FPS анімації"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Refresh interval in ms. Lower = smoother but more CPU. Default: 150ms (~7 "
+"fps)."
+msgstr ""
+"Інтервал оновлення в мс. Менше = плавніше, але більше навантаження на ЦП. За "
+"замовчуванням: 150мс (~7 кадрів/с)."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure how colors are displayed on task manager entries."
+msgstr "Налаштувати відображення кольорів на записах менеджера завдань."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Mode"
+msgstr "Режим"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay is rendered on each task."
+msgstr "Як кольорова накладка відображається на кожному завданні."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Thickness"
+msgstr "Товщина"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border/line thickness. Auto reads from theme SVG margins."
+msgstr "Товщина межі/лінії. Авто зчитує з SVG-полів теми."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opacity"
+msgstr "Непрозорість"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Color overlay intensity."
+msgstr "Інтенсивність заповнення тла."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corners"
+msgstr "Кути"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
+msgstr ""
+"Заокруглення кутів. Авто відповідає поточній темі. Макс = ідеальне коло."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "Поведінка"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "Показувати колір на закріплених обраних навіть без відкритих вікон."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Keep color on focused task"
+msgstr "Зберігати колір на активному завданні"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
+"line)."
+msgstr ""
+"Накладка залишається видимою над підсвіткою фокусу Plasma (80% тло + верхня "
+"акцентна лінія)."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget visibility"
+msgstr "Видимість віджета"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide widget icon from panel"
+msgstr "Сховати значок віджета з панелі"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"The widget icon is hidden. Colors continue to work. To show it again: right-"
+"click the panel → Enter Edit Mode → the widget will reappear → right-click "
+"it → uncheck this option. Tip: a global shortcut can open this popup even "
+"when hidden."
+msgstr ""
+"Значок віджета приховано. Кольори продовжують працювати. Щоб показати знову: "
+"клацніть правою кнопкою миші на панелі → Увійти в режим редагування → віджет "
+"з'явиться знову → клацніть правою кнопкою миші по ньому → зніміть позначку з "
+"цієї опції. Порада: глобальне клавіатурне скорочення може відкрити це "
+"спливаюче вікно навіть коли віджет приховано."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Hides the widget icon from the panel. Colors continue to work normally in "
+"the background. Also available via right-click on the widget icon. Tip: set "
+"a global shortcut to open this popup even when hidden."
+msgstr ""
+"Приховує значок віджета з панелі. Кольори продовжують працювати нормально у "
+"фоновому режимі. Також доступно через правий клік на значку віджета. Порада: "
+"призначте глобальне клавіатурне скорочення для відкриття цього спливаючого "
+"вікна навіть коли віджет приховано."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure Keyboard Shortcut…"
+msgstr "Налаштувати клавіатурне скорочення…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Opens the widget configuration dialog where you can set a global shortcut to "
+"toggle this popup."
+msgstr ""
+"Відкриває діалог налаштування віджета, де можна призначити глобальне "
+"клавіатурне скорочення для перемикання цього спливаючого вікна."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid ""
+"Temporarily override the color of a specific window. Overrides are lost when "
+"the window is closed."
+msgstr ""
+"Тимчасово перевизначити колір конкретного вікна. Перевизначення втрачаються "
+"при закритті вікна."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "No windows detected — open some windows to use per-window overrides."
+msgstr ""
+"Вікна не виявлено — відкрийте вікна для використання перевизначень по вікнах."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Window color override"
+msgstr "Перевизначення кольору вікна"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset to app color"
+msgstr "Скинути до кольору додатку"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
+#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
+#~ msgstr ""
+#~ "Значок віджета приховано. Кольори продовжують працювати. Щоб показати "
+#~ "його знову: клацніть правою кнопкою миші на панелі → Увійти в режим "
+#~ "редагування → віджет з'явиться знову → клацніть на ньому правою кнопкою "
+#~ "миші → зніміть позначку з цієї опції. Порада: глобальне клавіатурне "
+#~ "скорочення (Налаштувати віджет → Клавіатурні скорочення) може відкрити це "
+#~ "спливне вікно навіть у прихованому стані."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. Tip: "
+#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
+#~ "this popup even when hidden."
+#~ msgstr ""
+#~ "Приховує значок віджета з панелі. Кольори продовжують нормально працювати "
+#~ "у фоновому режимі. Також доступно через правий клік на значку віджета. "
+#~ "Порада: призначте глобальне клавіатурне скорочення (Налаштувати віджет → "
+#~ "Клавіатурні скорочення), щоб відкривати це спливне вікно навіть у "
+#~ "прихованому стані."
+
+#~ msgid "Wave effect"
+#~ msgstr "Ефект хвилі"
+
+#~ msgid ""
+#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
+#~ "color-shifting effect."
+#~ msgstr ""
+#~ "Хвилясті краї смуг з плавною анімацією. При вимкненні смуги плоскі з "
+#~ "ефектом зміни кольору."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. You can also set a keyboard "
+#~ "shortcut via Configure Widget → Keyboard Shortcuts."
+#~ msgstr ""
+#~ "Значок віджета приховано. Кольори продовжують працювати. Щоб показати "
+#~ "його знову: клацніть правою кнопкою миші на панелі → Увійти в режим "
+#~ "редагування → віджет з'явиться знову → клацніть на ньому правою кнопкою "
+#~ "миші → зніміть позначку з цієї опції. Ви також можете призначити "
+#~ "клавіатурне скорочення через Налаштувати віджет → Клавіатурні скорочення."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. You "
+#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
+#~ "Keyboard Shortcuts."
+#~ msgstr ""
+#~ "Приховує значок віджета з панелі. Кольори продовжують нормально працювати "
+#~ "у фоновому режимі. Також доступно через правий клік на значку віджета. Ви "
+#~ "можете призначити клавіатурне скорочення для перемикання видимості через "
+#~ "Налаштувати віджет → Клавіатурні скорочення."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option."
+#~ msgstr ""
+#~ "Значок віджета приховано. Кольори продовжують працювати. Щоб показати "
+#~ "його знову: клацніть правою кнопкою миші на панелі → Увійти в режим "
+#~ "редагування → віджет з'явиться знову → клацніть на ньому правою кнопкою "
+#~ "миші → зніміть позначку з цієї опції."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon."
+#~ msgstr ""
+#~ "Приховує значок віджета з панелі. Кольори продовжують нормально працювати "
+#~ "у фоновому режимі. Також доступно через правий клік на значку віджета."

@@ -1,0 +1,520 @@
+# Translation of Task Manager Colors in Brazilian Portuguese
+# Copyright (C) 2026 David DIVERRES
+# This file is distributed under the same license as the colors package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: colors\n"
+"Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
+"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"PO-Revision-Date: 2026-03-06 05:08\n"
+"Last-Translator: David DIVERRES <david@comexpertise.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml
+msgid "General"
+msgstr "Geral"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Pick a color"
+msgstr "Escolher uma cor"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Used:"
+msgstr "Usadas:"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Extracting…"
+msgstr "Extraindo…"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Auto (from icon)"
+msgstr "Auto (do ícone)"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
+msgstr "OK"
+
+#: contents/ui/configGeneral.qml
+msgid "General:"
+msgstr "Geral:"
+
+#: contents/ui/configGeneral.qml
+msgid "Enable color overlays"
+msgstr "Ativar sobreposições de cores"
+
+#: contents/ui/configGeneral.qml
+msgid "Color mode:"
+msgstr "Modo de cor:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "Moldura (todos os lados)"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "Linha superior"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "Linha inferior"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "Linha esquerda"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "Linha direita"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "Superior + Inferior"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "Esquerda + Direita"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "Centro │"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "Centro ─"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "Plano de fundo"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "Plano de fundo + Moldura"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "Diagonal \\"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "Diagonal /"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "Diagonal ✕"
+
+#: contents/ui/configGeneral.qml
+msgid "Thickness:"
+msgstr "Espessura:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "Auto"
+
+#: contents/ui/configGeneral.qml
+msgid "Corner radius:"
+msgstr "Raio dos cantos:"
+
+#: contents/ui/configGeneral.qml
+msgid "Opacity:"
+msgstr "Opacidade do plano de fundo:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "Apps fixados:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "Sempre coloridos"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "Apenas em execução"
+
+#: contents/ui/configGeneral.qml
+msgid "Focus:"
+msgstr "Foco:"
+
+#: contents/ui/configGeneral.qml
+msgid "Keep color visible on focused task"
+msgstr "Manter cor visível na tarefa em foco"
+
+#: contents/ui/configGeneral.qml
+msgid "Colors:"
+msgstr "Cores:"
+
+#: contents/ui/configGeneral.qml
+msgid "%1 application(s) configured"
+msgstr "%1 aplicativo(s) configurado(s)"
+
+#: contents/ui/configGeneral.qml
+msgid "No colors configured"
+msgstr "Nenhuma cor configurada"
+
+#: contents/ui/configGeneral.qml
+msgid "Click again to confirm"
+msgstr "Clique novamente para confirmar"
+
+#: contents/ui/configGeneral.qml
+msgid "Reset all colors"
+msgstr "Redefinir todas as cores"
+
+#: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
+msgid "Task Manager Colors"
+msgstr "Cores do gerenciador de tarefas"
+
+#: contents/ui/main.qml
+msgid "Applications"
+msgstr "Aplicativos"
+
+#: contents/ui/main.qml
+msgid "Windows (%1)"
+msgstr "Janelas (%1)"
+
+#: contents/ui/main.qml
+msgid "Settings"
+msgstr "Configurações"
+
+#: contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/main.qml
+msgid "About"
+msgstr "Sobre"
+
+#: contents/ui/main.qml
+msgid "Disabled — toggle switch above to enable"
+msgstr "Desativado — ative o interruptor acima"
+
+#: contents/ui/main.qml
+msgid "Hide widget from panel"
+msgstr "Ocultar widget do painel"
+
+#: contents/ui/main.qml
+msgid "Must be placed in a panel"
+msgstr "Deve ser colocado em um painel"
+
+#: contents/ui/main.qml
+msgid "Disabled"
+msgstr "Desativado"
+
+#: contents/ui/main.qml
+msgid "%1 application(s) colored"
+msgstr "%1 aplicativo(s) colorido(s)"
+
+#: contents/ui/main.qml
+msgid "Click to assign colors"
+msgstr "Clique para atribuir cores"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Version %1"
+msgstr "Versão %1"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid ""
+"Per-application and per-window color overlays for the Plasma task manager."
+msgstr ""
+"Sobreposições de cor por aplicativo e por janela para o gerenciador de "
+"tarefas do Plasma."
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Author"
+msgstr "Autor"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid ""
+"Assign a persistent color to each application. The color applies to all "
+"windows of that application."
+msgstr ""
+"Atribuir uma cor persistente a cada aplicativo. A cor se aplica a todas as "
+"janelas desse aplicativo."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "No tasks detected — open some windows to assign colors."
+msgstr "Nenhuma tarefa detectada — abra janelas para atribuir cores."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "(pinned)"
+msgstr "(fixado)"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color for: %1"
+msgstr "Cor para: %1"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Nyan Cat rainbow effect"
+msgstr "Efeito arco-íris Nyan Cat"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr "Remover cor"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Configure the rainbow animation effect. Enable it per-app using the switch "
+"next to each color button in the Applications tab."
+msgstr ""
+"Configurar o efeito de animação arco-íris. Ative-o por aplicativo usando o "
+"interruptor ao lado de cada botão de cor na aba Aplicativos."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Speed"
+msgstr "Velocidade"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Duration of one full rainbow cycle. Lower = faster."
+msgstr "Duração de um ciclo arco-íris completo. Menor = mais rápido."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Style"
+msgstr "Estilo"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Flat"
+msgstr "Plano"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wave"
+msgstr "Onda"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Original"
+msgstr "Original"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Color-shifting flat bands."
+msgstr "Faixas planas com mudança de cor."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Faithful to the original Nyan Cat rainbow: constant-width bands with "
+"alternating vertical offset."
+msgstr ""
+"Fiel ao arco-íris original do Nyan Cat: faixas de largura constante com "
+"deslocamento vertical alternado."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wavy band edges with flowing animation."
+msgstr "Bordas de faixa onduladas com animação fluida."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Animation FPS"
+msgstr "FPS da animação"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Refresh interval in ms. Lower = smoother but more CPU. Default: 150ms (~7 "
+"fps)."
+msgstr ""
+"Intervalo de atualização em ms. Menor = mais suave, mas mais CPU. Padrão: "
+"150ms (~7 fps)."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Preview"
+msgstr "Pré-visualização"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure how colors are displayed on task manager entries."
+msgstr ""
+"Configurar como as cores são exibidas nas entradas do gerenciador de tarefas."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Mode"
+msgstr "Modo"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay is rendered on each task."
+msgstr "Como a sobreposição de cor é renderizada em cada tarefa."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Thickness"
+msgstr "Espessura"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border/line thickness. Auto reads from theme SVG margins."
+msgstr "Espessura da borda/linha. Auto lê as margens SVG do tema."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opacity"
+msgstr "Opacidade"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Color overlay intensity."
+msgstr "Intensidade do preenchimento do plano de fundo."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corners"
+msgstr "Cantos"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
+msgstr ""
+"Arredondamento dos cantos. Auto corresponde ao tema atual. Máx = círculo "
+"perfeito."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "Mostrar cor em favoritos fixados mesmo sem janelas abertas."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Keep color on focused task"
+msgstr "Manter cor na tarefa em foco"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
+"line)."
+msgstr ""
+"A sobreposição permanece visível acima do destaque de foco do Plasma (80% "
+"fundo + linha de acento superior)."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget visibility"
+msgstr "Visibilidade do widget"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide widget icon from panel"
+msgstr "Ocultar ícone do widget do painel"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"The widget icon is hidden. Colors continue to work. To show it again: right-"
+"click the panel → Enter Edit Mode → the widget will reappear → right-click "
+"it → uncheck this option. Tip: a global shortcut can open this popup even "
+"when hidden."
+msgstr ""
+"O ícone do widget está oculto. As cores continuam funcionando. Para exibi-lo "
+"novamente: clique com o botão direito no painel → Entrar no modo de edição → "
+"o widget reaparecerá → clique com o botão direito nele → desmarque esta "
+"opção. Dica: um atalho global pode abrir este popup mesmo quando oculto."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Hides the widget icon from the panel. Colors continue to work normally in "
+"the background. Also available via right-click on the widget icon. Tip: set "
+"a global shortcut to open this popup even when hidden."
+msgstr ""
+"Oculta o ícone do widget do painel. As cores continuam funcionando "
+"normalmente em segundo plano. Também disponível via clique com o botão "
+"direito no ícone do widget. Dica: defina um atalho global para abrir este "
+"popup mesmo quando oculto."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure Keyboard Shortcut…"
+msgstr "Configurar atalho de teclado…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Opens the widget configuration dialog where you can set a global shortcut to "
+"toggle this popup."
+msgstr ""
+"Abre a caixa de diálogo de configuração do widget onde você pode definir um "
+"atalho global para alternar este popup."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid ""
+"Temporarily override the color of a specific window. Overrides are lost when "
+"the window is closed."
+msgstr ""
+"Substituir temporariamente a cor de uma janela específica. As substituições "
+"são perdidas ao fechar a janela."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "No windows detected — open some windows to use per-window overrides."
+msgstr ""
+"Nenhuma janela detectada — abra janelas para usar substituições por janela."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Window color override"
+msgstr "Substituição de cor da janela"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset to app color"
+msgstr "Redefinir para cor do aplicativo"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
+#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
+#~ msgstr ""
+#~ "O ícone do widget está oculto. As cores continuam funcionando. Para exibi-"
+#~ "lo novamente: clique com o botão direito no painel → Entrar no modo de "
+#~ "edição → o widget reaparecerá → clique com o botão direito nele → "
+#~ "desmarque esta opção. Dica: um atalho global (Configurar widget → Atalhos "
+#~ "de teclado) pode abrir este popup mesmo quando oculto."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. Tip: "
+#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
+#~ "this popup even when hidden."
+#~ msgstr ""
+#~ "Oculta o ícone do widget do painel. As cores continuam funcionando "
+#~ "normalmente em segundo plano. Também disponível clicando com o botão "
+#~ "direito no ícone do widget. Dica: defina um atalho global (Configurar "
+#~ "widget → Atalhos de teclado) para abrir este popup mesmo quando oculto."
+
+#~ msgid "Wave effect"
+#~ msgstr "Efeito de onda"
+
+#~ msgid ""
+#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
+#~ "color-shifting effect."
+#~ msgstr ""
+#~ "Bordas de faixa onduladas com animação fluida. Quando desativado, as "
+#~ "faixas são planas com um efeito de mudança de cor."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. You can also set a keyboard "
+#~ "shortcut via Configure Widget → Keyboard Shortcuts."
+#~ msgstr ""
+#~ "O ícone do widget está oculto. As cores continuam funcionando. Para exibi-"
+#~ "lo novamente: clique com o botão direito no painel → Entrar no modo de "
+#~ "edição → o widget reaparecerá → clique com o botão direito nele → "
+#~ "desmarque esta opção. Você também pode definir um atalho de teclado em "
+#~ "Configurar widget → Atalhos de teclado."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. You "
+#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
+#~ "Keyboard Shortcuts."
+#~ msgstr ""
+#~ "Oculta o ícone do widget do painel. As cores continuam funcionando "
+#~ "normalmente em segundo plano. Também disponível clicando com o botão "
+#~ "direito no ícone do widget. Você pode definir um atalho de teclado para "
+#~ "alternar a visibilidade em Configurar widget → Atalhos de teclado."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option."
+#~ msgstr ""
+#~ "O ícone do widget está oculto. As cores continuam funcionando. Para exibi-"
+#~ "lo novamente: clique com o botão direito no painel → Entrar no modo de "
+#~ "edição → o widget reaparecerá → clique com o botão direito nele → "
+#~ "desmarque esta opção."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon."
+#~ msgstr ""
+#~ "Oculta o ícone do widget do painel. As cores continuam funcionando "
+#~ "normalmente em segundo plano. Também disponível clicando com o botão "
+#~ "direito no ícone do widget."

@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "david@comexpertise.com",
+                "Name": "David DIVERRES"
+            }
+        ],
+        "Version": "1.0.0",
+        "Category": "Windows and Tasks",
+        "Description": "Per-application color coding for task manager entries",
+        "Icon": "preferences-desktop-color",
+        "Id": "com.comexpertise.plasma.taskmanagercolors",
+        "License": "GPL-2.0-or-later",
+        "Name": "Task Manager Colors",
+        "Website": "https://www.comexpertise.com"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
