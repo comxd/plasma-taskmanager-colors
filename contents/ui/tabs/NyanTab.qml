@@ -63,6 +63,8 @@ Item {
         Controls.ComboBox {
             id: nyanStyleCombo
             Layout.fillWidth: true
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            Kirigami.Theme.inherit: false
             model: [
                 { value: "flat", text: i18n("Flat") },
                 { value: "wave", text: i18n("Wave") },

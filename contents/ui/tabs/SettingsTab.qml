@@ -50,6 +50,8 @@ Flickable {
         Controls.ComboBox {
             id: modeCombo
             Layout.fillWidth: true
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            Kirigami.Theme.inherit: false
             model: [
                 { value: "frame", text: i18n("Frame (all sides)") },
                 { value: "top", text: i18n("Top line") },
@@ -179,6 +181,8 @@ Flickable {
             Controls.Label { text: i18n("Pinned apps:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 6 }
             Controls.ComboBox {
                 Layout.fillWidth: true
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
+                Kirigami.Theme.inherit: false
                 model: [
                     { value: "always", text: i18n("Always colored") },
                     { value: "runningOnly", text: i18n("Only when running") }
