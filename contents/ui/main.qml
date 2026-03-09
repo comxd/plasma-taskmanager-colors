@@ -600,6 +600,12 @@ PlasmoidItem {
     }
     onEditModeChanged: updatePlasmoidStatus()
     onHideWidgetChanged: updatePlasmoidStatus()
+    onExpandedChanged: if (!expanded) statusResetTimer.restart()
+    Timer {
+        id: statusResetTimer
+        interval: 0
+        onTriggered: updatePlasmoidStatus()
+    }
 
     property PlasmaCore.Action hideWidgetAction: PlasmaCore.Action {
         text: i18n("Hide widget from panel")
