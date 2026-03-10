@@ -73,7 +73,7 @@ bash translate/build.sh   # compile .po → .mo
 
 ## License
 
-GPL-2.0-or-later — see individual file headers for details.
+© 2026 ComExpertise — GPL-2.0-or-later — see individual file headers for details.
 
 ## Author
 
