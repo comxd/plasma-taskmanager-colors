@@ -1,0 +1,503 @@
+# Translation of Task Manager Colors in Korean
+# Copyright (C) 2026 David DIVERRES
+# This file is distributed under the same license as the colors package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: colors\n"
+"Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
+"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"PO-Revision-Date: 2026-03-06 05:08\n"
+"Last-Translator: David DIVERRES <david@comexpertise.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml
+msgid "General"
+msgstr "일반"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Pick a color"
+msgstr "색상 선택"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Cancel"
+msgstr "취소"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Used:"
+msgstr "사용 중:"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Extracting…"
+msgstr "추출 중…"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Auto (from icon)"
+msgstr "자동 (아이콘에서)"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
+msgstr "확인"
+
+#: contents/ui/configGeneral.qml
+msgid "General:"
+msgstr "일반:"
+
+#: contents/ui/configGeneral.qml
+msgid "Enable color overlays"
+msgstr "색상 오버레이 활성화"
+
+#: contents/ui/configGeneral.qml
+msgid "Color mode:"
+msgstr "색상 모드:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "프레임 (모든 면)"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "상단 선"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "하단 선"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "왼쪽 선"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "오른쪽 선"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "상단 + 하단"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "왼쪽 + 오른쪽"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "중앙 │"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "중앙 ─"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "배경"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "배경 + 프레임"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "대각선 \\"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "대각선 /"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "대각선 ✕"
+
+#: contents/ui/configGeneral.qml
+msgid "Thickness:"
+msgstr "두께:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "자동"
+
+#: contents/ui/configGeneral.qml
+msgid "Corner radius:"
+msgstr "모서리 반경:"
+
+#: contents/ui/configGeneral.qml
+msgid "Opacity:"
+msgstr "배경 불투명도:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "고정된 앱:"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "항상 색상 표시"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "실행 중일 때만"
+
+#: contents/ui/configGeneral.qml
+msgid "Focus:"
+msgstr "포커스:"
+
+#: contents/ui/configGeneral.qml
+msgid "Keep color visible on focused task"
+msgstr "포커스된 작업에서 색상 유지"
+
+#: contents/ui/configGeneral.qml
+msgid "Colors:"
+msgstr "색상:"
+
+#: contents/ui/configGeneral.qml
+msgid "%1 application(s) configured"
+msgstr "%1개 애플리케이션 구성됨"
+
+#: contents/ui/configGeneral.qml
+msgid "No colors configured"
+msgstr "구성된 색상 없음"
+
+#: contents/ui/configGeneral.qml
+msgid "Click again to confirm"
+msgstr "확인하려면 다시 클릭"
+
+#: contents/ui/configGeneral.qml
+msgid "Reset all colors"
+msgstr "모든 색상 초기화"
+
+#: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
+msgid "Task Manager Colors"
+msgstr "작업 관리자 색상"
+
+#: contents/ui/main.qml
+msgid "Applications"
+msgstr "애플리케이션"
+
+#: contents/ui/main.qml
+msgid "Windows (%1)"
+msgstr "창 (%1)"
+
+#: contents/ui/main.qml
+msgid "Settings"
+msgstr "설정"
+
+#: contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/main.qml
+msgid "About"
+msgstr "정보"
+
+#: contents/ui/main.qml
+msgid "Disabled — toggle switch above to enable"
+msgstr "비활성화됨 — 위의 스위치를 켜서 활성화"
+
+#: contents/ui/main.qml
+msgid "Hide widget from panel"
+msgstr "패널에서 위젯 숨기기"
+
+#: contents/ui/main.qml
+msgid "Must be placed in a panel"
+msgstr "패널에 배치해야 합니다"
+
+#: contents/ui/main.qml
+msgid "Disabled"
+msgstr "비활성화됨"
+
+#: contents/ui/main.qml
+msgid "%1 application(s) colored"
+msgstr "%1개 애플리케이션 색상 적용됨"
+
+#: contents/ui/main.qml
+msgid "Click to assign colors"
+msgstr "클릭하여 색상 할당"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Version %1"
+msgstr "버전 %1"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid ""
+"Per-application and per-window color overlays for the Plasma task manager."
+msgstr "Plasma 작업 관리자용 애플리케이션별 및 창별 색상 오버레이."
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Author"
+msgstr "작성자"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid ""
+"Assign a persistent color to each application. The color applies to all "
+"windows of that application."
+msgstr ""
+"각 애플리케이션에 고정 색상을 할당합니다. 색상은 해당 애플리케이션의 모든 창"
+"에 적용됩니다."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "No tasks detected — open some windows to assign colors."
+msgstr "작업이 감지되지 않음 — 창을 열어 색상을 할당하세요."
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "(pinned)"
+msgstr "(고정됨)"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color for: %1"
+msgstr "%1의 색상"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Nyan Cat rainbow effect"
+msgstr "Nyan Cat 무지개 효과"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr "색상 제거"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Configure the rainbow animation effect. Enable it per-app using the switch "
+"next to each color button in the Applications tab."
+msgstr ""
+"무지개 애니메이션 효과를 구성합니다. 애플리케이션 탭에서 각 색상 버튼 옆의 스"
+"위치를 사용하여 앱별로 활성화하세요."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Speed"
+msgstr "속도"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Duration of one full rainbow cycle. Lower = faster."
+msgstr "무지개 한 주기의 지속 시간. 낮을수록 = 빠름."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Style"
+msgstr "스타일"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Flat"
+msgstr "플랫"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wave"
+msgstr "웨이브"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Original"
+msgstr "오리지널"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Color-shifting flat bands."
+msgstr "색상이 변하는 플랫 밴드."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Faithful to the original Nyan Cat rainbow: constant-width bands with "
+"alternating vertical offset."
+msgstr "Nyan Cat 원본 무지개에 충실: 일정 너비 밴드와 교대 수직 오프셋."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wavy band edges with flowing animation."
+msgstr "물결 모양 밴드 가장자리와 흐르는 애니메이션."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Animation FPS"
+msgstr "애니메이션 FPS"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Refresh interval in ms. Lower = smoother but more CPU. Default: 150ms (~7 "
+"fps)."
+msgstr ""
+"새로고침 간격(ms). 낮을수록 부드럽지만 CPU 사용량이 높아집니다. 기본값: "
+"150ms(~7fps)."
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Preview"
+msgstr "미리보기"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure how colors are displayed on task manager entries."
+msgstr "작업 관리자 항목에 색상이 표시되는 방식을 구성합니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Mode"
+msgstr "모드"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay is rendered on each task."
+msgstr "각 작업에서 색상 오버레이가 렌더링되는 방식."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Thickness"
+msgstr "두께"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border/line thickness. Auto reads from theme SVG margins."
+msgstr "테두리/선 두께. 자동은 테마 SVG 여백에서 읽습니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opacity"
+msgstr "불투명도"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Color overlay intensity."
+msgstr "배경 채우기 강도."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corners"
+msgstr "모서리"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
+msgstr "모서리 둥글기. 자동은 현재 테마에 맞춤. 최대 = 완벽한 원."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "동작"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "창이 열려 있지 않아도 고정된 즐겨찾기에 색상을 표시합니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Keep color on focused task"
+msgstr "포커스된 작업의 색상 유지"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
+"line)."
+msgstr ""
+"오버레이가 Plasma 포커스 하이라이트 위에 표시됩니다 (80% 배경 + 상단 강조 "
+"선)."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget visibility"
+msgstr "위젯 가시성"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide widget icon from panel"
+msgstr "패널에서 위젯 아이콘 숨기기"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"The widget icon is hidden. Colors continue to work. To show it again: right-"
+"click the panel → Enter Edit Mode → the widget will reappear → right-click "
+"it → uncheck this option. Tip: a global shortcut can open this popup even "
+"when hidden."
+msgstr ""
+"위젯 아이콘이 숨겨져 있습니다. 색상 기능은 계속 작동합니다. 다시 표시하려면: 패널을 마우스 오른쪽 버튼으로 클릭 → 편집 모드 진입 "
+"→ 위젯이 다시 나타남 → 마우스 오른쪽 버튼으로 클릭 → 이 옵션의 체크 해제. 팁: 숨겨져 있어도 전역 단축키로 이 팝업을 열 수 "
+"있습니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Hides the widget icon from the panel. Colors continue to work normally in "
+"the background. Also available via right-click on the widget icon. Tip: set "
+"a global shortcut to open this popup even when hidden."
+msgstr ""
+"패널에서 위젯 아이콘을 숨깁니다. 색상 기능은 백그라운드에서 정상적으로 계속 작동합니다. 위젯 아이콘을 마우스 오른쪽 버튼으로 클릭해서도 "
+"사용할 수 있습니다. 팁: 숨겨져 있어도 이 팝업을 열 수 있도록 전역 단축키를 설정하세요."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure Keyboard Shortcut…"
+msgstr "키보드 단축키 설정…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Opens the widget configuration dialog where you can set a global shortcut to "
+"toggle this popup."
+msgstr "이 팝업을 전환하는 전역 단축키를 설정할 수 있는 위젯 구성 대화 상자를 엽니다."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid ""
+"Temporarily override the color of a specific window. Overrides are lost when "
+"the window is closed."
+msgstr "특정 창의 색상을 임시로 재정의합니다. 창을 닫으면 재정의가 사라집니다."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "No windows detected — open some windows to use per-window overrides."
+msgstr "창이 감지되지 않음 — 창을 열어 창별 재정의를 사용하세요."
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Window color override"
+msgstr "창 색상 재정의"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset to app color"
+msgstr "앱 색상으로 초기화"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
+#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
+#~ msgstr ""
+#~ "위젯 아이콘이 숨겨져 있습니다. 색상 기능은 계속 작동합니다. 다시 표시하려"
+#~ "면: 패널을 마우스 오른쪽 버튼으로 클릭 → 편집 모드 진입 → 위젯이 다시 나타"
+#~ "남 → 위젯을 마우스 오른쪽 버튼으로 클릭 → 이 옵션의 체크를 해제하세요. "
+#~ "팁: 전역 단축키(위젯 설정 → 키보드 단축키)로 숨겨진 상태에서도 이 팝업을 "
+#~ "열 수 있습니다."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. Tip: "
+#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
+#~ "this popup even when hidden."
+#~ msgstr ""
+#~ "패널에서 위젯 아이콘을 숨깁니다. 색상 기능은 백그라운드에서 정상적으로 계"
+#~ "속 작동합니다. 위젯 아이콘을 마우스 오른쪽 버튼으로 클릭하여 사용할 수도 "
+#~ "있습니다. 팁: 전역 단축키(위젯 설정 → 키보드 단축키)를 설정하면 숨겨진 상"
+#~ "태에서도 이 팝업을 열 수 있습니다."
+
+#~ msgid "Wave effect"
+#~ msgstr "파도 효과"
+
+#~ msgid ""
+#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
+#~ "color-shifting effect."
+#~ msgstr ""
+#~ "흐르는 애니메이션과 함께 물결 모양의 밴드 가장자리. 꺼져 있으면 밴드가 평"
+#~ "평하고 색상 전환 효과가 적용됩니다."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. You can also set a keyboard "
+#~ "shortcut via Configure Widget → Keyboard Shortcuts."
+#~ msgstr ""
+#~ "위젯 아이콘이 숨겨져 있습니다. 색상 기능은 계속 작동합니다. 다시 표시하려"
+#~ "면: 패널을 마우스 오른쪽 버튼으로 클릭 → 편집 모드 진입 → 위젯이 다시 나타"
+#~ "남 → 위젯을 마우스 오른쪽 버튼으로 클릭 → 이 옵션의 체크를 해제하세요. 위"
+#~ "젯 설정 → 키보드 단축키에서 단축키를 설정할 수도 있습니다."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. You "
+#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
+#~ "Keyboard Shortcuts."
+#~ msgstr ""
+#~ "패널에서 위젯 아이콘을 숨깁니다. 색상 기능은 백그라운드에서 정상적으로 계"
+#~ "속 작동합니다. 위젯 아이콘을 마우스 오른쪽 버튼으로 클릭하여 사용할 수도 "
+#~ "있습니다. 위젯 설정 → 키보드 단축키에서 가시성 전환 단축키를 설정할 수 있"
+#~ "습니다."
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option."
+#~ msgstr ""
+#~ "위젯 아이콘이 숨겨져 있습니다. 색상 기능은 계속 작동합니다. 다시 표시하려"
+#~ "면: 패널을 마우스 오른쪽 버튼으로 클릭 → 편집 모드 진입 → 위젯이 다시 나타"
+#~ "남 → 위젯을 마우스 오른쪽 버튼으로 클릭 → 이 옵션의 체크를 해제하세요."
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon."
+#~ msgstr ""
+#~ "패널에서 위젯 아이콘을 숨깁니다. 색상 기능은 백그라운드에서 정상적으로 계"
+#~ "속 작동합니다. 위젯 아이콘을 마우스 오른쪽 버튼으로 클릭하여 사용할 수도 "
+#~ "있습니다."

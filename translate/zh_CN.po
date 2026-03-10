@@ -1,0 +1,484 @@
+# Translation of Task Manager Colors in Chinese (Simplified)
+# Copyright (C) 2026 David DIVERRES
+# This file is distributed under the same license as the colors package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: colors\n"
+"Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
+"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"PO-Revision-Date: 2026-03-06 05:08\n"
+"Last-Translator: David DIVERRES <david@comexpertise.com>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml
+msgid "General"
+msgstr "常规"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Pick a color"
+msgstr "选择颜色"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Cancel"
+msgstr "取消"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Used:"
+msgstr "已使用："
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Extracting…"
+msgstr "提取中…"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Auto (from icon)"
+msgstr "自动（从图标）"
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
+msgstr "确定"
+
+#: contents/ui/configGeneral.qml
+msgid "General:"
+msgstr "常规："
+
+#: contents/ui/configGeneral.qml
+msgid "Enable color overlays"
+msgstr "启用颜色叠加"
+
+#: contents/ui/configGeneral.qml
+msgid "Color mode:"
+msgstr "颜色模式："
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "边框（所有边）"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "顶部线条"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "底部线条"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "左侧线条"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "右侧线条"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "顶部 + 底部"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "左侧 + 右侧"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "居中 │"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "居中 ─"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "背景"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "背景 + 边框"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "对角线 \\"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "对角线 /"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "对角线 ✕"
+
+#: contents/ui/configGeneral.qml
+msgid "Thickness:"
+msgstr "厚度："
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "自动"
+
+#: contents/ui/configGeneral.qml
+msgid "Corner radius:"
+msgstr "圆角半径："
+
+#: contents/ui/configGeneral.qml
+msgid "Opacity:"
+msgstr "背景不透明度："
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "固定应用："
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "始终着色"
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "仅在运行时"
+
+#: contents/ui/configGeneral.qml
+msgid "Focus:"
+msgstr "焦点："
+
+#: contents/ui/configGeneral.qml
+msgid "Keep color visible on focused task"
+msgstr "在聚焦任务上保持颜色可见"
+
+#: contents/ui/configGeneral.qml
+msgid "Colors:"
+msgstr "颜色："
+
+#: contents/ui/configGeneral.qml
+msgid "%1 application(s) configured"
+msgstr "已配置 %1 个应用"
+
+#: contents/ui/configGeneral.qml
+msgid "No colors configured"
+msgstr "未配置颜色"
+
+#: contents/ui/configGeneral.qml
+msgid "Click again to confirm"
+msgstr "再次点击确认"
+
+#: contents/ui/configGeneral.qml
+msgid "Reset all colors"
+msgstr "重置所有颜色"
+
+#: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
+msgid "Task Manager Colors"
+msgstr "任务管理器颜色"
+
+#: contents/ui/main.qml
+msgid "Applications"
+msgstr "应用程序"
+
+#: contents/ui/main.qml
+msgid "Windows (%1)"
+msgstr "窗口 (%1)"
+
+#: contents/ui/main.qml
+msgid "Settings"
+msgstr "设置"
+
+#: contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/main.qml
+msgid "About"
+msgstr "关于"
+
+#: contents/ui/main.qml
+msgid "Disabled — toggle switch above to enable"
+msgstr "已禁用——请开启上方开关"
+
+#: contents/ui/main.qml
+msgid "Hide widget from panel"
+msgstr "从面板隐藏小部件"
+
+#: contents/ui/main.qml
+msgid "Must be placed in a panel"
+msgstr "必须放置在面板中"
+
+#: contents/ui/main.qml
+msgid "Disabled"
+msgstr "已禁用"
+
+#: contents/ui/main.qml
+msgid "%1 application(s) colored"
+msgstr "已着色 %1 个应用"
+
+#: contents/ui/main.qml
+msgid "Click to assign colors"
+msgstr "点击分配颜色"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Version %1"
+msgstr "版本 %1"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid ""
+"Per-application and per-window color overlays for the Plasma task manager."
+msgstr "为 Plasma 任务管理器提供按应用和按窗口的颜色叠加。"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Author"
+msgstr "作者"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid ""
+"Assign a persistent color to each application. The color applies to all "
+"windows of that application."
+msgstr "为每个应用分配持久颜色。颜色适用于该应用的所有窗口。"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "No tasks detected — open some windows to assign colors."
+msgstr "未检测到任务——请打开窗口以分配颜色。"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "(pinned)"
+msgstr "（固定）"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color for: %1"
+msgstr "颜色：%1"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Nyan Cat rainbow effect"
+msgstr "Nyan Cat 彩虹效果"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr "移除颜色"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Configure the rainbow animation effect. Enable it per-app using the switch "
+"next to each color button in the Applications tab."
+msgstr ""
+"配置彩虹动画效果。在应用程序选项卡中，使用每个颜色按钮旁边的开关为每个应用启"
+"用。"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Speed"
+msgstr "速度"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Duration of one full rainbow cycle. Lower = faster."
+msgstr "一个完整彩虹周期的持续时间。越低 = 越快。"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Style"
+msgstr "样式"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Flat"
+msgstr "平面"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wave"
+msgstr "波浪"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Original"
+msgstr "经典"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Color-shifting flat bands."
+msgstr "颜色渐变的平面色带。"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Faithful to the original Nyan Cat rainbow: constant-width bands with "
+"alternating vertical offset."
+msgstr "忠于 Nyan Cat 原版彩虹：等宽色带，交替垂直偏移。"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wavy band edges with flowing animation."
+msgstr "波浪形色带边缘，流动动画。"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Animation FPS"
+msgstr "动画帧率"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid ""
+"Refresh interval in ms. Lower = smoother but more CPU. Default: 150ms (~7 "
+"fps)."
+msgstr "刷新间隔（毫秒）。越低越流畅，但CPU占用越高。默认：150ms（约7帧/秒）。"
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Preview"
+msgstr "预览"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure how colors are displayed on task manager entries."
+msgstr "配置任务管理器条目上的颜色显示方式。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Mode"
+msgstr "模式"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay is rendered on each task."
+msgstr "颜色叠加在每个任务上的渲染方式。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Thickness"
+msgstr "厚度"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border/line thickness. Auto reads from theme SVG margins."
+msgstr "边框/线条厚度。自动从主题 SVG 边距读取。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opacity"
+msgstr "不透明度"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Color overlay intensity."
+msgstr "背景填充强度。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corners"
+msgstr "圆角"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
+msgstr "圆角弧度。自动匹配当前主题。最大 = 完美圆形。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "行为"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "即使没有打开窗口，也在固定收藏上显示颜色。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Keep color on focused task"
+msgstr "在聚焦任务上保持颜色"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
+"line)."
+msgstr "叠加层保持在 Plasma 焦点高亮上方可见（80% 背景 + 顶部强调线）。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget visibility"
+msgstr "小部件可见性"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide widget icon from panel"
+msgstr "从面板隐藏小部件图标"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"The widget icon is hidden. Colors continue to work. To show it again: right-"
+"click the panel → Enter Edit Mode → the widget will reappear → right-click "
+"it → uncheck this option. Tip: a global shortcut can open this popup even "
+"when hidden."
+msgstr ""
+"小部件图标已隐藏。颜色功能继续工作。要重新显示：右键点击面板 → 进入编辑模式 → 小部件将重新出现 → 右键点击它 → "
+"取消勾选此选项。提示：即使隐藏时，全局快捷键也可以打开此弹出窗口。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Hides the widget icon from the panel. Colors continue to work normally in "
+"the background. Also available via right-click on the widget icon. Tip: set "
+"a global shortcut to open this popup even when hidden."
+msgstr "从面板隐藏小部件图标。颜色功能在后台继续正常工作。也可通过右键点击小部件图标使用。提示：设置全局快捷键，即使在隐藏时也可以打开此弹出窗口。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure Keyboard Shortcut…"
+msgstr "配置键盘快捷键…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Opens the widget configuration dialog where you can set a global shortcut to "
+"toggle this popup."
+msgstr "打开小部件配置对话框，您可以在其中设置全局快捷键来切换此弹出窗口。"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid ""
+"Temporarily override the color of a specific window. Overrides are lost when "
+"the window is closed."
+msgstr "临时覆盖特定窗口的颜色。关闭窗口时覆盖将丢失。"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "No windows detected — open some windows to use per-window overrides."
+msgstr "未检测到窗口——请打开窗口以使用单窗口覆盖。"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Window color override"
+msgstr "窗口颜色覆盖"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset to app color"
+msgstr "重置为应用颜色"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
+#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
+#~ msgstr ""
+#~ "小部件图标已隐藏。颜色功能继续正常工作。要重新显示：右键单击面板 → 进入编"
+#~ "辑模式 → 小部件将重新出现 → 右键单击它 → 取消勾选此选项。提示：全局快捷键"
+#~ "（配置小部件 → 键盘快捷键）可以在隐藏状态下打开此弹出窗口。"
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. Tip: "
+#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
+#~ "this popup even when hidden."
+#~ msgstr ""
+#~ "从面板隐藏小部件图标。颜色功能在后台继续正常工作。也可通过右键单击小部件图"
+#~ "标使用。提示：设置全局快捷键（配置小部件 → 键盘快捷键）以便在隐藏状态下打"
+#~ "开此弹出窗口。"
+
+#~ msgid "Wave effect"
+#~ msgstr "波浪效果"
+
+#~ msgid ""
+#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
+#~ "color-shifting effect."
+#~ msgstr "波浪形色带边缘带流动动画。关闭时，色带平整并带有颜色渐变效果。"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option. You can also set a keyboard "
+#~ "shortcut via Configure Widget → Keyboard Shortcuts."
+#~ msgstr ""
+#~ "小部件图标已隐藏。颜色功能继续正常工作。要重新显示：右键单击面板 → 进入编"
+#~ "辑模式 → 小部件将重新出现 → 右键单击它 → 取消勾选此选项。您还可以通过配置"
+#~ "小部件 → 键盘快捷键来设置快捷键。"
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon. You "
+#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
+#~ "Keyboard Shortcuts."
+#~ msgstr ""
+#~ "从面板隐藏小部件图标。颜色功能在后台继续正常工作。也可通过右键单击小部件图"
+#~ "标使用。您可以通过配置小部件 → 键盘快捷键来设置切换可见性的快捷键。"
+
+#~ msgid ""
+#~ "The widget icon is hidden. Colors continue to work. To show it again: "
+#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
+#~ "right-click it → uncheck this option."
+#~ msgstr ""
+#~ "小部件图标已隐藏。颜色功能继续正常工作。要重新显示：右键单击面板 → 进入编"
+#~ "辑模式 → 小部件将重新出现 → 右键单击它 → 取消勾选此选项。"
+
+#~ msgid ""
+#~ "Hides the widget icon from the panel. Colors continue to work normally in "
+#~ "the background. Also available via right-click on the widget icon."
+#~ msgstr ""
+#~ "从面板隐藏小部件图标。颜色功能在后台继续正常工作。也可通过右键单击小部件图"
+#~ "标使用。"

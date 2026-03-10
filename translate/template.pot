@@ -1,0 +1,398 @@
+# Translation of Task Manager Colors
+# Copyright (C) 2026 David DIVERRES
+# This file is distributed under the same license as the taskmanagercolors package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: taskmanagercolors\n"
+"Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
+"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml
+msgid "General"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Pick a color"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Used:"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Extracting…"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "Auto (from icon)"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "General:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Enable color overlays"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Color mode:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Thickness:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Corner radius:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Opacity:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr ""
+
+#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Focus:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Keep color visible on focused task"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Colors:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "%1 application(s) configured"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "No colors configured"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Click again to confirm"
+msgstr ""
+
+#: contents/ui/configGeneral.qml
+msgid "Reset all colors"
+msgstr ""
+
+#: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
+msgid "Task Manager Colors"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Applications"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Windows (%1)"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Settings"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "About"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Disabled — toggle switch above to enable"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Hide widget from panel"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Must be placed in a panel"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Disabled"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "%1 application(s) colored"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Click to assign colors"
+msgstr ""
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Version %1"
+msgstr ""
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Per-application and per-window color overlays for the Plasma task manager."
+msgstr ""
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Author"
+msgstr ""
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Assign a persistent color to each application. The color applies to all windows of that application."
+msgstr ""
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "No tasks detected — open some windows to assign colors."
+msgstr ""
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "(pinned)"
+msgstr ""
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color for: %1"
+msgstr ""
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Nyan Cat rainbow effect"
+msgstr ""
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Configure the rainbow animation effect. Enable it per-app using the switch next to each color button in the Applications tab."
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Speed"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Duration of one full rainbow cycle. Lower = faster."
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Style"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Flat"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wave"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Original"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Color-shifting flat bands."
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Faithful to the original Nyan Cat rainbow: constant-width bands with alternating vertical offset."
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Wavy band edges with flowing animation."
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Animation FPS"
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Refresh interval in ms. Lower = smoother but more CPU. Default: 150ms (~7 fps)."
+msgstr ""
+
+#: contents/ui/tabs/NyanTab.qml
+msgid "Preview"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure how colors are displayed on task manager entries."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Mode"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay is rendered on each task."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Thickness"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border/line thickness. Auto reads from theme SVG margins."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opacity"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Color overlay intensity."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corners"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Keep color on focused task"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Overlay stays visible above Plasma's focus highlight (80% bg + top accent line)."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget visibility"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide widget icon from panel"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "The widget icon is hidden. Colors continue to work. To show it again: right-click the panel → Enter Edit Mode → the widget will reappear → right-click it → uncheck this option. Tip: a global shortcut can open this popup even when hidden."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hides the widget icon from the panel. Colors continue to work normally in the background. Also available via right-click on the widget icon. Tip: set a global shortcut to open this popup even when hidden."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Configure Keyboard Shortcut…"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Opens the widget configuration dialog where you can set a global shortcut to toggle this popup."
+msgstr ""
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Temporarily override the color of a specific window. Overrides are lost when the window is closed."
+msgstr ""
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "No windows detected — open some windows to use per-window overrides."
+msgstr ""
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Window color override"
+msgstr ""
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset to app color"
+msgstr ""
