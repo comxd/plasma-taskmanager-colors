@@ -14,7 +14,7 @@ systemctl stop serial-getty@ttyS0.service 2>/dev/null || true
 # Helper: run a command as the neon user with D-Bus access
 # KDE Neon live ISO: neon = UID 1000, D-Bus socket at /run/user/1000/bus
 run_as_neon() {
-    su - neon -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus XDG_RUNTIME_DIR=/run/user/1000 $1"
+    su - neon -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-0 $1"
 }
 
 # 1. Mount shared folder (may already be mounted by bootstrap)
@@ -42,10 +42,23 @@ echo "  OK: widget added to panel"
 # 4. Open test apps to populate the task manager
 echo "[4/4] Opening test apps..."
 run_as_neon "dolphin ~ &>/dev/null &"
+sleep 1
 run_as_neon "systemsettings &>/dev/null &"
+sleep 1
 run_as_neon "kate &>/dev/null &"
+sleep 1
+run_as_neon "konsole &>/dev/null &"
+sleep 1
+run_as_neon "plasma-discover &>/dev/null &"
+sleep 1
+run_as_neon "gwenview &>/dev/null &"
+sleep 1
+run_as_neon "okular &>/dev/null &"
+sleep 1
+run_as_neon "kinfocenter &>/dev/null &"
 
 echo ""
 echo "=== Setup complete! ==="
+echo "  - 8 apps launched: Dolphin, System Settings, Kate, Konsole, Discover, Gwenview, Okular, Info Center"
 echo "  - Click the widget icon in the panel to see the popup"
 echo "  - Reload after code changes: ./vm/reload-plasmoid.sh"
