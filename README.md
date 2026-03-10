@@ -2,7 +2,7 @@
 
 A KDE Plasma 6 plasmoid that adds per-application color overlays to your task manager.
 
-![Plasma 6](https://img.shields.io/badge/Plasma-6-blue) ![License](https://img.shields.io/badge/license-GPL--3.0-green)
+![Plasma 6](https://img.shields.io/badge/Plasma-6-blue) ![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green)
 
 ## Features
 
@@ -27,7 +27,7 @@ kpackagetool6 -t Plasma/Applet -i com.comexpertise.plasma.taskmanagercolors-*.pl
 ### From source
 
 ```bash
-git clone https://github.com/comexpertise/org.kde.comexpertise.plasma.task-manager.colors.git
+git clone https://github.com/comxd/plasma-taskmanager-colors.git
 cd org.kde.comexpertise.plasma.task-manager.colors
 kpackagetool6 -t Plasma/Applet -i .
 ```
@@ -73,7 +73,7 @@ bash translate/build.sh   # compile .po → .mo
 
 ## License
 
-GPL-3.0-or-later — see individual file headers for details.
+© 2026 ComExpertise — GPL-2.0-or-later — see individual file headers for details.
 
 ## Author
 
