@@ -7,7 +7,7 @@
                 "Name": "David DIVERRES"
             }
         ],
-        "Version": "1.0.0",
+        "Version": "1.0.1",
         "Category": "Windows and Tasks",
         "Description": "Per-application color coding for task manager entries",
         "Icon": "preferences-desktop-color",
