@@ -1,8 +1,21 @@
-# Task Manager Colors
+<p align="center">
+  <img src="contents/icons/logo.svg" alt="Task Manager Colors" width="96">
+</p>
 
-A KDE Plasma 6 plasmoid that adds per-application color overlays to your task manager.
+<h1 align="center">Task Manager Colors</h1>
 
-![Plasma 6](https://img.shields.io/badge/Plasma-6-blue) ![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green)
+<p align="center">
+  A KDE Plasma 6 plasmoid that adds per-application color overlays to your task manager.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Plasma-6-blue" alt="Plasma 6">
+  <img src="https://img.shields.io/badge/license-GPL--2.0--or--later-green" alt="License">
+</p>
+
+<p align="center">
+  <img src="assets/screenshot-applications.png" alt="Task Manager Colors — Applications tab" width="600">
+</p>
 
 ## Features
 
@@ -17,6 +30,13 @@ A KDE Plasma 6 plasmoid that adds per-application color overlays to your task ma
 - **15 languages** — fr, de, es, pt_BR, ru, zh_CN, ja, ko, it, nl, pl, tr, ar, uk, cs
 
 ## Installation
+
+### From KDE Store (recommended)
+
+1. Right-click your panel → **Add Widgets** → **Get New Widgets** → **Download New Plasma Widgets**
+2. Search **"Task Manager Colors"** → **Install**
+
+Or visit [store.kde.org/p/2351299](https://store.kde.org/p/2351299).
 
 ### From .plasmoid file
 
