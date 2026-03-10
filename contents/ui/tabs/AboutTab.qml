@@ -17,7 +17,7 @@ Item {
         Item { Layout.fillHeight: true }
 
         Kirigami.Icon {
-            source: "preferences-desktop-color"
+            source: Qt.resolvedUrl("../../icons/logo.svg")
             Layout.preferredWidth: Kirigami.Units.iconSizes.huge
             Layout.preferredHeight: Kirigami.Units.iconSizes.huge
             Layout.alignment: Qt.AlignHCenter
