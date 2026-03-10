@@ -20,6 +20,7 @@ import "tabs" as Tabs
 PlasmoidItem {
     id: root
     activationTogglesExpanded: true
+    Plasmoid.icon: Qt.resolvedUrl("../icons/icon.svg")
 
     // ── Configuration helpers ──
 
