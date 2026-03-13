@@ -13,6 +13,11 @@ contents/locale/
 
 # Local project docs
 TODO.md
+CLAUDE.md
+AGENTS.md
+.claude/
+.serena/
+screenshots/
 
 # OS
 .DS_Store

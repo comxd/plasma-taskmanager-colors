@@ -1,3 +1,5 @@
+![Task Manager Colors](docs/covers/cover-large-1400x560.png)
+
 <p align="center">
   <img src="contents/icons/logo.svg" alt="Task Manager Colors" width="96">
 </p>
@@ -11,10 +13,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Plasma-6-blue" alt="Plasma 6">
   <img src="https://img.shields.io/badge/license-GPL--2.0--or--later-green" alt="License">
-</p>
-
-<p align="center">
-  <img src="assets/screenshot-applications.png" alt="Task Manager Colors — Applications tab" width="600">
 </p>
 
 ## Features
