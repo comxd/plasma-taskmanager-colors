@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "Nascondi widget dal pannello"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "Informazioni su Colori del gestore attività"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "Deve essere posizionato in un pannello"
 
@@ -227,8 +231,16 @@ msgstr ""
 "attività di Plasma."
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "Autore"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"Questo plasmoide è sviluppato e mantenuto nel mio tempo libero. Se lo trovi "
+"utile, una piccola donazione aiuta a mantenerlo attivo!"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -329,6 +341,10 @@ msgstr ""
 "Configura come i colori vengono visualizzati sulle voci del gestore attività."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "Modalità"
 
@@ -383,8 +399,67 @@ msgstr ""
 "(80% sfondo + linea d'accento superiore)."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "Visibilità del widget"
+msgid "Minimized windows:"
+msgstr "Finestre minimizzate:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "Normale (nessuna modifica)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "Nascondi sovrapposizione"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "Attenua sovrapposizione"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "Desatura (scala di grigi)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "Stile personalizzato…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr ""
+"Comportamento delle sovrapposizioni di colore sulle finestre minimizzate."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "Stile ridotto a icona:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr ""
+"Usare una modalità di visualizzazione diversa quando le finestre sono "
+"ridotte a icona."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr ""
+"La modalità normale attuale è disabilitata — usare Attenua o Desatura per "
+"effetti con la stessa forma."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "Effetto:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "Nessuno"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "Desatura sovrapposizione"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "Widget"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -447,6 +522,12 @@ msgstr "Sovrascrittura colore finestra"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "Reimposta al colore dell'app"
+
+#~ msgid "Author"
+#~ msgstr "Autore"
+
+#~ msgid "Widget visibility"
+#~ msgstr "Visibilità del widget"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "

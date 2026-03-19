@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "从面板隐藏小部件"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "关于任务管理器颜色"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "必须放置在面板中"
 
@@ -225,8 +229,16 @@ msgid ""
 msgstr "为 Plasma 任务管理器提供按应用和按窗口的颜色叠加。"
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "作者"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"这个小部件是在我的空闲时间开发和维护的。如果您觉得它有用，小额捐赠将帮助它持"
+"续发展！"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -319,6 +331,10 @@ msgid "Configure how colors are displayed on task manager entries."
 msgstr "配置任务管理器条目上的颜色显示方式。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "外观"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "模式"
 
@@ -369,8 +385,62 @@ msgid ""
 msgstr "叠加层保持在 Plasma 焦点高亮上方可见（80% 背景 + 顶部强调线）。"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "小部件可见性"
+msgid "Minimized windows:"
+msgstr "最小化窗口："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "正常（无变化）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "隐藏叠加层"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "变暗叠加层"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "去饱和（灰度）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "自定义样式…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr "最小化窗口上颜色叠加层的行为方式。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "最小化样式："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr "当窗口最小化时使用不同的显示模式。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr "当前正常模式已禁用——使用变暗或去饱和获得相同形状的效果。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "效果："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "无"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "去饱和叠加层"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "小部件"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -383,15 +453,18 @@ msgid ""
 "it → uncheck this option. Tip: a global shortcut can open this popup even "
 "when hidden."
 msgstr ""
-"小部件图标已隐藏。颜色功能继续工作。要重新显示：右键点击面板 → 进入编辑模式 → 小部件将重新出现 → 右键点击它 → "
-"取消勾选此选项。提示：即使隐藏时，全局快捷键也可以打开此弹出窗口。"
+"小部件图标已隐藏。颜色功能继续工作。要重新显示：右键点击面板 → 进入编辑模式 "
+"→ 小部件将重新出现 → 右键点击它 → 取消勾选此选项。提示：即使隐藏时，全局快捷"
+"键也可以打开此弹出窗口。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid ""
 "Hides the widget icon from the panel. Colors continue to work normally in "
 "the background. Also available via right-click on the widget icon. Tip: set "
 "a global shortcut to open this popup even when hidden."
-msgstr "从面板隐藏小部件图标。颜色功能在后台继续正常工作。也可通过右键点击小部件图标使用。提示：设置全局快捷键，即使在隐藏时也可以打开此弹出窗口。"
+msgstr ""
+"从面板隐藏小部件图标。颜色功能在后台继续正常工作。也可通过右键点击小部件图标"
+"使用。提示：设置全局快捷键，即使在隐藏时也可以打开此弹出窗口。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Configure Keyboard Shortcut…"
@@ -420,6 +493,12 @@ msgstr "窗口颜色覆盖"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "重置为应用颜色"
+
+#~ msgid "Author"
+#~ msgstr "作者"
+
+#~ msgid "Widget visibility"
+#~ msgstr "小部件可见性"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "Ukryj widżet z panelu"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "O aplikacji Kolory menedżera zadań"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "Musi być umieszczony na panelu"
 
@@ -225,8 +229,16 @@ msgid ""
 msgstr "Nakładki kolorów per aplikacja i per okno dla menedżera zadań Plasmy."
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "Autor"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"Ten plazmoid jest rozwijany i utrzymywany w moim wolnym czasie. Jeśli "
+"uważasz go za przydatny, niewielka darowizna pomoże w jego dalszym rozwoju!"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -325,6 +337,10 @@ msgid "Configure how colors are displayed on task manager entries."
 msgstr "Skonfiguruj sposób wyświetlania kolorów na wpisach menedżera zadań."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "Wygląd"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "Tryb"
 
@@ -379,8 +395,64 @@ msgstr ""
 "górna linia akcentu)."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "Widoczność widżetu"
+msgid "Minimized windows:"
+msgstr "Zminimalizowane okna:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "Normalnie (bez zmian)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "Ukryj nakładkę"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "Przyciemnij nakładkę"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "Desaturacja (skala szarości)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "Własny styl…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr "Zachowanie kolorowych nakładek na zminimalizowanych oknach."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "Styl zminimalizowany:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr "Użyj innego trybu wyświetlania, gdy okna są zminimalizowane."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr ""
+"Bieżący tryb normalny jest wyłączony — użyj Przyciemnij lub Desaturacja dla "
+"efektów o tym samym kształcie."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "Efekt:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "Brak"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "Desaturuj nakładkę"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "Widget"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -441,6 +513,12 @@ msgstr "Nadpisanie koloru okna"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "Zresetuj do koloru aplikacji"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid "Widget visibility"
+#~ msgstr "Widoczność widżetu"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "
