@@ -39,7 +39,7 @@ Or visit [store.kde.org/p/2351299](https://store.kde.org/p/2351299).
 ### From .plasmoid file
 
 ```bash
-kpackagetool6 -t Plasma/Applet -i com.comexpertise.plasma.taskmanagercolors-*.plasmoid
+kpackagetool6 -t Plasma/Applet -i com.comexpertise.plasma.taskmanagercolors-<version>.plasmoid
 ```
 
 ### From source
@@ -51,6 +51,16 @@ kpackagetool6 -t Plasma/Applet -i .
 ```
 
 Then right-click your panel → **Add Widgets** → search **"Task Manager Colors"**.
+
+### After updating
+
+If the widget still shows the old UI after an update, restart Plasma shell:
+
+```bash
+systemctl --user restart plasma-plasmashell.service
+```
+
+Or log out and log back in.
 
 ## Configuration
 
