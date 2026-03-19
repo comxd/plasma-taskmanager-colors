@@ -559,6 +559,7 @@ PlasmoidItem {
                         onRemoveAppColor: function(appId) { root.removeAppColor(appId); }
                         onToggleNyan: function(appId, enable) { root.toggleNyan(appId, enable); }
                         onExtractColorFromIcon: function(appId, iconName) { iconExtractor.extractForApp(appId, iconName); }
+                        onResetAllColors: { plasmoid.configuration.appColorMap = "{}"; root.applyColors(); }
 
                         Connections {
                             target: iconExtractor
@@ -576,6 +577,13 @@ PlasmoidItem {
                         onExtractColorForWindow: function(overlay, iconName) { iconExtractor.extractForWindow(overlay, iconName); }
                         onNyanOverlaysChanged: {
                             root.hasNyanOverlays = root.activeOverlays.some(function(o) { return o.isNyan; });
+                        }
+                        onResetWindowOverrides: {
+                            for (let o of root.activeOverlays) {
+                                if (o) o.windowColorOverride = "";
+                            }
+                            root.hasNyanOverlays = false;
+                            root.applyColors();
                         }
 
                         Connections {

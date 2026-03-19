@@ -26,6 +26,7 @@ StackLayout {
     signal removeAppColor(string appId)
     signal toggleNyan(string appId, bool enable)
     signal extractColorFromIcon(string appId, var iconName)
+    signal resetAllColors()
 
     // Connected by root to close picker on extraction complete
     signal extractionComplete()
@@ -163,6 +164,31 @@ StackLayout {
                         opacity: 0.3
                         visible: index < applicationsTab.detectedTasks.length - 1
                     }
+                }
+            }
+
+            // Reset all colors (two-click confirmation)
+            Controls.Button {
+                id: resetButton
+                property bool armed: false
+                Layout.alignment: Qt.AlignRight
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                flat: true
+                icon.name: armed ? "dialog-warning" : "edit-clear-all"
+                text: armed ? i18n("Click again to confirm") : i18n("Reset all colors")
+                onClicked: {
+                    if (armed) {
+                        applicationsTab.resetAllColors();
+                        armed = false;
+                    } else {
+                        armed = true;
+                        resetDisarmTimer.restart();
+                    }
+                }
+                Timer {
+                    id: resetDisarmTimer
+                    interval: 3000
+                    onTriggered: resetButton.armed = false
                 }
             }
         }
