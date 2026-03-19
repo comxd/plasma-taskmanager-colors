@@ -4,11 +4,13 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
 
-Kirigami.FormLayout {
-    id: page
+KCM.SimpleKCM {
+    id: configPage
 
     // UI-bound properties
     property alias cfg_isEnabled: enabledCheck.checked
@@ -40,32 +42,36 @@ Kirigami.FormLayout {
     property bool cfg_minimizedDim
     property bool cfg_minimizedDesaturate
 
-    Controls.CheckBox {
-        id: enabledCheck
-        Kirigami.FormData.label: i18n("General:")
-        text: i18n("Enable color overlays")
-    }
+    Kirigami.FormLayout {
+        id: formLayout
 
-    Controls.Label {
-        Kirigami.FormData.label: i18n("Colors:")
-        text: {
-            try {
-                let map = JSON.parse(cfg_appColorMap);
-                let count = Object.keys(map).length;
-                return i18n("%1 application(s) configured", count);
-            } catch (e) {
-                return i18n("No colors configured");
+        Controls.CheckBox {
+            id: enabledCheck
+            Kirigami.FormData.label: i18n("General:")
+            text: i18n("Enable color overlays")
+        }
+
+        Controls.Label {
+            Kirigami.FormData.label: i18n("Colors:")
+            text: {
+                try {
+                    let map = JSON.parse(cfg_appColorMap);
+                    let count = Object.keys(map).length;
+                    return i18n("%1 application(s) configured", count);
+                } catch (e) {
+                    return i18n("No colors configured");
+                }
             }
         }
-    }
 
-    Item { Kirigami.FormData.isSection: true }
+        Item { Kirigami.FormData.isSection: true }
 
-    Controls.Label {
-        text: i18n("All settings and color management are available in the widget popup. Click the widget icon in the panel to open it.")
-        wrapMode: Text.Wrap
-        width: parent.width
-        color: Kirigami.Theme.disabledTextColor
-        font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+        Controls.Label {
+            Layout.fillWidth: true
+            wrapMode: Text.Wrap
+            text: i18n("All settings and color management are available in the widget popup. Click the widget icon in the panel to open it.")
+            color: Kirigami.Theme.disabledTextColor
+            font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+        }
     }
 }
