@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2026 ComExpertise
     SPDX-License-Identifier: GPL-2.0-or-later
 
-    Inline color picker: 30 presets + used colors reuse + hex input + auto from icon.
+    Inline color picker: 40 presets + used colors reuse + hex input + auto from icon.
     Used by both ApplicationsTab and WindowsTab (with different signal wiring).
 */
 
@@ -33,8 +33,16 @@ Rectangle {
         "#c0392b", "#d35400", "#f39c12", "#27ae60", "#16a085",
         "#2980b9", "#8e44ad", "#c2185b", "#5d4037", "#455a64",
         "#ff6b6b", "#ffa726", "#ffee58", "#66bb6a", "#26c6da",
-        "#42a5f5", "#ab47bc", "#ec407a", "#8d6e63", "#78909c"
+        "#42a5f5", "#ab47bc", "#ec407a", "#8d6e63", "#78909c",
+        "#FFFFFF", "#BDBDBD", "#757575", "#424242", "#212121",
+        "#00BCD4", "#FF00FF", "#CDDC39", "#3F51B5", "#FF5722"
     ]
+
+    function swatchBorder(c) {
+        let darker = Qt.darker(c, 1.3);
+        let lum = 0.299 * darker.r + 0.587 * darker.g + 0.114 * darker.b;
+        return lum > 0.85 ? "#999999" : darker;
+    }
 
     height: pickerColumn.implicitHeight + Kirigami.Units.smallSpacing * 2
     color: Kirigami.Theme.backgroundColor
@@ -91,7 +99,7 @@ Rectangle {
                     background: Rectangle {
                         radius: 3
                         color: parent.modelData.color
-                        border.color: Qt.darker(parent.modelData.color, 1.3)
+                        border.color: colorPicker.swatchBorder(parent.modelData.color)
                         border.width: parent.activeFocus ? 2 : 1
                     }
 
@@ -126,7 +134,7 @@ Rectangle {
                     background: Rectangle {
                         radius: 3
                         color: parent.modelData
-                        border.color: Qt.darker(parent.modelData, 1.3)
+                        border.color: colorPicker.swatchBorder(parent.modelData)
                         border.width: parent.activeFocus ? 2 : 1
                     }
 
