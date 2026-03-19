@@ -122,6 +122,15 @@ StackLayout {
                 }
                 Controls.ItemDelegate {
                     Layout.fillWidth: true
+                    padding: Kirigami.Units.smallSpacing
+                    Kirigami.Theme.colorSet: Kirigami.Theme.View
+                    Kirigami.Theme.inherit: false
+                    background: Rectangle {
+                        color: Kirigami.Theme.backgroundColor
+                        border.color: Kirigami.Theme.separatorColor || Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.2)
+                        border.width: 1
+                        radius: Kirigami.Units.smallSpacing
+                    }
                     contentItem: RowLayout {
                         spacing: Kirigami.Units.smallSpacing
                         Controls.Label {
@@ -130,7 +139,7 @@ StackLayout {
                             elide: Text.ElideRight
                         }
                         Kirigami.Icon {
-                            source: "go-next"
+                            source: "arrow-down"
                             Layout.preferredWidth: Kirigami.Units.iconSizes.small
                             Layout.preferredHeight: Kirigami.Units.iconSizes.small
                         }
@@ -485,7 +494,7 @@ StackLayout {
 
                 RowLayout {
                     Layout.fillWidth: true
-                    Controls.Label { text: i18n("Minimized windows:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 6 }
+                    Controls.Label { text: i18n("Minimized windows:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
                     Controls.ComboBox {
                         id: minimizedModeCombo
                         Layout.fillWidth: true
@@ -522,9 +531,18 @@ StackLayout {
 
                     RowLayout {
                         Layout.fillWidth: true
-                        Controls.Label { text: i18n("Minimized style:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 6 }
+                        Controls.Label { text: i18n("Minimized style:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
                         Controls.ItemDelegate {
                             Layout.fillWidth: true
+                            padding: Kirigami.Units.smallSpacing
+                            Kirigami.Theme.colorSet: Kirigami.Theme.View
+                            Kirigami.Theme.inherit: false
+                            background: Rectangle {
+                                color: Kirigami.Theme.backgroundColor
+                                border.color: Kirigami.Theme.separatorColor || Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.2)
+                                border.width: 1
+                                radius: Kirigami.Units.smallSpacing
+                            }
                             contentItem: RowLayout {
                                 spacing: Kirigami.Units.smallSpacing
                                 Controls.Label {
@@ -533,7 +551,7 @@ StackLayout {
                                     elide: Text.ElideRight
                                 }
                                 Kirigami.Icon {
-                                    source: "go-next"
+                                    source: "arrow-down"
                                     Layout.preferredWidth: Kirigami.Units.iconSizes.small
                                     Layout.preferredHeight: Kirigami.Units.iconSizes.small
                                 }

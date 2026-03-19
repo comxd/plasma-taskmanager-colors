@@ -22,6 +22,22 @@ PlasmoidItem {
     activationTogglesExpanded: true
     Plasmoid.icon: Qt.resolvedUrl("../icons/icon.svg")
 
+    property int pendingTabIndex: -1
+
+    function applyPendingTabIndex() {
+        if (!expanded || pendingTabIndex < 0) return;
+        let rep = fullRepresentationItem;
+        if (!rep || !rep.tabBarRef) return;
+        rep.tabBarRef.currentIndex = pendingTabIndex;
+        pendingTabIndex = -1;
+    }
+
+    onExpandedChanged: {
+        if (expanded) {
+            Qt.callLater(function() { root.applyPendingTabIndex(); });
+        }
+    }
+
     // ── Configuration helpers ──
 
     function getColorMap() {
@@ -536,6 +552,9 @@ PlasmoidItem {
         Layout.minimumWidth: Kirigami.Units.gridUnit * 18
         Layout.minimumHeight: Kirigami.Units.gridUnit * 14
 
+        property alias tabBarRef: tabBar
+        Component.onCompleted: root.applyPendingTabIndex()
+
         ColumnLayout {
             anchors.fill: parent
             spacing: 0
@@ -710,8 +729,9 @@ PlasmoidItem {
         text: i18n("About Task Manager Colors")
         icon.name: "help-about"
         onTriggered: {
+            root.pendingTabIndex = 4;
             root.expanded = true;
-            tabBar.currentIndex = 4;
+            Qt.callLater(function() { root.applyPendingTabIndex(); });
         }
     }
 
