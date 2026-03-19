@@ -429,6 +429,7 @@ PlasmoidItem {
         }
         root.activeOverlays = liveOverlays;
         root.hasNyanOverlays = liveOverlays.some(function(o) { return o.isNyan; });
+        windowList.sort((a, b) => (a.windowTitle || a.appName).localeCompare(b.windowTitle || b.appName));
         root.detectedWindows = windowList;
     }
 
