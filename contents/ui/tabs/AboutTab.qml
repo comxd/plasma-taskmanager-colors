@@ -9,10 +9,24 @@ import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
 
-Item {
+Flickable {
+    id: aboutTab
+
+    contentWidth: width
+    contentHeight: aboutColumn.implicitHeight + aboutColumn.y + Kirigami.Units.largeSpacing * 2
+    clip: true
+    flickableDirection: Flickable.VerticalFlick
+
+    Controls.ScrollBar.vertical: Controls.ScrollBar {
+        id: scrollBar
+        policy: Controls.ScrollBar.AsNeeded
+    }
+
     ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.largeSpacing * 2
+        id: aboutColumn
+        x: Kirigami.Units.largeSpacing * 2
+        y: Kirigami.Units.largeSpacing * 2
+        width: parent.width - x - (scrollBar.visible ? scrollBar.width + Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing * 2)
         spacing: Kirigami.Units.largeSpacing
 
         // ── Header: logo + name/version ──
@@ -176,7 +190,5 @@ Item {
                 onClicked: Qt.openUrlExternally("https://buymeacoffee.com/comxd")
             }
         }
-
-        Item { Layout.fillHeight: true }
     }
 }

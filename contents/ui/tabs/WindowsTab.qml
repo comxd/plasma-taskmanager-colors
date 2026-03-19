@@ -51,13 +51,14 @@ Item {
             Layout.fillHeight: true
             clip: true
             spacing: Kirigami.Units.smallSpacing
+            Controls.ScrollBar.vertical: Controls.ScrollBar { id: winScrollBar; policy: Controls.ScrollBar.AsNeeded }
 
             model: windowsTab.detectedWindows
 
             delegate: RowLayout {
                 required property var modelData
                 required property int index
-                width: windowListView.width
+                width: windowListView.width - (winScrollBar.visible ? winScrollBar.width + Kirigami.Units.smallSpacing : 0)
                 spacing: Kirigami.Units.smallSpacing
 
                 Kirigami.Icon {

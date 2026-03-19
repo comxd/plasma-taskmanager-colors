@@ -53,12 +53,13 @@ Item {
             Layout.fillHeight: true
             clip: true
             spacing: Kirigami.Units.smallSpacing
+            Controls.ScrollBar.vertical: Controls.ScrollBar { id: appScrollBar; policy: Controls.ScrollBar.AsNeeded }
 
             model: applicationsTab.detectedTasks
 
             delegate: RowLayout {
                 required property var modelData
-                width: taskListView.width
+                width: taskListView.width - (appScrollBar.visible ? appScrollBar.width + Kirigami.Units.smallSpacing : 0)
                 spacing: Kirigami.Units.smallSpacing
 
                 Kirigami.Icon {

@@ -11,7 +11,7 @@ import QtQuick.Controls as Controls
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 
-Item {
+Flickable {
     id: nyanTab
 
     // Nyan animation state from root (for preview)
@@ -19,9 +19,21 @@ Item {
     required property int nyanStep
     required property real nyanScroll
 
+    contentWidth: width
+    contentHeight: nyanColumn.implicitHeight + nyanColumn.y + Kirigami.Units.mediumSpacing
+    clip: true
+    flickableDirection: Flickable.VerticalFlick
+
+    Controls.ScrollBar.vertical: Controls.ScrollBar {
+        id: nyanScrollBar
+        policy: Controls.ScrollBar.AsNeeded
+    }
+
     ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.mediumSpacing
+        id: nyanColumn
+        x: Kirigami.Units.mediumSpacing
+        y: Kirigami.Units.mediumSpacing
+        width: parent.width - x - (nyanScrollBar.visible ? nyanScrollBar.width + Kirigami.Units.smallSpacing : Kirigami.Units.mediumSpacing)
         spacing: Kirigami.Units.smallSpacing
 
         Controls.Label {
@@ -196,7 +208,5 @@ Item {
                 }
             }
         }
-
-        Item { Layout.fillHeight: true }
     }
 }
