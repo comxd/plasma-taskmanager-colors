@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-18 03:45+0100\n"
+"POT-Creation-Date: 2026-03-19 02:29+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -112,12 +112,16 @@ msgid "Diagonal ✕"
 msgstr "Diagonal ✕"
 
 #: contents/ui/configGeneral.qml
-msgid "General:"
-msgstr "Geral:"
+msgid "Enable:"
+msgstr "Ativar:"
 
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
 msgstr "Ativar sobreposições de cores"
+
+#: contents/ui/configGeneral.qml
+msgid "Status"
+msgstr "Estado"
 
 #: contents/ui/configGeneral.qml
 msgid "Colors:"
@@ -132,10 +136,16 @@ msgid "No colors configured"
 msgstr "Nenhuma cor configurada"
 
 #: contents/ui/configGeneral.qml
+msgid "Help"
+msgstr "Ajuda"
+
+#: contents/ui/configGeneral.qml
 msgid ""
 "All settings and color management are available in the widget popup. Click "
 "the widget icon in the panel to open it."
-msgstr "Todas as configurações e o gerenciamento de cores estão disponíveis no popup do widget. Clique no ícone do widget no painel para abri-lo."
+msgstr ""
+"Todas as configurações e o gerenciamento de cores estão disponíveis no popup "
+"do widget. Clique no ícone do widget no painel para abri-lo."
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
 msgid "Task Manager Colors"
@@ -543,3 +553,6 @@ msgstr "Redefinir para cor do aplicativo"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Redefinir substituições de janela"
+
+#~ msgid "General:"
+#~ msgstr "Geral:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-18 03:45+0100\n"
+"POT-Creation-Date: 2026-03-19 02:29+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -112,12 +112,16 @@ msgid "Diagonal ✕"
 msgstr "Diagonaal ✕"
 
 #: contents/ui/configGeneral.qml
-msgid "General:"
-msgstr "Algemeen:"
+msgid "Enable:"
+msgstr "Inschakelen:"
 
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
 msgstr "Kleuroverlays inschakelen"
+
+#: contents/ui/configGeneral.qml
+msgid "Status"
+msgstr "Status"
 
 #: contents/ui/configGeneral.qml
 msgid "Colors:"
@@ -132,10 +136,16 @@ msgid "No colors configured"
 msgstr "Geen kleuren geconfigureerd"
 
 #: contents/ui/configGeneral.qml
+msgid "Help"
+msgstr "Hulp"
+
+#: contents/ui/configGeneral.qml
 msgid ""
 "All settings and color management are available in the widget popup. Click "
 "the widget icon in the panel to open it."
-msgstr "Alle instellingen en kleurbeheer zijn beschikbaar in het widget-popup. Klik op het widgetpictogram in het paneel om het te openen."
+msgstr ""
+"Alle instellingen en kleurbeheer zijn beschikbaar in het widget-popup. Klik "
+"op het widgetpictogram in het paneel om het te openen."
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
 msgid "Task Manager Colors"
@@ -541,3 +551,6 @@ msgstr "Herstellen naar app-kleur"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Vensteroverschrijvingen resetten"
+
+#~ msgid "General:"
+#~ msgstr "Algemeen:"

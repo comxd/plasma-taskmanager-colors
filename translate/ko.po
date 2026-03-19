@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-18 03:45+0100\n"
+"POT-Creation-Date: 2026-03-19 02:29+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -112,12 +112,16 @@ msgid "Diagonal ✕"
 msgstr "대각선 ✕"
 
 #: contents/ui/configGeneral.qml
-msgid "General:"
-msgstr "일반:"
+msgid "Enable:"
+msgstr "활성화:"
 
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
 msgstr "색상 오버레이 활성화"
+
+#: contents/ui/configGeneral.qml
+msgid "Status"
+msgstr "상태"
 
 #: contents/ui/configGeneral.qml
 msgid "Colors:"
@@ -132,10 +136,16 @@ msgid "No colors configured"
 msgstr "구성된 색상 없음"
 
 #: contents/ui/configGeneral.qml
+msgid "Help"
+msgstr "도움말"
+
+#: contents/ui/configGeneral.qml
 msgid ""
 "All settings and color management are available in the widget popup. Click "
 "the widget icon in the panel to open it."
-msgstr "모든 설정과 색상 관리는 위젯 팝업에서 사용할 수 있습니다. 패널의 위젯 아이콘을 클릭하여 여세요."
+msgstr ""
+"모든 설정과 색상 관리는 위젯 팝업에서 사용할 수 있습니다. 패널의 위젯 아이콘"
+"을 클릭하여 여세요."
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
 msgid "Task Manager Colors"
@@ -530,3 +540,6 @@ msgstr "앱 색상으로 초기화"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "창 재정의 초기화"
+
+#~ msgid "General:"
+#~ msgstr "일반:"
