@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:05+0100\n"
+"POT-Creation-Date: 2026-03-17 03:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,6 +227,10 @@ msgstr ""
 
 #: contents/ui/tabs/AboutTab.qml
 msgid "Per-application and per-window color overlays for the Plasma task manager."
+msgstr ""
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Enjoying this plasmoid? Support its development!"
 msgstr ""
 
 #: contents/ui/tabs/AboutTab.qml

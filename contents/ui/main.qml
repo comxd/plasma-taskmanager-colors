@@ -643,7 +643,16 @@ PlasmoidItem {
             hideWidgetAction.checked = plasmoid.configuration.hideWidget;
         }
     }
-    Plasmoid.contextualActions: [hideWidgetAction]
+    property PlasmaCore.Action aboutAction: PlasmaCore.Action {
+        text: i18n("About Task Manager Colors")
+        icon.name: "help-about"
+        onTriggered: {
+            root.expanded = true;
+            tabBar.currentIndex = 4;
+        }
+    }
+
+    Plasmoid.contextualActions: [hideWidgetAction, aboutAction]
 
     toolTipMainText: i18n("Task Manager Colors")
     toolTipSubText: {

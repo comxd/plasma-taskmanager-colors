@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:05+0100\n"
+"POT-Creation-Date: 2026-03-17 03:24+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -229,6 +229,10 @@ msgid ""
 msgstr ""
 "Sobreposições de cor por aplicativo e por janela para o gerenciador de "
 "tarefas do Plasma."
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Enjoying this plasmoid? Support its development!"
+msgstr "Gostando deste plasmoide? Apoie seu desenvolvimento!"
 
 #: contents/ui/tabs/AboutTab.qml
 msgid ""

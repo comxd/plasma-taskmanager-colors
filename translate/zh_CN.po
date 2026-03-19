@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:05+0100\n"
+"POT-Creation-Date: 2026-03-17 03:24+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -227,6 +227,10 @@ msgstr "版本 %1"
 msgid ""
 "Per-application and per-window color overlays for the Plasma task manager."
 msgstr "为 Plasma 任务管理器提供按应用和按窗口的颜色叠加。"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Enjoying this plasmoid? Support its development!"
+msgstr "喜欢这个小部件？支持它的开发！"
 
 #: contents/ui/tabs/AboutTab.qml
 msgid ""
