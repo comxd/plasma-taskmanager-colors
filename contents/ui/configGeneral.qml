@@ -86,8 +86,6 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             wrapMode: Text.Wrap
             text: i18n("All settings and color management are available in the widget popup. Click the widget icon in the panel to open it.")
-            color: Kirigami.Theme.disabledTextColor
-            font.pixelSize: Kirigami.Theme.smallFont.pixelSize
         }
     }
 }
