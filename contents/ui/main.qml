@@ -276,7 +276,17 @@ PlasmoidItem {
         let autoBorderW = plasmoid.configuration.autoBorderWidth;
         let borderW = plasmoid.configuration.borderWidth;
         let bgOpac = plasmoid.configuration.backgroundOpacity;
-        let focusOverride = plasmoid.configuration.showOnFocus;
+        let focMode = plasmoid.configuration.focusedMode || "background";
+        let focColorMode = (focMode === "custom") ? (plasmoid.configuration.focusedColorMode || "") : "";
+        if (focColorMode && root.isVertical) {
+            let swap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
+                         "top+bottom": "left+right", "left+right": "top+bottom" };
+            if (swap[focColorMode]) focColorMode = swap[focColorMode];
+        }
+        let focAutoBorderW = plasmoid.configuration.focusedAutoBorderWidth;
+        let focBorderW = plasmoid.configuration.focusedBorderWidth;
+        let focOpacity = plasmoid.configuration.focusedOpacity;
+        let focRadius = plasmoid.configuration.focusedBorderRadius;
         let minMode = plasmoid.configuration.minimizedMode || "normal";
         let minColorMode = (minMode === "custom") ? (plasmoid.configuration.minimizedColorMode || "") : "";
         if (minColorMode && root.isVertical) {
@@ -286,6 +296,10 @@ PlasmoidItem {
         }
         let minDim = plasmoid.configuration.minimizedDim || false;
         let minDesaturate = plasmoid.configuration.minimizedDesaturate || false;
+        let minAutoBorderW = plasmoid.configuration.minimizedAutoBorderWidth;
+        let minBorderW = plasmoid.configuration.minimizedBorderWidth;
+        let minOpacity = plasmoid.configuration.minimizedOpacity;
+        let minRadius = plasmoid.configuration.minimizedBorderRadius;
 
         let uniqueTasks = {};
         for (let t of tasks) {
@@ -357,20 +371,42 @@ PlasmoidItem {
 
             let svg = findFrameSvg(t.item);
 
+            function autoMarginFor(m) {
+                if (!svg) return 0;
+                if (m === "bottom") return svg.margins.bottom;
+                if (m === "left" || m === "left+right") return svg.margins.left;
+                if (m === "right") return svg.margins.right;
+                if (m === "center" || m === "center-h") return Math.min(svg.margins.top, svg.margins.left);
+                return svg.margins.top;
+            }
+
             let effectiveBorderW = borderW;
             if (autoBorderW && svg) {
-                function autoMarginFor(m) {
-                    if (m === "bottom") return svg.margins.bottom;
-                    if (m === "left" || m === "left+right") return svg.margins.left;
-                    if (m === "right") return svg.margins.right;
-                    if (m === "center" || m === "center-h") return Math.min(svg.margins.top, svg.margins.left);
-                    return svg.margins.top;
-                }
                 let margin = autoMarginFor(mode);
                 if (minColorMode) margin = Math.max(margin, autoMarginFor(minColorMode));
                 if (margin > 0) effectiveBorderW = margin;
             }
             effectiveBorderW = Math.min(effectiveBorderW, root.computedMaxBorder);
+
+            let effectiveMinBorderW = -1;
+            if (minColorMode && minColorMode !== "background") {
+                effectiveMinBorderW = minBorderW;
+                if (minAutoBorderW && svg) {
+                    let minMargin = autoMarginFor(minColorMode);
+                    if (minMargin > 0) effectiveMinBorderW = minMargin;
+                }
+                effectiveMinBorderW = Math.min(effectiveMinBorderW, root.computedMaxBorder);
+            }
+
+            let effectiveFocBorderW = -1;
+            if (focColorMode && focColorMode !== "background") {
+                effectiveFocBorderW = focBorderW;
+                if (focAutoBorderW && svg) {
+                    let focMargin = autoMarginFor(focColorMode);
+                    if (focMargin > 0) effectiveFocBorderW = focMargin;
+                }
+                effectiveFocBorderW = Math.min(effectiveFocBorderW, root.computedMaxBorder);
+            }
 
             let effectiveRadius = cfgRadius >= 0 ? cfgRadius : 0;
             if (cfgRadius < 0 && svg) {
@@ -390,8 +426,15 @@ PlasmoidItem {
                 colorMode: mode,
                 borderRadius: effectiveRadius,
                 borderSize: effectiveBorderW,
+                minimizedBorderSize: effectiveMinBorderW,
                 bgOpacity: bgOpac,
-                focusOverride: focusOverride,
+                focusedMode: focMode,
+                focusedColorMode: focColorMode,
+                focusedBorderSize: effectiveFocBorderW,
+                focusedOpacity: focOpacity,
+                focusedBorderRadius: focRadius >= 0 ? Math.min(focRadius, root.computedMaxRadius) : -1,
+                minimizedOpacity: minOpacity,
+                minimizedBorderRadius: minRadius >= 0 ? Math.min(minRadius, root.computedMaxRadius) : -1,
                 panelIsVertical: root.isVertical,
                 windowTitle: t.windowTitle || "",
                 isMinimized: t.isMinimized,
@@ -460,13 +503,22 @@ PlasmoidItem {
         target: plasmoid.configuration
         function onAppColorMapChanged() { applyDebounce.restart(); }
         function onColorModeChanged() { applyDebounce.restart(); }
-        function onShowOnFocusChanged() { applyDebounce.restart(); }
+        function onFocusedModeChanged() { applyDebounce.restart(); }
+        function onFocusedColorModeChanged() { applyDebounce.restart(); }
+        function onFocusedBorderWidthChanged() { applyDebounce.restart(); }
+        function onFocusedAutoBorderWidthChanged() { applyDebounce.restart(); }
+        function onFocusedOpacityChanged() { applyDebounce.restart(); }
+        function onFocusedBorderRadiusChanged() { applyDebounce.restart(); }
+        function onMinimizedOpacityChanged() { applyDebounce.restart(); }
+        function onMinimizedBorderRadiusChanged() { applyDebounce.restart(); }
         function onBorderRadiusChanged() { applyDebounce.restart(); }
         function onPinnedBehaviorChanged() { applyDebounce.restart(); }
         function onMinimizedModeChanged() { applyDebounce.restart(); }
         function onMinimizedColorModeChanged() { applyDebounce.restart(); }
         function onMinimizedDimChanged() { applyDebounce.restart(); }
         function onMinimizedDesaturateChanged() { applyDebounce.restart(); }
+        function onMinimizedBorderWidthChanged() { applyDebounce.restart(); }
+        function onMinimizedAutoBorderWidthChanged() { applyDebounce.restart(); }
         function onAutoBorderWidthChanged() { applyDebounce.restart(); }
         function onBorderWidthChanged() { applyDebounce.restart(); }
         function onRainbowSpeedChanged() { applyDebounce.restart(); }

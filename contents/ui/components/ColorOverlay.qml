@@ -16,9 +16,16 @@ Item {
     property color overlayColor: "transparent"
     property string colorMode: "frame"
     property int borderSize: 2
+    property int minimizedBorderSize: -1
     property int borderRadius: 0
     property real bgOpacity: 0.35
-    property bool focusOverride: false
+    property string focusedMode: "background"
+    property string focusedColorMode: ""
+    property int focusedBorderSize: -1
+    property real focusedOpacity: -1
+    property int focusedBorderRadius: -1
+    property real minimizedOpacity: -1
+    property int minimizedBorderRadius: -1
     property bool panelIsVertical: false
 
     property bool isMinimized: false
@@ -74,11 +81,41 @@ Item {
         return effectiveColor;
     }
 
-    // Effective color mode (switches to minimizedColorMode when minimized + custom)
+    // Effective color mode (focused takes priority over minimized)
     property string effectiveMode: {
+        if (taskIsActive && focusedMode === "custom" && focusedColorMode !== "")
+            return focusedColorMode;
+        if (taskIsActive && focusedMode === "background")
+            return "background";
         if (isMinimized && minimizedMode === "custom" && minimizedColorMode !== "")
             return minimizedColorMode;
         return colorMode;
+    }
+
+    property int effectiveBorderSize: {
+        if (taskIsActive && focusedMode === "custom" && focusedBorderSize >= 0)
+            return focusedBorderSize;
+        if (isMinimized && minimizedMode === "custom" && minimizedBorderSize >= 0)
+            return minimizedBorderSize;
+        return borderSize;
+    }
+
+    property real effectiveOpacity: {
+        if (taskIsActive && focusedMode === "background")
+            return 0.8;
+        if (taskIsActive && focusedMode === "custom")
+            return focusedOpacity >= 0 ? focusedOpacity : 0.8;
+        if (isMinimized && minimizedMode === "custom" && minimizedOpacity >= 0)
+            return minimizedOpacity;
+        return bgOpacity;
+    }
+
+    property int effectiveBorderRadius: {
+        if (taskIsActive && focusedMode === "custom" && focusedBorderRadius >= 0)
+            return focusedBorderRadius;
+        if (isMinimized && minimizedMode === "custom" && minimizedBorderRadius >= 0)
+            return minimizedBorderRadius;
+        return borderRadius;
     }
 
     // Derived helpers from effective color mode
@@ -105,8 +142,10 @@ Item {
     }
     // Detect if this task currently has focus (reactive binding)
     property bool taskIsActive: taskDelegate?.model?.IsActive ?? false
-    property bool focusEnhanced: focusOverride && taskIsActive
-    property bool hiddenByFocus: !focusOverride && taskIsActive
+    property bool focusEnhanced: taskIsActive && focusedMode !== "hide"
+    property bool hiddenByFocus: taskIsActive && focusedMode === "hide"
+    property bool focusIsBackground: taskIsActive && focusedMode === "background"
+    property bool focusIsCustom: taskIsActive && focusedMode === "custom"
 
     // Set to true when overlay was created without an app-level color
     property bool hasAppColor: true
@@ -121,13 +160,13 @@ Item {
     // Background fill (hidden when nyan rainbow canvas is active)
     Rectangle {
         anchors.fill: parent
-        radius: overlay.borderRadius
-        visible: (overlay.hasBackground || overlay.focusEnhanced) && !overlay.isNyan
+        radius: overlay.effectiveBorderRadius
+        visible: (overlay.hasBackground || overlay.focusIsBackground) && !overlay.isNyan
         color: Qt.rgba(
             overlay.displayColor.r,
             overlay.displayColor.g,
             overlay.displayColor.b,
-            (overlay.focusEnhanced ? 0.8 : overlay.bgOpacity) * overlay.minimizedDimFactor
+            overlay.effectiveOpacity * overlay.minimizedDimFactor
         )
         Behavior on color { ColorAnimation { duration: 200 } }
     }
@@ -135,40 +174,40 @@ Item {
     // ── Nyan Cat rainbow: background (flat mode) ──
     NyanFlat {
         anchors.fill: parent
-        visible: overlay.isNyan && overlay.nyanStyle === "flat" && (overlay.hasBackground || overlay.focusEnhanced)
+        visible: overlay.isNyan && overlay.nyanStyle === "flat" && (overlay.hasBackground || overlay.focusIsBackground)
         nyanColors: overlay.effectiveNyanColors
         nyanStep: overlay.nyanStep
         nyanWaveOffset: overlay.nyanWaveOffset
-        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
-        focusEnhanced: overlay.focusEnhanced
-        borderRadius: overlay.borderRadius
+        bgOpacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
+        focusEnhanced: overlay.focusIsBackground
+        borderRadius: overlay.effectiveBorderRadius
     }
 
     // ── Nyan Cat rainbow: background (wave mode) ──
     NyanWaveClip {
         anchors.fill: parent
-        visible: overlay.isNyan && overlay.nyanStyle === "wave" && (overlay.hasBackground || overlay.focusEnhanced)
+        visible: overlay.isNyan && overlay.nyanStyle === "wave" && (overlay.hasBackground || overlay.focusIsBackground)
         nyanColors: overlay.effectiveNyanColors
         nyanScroll: overlay.nyanScroll
         nyanWaveOffset: overlay.nyanWaveOffset
-        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
-        focusEnhanced: overlay.focusEnhanced
+        bgOpacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
+        focusEnhanced: overlay.focusIsBackground
     }
 
     // ── Nyan Cat rainbow: background (original mode) ──
     NyanOriginal {
         anchors.fill: parent
-        visible: overlay.isNyan && overlay.nyanStyle === "original" && (overlay.hasBackground || overlay.focusEnhanced)
+        visible: overlay.isNyan && overlay.nyanStyle === "original" && (overlay.hasBackground || overlay.focusIsBackground)
         nyanColors: overlay.effectiveNyanColors
         nyanStep: overlay.nyanStep
-        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
-        focusEnhanced: overlay.focusEnhanced
+        bgOpacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
+        focusEnhanced: overlay.focusIsBackground
     }
 
     // ── Nyan Cat rainbow: borders (Canvas + clip) ──
     NyanBorderCanvas {
         anchors.fill: parent
-        visible: overlay.isNyan && (overlay.hasFrame || overlay.hasTop || overlay.hasBottom || overlay.hasLeft || overlay.hasRight || overlay.hasCenter || overlay.hasCenterH || overlay.hasDiag || overlay.focusEnhanced)
+        visible: overlay.isNyan && (overlay.hasFrame || overlay.hasTop || overlay.hasBottom || overlay.hasLeft || overlay.hasRight || overlay.hasCenter || overlay.hasCenterH || overlay.hasDiag || overlay.focusIsBackground)
 
         hasFrame: overlay.hasFrame
         hasTop: overlay.hasTop
@@ -180,28 +219,28 @@ Item {
         hasDiag: overlay.hasDiag
         hasDiagDown: overlay.hasDiagDown
         hasDiagUp: overlay.hasDiagUp
-        focusEnhanced: overlay.focusEnhanced
+        focusEnhanced: overlay.focusIsBackground
         panelIsVertical: overlay.panelIsVertical
-        borderSize: overlay.borderSize
+        borderSize: overlay.effectiveBorderSize
 
         nyanStep: overlay.nyanStep
         nyanScroll: overlay.nyanScroll
         nyanStyle: overlay.nyanStyle
         nyanWaveOffset: overlay.nyanWaveOffset
         nyanColors: overlay.effectiveNyanColors
-        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        bgOpacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
     }
 
     // ── Regular color rendering ──
 
     Rectangle {
         anchors.fill: parent
-        radius: overlay.borderRadius
-        visible: overlay.hasFrame && !overlay.focusEnhanced && !overlay.isNyan
+        radius: overlay.effectiveBorderRadius
+        visible: overlay.hasFrame && !overlay.focusIsBackground && !overlay.isNyan
         color: "transparent"
         border.color: overlay.displayColor
-        border.width: overlay.borderSize
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        border.width: overlay.effectiveBorderSize
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on border.color { ColorAnimation { duration: 200 } }
     }
 
@@ -209,10 +248,10 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: parent.top
-        height: overlay.borderSize
-        visible: ((overlay.focusEnhanced && !overlay.panelIsVertical) || (overlay.hasTop && !overlay.hasFrame)) && !overlay.isNyan
+        height: overlay.effectiveBorderSize
+        visible: ((overlay.focusIsBackground && !overlay.panelIsVertical) || (overlay.hasTop && !overlay.hasFrame)) && !overlay.isNyan
         color: overlay.displayColor
-        opacity: (overlay.focusEnhanced ? 0.8 : overlay.bgOpacity) * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -220,10 +259,10 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        height: overlay.borderSize
-        visible: overlay.hasBottom && !overlay.hasFrame && !overlay.focusEnhanced && !overlay.isNyan
+        height: overlay.effectiveBorderSize
+        visible: overlay.hasBottom && !overlay.hasFrame && !overlay.focusIsBackground && !overlay.isNyan
         color: overlay.displayColor
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -231,10 +270,10 @@ Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.left: parent.left
-        width: overlay.borderSize
-        visible: ((overlay.focusEnhanced && overlay.panelIsVertical) || (overlay.hasLeft && !overlay.hasFrame && !overlay.focusEnhanced)) && !overlay.isNyan
+        width: overlay.effectiveBorderSize
+        visible: ((overlay.focusIsBackground && overlay.panelIsVertical) || (overlay.hasLeft && !overlay.hasFrame && !overlay.focusIsBackground)) && !overlay.isNyan
         color: overlay.displayColor
-        opacity: (overlay.focusEnhanced ? 0.8 : overlay.bgOpacity) * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -242,10 +281,10 @@ Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.right: parent.right
-        width: overlay.borderSize
-        visible: overlay.hasRight && !overlay.hasFrame && !overlay.focusEnhanced && !overlay.isNyan
+        width: overlay.effectiveBorderSize
+        visible: overlay.hasRight && !overlay.hasFrame && !overlay.focusIsBackground && !overlay.isNyan
         color: overlay.displayColor
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -254,20 +293,20 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        width: overlay.borderSize
+        width: overlay.effectiveBorderSize
         visible: overlay.hasCenter && !overlay.panelIsVertical && !overlay.isNyan
         color: overlay.displayColor
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
     Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.right: parent.right
-        height: overlay.borderSize
+        height: overlay.effectiveBorderSize
         visible: overlay.hasCenter && overlay.panelIsVertical && !overlay.isNyan
         color: overlay.displayColor
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -276,20 +315,20 @@ Item {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.right: parent.right
-        height: overlay.borderSize
+        height: overlay.effectiveBorderSize
         visible: overlay.hasCenterH && !overlay.panelIsVertical && !overlay.isNyan
         color: overlay.displayColor
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
     Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        width: overlay.borderSize
+        width: overlay.effectiveBorderSize
         visible: overlay.hasCenterH && overlay.panelIsVertical && !overlay.isNyan
         color: overlay.displayColor
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -297,12 +336,12 @@ Item {
     Canvas {
         id: diagCanvas
         anchors.fill: parent
-        visible: overlay.hasDiag && !overlay.focusEnhanced && !overlay.isNyan
-        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
+        visible: overlay.hasDiag && !overlay.focusIsBackground && !overlay.isNyan
+        opacity: overlay.effectiveOpacity * overlay.minimizedDimFactor
 
         onVisibleChanged: if (visible) requestPaint()
         property color diagColor: overlay.displayColor
-        property int diagWidth: overlay.borderSize
+        property int diagWidth: overlay.effectiveBorderSize
         property string diagMode: overlay.effectiveMode
         onDiagColorChanged: requestPaint()
         onDiagWidthChanged: requestPaint()

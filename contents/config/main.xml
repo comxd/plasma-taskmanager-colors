@@ -24,12 +24,40 @@
     <entry name="borderWidth" type="Int">
       <default>2</default>
     </entry>
+    <!-- Separate border width for custom minimized mode (-1 = Auto from theme) -->
+    <entry name="minimizedAutoBorderWidth" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="minimizedBorderWidth" type="Int">
+      <default>2</default>
+    </entry>
     <entry name="backgroundOpacity" type="Double">
       <default>0.55</default>
     </entry>
-    <!-- Show color overlay even when task has focus (above Plasma's highlight) -->
-    <entry name="showOnFocus" type="Bool">
+    <!-- Focused window mode: hide/background/custom -->
+    <entry name="focusedMode" type="String">
+      <default>background</default>
+    </entry>
+    <entry name="focusedColorMode" type="String">
+      <default></default>
+    </entry>
+    <entry name="focusedAutoBorderWidth" type="Bool">
       <default>true</default>
+    </entry>
+    <entry name="focusedBorderWidth" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="focusedOpacity" type="Double">
+      <default>-1</default>
+    </entry>
+    <entry name="focusedBorderRadius" type="Int">
+      <default>-1</default>
+    </entry>
+    <entry name="minimizedOpacity" type="Double">
+      <default>-1</default>
+    </entry>
+    <entry name="minimizedBorderRadius" type="Int">
+      <default>-1</default>
     </entry>
     <!-- always: color pinned+running, runningOnly: only when window is open -->
     <entry name="pinnedBehavior" type="String">
