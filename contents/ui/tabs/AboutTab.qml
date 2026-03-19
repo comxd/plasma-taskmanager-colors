@@ -13,7 +13,7 @@ Flickable {
     id: aboutTab
 
     contentWidth: width
-    contentHeight: aboutColumn.implicitHeight + aboutColumn.y + Kirigami.Units.largeSpacing * 2
+    contentHeight: Math.max(aboutColumn.implicitHeight, height)
     clip: true
     flickableDirection: Flickable.VerticalFlick
 
@@ -24,127 +24,116 @@ Flickable {
 
     ColumnLayout {
         id: aboutColumn
-        x: Kirigami.Units.largeSpacing * 2
-        y: Kirigami.Units.largeSpacing * 2
-        width: parent.width - x - (scrollBar.visible ? scrollBar.width + Kirigami.Units.smallSpacing : Kirigami.Units.largeSpacing * 2)
+        width: parent.width - (scrollBar.visible ? scrollBar.width : 0)
+        height: Math.max(implicitHeight, aboutTab.height)
         spacing: Kirigami.Units.largeSpacing
 
-        // ── Header: logo + name/version ──
-        RowLayout {
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.largeSpacing
+        // ════════════════════════════════════════
+        // ── Section 1: Header ──
+        // ════════════════════════════════════════
 
-            Kirigami.Icon {
-                source: Qt.resolvedUrl("../../icons/logo.svg")
-                Layout.preferredWidth: Kirigami.Units.iconSizes.huge
-                Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+        Rectangle {
+            id: headerBlock
+            Layout.fillWidth: true
+            implicitHeight: headerRow.implicitHeight + Kirigami.Units.largeSpacing * 4 + accentStrip.height
+
+            Kirigami.Theme.colorSet: Kirigami.Theme.Header
+            Kirigami.Theme.inherit: false
+
+            color: Kirigami.Theme.backgroundColor
+            radius: Kirigami.Units.smallSpacing
+
+            // Mask top corners to keep them flat (edge-to-edge)
+            Rectangle {
+                anchors.top: parent.top
+                anchors.left: parent.left
+                anchors.right: parent.right
+                height: parent.radius
+                color: parent.color
             }
 
-            ColumnLayout {
-                spacing: 0
-                Controls.Label {
-                    text: i18n("Task Manager Colors")
-                    font.bold: true
-                    font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.6
+            RowLayout {
+                id: headerRow
+                anchors.left: parent.left
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.verticalCenterOffset: -Math.round(accentStrip.height / 2)
+                anchors.leftMargin: Kirigami.Units.largeSpacing * 2
+                spacing: Kirigami.Units.largeSpacing * 2
+
+                Kirigami.Icon {
+                    source: Qt.resolvedUrl("../../icons/logo.svg")
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.huge
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.huge
+                    Layout.alignment: Qt.AlignVCenter
                 }
-                Controls.Label {
-                    text: i18n("Version %1", Plasmoid.metaData.version || "1.0.0")
-                    color: Kirigami.Theme.disabledTextColor
-                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+
+                ColumnLayout {
+                    spacing: 0
+                    Layout.alignment: Qt.AlignVCenter
+
+                    Controls.Label {
+                        text: i18n("Task Manager Colors")
+                        font.bold: true
+                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.6
+                        color: Kirigami.Theme.textColor
+                    }
+                    Controls.Label {
+                        text: i18n("Version %1", Plasmoid.metaData.version || "1.0.0")
+                        color: Kirigami.Theme.disabledTextColor
+                        font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    }
+
+                    Item { height: Kirigami.Units.smallSpacing }
+
+                    Controls.Label {
+                        text: "David DIVERRES — <a href=\"mailto:david@comexpertise.com\">david@comexpertise.com</a>"
+                        font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                        color: Kirigami.Theme.disabledTextColor
+                        onLinkActivated: (link) => Qt.openUrlExternally(link)
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                            acceptedButtons: Qt.NoButton
+                        }
+                    }
                 }
+            }
+
+            // Accent strip at the bottom
+            Rectangle {
+                id: accentStrip
+                anchors.bottom: parent.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.bottomMargin: parent.radius
+                height: 3
+                color: Kirigami.Theme.highlightColor
             }
         }
 
-        Item { height: Kirigami.Units.largeSpacing }
+        // ════════════════════════════════════════
+        // ── Section 2: Body ──
+        // ════════════════════════════════════════
 
-        // ── Description ──
         Controls.Label {
             text: i18n("Per-application and per-window color overlays for the Plasma task manager.")
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
             Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing * 2
+            Layout.rightMargin: Kirigami.Units.largeSpacing * 2
         }
 
-        Item { height: Kirigami.Units.largeSpacing }
+        Item { height: Kirigami.Units.largeSpacing; width: 1 }
 
-        // ── Author card ──
-        Rectangle {
-            Layout.preferredWidth: authorColumn.implicitWidth + Kirigami.Units.largeSpacing * 4
-            implicitHeight: authorColumn.implicitHeight + Kirigami.Units.largeSpacing * 4
-            Layout.alignment: Qt.AlignHCenter
-            radius: Kirigami.Units.smallSpacing
-            color: Qt.rgba(
-                Kirigami.Theme.backgroundColor.r,
-                Kirigami.Theme.backgroundColor.g,
-                Kirigami.Theme.backgroundColor.b,
-                0.5
-            )
-            border.color: Qt.rgba(
-                Kirigami.Theme.textColor.r,
-                Kirigami.Theme.textColor.g,
-                Kirigami.Theme.textColor.b,
-                0.08
-            )
-            border.width: 1
-
-            ColumnLayout {
-                id: authorColumn
-                anchors.centerIn: parent
-                spacing: 2
-
-                Controls.Label {
-                    text: "David DIVERRES"
-                    font.bold: true
-                    Layout.alignment: Qt.AlignHCenter
-                }
-                Controls.Label {
-                    text: "<a href=\"mailto:david@comexpertise.com\">david@comexpertise.com</a>"
-                    onLinkActivated: (link) => Qt.openUrlExternally(link)
-                    Layout.alignment: Qt.AlignHCenter
-                    MouseArea {
-                        anchors.fill: parent
-                        cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-                        acceptedButtons: Qt.NoButton
-                    }
-                }
-                Controls.Label {
-                    text: "<a href=\"https://comexpertise.com\">comexpertise.com</a>"
-                    onLinkActivated: (link) => Qt.openUrlExternally(link)
-                    Layout.alignment: Qt.AlignHCenter
-                    MouseArea {
-                        anchors.fill: parent
-                        cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-                        acceptedButtons: Qt.NoButton
-                    }
-                }
-                Controls.Label {
-                    text: "<a href=\"https://store.kde.org/p/2351299\">KDE Store</a>"
-                    onLinkActivated: (link) => Qt.openUrlExternally(link)
-                    Layout.alignment: Qt.AlignHCenter
-                    MouseArea {
-                        anchors.fill: parent
-                        cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-                        acceptedButtons: Qt.NoButton
-                    }
-                }
-                Controls.Label {
-                    text: "© 2026 ComExpertise · GPL-2.0-or-later"
-                    color: Kirigami.Theme.disabledTextColor
-                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
-                    Layout.alignment: Qt.AlignHCenter
-                }
-            }
-        }
-
-        Item { height: Kirigami.Units.largeSpacing }
-
-        // ── Buy me a coffee ──
         Controls.Label {
             text: i18n("Enjoying this plasmoid? Support its development!")
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
             Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing * 2
+            Layout.rightMargin: Kirigami.Units.largeSpacing * 2
         }
 
         Controls.Label {
@@ -154,6 +143,8 @@ Flickable {
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
             Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing * 2
+            Layout.rightMargin: Kirigami.Units.largeSpacing * 2
         }
 
         Rectangle {
@@ -188,6 +179,56 @@ Flickable {
                 hoverEnabled: true
                 cursorShape: Qt.PointingHandCursor
                 onClicked: Qt.openUrlExternally("https://buymeacoffee.com/comxd")
+            }
+        }
+
+        // ════════════════════════════════════════
+        // ── Section 3: Footer (pushed to bottom) ──
+        // ════════════════════════════════════════
+
+        Item { Layout.fillHeight: true }
+
+        Rectangle {
+            Layout.fillWidth: true
+            implicitHeight: footerColumn.implicitHeight + Kirigami.Units.largeSpacing * 2
+            color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.05)
+            radius: Kirigami.Units.smallSpacing
+
+            // Mask bottom corners to keep them flat (edge-to-edge)
+            Rectangle {
+                anchors.bottom: parent.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+                height: parent.radius
+                color: parent.color
+            }
+
+            ColumnLayout {
+                id: footerColumn
+                anchors.centerIn: parent
+                spacing: 2
+
+                Controls.Label {
+                    text: "<a href=\"https://comexpertise.com\">comexpertise.com</a> · <a href=\"https://store.kde.org/p/2351299\">KDE Store</a>"
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    horizontalAlignment: Text.AlignHCenter
+                    onLinkActivated: (link) => Qt.openUrlExternally(link)
+                    Layout.alignment: Qt.AlignHCenter
+                    MouseArea {
+                        anchors.fill: parent
+                        cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                        acceptedButtons: Qt.NoButton
+                    }
+                }
+
+                Controls.Label {
+                    text: "© 2026 ComExpertise · GPL-2.0-or-later"
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    horizontalAlignment: Text.AlignHCenter
+                    Layout.alignment: Qt.AlignHCenter
+                }
             }
         }
     }
