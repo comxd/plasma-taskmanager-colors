@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 16:01+0100\n"
+"POT-Creation-Date: 2026-03-18 03:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,8 +25,8 @@ msgstr ""
 msgid "Pick a color"
 msgstr ""
 
-#: contents/ui/components/ColorPicker.qml
-msgid "Cancel"
+#: contents/ui/components/ColorPicker.qml contents/ui/components/ModePicker.qml
+msgid "Back"
 msgstr ""
 
 #: contents/ui/components/ColorPicker.qml
@@ -42,70 +42,74 @@ msgid "Auto (from icon)"
 msgstr ""
 
 #: contents/ui/components/ColorPicker.qml
-msgid "OK"
+msgid "Nyan Cat (active)"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml
-msgid "Back"
+#: contents/ui/components/ColorPicker.qml contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr ""
+
+#: contents/ui/components/ColorPicker.qml
+msgid "OK"
 msgstr ""
 
 #: contents/ui/components/ModePicker.qml
 msgid "Search mode..."
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Frame (all sides)"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top line"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Bottom line"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left line"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Right line"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top + Bottom"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left + Right"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center │"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center ─"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background + Frame"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal \\"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal /"
 msgstr ""
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal ✕"
 msgstr ""
 
@@ -115,46 +119,6 @@ msgstr ""
 
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Color mode:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Thickness:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Auto"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Corner radius:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Opacity:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Pinned apps:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Always colored"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Only when running"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Focus:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Keep color visible on focused task"
 msgstr ""
 
 #: contents/ui/configGeneral.qml
@@ -170,11 +134,7 @@ msgid "No colors configured"
 msgstr ""
 
 #: contents/ui/configGeneral.qml
-msgid "Click again to confirm"
-msgstr ""
-
-#: contents/ui/configGeneral.qml
-msgid "Reset all colors"
+msgid "All settings and color management are available in the widget popup. Click the widget icon in the panel to open it."
 msgstr ""
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
@@ -191,10 +151,6 @@ msgstr ""
 
 #: contents/ui/main.qml
 msgid "Settings"
-msgstr ""
-
-#: contents/ui/main.qml
-msgid "Nyan Cat"
 msgstr ""
 
 #: contents/ui/main.qml
@@ -265,12 +221,16 @@ msgstr ""
 msgid "Color for: %1"
 msgstr ""
 
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Remove color"
+msgstr ""
+
 #: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
-msgid "Nyan Cat rainbow effect"
+msgid "Click again to confirm"
 msgstr ""
 
 #: contents/ui/tabs/ApplicationsTab.qml
-msgid "Remove color"
+msgid "Reset all colors"
 msgstr ""
 
 #: contents/ui/tabs/NyanTab.qml
@@ -346,6 +306,10 @@ msgid "Thickness"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Border/line thickness. Auto reads from theme SVG margins."
 msgstr ""
 
@@ -366,19 +330,47 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Behavior"
+msgid "Focused window"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Show color on pinned favorites even when no window is open."
+msgid "Focused window:"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Keep color on focused task"
+msgid "Hide overlay"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Overlay stays visible above Plasma's focus highlight (80% bg + top accent line)."
+msgid "Background (80%)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when a task has focus."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for focused windows."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom opacity"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom corners"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized window"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
@@ -390,19 +382,11 @@ msgid "Normal (no change)"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Hide overlay"
-msgstr ""
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Dim overlay"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate (grayscale)"
-msgstr ""
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid "Custom style…"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
@@ -418,10 +402,6 @@ msgid "Use a different display mode when windows are minimized."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Current normal mode is disabled — use Dim or Desaturate for same-shape effects."
-msgstr ""
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Effect:"
 msgstr ""
 
@@ -431,6 +411,30 @@ msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate overlay"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for minimized windows."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
@@ -465,6 +469,10 @@ msgstr ""
 msgid "Minimized style"
 msgstr ""
 
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style"
+msgstr ""
+
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Temporarily override the color of a specific window. Overrides are lost when the window is closed."
 msgstr ""
@@ -479,4 +487,8 @@ msgstr ""
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
+msgstr ""
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset window overrides"
 msgstr ""

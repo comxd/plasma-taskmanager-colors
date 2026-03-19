@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 16:01+0100\n"
+"POT-Creation-Date: 2026-03-18 03:45+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -23,9 +23,9 @@ msgstr "一般"
 msgid "Pick a color"
 msgstr "色を選択"
 
-#: contents/ui/components/ColorPicker.qml
-msgid "Cancel"
-msgstr "キャンセル"
+#: contents/ui/components/ColorPicker.qml contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "戻る"
 
 #: contents/ui/components/ColorPicker.qml
 msgid "Used:"
@@ -40,84 +40,74 @@ msgid "Auto (from icon)"
 msgstr "自動（アイコンから）"
 
 #: contents/ui/components/ColorPicker.qml
+msgid "Nyan Cat (active)"
+msgstr "Nyan Cat（アクティブ）"
+
+#: contents/ui/components/ColorPicker.qml contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/components/ColorPicker.qml
 msgid "OK"
 msgstr "OK"
-
-#: contents/ui/components/ModePicker.qml
-msgid "Back"
-msgstr "戻る"
 
 #: contents/ui/components/ModePicker.qml
 msgid "Search mode..."
 msgstr "モードを検索…"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Frame (all sides)"
 msgstr "フレーム（全辺）"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top line"
 msgstr "上部ライン"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Bottom line"
 msgstr "下部ライン"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left line"
 msgstr "左ライン"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Right line"
 msgstr "右ライン"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top + Bottom"
 msgstr "上 + 下"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left + Right"
 msgstr "左 + 右"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center │"
 msgstr "中央 │"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center ─"
 msgstr "中央 ─"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background"
 msgstr "背景"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background + Frame"
 msgstr "背景 + フレーム"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal \\"
 msgstr "対角線 \\"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal /"
 msgstr "対角線 /"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal ✕"
 msgstr "対角線 ✕"
 
@@ -128,46 +118,6 @@ msgstr "一般:"
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
 msgstr "カラーオーバーレイを有効にする"
-
-#: contents/ui/configGeneral.qml
-msgid "Color mode:"
-msgstr "カラーモード:"
-
-#: contents/ui/configGeneral.qml
-msgid "Thickness:"
-msgstr "太さ:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Auto"
-msgstr "自動"
-
-#: contents/ui/configGeneral.qml
-msgid "Corner radius:"
-msgstr "角の半径:"
-
-#: contents/ui/configGeneral.qml
-msgid "Opacity:"
-msgstr "背景の不透明度:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Pinned apps:"
-msgstr "ピン留めアプリ:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Always colored"
-msgstr "常に色付き"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Only when running"
-msgstr "実行中のみ"
-
-#: contents/ui/configGeneral.qml
-msgid "Focus:"
-msgstr "フォーカス:"
-
-#: contents/ui/configGeneral.qml
-msgid "Keep color visible on focused task"
-msgstr "フォーカスされたタスクで色を表示し続ける"
 
 #: contents/ui/configGeneral.qml
 msgid "Colors:"
@@ -182,12 +132,10 @@ msgid "No colors configured"
 msgstr "色が設定されていません"
 
 #: contents/ui/configGeneral.qml
-msgid "Click again to confirm"
-msgstr "確認するにはもう一度クリック"
-
-#: contents/ui/configGeneral.qml
-msgid "Reset all colors"
-msgstr "すべての色をリセット"
+msgid ""
+"All settings and color management are available in the widget popup. Click "
+"the widget icon in the panel to open it."
+msgstr "すべての設定と色管理はウィジェットのポップアップで利用できます。パネルのウィジェットアイコンをクリックして開いてください。"
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
 msgid "Task Manager Colors"
@@ -204,10 +152,6 @@ msgstr "ウィンドウ (%1)"
 #: contents/ui/main.qml
 msgid "Settings"
 msgstr "設定"
-
-#: contents/ui/main.qml
-msgid "Nyan Cat"
-msgstr "Nyan Cat"
 
 #: contents/ui/main.qml
 msgid "About"
@@ -288,13 +232,17 @@ msgstr "（ピン留め）"
 msgid "Color for: %1"
 msgstr "%1 の色"
 
-#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
-msgid "Nyan Cat rainbow effect"
-msgstr "Nyan Cat レインボーエフェクト"
-
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid "Remove color"
 msgstr "色を削除"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Click again to confirm"
+msgstr "確認するにはもう一度クリック"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Reset all colors"
+msgstr "すべての色をリセット"
 
 #: contents/ui/tabs/NyanTab.qml
 msgid ""
@@ -380,6 +328,10 @@ msgid "Thickness"
 msgstr "太さ"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "自動"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Border/line thickness. Auto reads from theme SVG margins."
 msgstr "枠線/ラインの太さ。自動はテーマのSVGマージンから読み取ります。"
 
@@ -400,24 +352,48 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "角の丸み。自動は現在のテーマに合わせます。最大 = 正円。"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Behavior"
-msgstr "動作"
+msgid "Focused window"
+msgstr "フォーカスウィンドウ"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Show color on pinned favorites even when no window is open."
-msgstr "ウィンドウが開いていなくてもピン留めされたお気に入りに色を表示します。"
+msgid "Focused window:"
+msgstr "フォーカスウィンドウ："
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Keep color on focused task"
-msgstr "フォーカスされたタスクの色を保持"
+msgid "Hide overlay"
+msgstr "オーバーレイを非表示"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
-"line)."
-msgstr ""
-"オーバーレイはPlasmaのフォーカスハイライトの上に表示されたままになります（80%"
-"背景 + 上部アクセントライン）。"
+msgid "Background (80%)"
+msgstr "背景（80%）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "カスタムスタイル…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when a task has focus."
+msgstr "タスクにフォーカスがあるときのカラーオーバーレイの動作。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style:"
+msgstr "フォーカススタイル："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for focused windows."
+msgstr "フォーカスウィンドウの枠線の太さ。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom opacity"
+msgstr "カスタム不透明度"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom corners"
+msgstr "カスタムコーナー"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized window"
+msgstr "最小化ウィンドウ"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized windows:"
@@ -428,20 +404,12 @@ msgid "Normal (no change)"
 msgstr "通常（変更なし）"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Hide overlay"
-msgstr "オーバーレイを非表示"
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Dim overlay"
 msgstr "オーバーレイを暗くする"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate (grayscale)"
 msgstr "彩度を下げる（グレースケール）"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid "Custom style…"
-msgstr "カスタムスタイル…"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "How color overlays behave on minimized windows."
@@ -456,14 +424,6 @@ msgid "Use a different display mode when windows are minimized."
 msgstr "ウィンドウが最小化されているとき、別の表示モードを使用します。"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Current normal mode is disabled — use Dim or Desaturate for same-shape "
-"effects."
-msgstr ""
-"現在の通常モードは無効です——同じ形状の効果には「暗くする」または「彩度を下げ"
-"る」を使用してください。"
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Effect:"
 msgstr "エフェクト："
 
@@ -474,6 +434,30 @@ msgstr "なし"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate overlay"
 msgstr "オーバーレイの彩度を下げる"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for minimized windows."
+msgstr "最小化ウィンドウの枠線の太さ。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "動作"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "ピン留めアプリ:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "常に色付き"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "実行中のみ"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "ウィンドウが開いていなくてもピン留めされたお気に入りに色を表示します。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -526,6 +510,10 @@ msgstr "モードを選択"
 msgid "Minimized style"
 msgstr "最小化スタイル"
 
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style"
+msgstr "フォーカススタイル"
+
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""
 "Temporarily override the color of a specific window. Overrides are lost when "
@@ -548,81 +536,6 @@ msgstr "ウィンドウ色の上書き"
 msgid "Reset to app color"
 msgstr "アプリの色にリセット"
 
-#~ msgid "Author"
-#~ msgstr "作者"
-
-#~ msgid "Widget visibility"
-#~ msgstr "ウィジェットの表示"
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
-#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
-#~ msgstr ""
-#~ "ウィジェットアイコンは非表示です。カラー機能は引き続き動作します。再表示す"
-#~ "るには：パネルを右クリック → 編集モードに入る → ウィジェットが再表示されま"
-#~ "す → それを右クリック → このオプションのチェックを外してください。ヒント："
-#~ "グローバルショートカット（ウィジェットを設定 → キーボードショートカット）"
-#~ "で非表示中でもこのポップアップを開けます。"
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon. Tip: "
-#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
-#~ "this popup even when hidden."
-#~ msgstr ""
-#~ "パネルからウィジェットアイコンを非表示にします。カラー機能はバックグラウン"
-#~ "ドで通常通り動作し続けます。ウィジェットアイコンの右クリックからも利用でき"
-#~ "ます。ヒント：グローバルショートカット（ウィジェットを設定 → キーボード"
-#~ "ショートカット）を設定すると、非表示中でもこのポップアップを開けます。"
-
-#~ msgid "Wave effect"
-#~ msgstr "ウェーブエフェクト"
-
-#~ msgid ""
-#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
-#~ "color-shifting effect."
-#~ msgstr ""
-#~ "波打つバンド端と流れるアニメーション。オフの場合、バンドはフラットで色変化"
-#~ "エフェクトが適用されます。"
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option. You can also set a keyboard "
-#~ "shortcut via Configure Widget → Keyboard Shortcuts."
-#~ msgstr ""
-#~ "ウィジェットアイコンは非表示です。カラー機能は引き続き動作します。再表示す"
-#~ "るには：パネルを右クリック → 編集モードに入る → ウィジェットが再表示されま"
-#~ "す → それを右クリック → このオプションのチェックを外してください。ウィ"
-#~ "ジェットを設定 → キーボードショートカットからショートカットキーを設定する"
-#~ "こともできます。"
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon. You "
-#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
-#~ "Keyboard Shortcuts."
-#~ msgstr ""
-#~ "パネルからウィジェットアイコンを非表示にします。カラー機能はバックグラウン"
-#~ "ドで通常通り動作し続けます。ウィジェットアイコンの右クリックからも利用でき"
-#~ "ます。ウィジェットを設定 → キーボードショートカットから表示切替のショート"
-#~ "カットキーを設定できます。"
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option."
-#~ msgstr ""
-#~ "ウィジェットアイコンは非表示です。カラー機能は引き続き動作します。再表示す"
-#~ "るには：パネルを右クリック → 編集モードに入る → ウィジェットが再表示されま"
-#~ "す → それを右クリック → このオプションのチェックを外してください。"
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon."
-#~ msgstr ""
-#~ "パネルからウィジェットアイコンを非表示にします。カラー機能はバックグラウン"
-#~ "ドで通常通り動作し続けます。ウィジェットアイコンの右クリックからも利用でき"
-#~ "ます。"
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset window overrides"
+msgstr "ウィンドウの上書きをリセット"

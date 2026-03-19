@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 16:01+0100\n"
+"POT-Creation-Date: 2026-03-18 03:45+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -23,9 +23,9 @@ msgstr "Общие"
 msgid "Pick a color"
 msgstr "Выбрать цвет"
 
-#: contents/ui/components/ColorPicker.qml
-msgid "Cancel"
-msgstr "Отмена"
+#: contents/ui/components/ColorPicker.qml contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "Назад"
 
 #: contents/ui/components/ColorPicker.qml
 msgid "Used:"
@@ -40,84 +40,74 @@ msgid "Auto (from icon)"
 msgstr "Авто (из значка)"
 
 #: contents/ui/components/ColorPicker.qml
+msgid "Nyan Cat (active)"
+msgstr "Nyan Cat (активен)"
+
+#: contents/ui/components/ColorPicker.qml contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/components/ColorPicker.qml
 msgid "OK"
 msgstr "ОК"
-
-#: contents/ui/components/ModePicker.qml
-msgid "Back"
-msgstr "Назад"
 
 #: contents/ui/components/ModePicker.qml
 msgid "Search mode..."
 msgstr "Поиск режима…"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Frame (all sides)"
 msgstr "Рамка (все стороны)"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top line"
 msgstr "Верхняя линия"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Bottom line"
 msgstr "Нижняя линия"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left line"
 msgstr "Левая линия"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Right line"
 msgstr "Правая линия"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top + Bottom"
 msgstr "Верх + Низ"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left + Right"
 msgstr "Лево + Право"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center │"
 msgstr "Центр │"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center ─"
 msgstr "Центр ─"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background"
 msgstr "Фон"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background + Frame"
 msgstr "Фон + Рамка"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal \\"
 msgstr "Диагональ \\"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal /"
 msgstr "Диагональ /"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal ✕"
 msgstr "Диагональ ✕"
 
@@ -128,46 +118,6 @@ msgstr "Общие:"
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
 msgstr "Включить цветные наложения"
-
-#: contents/ui/configGeneral.qml
-msgid "Color mode:"
-msgstr "Режим цвета:"
-
-#: contents/ui/configGeneral.qml
-msgid "Thickness:"
-msgstr "Толщина:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Auto"
-msgstr "Авто"
-
-#: contents/ui/configGeneral.qml
-msgid "Corner radius:"
-msgstr "Радиус углов:"
-
-#: contents/ui/configGeneral.qml
-msgid "Opacity:"
-msgstr "Непрозрачность фона:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Pinned apps:"
-msgstr "Закреплённые приложения:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Always colored"
-msgstr "Всегда окрашены"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Only when running"
-msgstr "Только при запуске"
-
-#: contents/ui/configGeneral.qml
-msgid "Focus:"
-msgstr "Фокус:"
-
-#: contents/ui/configGeneral.qml
-msgid "Keep color visible on focused task"
-msgstr "Сохранять цвет на активной задаче"
 
 #: contents/ui/configGeneral.qml
 msgid "Colors:"
@@ -182,12 +132,10 @@ msgid "No colors configured"
 msgstr "Цвета не настроены"
 
 #: contents/ui/configGeneral.qml
-msgid "Click again to confirm"
-msgstr "Нажмите ещё раз для подтверждения"
-
-#: contents/ui/configGeneral.qml
-msgid "Reset all colors"
-msgstr "Сбросить все цвета"
+msgid ""
+"All settings and color management are available in the widget popup. Click "
+"the widget icon in the panel to open it."
+msgstr "Все настройки и управление цветами доступны во всплывающем окне виджета. Нажмите на значок виджета на панели, чтобы открыть его."
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
 msgid "Task Manager Colors"
@@ -204,10 +152,6 @@ msgstr "Окна (%1)"
 #: contents/ui/main.qml
 msgid "Settings"
 msgstr "Настройки"
-
-#: contents/ui/main.qml
-msgid "Nyan Cat"
-msgstr "Nyan Cat"
 
 #: contents/ui/main.qml
 msgid "About"
@@ -286,13 +230,17 @@ msgstr "(закреплено)"
 msgid "Color for: %1"
 msgstr "Цвет для: %1"
 
-#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
-msgid "Nyan Cat rainbow effect"
-msgstr "Радужный эффект Nyan Cat"
-
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid "Remove color"
 msgstr "Удалить цвет"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Click again to confirm"
+msgstr "Нажмите ещё раз для подтверждения"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Reset all colors"
+msgstr "Сбросить все цвета"
 
 #: contents/ui/tabs/NyanTab.qml
 msgid ""
@@ -379,6 +327,10 @@ msgid "Thickness"
 msgstr "Толщина"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "Авто"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Border/line thickness. Auto reads from theme SVG margins."
 msgstr "Толщина границы/линии. Авто читает из SVG-полей темы."
 
@@ -400,24 +352,48 @@ msgstr ""
 "Скругление углов. Авто соответствует текущей теме. Макс = идеальный круг."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Behavior"
-msgstr "Поведение"
+msgid "Focused window"
+msgstr "Активное окно"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Show color on pinned favorites even when no window is open."
-msgstr "Показывать цвет на закреплённых избранных даже без открытых окон."
+msgid "Focused window:"
+msgstr "Активное окно:"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Keep color on focused task"
-msgstr "Сохранять цвет на активной задаче"
+msgid "Hide overlay"
+msgstr "Скрыть наложение"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
-"line)."
-msgstr ""
-"Наложение остаётся видимым поверх подсветки фокуса Plasma (80% фон + верхняя "
-"акцентная линия)."
+msgid "Background (80%)"
+msgstr "Фон (80%)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "Свой стиль…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when a task has focus."
+msgstr "Поведение цветового наложения, когда задача находится в фокусе."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style:"
+msgstr "Стиль фокуса:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for focused windows."
+msgstr "Толщина рамки для активных окон."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom opacity"
+msgstr "Своя прозрачность"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom corners"
+msgstr "Свои углы"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized window"
+msgstr "Свёрнутое окно"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized windows:"
@@ -428,20 +404,12 @@ msgid "Normal (no change)"
 msgstr "Обычный (без изменений)"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Hide overlay"
-msgstr "Скрыть наложение"
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Dim overlay"
 msgstr "Приглушить наложение"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate (grayscale)"
 msgstr "Обесцветить (оттенки серого)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid "Custom style…"
-msgstr "Свой стиль…"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "How color overlays behave on minimized windows."
@@ -456,14 +424,6 @@ msgid "Use a different display mode when windows are minimized."
 msgstr "Использовать другой режим отображения для свёрнутых окон."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Current normal mode is disabled — use Dim or Desaturate for same-shape "
-"effects."
-msgstr ""
-"Текущий обычный режим отключён — используйте Приглушить или Обесцветить для "
-"эффектов той же формы."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Effect:"
 msgstr "Эффект:"
 
@@ -474,6 +434,30 @@ msgstr "Нет"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate overlay"
 msgstr "Обесцветить наложение"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for minimized windows."
+msgstr "Толщина рамки для свёрнутых окон."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "Поведение"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "Закреплённые приложения:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "Всегда окрашены"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "Только при запуске"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "Показывать цвет на закреплённых избранных даже без открытых окон."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -527,6 +511,10 @@ msgstr "Выбрать режим"
 msgid "Minimized style"
 msgstr "Стиль для свёрнутых"
 
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style"
+msgstr "Стиль фокуса"
+
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""
 "Temporarily override the color of a specific window. Overrides are lost when "
@@ -549,83 +537,6 @@ msgstr "Переопределение цвета окна"
 msgid "Reset to app color"
 msgstr "Сбросить на цвет приложения"
 
-#~ msgid "Author"
-#~ msgstr "Автор"
-
-#~ msgid "Widget visibility"
-#~ msgstr "Видимость виджета"
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
-#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
-#~ msgstr ""
-#~ "Значок виджета скрыт. Цвета продолжают работать. Чтобы снова показать "
-#~ "его: щёлкните правой кнопкой мыши по панели → Войти в режим "
-#~ "редактирования → виджет появится снова → щёлкните по нему правой кнопкой "
-#~ "мыши → снимите флажок с этой опции. Совет: глобальная комбинация клавиш "
-#~ "(Настроить виджет → Комбинации клавиш) может открыть это всплывающее окно "
-#~ "даже в скрытом состоянии."
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon. Tip: "
-#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
-#~ "this popup even when hidden."
-#~ msgstr ""
-#~ "Скрывает значок виджета с панели. Цвета продолжают нормально работать в "
-#~ "фоновом режиме. Также доступно через правый клик по значку виджета. "
-#~ "Совет: назначьте глобальную комбинацию клавиш (Настроить виджет → "
-#~ "Комбинации клавиш), чтобы открывать это всплывающее окно даже в скрытом "
-#~ "состоянии."
-
-#~ msgid "Wave effect"
-#~ msgstr "Эффект волны"
-
-#~ msgid ""
-#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
-#~ "color-shifting effect."
-#~ msgstr ""
-#~ "Волнистые края полос с плавной анимацией. При выключении полосы плоские с "
-#~ "эффектом смены цвета."
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option. You can also set a keyboard "
-#~ "shortcut via Configure Widget → Keyboard Shortcuts."
-#~ msgstr ""
-#~ "Значок виджета скрыт. Цвета продолжают работать. Чтобы снова показать "
-#~ "его: щёлкните правой кнопкой мыши по панели → Войти в режим "
-#~ "редактирования → виджет появится снова → щёлкните по нему правой кнопкой "
-#~ "мыши → снимите флажок с этой опции. Вы также можете назначить сочетание "
-#~ "клавиш через Настроить виджет → Комбинации клавиш."
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon. You "
-#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
-#~ "Keyboard Shortcuts."
-#~ msgstr ""
-#~ "Скрывает значок виджета с панели. Цвета продолжают нормально работать в "
-#~ "фоновом режиме. Также доступно через правый клик по значку виджета. Вы "
-#~ "можете назначить сочетание клавиш для переключения видимости через "
-#~ "Настроить виджет → Комбинации клавиш."
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option."
-#~ msgstr ""
-#~ "Значок виджета скрыт. Цвета продолжают работать. Чтобы снова показать "
-#~ "его: щёлкните правой кнопкой мыши по панели → Войти в режим "
-#~ "редактирования → виджет появится снова → щёлкните по нему правой кнопкой "
-#~ "мыши → снимите флажок с этой опции."
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon."
-#~ msgstr ""
-#~ "Скрывает значок виджета с панели. Цвета продолжают нормально работать в "
-#~ "фоновом режиме. Также доступно через правый клик по значку виджета."
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset window overrides"
+msgstr "Сбросить переопределения окон"
