@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 16:01+0100\n"
+"POT-Creation-Date: 2026-03-18 03:45+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -23,9 +23,9 @@ msgstr "Genel"
 msgid "Pick a color"
 msgstr "Bir renk seçin"
 
-#: contents/ui/components/ColorPicker.qml
-msgid "Cancel"
-msgstr "İptal"
+#: contents/ui/components/ColorPicker.qml contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "Geri"
 
 #: contents/ui/components/ColorPicker.qml
 msgid "Used:"
@@ -40,84 +40,74 @@ msgid "Auto (from icon)"
 msgstr "Otomatik (simgeden)"
 
 #: contents/ui/components/ColorPicker.qml
+msgid "Nyan Cat (active)"
+msgstr "Nyan Cat (etkin)"
+
+#: contents/ui/components/ColorPicker.qml contents/ui/main.qml
+msgid "Nyan Cat"
+msgstr "Nyan Cat"
+
+#: contents/ui/components/ColorPicker.qml
 msgid "OK"
 msgstr "Tamam"
-
-#: contents/ui/components/ModePicker.qml
-msgid "Back"
-msgstr "Geri"
 
 #: contents/ui/components/ModePicker.qml
 msgid "Search mode..."
 msgstr "Mod ara…"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Frame (all sides)"
 msgstr "Çerçeve (tüm kenarlar)"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top line"
 msgstr "Üst çizgi"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Bottom line"
 msgstr "Alt çizgi"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left line"
 msgstr "Sol çizgi"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Right line"
 msgstr "Sağ çizgi"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Top + Bottom"
 msgstr "Üst + Alt"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Left + Right"
 msgstr "Sol + Sağ"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center │"
 msgstr "Orta │"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Center ─"
 msgstr "Orta ─"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background"
 msgstr "Arka plan"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Background + Frame"
 msgstr "Arka plan + Çerçeve"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal \\"
 msgstr "Çapraz \\"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal /"
 msgstr "Çapraz /"
 
-#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
-#: contents/ui/tabs/SettingsTab.qml
+#: contents/ui/components/ModePicker.qml contents/ui/tabs/SettingsTab.qml
 msgid "Diagonal ✕"
 msgstr "Çapraz ✕"
 
@@ -128,46 +118,6 @@ msgstr "Genel:"
 #: contents/ui/configGeneral.qml
 msgid "Enable color overlays"
 msgstr "Renk katmanlarını etkinleştir"
-
-#: contents/ui/configGeneral.qml
-msgid "Color mode:"
-msgstr "Renk modu:"
-
-#: contents/ui/configGeneral.qml
-msgid "Thickness:"
-msgstr "Kalınlık:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Auto"
-msgstr "Otomatik"
-
-#: contents/ui/configGeneral.qml
-msgid "Corner radius:"
-msgstr "Köşe yarıçapı:"
-
-#: contents/ui/configGeneral.qml
-msgid "Opacity:"
-msgstr "Arka plan opaklığı:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Pinned apps:"
-msgstr "Sabitlenmiş uygulamalar:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Always colored"
-msgstr "Her zaman renkli"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Only when running"
-msgstr "Yalnızca çalışırken"
-
-#: contents/ui/configGeneral.qml
-msgid "Focus:"
-msgstr "Odak:"
-
-#: contents/ui/configGeneral.qml
-msgid "Keep color visible on focused task"
-msgstr "Odaklanılan görevde rengi görünür tut"
 
 #: contents/ui/configGeneral.qml
 msgid "Colors:"
@@ -182,12 +132,10 @@ msgid "No colors configured"
 msgstr "Yapılandırılmış renk yok"
 
 #: contents/ui/configGeneral.qml
-msgid "Click again to confirm"
-msgstr "Onaylamak için tekrar tıklayın"
-
-#: contents/ui/configGeneral.qml
-msgid "Reset all colors"
-msgstr "Tüm renkleri sıfırla"
+msgid ""
+"All settings and color management are available in the widget popup. Click "
+"the widget icon in the panel to open it."
+msgstr "Tüm ayarlar ve renk yönetimi widget açılır penceresinde mevcuttur. Açmak için paneldeki widget simgesine tıklayın."
 
 #: contents/ui/main.qml contents/ui/tabs/AboutTab.qml
 msgid "Task Manager Colors"
@@ -204,10 +152,6 @@ msgstr "Pencereler (%1)"
 #: contents/ui/main.qml
 msgid "Settings"
 msgstr "Ayarlar"
-
-#: contents/ui/main.qml
-msgid "Nyan Cat"
-msgstr "Nyan Cat"
 
 #: contents/ui/main.qml
 msgid "About"
@@ -287,13 +231,17 @@ msgstr "(sabitlenmiş)"
 msgid "Color for: %1"
 msgstr "%1 için renk"
 
-#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
-msgid "Nyan Cat rainbow effect"
-msgstr "Nyan Cat gökkuşağı efekti"
-
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid "Remove color"
 msgstr "Rengi kaldır"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "Click again to confirm"
+msgstr "Onaylamak için tekrar tıklayın"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Reset all colors"
+msgstr "Tüm renkleri sıfırla"
 
 #: contents/ui/tabs/NyanTab.qml
 msgid ""
@@ -381,6 +329,10 @@ msgid "Thickness"
 msgstr "Kalınlık"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Auto"
+msgstr "Otomatik"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Border/line thickness. Auto reads from theme SVG margins."
 msgstr ""
 "Kenarlık/çizgi kalınlığı. Otomatik, tema SVG kenar boşluklarından okur."
@@ -402,24 +354,48 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "Köşe yuvarlatma. Otomatik geçerli temaya uyar. Maks = mükemmel daire."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Behavior"
-msgstr "Davranış"
+msgid "Focused window"
+msgstr "Odaklanan pencere"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Show color on pinned favorites even when no window is open."
-msgstr "Pencere açık olmasa bile sabitlenmiş sık kullanılanlarda rengi göster."
+msgid "Focused window:"
+msgstr "Odaklanan pencere:"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Keep color on focused task"
-msgstr "Odaklanılan görevde rengi koru"
+msgid "Hide overlay"
+msgstr "Kaplamayı gizle"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Overlay stays visible above Plasma's focus highlight (80% bg + top accent "
-"line)."
-msgstr ""
-"Katman, Plasma'nın odak vurgulamasının üzerinde görünür kalır (%80 arka plan "
-"+ üst vurgu çizgisi)."
+msgid "Background (80%)"
+msgstr "Arka plan (80%)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "Özel stil…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when a task has focus."
+msgstr "Bir görev odaklandığında renk kaplamasının davranışı."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style:"
+msgstr "Odak stili:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for focused windows."
+msgstr "Odaklanan pencereler için kenarlık kalınlığı."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom opacity"
+msgstr "Özel opaklık"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom corners"
+msgstr "Özel köşeler"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized window"
+msgstr "Küçültülen pencere"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized windows:"
@@ -430,20 +406,12 @@ msgid "Normal (no change)"
 msgstr "Normal (değişiklik yok)"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Hide overlay"
-msgstr "Kaplamayı gizle"
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Dim overlay"
 msgstr "Kaplamayı karart"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate (grayscale)"
 msgstr "Doygunluğu azalt (gri tonlama)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid "Custom style…"
-msgstr "Özel stil…"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "How color overlays behave on minimized windows."
@@ -458,14 +426,6 @@ msgid "Use a different display mode when windows are minimized."
 msgstr "Pencereler küçültüldüğünde farklı bir görüntüleme modu kullan."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Current normal mode is disabled — use Dim or Desaturate for same-shape "
-"effects."
-msgstr ""
-"Mevcut normal mod devre dışı — aynı şekil efektleri için Karart veya "
-"Doygunluğu azalt kullanın."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Effect:"
 msgstr "Efekt:"
 
@@ -476,6 +436,30 @@ msgstr "Yok"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Desaturate overlay"
 msgstr "Kaplama doygunluğunu azalt"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for minimized windows."
+msgstr "Küçültülen pencereler için kenarlık kalınlığı."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Behavior"
+msgstr "Davranış"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Pinned apps:"
+msgstr "Sabitlenmiş uygulamalar:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Always colored"
+msgstr "Her zaman renkli"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Only when running"
+msgstr "Yalnızca çalışırken"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show color on pinned favorites even when no window is open."
+msgstr "Pencere açık olmasa bile sabitlenmiş sık kullanılanlarda rengi göster."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -527,6 +511,10 @@ msgstr "Modu seçin"
 msgid "Minimized style"
 msgstr "Küçültülmüş stili"
 
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Focused style"
+msgstr "Odak stili"
+
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""
 "Temporarily override the color of a specific window. Overrides are lost when "
@@ -549,80 +537,6 @@ msgstr "Pencere rengi geçersiz kılma"
 msgid "Reset to app color"
 msgstr "Uygulama rengine sıfırla"
 
-#~ msgid "Author"
-#~ msgstr "Yazar"
-
-#~ msgid "Widget visibility"
-#~ msgstr "Bileşen görünürlüğü"
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option. Tip: a global shortcut (Configure "
-#~ "Widget → Keyboard Shortcuts) can open this popup even when hidden."
-#~ msgstr ""
-#~ "Bileşen simgesi gizlendi. Renkler çalışmaya devam eder. Tekrar göstermek "
-#~ "için: panele sağ tıklayın → Düzenleme Moduna Girin → bileşen yeniden "
-#~ "görünecektir → üzerine sağ tıklayın → bu seçeneğin işaretini kaldırın. "
-#~ "İpucu: bir genel kısayol (Bileşeni Yapılandır → Klavye Kısayolları) bu "
-#~ "açılır pencereyi gizliyken bile açabilir."
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon. Tip: "
-#~ "set a global shortcut (Configure Widget → Keyboard Shortcuts) to open "
-#~ "this popup even when hidden."
-#~ msgstr ""
-#~ "Bileşen simgesini panelden gizler. Renkler arka planda normal şekilde "
-#~ "çalışmaya devam eder. Bileşen simgesine sağ tıklayarak da kullanılabilir. "
-#~ "İpucu: bir genel kısayol belirleyin (Bileşeni Yapılandır → Klavye "
-#~ "Kısayolları) bu açılır pencereyi gizliyken bile açmak için."
-
-#~ msgid "Wave effect"
-#~ msgstr "Dalga efekti"
-
-#~ msgid ""
-#~ "Wavy band edges with flowing animation. When off, bands are flat with a "
-#~ "color-shifting effect."
-#~ msgstr ""
-#~ "Akan animasyonlu dalgalı bant kenarları. Kapalıyken bantlar düzdür ve "
-#~ "renk değiştirme efekti uygulanır."
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option. You can also set a keyboard "
-#~ "shortcut via Configure Widget → Keyboard Shortcuts."
-#~ msgstr ""
-#~ "Bileşen simgesi gizlendi. Renkler çalışmaya devam eder. Tekrar göstermek "
-#~ "için: panele sağ tıklayın → Düzenleme Moduna Girin → bileşen yeniden "
-#~ "görünecektir → üzerine sağ tıklayın → bu seçeneğin işaretini kaldırın. "
-#~ "Ayrıca Bileşeni Yapılandır → Klavye Kısayolları üzerinden bir klavye "
-#~ "kısayolu tanımlayabilirsiniz."
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon. You "
-#~ "can set a keyboard shortcut to toggle visibility via Configure Widget → "
-#~ "Keyboard Shortcuts."
-#~ msgstr ""
-#~ "Bileşen simgesini panelden gizler. Renkler arka planda normal şekilde "
-#~ "çalışmaya devam eder. Bileşen simgesine sağ tıklayarak da kullanılabilir. "
-#~ "Bileşeni Yapılandır → Klavye Kısayolları üzerinden görünürlüğü "
-#~ "değiştirmek için bir klavye kısayolu tanımlayabilirsiniz."
-
-#~ msgid ""
-#~ "The widget icon is hidden. Colors continue to work. To show it again: "
-#~ "right-click the panel → Enter Edit Mode → the widget will reappear → "
-#~ "right-click it → uncheck this option."
-#~ msgstr ""
-#~ "Bileşen simgesi gizlendi. Renkler çalışmaya devam eder. Tekrar göstermek "
-#~ "için: panele sağ tıklayın → Düzenleme Moduna Girin → bileşen yeniden "
-#~ "görünecektir → üzerine sağ tıklayın → bu seçeneğin işaretini kaldırın."
-
-#~ msgid ""
-#~ "Hides the widget icon from the panel. Colors continue to work normally in "
-#~ "the background. Also available via right-click on the widget icon."
-#~ msgstr ""
-#~ "Bileşen simgesini panelden gizler. Renkler arka planda normal şekilde "
-#~ "çalışmaya devam eder. Bileşen simgesine sağ tıklayarak da kullanılabilir."
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Reset window overrides"
+msgstr "Pencere geçersiz kılmalarını sıfırla"
