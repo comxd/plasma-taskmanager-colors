@@ -2,7 +2,8 @@
     SPDX-FileCopyrightText: 2026 ComExpertise
     SPDX-License-Identifier: GPL-2.0-or-later
 
-    Applications tab: app list + color picker + nyan toggle.
+    Applications tab: app list + full-page color picker + nyan toggle.
+    Uses StackLayout for color picker page navigation.
 */
 
 import QtQuick
@@ -11,7 +12,7 @@ import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 import "../components" as Components
 
-Item {
+StackLayout {
     id: applicationsTab
 
     // Data from root
@@ -29,147 +30,169 @@ Item {
     // Connected by root to close picker on extraction complete
     signal extractionComplete()
 
-    ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: Kirigami.Units.mediumSpacing
-        spacing: Kirigami.Units.smallSpacing
+    currentIndex: 0
 
-        Controls.Label {
-            text: applicationsTab.detectedTasks.length > 0
-                ? i18n("Assign a persistent color to each application. The color applies to all windows of that application.")
-                : i18n("No tasks detected \u2014 open some windows to assign colors.")
-            color: Kirigami.Theme.disabledTextColor
-            wrapMode: Text.Wrap
-            Layout.fillWidth: true
-        }
+    // ════════════════════════════════════════
+    // ── Page 0: App list ──
+    // ════════════════════════════════════════
 
-        Item { height: Kirigami.Units.smallSpacing; width: 1 }
-        Kirigami.Separator { Layout.fillWidth: true }
-        Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-        ListView {
-            id: taskListView
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            clip: true
+    Item {
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.largeSpacing * 2
             spacing: Kirigami.Units.smallSpacing
-            Controls.ScrollBar.vertical: Controls.ScrollBar { id: appScrollBar; policy: Controls.ScrollBar.AsNeeded }
 
-            model: applicationsTab.detectedTasks
+            Controls.Label {
+                text: applicationsTab.detectedTasks.length > 0
+                    ? i18n("Assign a persistent color to each application. The color applies to all windows of that application.")
+                    : i18n("No tasks detected \u2014 open some windows to assign colors.")
+                color: Kirigami.Theme.disabledTextColor
+                wrapMode: Text.Wrap
+                Layout.fillWidth: true
+            }
 
-            delegate: RowLayout {
-                required property var modelData
-                width: taskListView.width - (appScrollBar.visible ? appScrollBar.width + Kirigami.Units.smallSpacing : 0)
-                spacing: Kirigami.Units.smallSpacing
+            Item { height: Kirigami.Units.smallSpacing; width: 1 }
+            Kirigami.Separator { Layout.fillWidth: true }
 
-                Kirigami.Icon {
-                    source: modelData.iconName || modelData.appId
-                    implicitWidth: Kirigami.Units.iconSizes.small
-                    implicitHeight: Kirigami.Units.iconSizes.small
-                }
+            ListView {
+                id: taskListView
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                clip: true
+                spacing: 0
+                Controls.ScrollBar.vertical: Controls.ScrollBar { id: appScrollBar; policy: Controls.ScrollBar.AsNeeded }
 
-                Controls.Label {
-                    text: modelData.appName || modelData.appId
-                    elide: Text.ElideRight
-                    Layout.fillWidth: true
-                }
+                model: applicationsTab.detectedTasks
 
-                Controls.Label {
-                    text: i18n("(pinned)")
-                    color: Kirigami.Theme.disabledTextColor
-                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
-                    visible: !modelData.isRunning
-                }
+                delegate: ColumnLayout {
+                    required property var modelData
+                    required property int index
+                    width: taskListView.width - (appScrollBar.visible ? appScrollBar.width + Kirigami.Units.smallSpacing : 0)
+                    spacing: 0
 
-                Controls.Button {
-                    implicitWidth: Kirigami.Units.gridUnit * 2.5
-                    implicitHeight: Kirigami.Units.gridUnit * 1.5
+                    RowLayout {
+                        Layout.fillWidth: true
+                        Layout.topMargin: Kirigami.Units.mediumSpacing
+                        Layout.bottomMargin: Kirigami.Units.mediumSpacing
+                        spacing: Kirigami.Units.mediumSpacing
 
-                    property string appId: modelData.appId
-                    property string rawColor: applicationsTab.colorMapCache[appId] || ""
-                    property string assignedColor: rawColor.replace(/:nyan$/, "")
-                    property bool isNyan: rawColor.endsWith(":nyan")
+                        Kirigami.Icon {
+                            source: modelData.iconName || modelData.appId
+                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        }
 
-                    visible: !isNyan
+                        ColumnLayout {
+                            Layout.fillWidth: true
+                            spacing: 0
 
-                    contentItem: Item {}
-                    background: Rectangle {
-                        color: parent.assignedColor
-                            ? parent.assignedColor
-                            : Kirigami.Theme.backgroundColor
-                        radius: 3
-                        border.color: Kirigami.Theme.textColor
-                        border.width: 1
+                            Controls.Label {
+                                text: modelData.appName || modelData.appId
+                                font.weight: Font.DemiBold
+                                elide: Text.ElideRight
+                                Layout.fillWidth: true
+                            }
+                            Controls.Label {
+                                text: modelData.appId
+                                elide: Text.ElideRight
+                                Layout.fillWidth: true
+                                font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                                color: Kirigami.Theme.disabledTextColor
+                                visible: modelData.appId !== (modelData.appName || modelData.appId)
+                            }
+                        }
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: parent.parent.assignedColor ? "" : "+"
-                            color: Kirigami.Theme.textColor
-                            font.pixelSize: Kirigami.Theme.defaultFont.pixelSize
+                        Controls.Label {
+                            text: i18n("(pinned)")
+                            color: Kirigami.Theme.disabledTextColor
+                            font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                            visible: !modelData.isRunning
+                        }
+
+                        Controls.Button {
+                            implicitWidth: Kirigami.Units.gridUnit * 2.5
+                            implicitHeight: Kirigami.Units.gridUnit * 1.5
+
+                            property string appId: modelData.appId
+                            property string rawColor: applicationsTab.colorMapCache[appId] || ""
+                            property string assignedColor: rawColor.replace(/:nyan$/, "")
+                            property bool isNyan: rawColor.endsWith(":nyan")
+
+                            contentItem: Item {}
+                            background: Rectangle {
+                                color: parent.assignedColor
+                                    ? parent.assignedColor
+                                    : Kirigami.Theme.backgroundColor
+                                radius: 3
+                                border.color: Kirigami.Theme.textColor
+                                border.width: 1
+
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: parent.parent.assignedColor ? "" : "+"
+                                    color: Kirigami.Theme.textColor
+                                    font.pixelSize: Kirigami.Theme.defaultFont.pixelSize
+                                }
+                            }
+
+                            onClicked: {
+                                appColorPicker.targetAppId = appId;
+                                appColorPicker.targetIconName = modelData.iconName || appId;
+                                appColorPicker.title = i18n("Color for: %1", appId);
+                                appColorPicker.isNyan = isNyan;
+                                applicationsTab.currentIndex = 1;
+                                appColorPicker.activate();
+                            }
+                        }
+
+                        Controls.Button {
+                            icon.name: "edit-clear"
+                            implicitWidth: Kirigami.Units.gridUnit * 1.5
+                            implicitHeight: Kirigami.Units.gridUnit * 1.5
+                            visible: modelData.appId in applicationsTab.colorMapCache
+                            onClicked: applicationsTab.removeAppColor(modelData.appId)
+
+                            Controls.ToolTip.text: i18n("Remove color")
+                            Controls.ToolTip.visible: hovered
                         }
                     }
 
-                    onClicked: {
-                        inlineColorPicker.targetAppId = appId;
-                        inlineColorPicker.targetIconName = modelData.iconName || appId;
-                        inlineColorPicker.title = i18n("Color for: %1", appId);
-                        inlineColorPicker.visible = true;
+                    Kirigami.Separator {
+                        Layout.fillWidth: true
+                        opacity: 0.3
+                        visible: index < applicationsTab.detectedTasks.length - 1
                     }
-                }
-
-                // Nyan Cat toggle (always visible — can be used without a color)
-                Controls.Switch {
-                    implicitWidth: Kirigami.Units.gridUnit * 2
-                    implicitHeight: Kirigami.Units.gridUnit * 1.5
-                    checked: {
-                        let raw = applicationsTab.colorMapCache[modelData.appId] || "";
-                        return raw.endsWith(":nyan");
-                    }
-                    onToggled: {
-                        applicationsTab.toggleNyan(modelData.appId, checked);
-                        if (checked && inlineColorPicker.targetAppId === modelData.appId) {
-                            inlineColorPicker.visible = false;
-                        }
-                    }
-                    Controls.ToolTip.text: i18n("Nyan Cat rainbow effect")
-                    Controls.ToolTip.visible: hovered
-                }
-
-                Controls.Button {
-                    icon.name: "edit-clear"
-                    implicitWidth: Kirigami.Units.gridUnit * 1.5
-                    implicitHeight: Kirigami.Units.gridUnit * 1.5
-                    visible: modelData.appId in applicationsTab.colorMapCache
-                    onClicked: applicationsTab.removeAppColor(modelData.appId)
-
-                    Controls.ToolTip.text: i18n("Remove color")
-                    Controls.ToolTip.visible: hovered
                 }
             }
         }
+    }
 
-        // Inline color picker
-        Components.ColorPicker {
-            id: inlineColorPicker
-            Layout.fillWidth: true
-            visible: false
-            usedColors: applicationsTab.usedColors
-            extractorBusy: applicationsTab.extractorBusy
+    // ════════════════════════════════════════
+    // ── Page 1: Color picker ──
+    // ════════════════════════════════════════
 
-            property string targetAppId: ""
-            property var targetIconName: ""
+    Components.ColorPicker {
+        id: appColorPicker
+        usedColors: applicationsTab.usedColors
+        extractorBusy: applicationsTab.extractorBusy
 
-            onColorSelected: function(color) {
-                applicationsTab.setAppColor(targetAppId, color);
-                visible = false;
-            }
-            onAutoFromIconRequested: applicationsTab.extractColorFromIcon(targetAppId, targetIconName)
-            onCloseRequested: visible = false
+        property string targetAppId: ""
+        property var targetIconName: ""
+
+        onColorSelected: function(color) {
+            applicationsTab.setAppColor(targetAppId, color);
+            applicationsTab.currentIndex = 0;
         }
-
-        Connections {
-            target: applicationsTab
-            function onExtractionComplete() { inlineColorPicker.visible = false; }
+        onAutoFromIconRequested: applicationsTab.extractColorFromIcon(targetAppId, targetIconName)
+        onNyanToggled: function(enabled) {
+            applicationsTab.toggleNyan(targetAppId, enabled);
         }
+        onBackRequested: applicationsTab.currentIndex = 0
+    }
+
+    Connections {
+        target: applicationsTab
+        function onExtractionComplete() { applicationsTab.currentIndex = 0; }
     }
 }

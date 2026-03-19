@@ -310,8 +310,8 @@ PlasmoidItem {
         let usedList = [];
         for (let c of uniqueUsedColors) {
             let apps = Object.keys(colorMap).filter(k => colorMap[k].replace(/:nyan$/, "") === c);
-            let appName = apps.length > 0 ? (uniqueTasks[apps[0]]?.appName || apps[0]) : "";
-            usedList.push({ color: c, appName: appName });
+            let appNames = apps.map(k => uniqueTasks[k]?.appName || k);
+            usedList.push({ color: c, appNames: appNames, count: appNames.length });
         }
         root.usedColors = usedList;
 
