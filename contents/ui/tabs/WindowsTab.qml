@@ -24,6 +24,7 @@ StackLayout {
     // Signals for root to handle
     signal extractColorForWindow(var overlay, var iconName)
     signal nyanOverlaysChanged()
+    signal resetWindowOverrides()
 
     // Connected by root to close picker on extraction complete
     signal extractionComplete()
@@ -164,6 +165,31 @@ StackLayout {
                         opacity: 0.3
                         visible: index < windowsTab.detectedWindows.length - 1
                     }
+                }
+            }
+
+            // Reset window overrides (two-click confirmation)
+            Controls.Button {
+                id: resetWinButton
+                property bool armed: false
+                Layout.alignment: Qt.AlignRight
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                flat: true
+                icon.name: armed ? "dialog-warning" : "edit-clear-all"
+                text: armed ? i18n("Click again to confirm") : i18n("Reset window overrides")
+                onClicked: {
+                    if (armed) {
+                        windowsTab.resetWindowOverrides();
+                        armed = false;
+                    } else {
+                        armed = true;
+                        resetWinDisarmTimer.restart();
+                    }
+                }
+                Timer {
+                    id: resetWinDisarmTimer
+                    interval: 3000
+                    onTriggered: resetWinButton.armed = false
                 }
             }
         }
