@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:24+0100\n"
+"POT-Creation-Date: 2026-03-17 16:01+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -43,6 +43,84 @@ msgstr "Auto (depuis l'icône)"
 msgid "OK"
 msgstr "OK"
 
+#: contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "Retour"
+
+#: contents/ui/components/ModePicker.qml
+msgid "Search mode..."
+msgstr "Rechercher un mode…"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "Cadre (tous les côtés)"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "Ligne du haut"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "Ligne du bas"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "Ligne gauche"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "Ligne droite"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "Haut + Bas"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "Gauche + Droite"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "Centre │"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "Centre ─"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "Arrière-plan + Cadre"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "Diagonale \\"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "Diagonale /"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "Diagonale ✕"
+
 #: contents/ui/configGeneral.qml
 msgid "General:"
 msgstr "Général :"
@@ -54,62 +132,6 @@ msgstr "Activer les surcouches de couleur"
 #: contents/ui/configGeneral.qml
 msgid "Color mode:"
 msgstr "Mode de couleur :"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Frame (all sides)"
-msgstr "Cadre (tous les côtés)"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top line"
-msgstr "Ligne du haut"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Bottom line"
-msgstr "Ligne du bas"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left line"
-msgstr "Ligne gauche"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Right line"
-msgstr "Ligne droite"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top + Bottom"
-msgstr "Haut + Bas"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left + Right"
-msgstr "Gauche + Droite"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center │"
-msgstr "Centre │"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center ─"
-msgstr "Centre ─"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background"
-msgstr "Arrière-plan"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background + Frame"
-msgstr "Arrière-plan + Cadre"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal \\"
-msgstr "Diagonale \\"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal /"
-msgstr "Diagonale /"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal ✕"
-msgstr "Diagonale ✕"
 
 #: contents/ui/configGeneral.qml
 msgid "Thickness:"
@@ -503,6 +525,14 @@ msgid ""
 msgstr ""
 "Ouvre la boîte de dialogue de configuration du widget où vous pouvez définir "
 "un raccourci global pour basculer ce popup."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select mode"
+msgstr "Sélectionner le mode"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style"
+msgstr "Style minimisé"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

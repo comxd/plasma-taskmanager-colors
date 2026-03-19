@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:24+0100\n"
+"POT-Creation-Date: 2026-03-17 16:01+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -43,6 +43,84 @@ msgstr "Авто (з піктограми)"
 msgid "OK"
 msgstr "OK"
 
+#: contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "Назад"
+
+#: contents/ui/components/ModePicker.qml
+msgid "Search mode..."
+msgstr "Пошук режиму…"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "Рамка (всі сторони)"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "Верхня лінія"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "Нижня лінія"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "Ліва лінія"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "Права лінія"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "Верх + Низ"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "Ліво + Право"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "Центр │"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "Центр ─"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "Тло"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "Тло + Рамка"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "Діагональ \\"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "Діагональ /"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "Діагональ ✕"
+
 #: contents/ui/configGeneral.qml
 msgid "General:"
 msgstr "Загальні:"
@@ -54,62 +132,6 @@ msgstr "Увімкнути кольорові накладки"
 #: contents/ui/configGeneral.qml
 msgid "Color mode:"
 msgstr "Режим кольору:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Frame (all sides)"
-msgstr "Рамка (всі сторони)"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top line"
-msgstr "Верхня лінія"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Bottom line"
-msgstr "Нижня лінія"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left line"
-msgstr "Ліва лінія"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Right line"
-msgstr "Права лінія"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top + Bottom"
-msgstr "Верх + Низ"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left + Right"
-msgstr "Ліво + Право"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center │"
-msgstr "Центр │"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center ─"
-msgstr "Центр ─"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background"
-msgstr "Тло"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background + Frame"
-msgstr "Тло + Рамка"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal \\"
-msgstr "Діагональ \\"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal /"
-msgstr "Діагональ /"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal ✕"
-msgstr "Діагональ ✕"
 
 #: contents/ui/configGeneral.qml
 msgid "Thickness:"
@@ -497,6 +519,14 @@ msgid ""
 msgstr ""
 "Відкриває діалог налаштування віджета, де можна призначити глобальне "
 "клавіатурне скорочення для перемикання цього спливаючого вікна."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select mode"
+msgstr "Вибрати режим"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style"
+msgstr "Стиль для згорнутих"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

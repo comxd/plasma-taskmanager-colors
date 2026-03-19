@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:24+0100\n"
+"POT-Creation-Date: 2026-03-17 16:01+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -43,6 +43,84 @@ msgstr "Auto (z ikony)"
 msgid "OK"
 msgstr "OK"
 
+#: contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "Zpět"
+
+#: contents/ui/components/ModePicker.qml
+msgid "Search mode..."
+msgstr "Hledat režim…"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "Rámeček (všechny strany)"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "Horní čára"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "Dolní čára"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "Levá čára"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "Pravá čára"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "Nahoře + Dole"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "Vlevo + Vpravo"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "Střed │"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "Střed ─"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "Pozadí"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "Pozadí + Rámeček"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "Diagonála \\"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "Diagonála /"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "Diagonála ✕"
+
 #: contents/ui/configGeneral.qml
 msgid "General:"
 msgstr "Obecné:"
@@ -54,62 +132,6 @@ msgstr "Povolit barevné překryvy"
 #: contents/ui/configGeneral.qml
 msgid "Color mode:"
 msgstr "Režim barvy:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Frame (all sides)"
-msgstr "Rámeček (všechny strany)"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top line"
-msgstr "Horní čára"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Bottom line"
-msgstr "Dolní čára"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left line"
-msgstr "Levá čára"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Right line"
-msgstr "Pravá čára"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top + Bottom"
-msgstr "Nahoře + Dole"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left + Right"
-msgstr "Vlevo + Vpravo"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center │"
-msgstr "Střed │"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center ─"
-msgstr "Střed ─"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background"
-msgstr "Pozadí"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background + Frame"
-msgstr "Pozadí + Rámeček"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal \\"
-msgstr "Diagonála \\"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal /"
-msgstr "Diagonála /"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal ✕"
-msgstr "Diagonála ✕"
 
 #: contents/ui/configGeneral.qml
 msgid "Thickness:"
@@ -494,6 +516,14 @@ msgid ""
 msgstr ""
 "Otevře dialogové okno konfigurace widgetu, kde můžete nastavit globální "
 "klávesovou zkratku pro přepínání tohoto vyskakovacího okna."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select mode"
+msgstr "Vybrat režim"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style"
+msgstr "Styl minimalizovaných"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:24+0100\n"
+"POT-Creation-Date: 2026-03-17 16:01+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -43,6 +43,84 @@ msgstr "自動（アイコンから）"
 msgid "OK"
 msgstr "OK"
 
+#: contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr "戻る"
+
+#: contents/ui/components/ModePicker.qml
+msgid "Search mode..."
+msgstr "モードを検索…"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr "フレーム（全辺）"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr "上部ライン"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr "下部ライン"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr "左ライン"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr "右ライン"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr "上 + 下"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr "左 + 右"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr "中央 │"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr "中央 ─"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr "背景"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr "背景 + フレーム"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr "対角線 \\"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr "対角線 /"
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr "対角線 ✕"
+
 #: contents/ui/configGeneral.qml
 msgid "General:"
 msgstr "一般:"
@@ -54,62 +132,6 @@ msgstr "カラーオーバーレイを有効にする"
 #: contents/ui/configGeneral.qml
 msgid "Color mode:"
 msgstr "カラーモード:"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Frame (all sides)"
-msgstr "フレーム（全辺）"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top line"
-msgstr "上部ライン"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Bottom line"
-msgstr "下部ライン"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left line"
-msgstr "左ライン"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Right line"
-msgstr "右ライン"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top + Bottom"
-msgstr "上 + 下"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left + Right"
-msgstr "左 + 右"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center │"
-msgstr "中央 │"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center ─"
-msgstr "中央 ─"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background"
-msgstr "背景"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background + Frame"
-msgstr "背景 + フレーム"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal \\"
-msgstr "対角線 \\"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal /"
-msgstr "対角線 /"
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal ✕"
-msgstr "対角線 ✕"
 
 #: contents/ui/configGeneral.qml
 msgid "Thickness:"
@@ -495,6 +517,14 @@ msgid ""
 msgstr ""
 "ウィジェット設定ダイアログを開き、このポップアップを切り替えるグローバル"
 "ショートカットを設定できます。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select mode"
+msgstr "モードを選択"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style"
+msgstr "最小化スタイル"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

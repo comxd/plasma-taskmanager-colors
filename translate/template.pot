@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-17 03:24+0100\n"
+"POT-Creation-Date: 2026-03-17 16:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,6 +45,70 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
+#: contents/ui/components/ModePicker.qml
+msgid "Back"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml
+msgid "Search mode..."
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Frame (all sides)"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top line"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Bottom line"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left line"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Right line"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Top + Bottom"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Left + Right"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center │"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Center ─"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Background + Frame"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal \\"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal /"
+msgstr ""
+
+#: contents/ui/components/ModePicker.qml contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
+msgid "Diagonal ✕"
+msgstr ""
+
 #: contents/ui/configGeneral.qml
 msgid "General:"
 msgstr ""
@@ -55,62 +119,6 @@ msgstr ""
 
 #: contents/ui/configGeneral.qml
 msgid "Color mode:"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Frame (all sides)"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top line"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Bottom line"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left line"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Right line"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Top + Bottom"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Left + Right"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center │"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Center ─"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Background + Frame"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal \\"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal /"
-msgstr ""
-
-#: contents/ui/configGeneral.qml contents/ui/tabs/SettingsTab.qml
-msgid "Diagonal ✕"
 msgstr ""
 
 #: contents/ui/configGeneral.qml
@@ -447,6 +455,14 @@ msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Opens the widget configuration dialog where you can set a global shortcut to toggle this popup."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select mode"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style"
 msgstr ""
 
 #: contents/ui/tabs/WindowsTab.qml
