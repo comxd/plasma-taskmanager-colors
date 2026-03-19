@@ -22,19 +22,38 @@ PlasmoidItem {
     activationTogglesExpanded: true
     Plasmoid.icon: Qt.resolvedUrl("../icons/icon.svg")
 
-    property int pendingTabIndex: -1
+    property int _pendingPage: -1
 
     function applyPendingTabIndex() {
-        if (!expanded || pendingTabIndex < 0) return;
+        if (!expanded || _pendingPage < 0) return;
         let rep = fullRepresentationItem;
         if (!rep || !rep.tabBarRef) return;
-        rep.tabBarRef.currentIndex = pendingTabIndex;
-        pendingTabIndex = -1;
+        rep.tabBarRef.currentIndex = _pendingPage;
+        _pendingPage = -1;
+        pendingPageTimeout.stop();
+    }
+
+    // Delay popup open to let context menu close first
+    Timer {
+        id: aboutOpenTimer
+        interval: 200
+        onTriggered: root.expanded = true
+    }
+
+    // Safety net: clear pending state if popup never opens
+    Timer {
+        id: pendingPageTimeout
+        interval: 2000
+        onTriggered: root._pendingPage = -1
     }
 
     onExpandedChanged: {
         if (expanded) {
             Qt.callLater(function() { root.applyPendingTabIndex(); });
+        } else if (_pendingPage < 0) {
+            // Reset to first tab when popup closes normally (not via context menu)
+            let rep = fullRepresentationItem;
+            if (rep && rep.tabBarRef) rep.tabBarRef.currentIndex = 0;
         }
     }
 
@@ -721,13 +740,14 @@ PlasmoidItem {
         text: i18n("About Task Manager Colors")
         icon.name: "help-about"
         onTriggered: {
-            root.pendingTabIndex = 4;
-            root.expanded = true;
-            Qt.callLater(function() { root.applyPendingTabIndex(); });
+            root.expanded = false;           // Close popup first (let context menu close)
+            root._pendingPage = 4;           // Mark which page to open
+            pendingPageTimeout.restart();    // Start safety timeout
+            aboutOpenTimer.restart();        // Schedule delayed popup open
         }
     }
 
-    Plasmoid.contextualActions: [hideWidgetAction, aboutAction]
+    Plasmoid.contextualActions: [aboutAction, hideWidgetAction]
 
     toolTipMainText: i18n("Task Manager Colors")
     toolTipSubText: {
