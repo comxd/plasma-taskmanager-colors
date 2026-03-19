@@ -45,20 +45,20 @@ KCM.SimpleKCM {
     Kirigami.FormLayout {
         id: formLayout
 
-        // ── General section ──
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("General")
-        }
-
-        Item { width: 1; height: Kirigami.Units.smallSpacing }
-
         Controls.CheckBox {
             id: enabledCheck
             Kirigami.FormData.label: i18n("Enable:")
             text: i18n("Enable color overlays")
         }
+
+        // ── Status section ──
+
+        Kirigami.Separator {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Status")
+        }
+
+        Item { width: 1; height: Kirigami.Units.smallSpacing }
 
         Controls.Label {
             Kirigami.FormData.label: i18n("Colors:")
@@ -73,11 +73,11 @@ KCM.SimpleKCM {
             }
         }
 
-        // ── Information section ──
+        // ── Help section ──
 
         Kirigami.Separator {
             Kirigami.FormData.isSection: true
-            Kirigami.FormData.label: i18n("Information")
+            Kirigami.FormData.label: i18n("Help")
         }
 
         Item { width: 1; height: Kirigami.Units.smallSpacing }
