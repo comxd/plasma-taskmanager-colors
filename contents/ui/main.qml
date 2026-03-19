@@ -282,34 +282,27 @@ PlasmoidItem {
         let colorMap = getColorMap();
         root.colorMapCache = colorMap;
 
+        let verticalSwap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
+                             "top+bottom": "left+right", "left+right": "top+bottom" };
+
         let mode = plasmoid.configuration.colorMode;
-        if (root.isVertical) {
-            let swap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
-                         "top+bottom": "left+right", "left+right": "top+bottom" };
-            if (swap[mode]) mode = swap[mode];
-        }
+        if (root.isVertical && verticalSwap[mode]) mode = verticalSwap[mode];
+
         let cfgRadius = plasmoid.configuration.borderRadius;
         let autoBorderW = plasmoid.configuration.autoBorderWidth;
         let borderW = plasmoid.configuration.borderWidth;
         let bgOpac = plasmoid.configuration.backgroundOpacity;
         let focMode = plasmoid.configuration.focusedMode || "background";
         let focColorMode = (focMode === "custom") ? (plasmoid.configuration.focusedColorMode || "") : "";
-        if (focColorMode && root.isVertical) {
-            let swap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
-                         "top+bottom": "left+right", "left+right": "top+bottom" };
-            if (swap[focColorMode]) focColorMode = swap[focColorMode];
-        }
+        if (focColorMode && root.isVertical && verticalSwap[focColorMode]) focColorMode = verticalSwap[focColorMode];
+
         let focAutoBorderW = plasmoid.configuration.focusedAutoBorderWidth;
         let focBorderW = plasmoid.configuration.focusedBorderWidth;
         let focOpacity = plasmoid.configuration.focusedOpacity;
         let focRadius = plasmoid.configuration.focusedBorderRadius;
         let minMode = plasmoid.configuration.minimizedMode || "normal";
         let minColorMode = (minMode === "custom") ? (plasmoid.configuration.minimizedColorMode || "") : "";
-        if (minColorMode && root.isVertical) {
-            let swap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
-                         "top+bottom": "left+right", "left+right": "top+bottom" };
-            if (swap[minColorMode]) minColorMode = swap[minColorMode];
-        }
+        if (minColorMode && root.isVertical && verticalSwap[minColorMode]) minColorMode = verticalSwap[minColorMode];
         let minDim = plasmoid.configuration.minimizedDim || false;
         let minDesaturate = plasmoid.configuration.minimizedDesaturate || false;
         let minAutoBorderW = plasmoid.configuration.minimizedAutoBorderWidth;
@@ -368,6 +361,15 @@ PlasmoidItem {
             );
         }
 
+        function autoMarginFor(svg, m) {
+            if (!svg) return 0;
+            if (m === "bottom") return svg.margins.bottom;
+            if (m === "left" || m === "left+right") return svg.margins.left;
+            if (m === "right") return svg.margins.right;
+            if (m === "center" || m === "center-h") return Math.min(svg.margins.top, svg.margins.left);
+            return svg.margins.top;
+        }
+
         let windowList = [];
         let liveOverlays = [];
         let nyanIndex = 0;
@@ -387,19 +389,10 @@ PlasmoidItem {
 
             let svg = findFrameSvg(t.item);
 
-            function autoMarginFor(m) {
-                if (!svg) return 0;
-                if (m === "bottom") return svg.margins.bottom;
-                if (m === "left" || m === "left+right") return svg.margins.left;
-                if (m === "right") return svg.margins.right;
-                if (m === "center" || m === "center-h") return Math.min(svg.margins.top, svg.margins.left);
-                return svg.margins.top;
-            }
-
             let effectiveBorderW = borderW;
             if (autoBorderW && svg) {
-                let margin = autoMarginFor(mode);
-                if (minColorMode) margin = Math.max(margin, autoMarginFor(minColorMode));
+                let margin = autoMarginFor(svg, mode);
+                if (minColorMode) margin = Math.max(margin, autoMarginFor(svg, minColorMode));
                 if (margin > 0) effectiveBorderW = margin;
             }
             effectiveBorderW = Math.min(effectiveBorderW, root.computedMaxBorder);
@@ -408,7 +401,7 @@ PlasmoidItem {
             if (minColorMode && minColorMode !== "background") {
                 effectiveMinBorderW = minBorderW;
                 if (minAutoBorderW && svg) {
-                    let minMargin = autoMarginFor(minColorMode);
+                    let minMargin = autoMarginFor(svg, minColorMode);
                     if (minMargin > 0) effectiveMinBorderW = minMargin;
                 }
                 effectiveMinBorderW = Math.min(effectiveMinBorderW, root.computedMaxBorder);
@@ -418,7 +411,7 @@ PlasmoidItem {
             if (focColorMode && focColorMode !== "background") {
                 effectiveFocBorderW = focBorderW;
                 if (focAutoBorderW && svg) {
-                    let focMargin = autoMarginFor(focColorMode);
+                    let focMargin = autoMarginFor(svg, focColorMode);
                     if (focMargin > 0) effectiveFocBorderW = focMargin;
                 }
                 effectiveFocBorderW = Math.min(effectiveFocBorderW, root.computedMaxBorder);
@@ -653,7 +646,6 @@ PlasmoidItem {
                             for (let o of root.activeOverlays) {
                                 if (o) o.windowColorOverride = "";
                             }
-                            root.hasNyanOverlays = false;
                             root.applyColors();
                         }
 

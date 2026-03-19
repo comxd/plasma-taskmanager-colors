@@ -55,9 +55,11 @@ Flickable {
             RowLayout {
                 id: headerRow
                 anchors.left: parent.left
+                anchors.right: parent.right
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.verticalCenterOffset: -Math.round(accentStrip.height / 2)
                 anchors.leftMargin: Kirigami.Units.largeSpacing * 2
+                anchors.rightMargin: Kirigami.Units.largeSpacing * 2
                 spacing: Kirigami.Units.largeSpacing * 2
 
                 Kirigami.Icon {
@@ -78,7 +80,7 @@ Flickable {
                         color: Kirigami.Theme.textColor
                     }
                     Controls.Label {
-                        text: i18n("Version %1", Plasmoid.metaData.version || "1.0.0")
+                        text: i18n("Version %1", Plasmoid.metaData.version || "1.1.0")
                         color: Kirigami.Theme.disabledTextColor
                         font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     }

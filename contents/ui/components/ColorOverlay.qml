@@ -145,7 +145,6 @@ Item {
     property bool focusEnhanced: taskIsActive && focusedMode !== "hide"
     property bool hiddenByFocus: taskIsActive && focusedMode === "hide"
     property bool focusIsBackground: taskIsActive && focusedMode === "background"
-    property bool focusIsCustom: taskIsActive && focusedMode === "custom"
 
     // Set to true when overlay was created without an app-level color
     property bool hasAppColor: true
