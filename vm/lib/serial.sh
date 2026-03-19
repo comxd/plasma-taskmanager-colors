@@ -9,7 +9,9 @@
 #   vm_serial() — send a command to the VM via serial console
 #   check_serial_sock() — exit with error if socket is missing
 
-SERIAL_SOCK="/tmp/task-manager-colors-vm-serial.sock"
+# VM_NAME should be set by the calling script (launch-vm.sh or reload-plasmoid.sh)
+VM_NAME="${VM_NAME:-plasmoid}"
+SERIAL_SOCK="/tmp/${VM_NAME}-vm-serial.sock"
 
 vm_serial() {
     # Keep connection open briefly so the command executes and we can read output
