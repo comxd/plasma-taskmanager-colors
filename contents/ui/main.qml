@@ -323,11 +323,13 @@ PlasmoidItem {
                 Math.floor(Math.min(t.width, t.height) / 2), 1
             );
             function borderDimFor(m) {
+                // Max border = half the dimension the border grows into
                 if (m === "left" || m === "right" || m === "left+right") return t.width;
+                if (m === "top" || m === "bottom" || m === "top+bottom") return t.height;
                 if (m === "center") return root.isVertical ? t.height : t.width;
                 if (m === "center-h") return root.isVertical ? t.width : t.height;
                 if (m === "frame" || m === "background+frame") return Math.min(t.width, t.height);
-                return t.height;
+                return Math.min(t.width, t.height);
             }
             let borderDim = borderDimFor(mode);
             if (minColorMode) borderDim = Math.min(borderDim, borderDimFor(minColorMode));
