@@ -4,32 +4,28 @@ All notable changes to Task Manager Colors will be documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/).
 
-## [Unreleased]
-
-## [1.1.0] — 2026-03-17
+## [1.1.0] — 2026-03-19
 
 ### Added
 
-- Minimized window mode with 5 options: normal, hide, dim, desaturate, custom style
-- Custom color mode for minimized windows: use a different display mode when windows are minimized (e.g., background → left border) with optional dim or desaturate effect
-- Nyan Cat desaturation support for minimized windows
-- "Buy me a coffee" donation button in About tab
-- "About" entry in plasmoid context menu
-- KDE Store link in About tab
-- Collapsible sections in Settings tab (Appearance, Behavior, Widget)
+- Minimized window modes: normal, hide, dim, desaturate, or custom style with optional dim/desaturate effect
+- Custom focus mode: hide, background (80%), or custom style with independent thickness, opacity, and corner radius
+- Full-page ColorPicker with Back navigation and Nyan Cat toggle
+- "Reset all colors" and "Reset window overrides" buttons with two-click confirmation
 - Expanded color palette from 30 to 40 swatches (neutrals + vivid colors)
+- Alphabetical sorting of windows list
 
 ### Changed
 
-- Redesigned About tab with compact header, centered author card, and polished layout
-- Build script touches QML/JS files to invalidate Plasma cache on update
-- VM reload script supports `--reset` flag to clear widget settings
+- Popup width increased by 20% for better readability
+- Redesigned About tab, Applications and Windows tabs with improved layout
+- System settings dialog with scroll support and structured sections
 
 ### Fixed
 
-- ComboBox delegate collapse in Plasma/Qt6 (minimized style selector)
-- Auto border width calculation for cross-axis minimized color modes
-- Corner radius visibility when only minimized mode uses rounded styles
+- About context menu popup closing immediately after opening
+- ComboBox delegate collapse in Plasma/Qt6
+- Various layout and padding issues across all tabs
 
 ## [1.0.1] — 2026-03-10
 

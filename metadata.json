@@ -7,14 +7,16 @@
                 "Name": "David DIVERRES"
             }
         ],
-        "Version": "1.0.1",
+        "Version": "1.1.0",
         "Category": "Windows and Tasks",
         "Description": "Per-application color coding for task manager entries",
         "Icon": "preferences-desktop-color",
         "Id": "com.comexpertise.plasma.taskmanagercolors",
         "License": "GPL-2.0-or-later",
         "Name": "Task Manager Colors",
-        "Website": "https://www.comexpertise.com"
+        "Website": "https://www.comexpertise.com",
+        "BugReportUrl": "https://github.com/comxd/plasma-taskmanager-colors/issues"
     },
-    "X-Plasma-API-Minimum-Version": "6.0"
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-FormFactors": ["desktop", "tablet"]
 }
