@@ -14,6 +14,7 @@ Item {
     required property int nyanWaveOffset
     required property real bgOpacity
     required property bool focusEnhanced
+    required property var nyanColors       // 6 Qt.rgba values (may be desaturated)
 
     clip: true
 
@@ -26,26 +27,25 @@ Item {
             return -(total - Math.floor(total)) * parent.width;
         }
         property real bgAlpha: nyanWaveClip.focusEnhanced ? 0.8 : nyanWaveClip.bgOpacity
+        property var canvasColors: nyanWaveClip.nyanColors
         onWidthChanged: requestPaint()
         onHeightChanged: requestPaint()
         onBgAlphaChanged: requestPaint()
+        onCanvasColorsChanged: requestPaint()
         onPaint: {
             var ctx = getContext("2d");
             ctx.reset();
             ctx.clearRect(0, 0, width, height);
             var fullW = width, h = height, pw = fullW / 2;
             if (pw <= 0 || h <= 0) return;
-            var colors = [
-                [1, 0, 0], [1, 0.6, 0], [1, 1, 0],
-                [0.2, 1, 0], [0, 0.6, 1], [0.4, 0.2, 1]
-            ];
+            var colors = nyanWaveClip.nyanColors;
             var n = colors.length, bandH = h / n;
             var amp = Math.max(3, h * 0.08);
             var freq = Math.PI * 4 / pw;
             var stp = Math.max(2, Math.floor(pw / 30));
             ctx.globalAlpha = bgAlpha;
             for (var i = 0; i < n; i++) {
-                ctx.fillStyle = Qt.rgba(colors[i][0], colors[i][1], colors[i][2], 1);
+                ctx.fillStyle = Qt.rgba(colors[i].r, colors[i].g, colors[i].b, 1);
                 ctx.beginPath();
                 if (i === 0) {
                     ctx.moveTo(0, -amp);

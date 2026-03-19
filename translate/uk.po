@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "Сховати віджет з панелі"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "Про Кольори менеджера завдань"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "Має бути розміщений на панелі"
 
@@ -226,8 +230,16 @@ msgstr ""
 "Кольорові накладки по додатках і по вікнах для менеджера завдань Plasma."
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "Автор"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"Цей плазмоїд розробляється та підтримується у мій вільний час. Якщо він вам "
+"корисний, невелика пожертва допоможе його розвитку!"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -326,6 +338,10 @@ msgid "Configure how colors are displayed on task manager entries."
 msgstr "Налаштувати відображення кольорів на записах менеджера завдань."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "Зовнішній вигляд"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "Режим"
 
@@ -379,8 +395,64 @@ msgstr ""
 "акцентна лінія)."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "Видимість віджета"
+msgid "Minimized windows:"
+msgstr "Згорнуті вікна:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "Звичайний (без змін)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "Сховати накладення"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "Приглушити накладення"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "Знебарвити (відтінки сірого)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "Власний стиль…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr "Поведінка кольорових накладень на згорнутих вікнах."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "Стиль для згорнутих:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr "Використовувати інший режим відображення для згорнутих вікон."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr ""
+"Поточний звичайний режим вимкнено — використовуйте Приглушити або Знебарвити "
+"для ефектів тієї ж форми."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "Ефект:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "Немає"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "Знебарвити накладення"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "Віджет"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -442,6 +514,12 @@ msgstr "Перевизначення кольору вікна"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "Скинути до кольору додатку"
+
+#~ msgid "Author"
+#~ msgstr "Автор"
+
+#~ msgid "Widget visibility"
+#~ msgstr "Видимість віджета"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "

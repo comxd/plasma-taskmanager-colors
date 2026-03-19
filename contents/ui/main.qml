@@ -152,6 +152,9 @@ PlasmoidItem {
             try { isLauncher = item.model?.IsLauncher ?? false; } catch(e) {}
             let isRunning = (item.isWindow || false) && !isLauncher;
 
+            let isMinimized = false;
+            try { isMinimized = item.model?.IsMinimized ?? false; } catch(e) {}
+
             results.push({
                 item: item,
                 appId: item.appId || "",
@@ -160,7 +163,8 @@ PlasmoidItem {
                 windowTitle: windowTitle,
                 isWindow: item.isWindow || false,
                 isRunning: isRunning,
-                isActive: isActive
+                isActive: isActive,
+                isMinimized: isMinimized
             });
         }
 
@@ -273,6 +277,15 @@ PlasmoidItem {
         let borderW = plasmoid.configuration.borderWidth;
         let bgOpac = plasmoid.configuration.backgroundOpacity;
         let focusOverride = plasmoid.configuration.showOnFocus;
+        let minMode = plasmoid.configuration.minimizedMode || "normal";
+        let minColorMode = (minMode === "custom") ? (plasmoid.configuration.minimizedColorMode || "") : "";
+        if (minColorMode && root.isVertical) {
+            let swap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
+                         "top+bottom": "left+right", "left+right": "top+bottom" };
+            if (swap[minColorMode]) minColorMode = swap[minColorMode];
+        }
+        let minDim = plasmoid.configuration.minimizedDim || false;
+        let minDesaturate = plasmoid.configuration.minimizedDesaturate || false;
 
         let uniqueTasks = {};
         for (let t of tasks) {
@@ -309,14 +322,15 @@ PlasmoidItem {
             root.computedMaxRadius = Math.max(
                 Math.floor(Math.min(t.width, t.height) / 2), 1
             );
-            let borderDim = (mode === "left" || mode === "right" || mode === "left+right")
-                ? t.width
-                : (mode === "center")
-                    ? (root.isVertical ? t.height : t.width)
-                    : (mode === "center-h")
-                        ? (root.isVertical ? t.width : t.height)
-                        : (mode === "frame" || mode === "background+frame")
-                            ? Math.min(t.width, t.height) : t.height;
+            function borderDimFor(m) {
+                if (m === "left" || m === "right" || m === "left+right") return t.width;
+                if (m === "center") return root.isVertical ? t.height : t.width;
+                if (m === "center-h") return root.isVertical ? t.width : t.height;
+                if (m === "frame" || m === "background+frame") return Math.min(t.width, t.height);
+                return t.height;
+            }
+            let borderDim = borderDimFor(mode);
+            if (minColorMode) borderDim = Math.min(borderDim, borderDimFor(minColorMode));
             root.computedMaxBorder = Math.max(
                 Math.floor(borderDim / 2), 1
             );
@@ -343,12 +357,15 @@ PlasmoidItem {
 
             let effectiveBorderW = borderW;
             if (autoBorderW && svg) {
-                let margin = 0;
-                if (mode === "bottom") margin = svg.margins.bottom;
-                else if (mode === "left" || mode === "left+right") margin = svg.margins.left;
-                else if (mode === "right") margin = svg.margins.right;
-                else if (mode === "center" || mode === "center-h") margin = Math.min(svg.margins.top, svg.margins.left);
-                else margin = svg.margins.top;
+                function autoMarginFor(m) {
+                    if (m === "bottom") return svg.margins.bottom;
+                    if (m === "left" || m === "left+right") return svg.margins.left;
+                    if (m === "right") return svg.margins.right;
+                    if (m === "center" || m === "center-h") return Math.min(svg.margins.top, svg.margins.left);
+                    return svg.margins.top;
+                }
+                let margin = autoMarginFor(mode);
+                if (minColorMode) margin = Math.max(margin, autoMarginFor(minColorMode));
                 if (margin > 0) effectiveBorderW = margin;
             }
             effectiveBorderW = Math.min(effectiveBorderW, root.computedMaxBorder);
@@ -375,6 +392,11 @@ PlasmoidItem {
                 focusOverride: focusOverride,
                 panelIsVertical: root.isVertical,
                 windowTitle: t.windowTitle || "",
+                isMinimized: t.isMinimized,
+                minimizedMode: minMode,
+                minimizedColorMode: minColorMode,
+                minimizedDim: minDim,
+                minimizedDesaturate: minDesaturate,
                 isNyanApp: isNyan,
                 nyanStyle: plasmoid.configuration.rainbowStyle,
                 nyanWaveOffset: nyanIndex % 6,
@@ -438,6 +460,10 @@ PlasmoidItem {
         function onShowOnFocusChanged() { applyDebounce.restart(); }
         function onBorderRadiusChanged() { applyDebounce.restart(); }
         function onPinnedBehaviorChanged() { applyDebounce.restart(); }
+        function onMinimizedModeChanged() { applyDebounce.restart(); }
+        function onMinimizedColorModeChanged() { applyDebounce.restart(); }
+        function onMinimizedDimChanged() { applyDebounce.restart(); }
+        function onMinimizedDesaturateChanged() { applyDebounce.restart(); }
         function onAutoBorderWidthChanged() { applyDebounce.restart(); }
         function onBorderWidthChanged() { applyDebounce.restart(); }
         function onRainbowSpeedChanged() { applyDebounce.restart(); }

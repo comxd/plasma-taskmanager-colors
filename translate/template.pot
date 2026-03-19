@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -202,6 +202,10 @@ msgid "Hide widget from panel"
 msgstr ""
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr ""
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr ""
 
@@ -226,7 +230,11 @@ msgid "Per-application and per-window color overlays for the Plasma task manager
 msgstr ""
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
+msgid "This plasmoid is developed and maintained on my free time. If you find it useful, a small donation helps keep it going!"
+msgstr ""
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
 msgstr ""
 
 #: contents/ui/tabs/ApplicationsTab.qml
@@ -310,6 +318,10 @@ msgid "Configure how colors are displayed on task manager entries."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr ""
 
@@ -358,7 +370,59 @@ msgid "Overlay stays visible above Plasma's focus highlight (80% bg + top accent
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
+msgid "Minimized windows:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Current normal mode is disabled — use Dim or Desaturate for same-shape effects."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml

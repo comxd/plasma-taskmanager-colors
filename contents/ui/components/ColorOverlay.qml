@@ -21,6 +21,12 @@ Item {
     property bool focusOverride: false
     property bool panelIsVertical: false
 
+    property bool isMinimized: false
+    property string minimizedMode: "normal"
+    property string minimizedColorMode: ""
+    property bool minimizedDim: false
+    property bool minimizedDesaturate: false
+
     property string windowColorOverride: ""
     property string windowTitle: ""
 
@@ -32,6 +38,17 @@ Item {
     property var nyanColors: []
     property int nyanStep: 0
     property real nyanScroll: 0
+
+    // Desaturated nyan colors for minimized windows
+    property var effectiveNyanColors: {
+        if (isMinimized && (minimizedMode === "desaturate" || (minimizedMode === "custom" && minimizedDesaturate))) {
+            return nyanColors.map(function(c) {
+                var gray = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+                return Qt.rgba(gray, gray, gray, c.a);
+            });
+        }
+        return nyanColors;
+    }
 
     property bool isNyanWindow: windowColorOverride.endsWith(":nyan")
     property bool isNyan: isNyanWindow || (windowColorOverride === "" && isNyanApp)
@@ -46,17 +63,35 @@ Item {
         return overlayColor;
     }
 
-    // Derived helpers from unified colorMode
-    property bool hasBackground: colorMode === "background" || colorMode === "background+frame"
-    property bool hasFrame: colorMode === "frame" || colorMode === "background+frame"
-    property bool hasTop: colorMode === "top" || colorMode === "top+bottom"
-    property bool hasBottom: colorMode === "bottom" || colorMode === "top+bottom"
-    property bool hasLeft: colorMode === "left" || colorMode === "left+right"
-    property bool hasRight: colorMode === "right" || colorMode === "left+right"
-    property bool hasCenter: colorMode === "center"
-    property bool hasCenterH: colorMode === "center-h"
-    property bool hasDiagDown: colorMode === "diagonal" || colorMode === "diagonal-cross"
-    property bool hasDiagUp: colorMode === "diagonal-reverse" || colorMode === "diagonal-cross"
+    // Minimized window mode helpers
+    property bool hiddenByMinimized: isMinimized && minimizedMode === "hide"
+    property real minimizedDimFactor: (isMinimized && (minimizedMode === "dim" || (minimizedMode === "custom" && minimizedDim))) ? 0.35 : 1.0
+    property color displayColor: {
+        if (isMinimized && (minimizedMode === "desaturate" || (minimizedMode === "custom" && minimizedDesaturate))) {
+            let gray = 0.299 * effectiveColor.r + 0.587 * effectiveColor.g + 0.114 * effectiveColor.b;
+            return Qt.rgba(gray, gray, gray, effectiveColor.a);
+        }
+        return effectiveColor;
+    }
+
+    // Effective color mode (switches to minimizedColorMode when minimized + custom)
+    property string effectiveMode: {
+        if (isMinimized && minimizedMode === "custom" && minimizedColorMode !== "")
+            return minimizedColorMode;
+        return colorMode;
+    }
+
+    // Derived helpers from effective color mode
+    property bool hasBackground: effectiveMode === "background" || effectiveMode === "background+frame"
+    property bool hasFrame: effectiveMode === "frame" || effectiveMode === "background+frame"
+    property bool hasTop: effectiveMode === "top" || effectiveMode === "top+bottom"
+    property bool hasBottom: effectiveMode === "bottom" || effectiveMode === "top+bottom"
+    property bool hasLeft: effectiveMode === "left" || effectiveMode === "left+right"
+    property bool hasRight: effectiveMode === "right" || effectiveMode === "left+right"
+    property bool hasCenter: effectiveMode === "center"
+    property bool hasCenterH: effectiveMode === "center-h"
+    property bool hasDiagDown: effectiveMode === "diagonal" || effectiveMode === "diagonal-cross"
+    property bool hasDiagUp: effectiveMode === "diagonal-reverse" || effectiveMode === "diagonal-cross"
     property bool hasDiag: hasDiagDown || hasDiagUp
 
     // Find the task delegate ancestor (has appId property)
@@ -80,7 +115,7 @@ Item {
     property bool hasNoColor: !hasAppColor && cleanWindowOverride === "" && !isNyan
 
     anchors.fill: parent
-    visible: !hiddenByFocus && !hasNoColor
+    visible: !hiddenByFocus && !hasNoColor && !hiddenByMinimized
     z: focusEnhanced ? 1 : -1
 
     // Background fill (hidden when nyan rainbow canvas is active)
@@ -89,10 +124,10 @@ Item {
         radius: overlay.borderRadius
         visible: (overlay.hasBackground || overlay.focusEnhanced) && !overlay.isNyan
         color: Qt.rgba(
-            overlay.effectiveColor.r,
-            overlay.effectiveColor.g,
-            overlay.effectiveColor.b,
-            overlay.focusEnhanced ? 0.8 : overlay.bgOpacity
+            overlay.displayColor.r,
+            overlay.displayColor.g,
+            overlay.displayColor.b,
+            (overlay.focusEnhanced ? 0.8 : overlay.bgOpacity) * overlay.minimizedDimFactor
         )
         Behavior on color { ColorAnimation { duration: 200 } }
     }
@@ -101,10 +136,10 @@ Item {
     NyanFlat {
         anchors.fill: parent
         visible: overlay.isNyan && overlay.nyanStyle === "flat" && (overlay.hasBackground || overlay.focusEnhanced)
-        nyanColors: overlay.nyanColors
+        nyanColors: overlay.effectiveNyanColors
         nyanStep: overlay.nyanStep
         nyanWaveOffset: overlay.nyanWaveOffset
-        bgOpacity: overlay.bgOpacity
+        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
         focusEnhanced: overlay.focusEnhanced
         borderRadius: overlay.borderRadius
     }
@@ -113,9 +148,10 @@ Item {
     NyanWaveClip {
         anchors.fill: parent
         visible: overlay.isNyan && overlay.nyanStyle === "wave" && (overlay.hasBackground || overlay.focusEnhanced)
+        nyanColors: overlay.effectiveNyanColors
         nyanScroll: overlay.nyanScroll
         nyanWaveOffset: overlay.nyanWaveOffset
-        bgOpacity: overlay.bgOpacity
+        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
         focusEnhanced: overlay.focusEnhanced
     }
 
@@ -123,8 +159,9 @@ Item {
     NyanOriginal {
         anchors.fill: parent
         visible: overlay.isNyan && overlay.nyanStyle === "original" && (overlay.hasBackground || overlay.focusEnhanced)
+        nyanColors: overlay.effectiveNyanColors
         nyanStep: overlay.nyanStep
-        bgOpacity: overlay.bgOpacity
+        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
         focusEnhanced: overlay.focusEnhanced
     }
 
@@ -151,7 +188,8 @@ Item {
         nyanScroll: overlay.nyanScroll
         nyanStyle: overlay.nyanStyle
         nyanWaveOffset: overlay.nyanWaveOffset
-        bgOpacity: overlay.bgOpacity
+        nyanColors: overlay.effectiveNyanColors
+        bgOpacity: overlay.bgOpacity * overlay.minimizedDimFactor
     }
 
     // ── Regular color rendering ──
@@ -161,9 +199,9 @@ Item {
         radius: overlay.borderRadius
         visible: overlay.hasFrame && !overlay.focusEnhanced && !overlay.isNyan
         color: "transparent"
-        border.color: overlay.effectiveColor
+        border.color: overlay.displayColor
         border.width: overlay.borderSize
-        opacity: overlay.bgOpacity
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on border.color { ColorAnimation { duration: 200 } }
     }
 
@@ -173,8 +211,8 @@ Item {
         anchors.top: parent.top
         height: overlay.borderSize
         visible: ((overlay.focusEnhanced && !overlay.panelIsVertical) || (overlay.hasTop && !overlay.hasFrame)) && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.focusEnhanced ? 0.8 : overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: (overlay.focusEnhanced ? 0.8 : overlay.bgOpacity) * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -184,8 +222,8 @@ Item {
         anchors.bottom: parent.bottom
         height: overlay.borderSize
         visible: overlay.hasBottom && !overlay.hasFrame && !overlay.focusEnhanced && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -195,8 +233,8 @@ Item {
         anchors.left: parent.left
         width: overlay.borderSize
         visible: ((overlay.focusEnhanced && overlay.panelIsVertical) || (overlay.hasLeft && !overlay.hasFrame && !overlay.focusEnhanced)) && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.focusEnhanced ? 0.8 : overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: (overlay.focusEnhanced ? 0.8 : overlay.bgOpacity) * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -206,8 +244,8 @@ Item {
         anchors.right: parent.right
         width: overlay.borderSize
         visible: overlay.hasRight && !overlay.hasFrame && !overlay.focusEnhanced && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -218,8 +256,8 @@ Item {
         anchors.bottom: parent.bottom
         width: overlay.borderSize
         visible: overlay.hasCenter && !overlay.panelIsVertical && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
     Rectangle {
@@ -228,8 +266,8 @@ Item {
         anchors.right: parent.right
         height: overlay.borderSize
         visible: overlay.hasCenter && overlay.panelIsVertical && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -240,8 +278,8 @@ Item {
         anchors.right: parent.right
         height: overlay.borderSize
         visible: overlay.hasCenterH && !overlay.panelIsVertical && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
     Rectangle {
@@ -250,8 +288,8 @@ Item {
         anchors.bottom: parent.bottom
         width: overlay.borderSize
         visible: overlay.hasCenterH && overlay.panelIsVertical && !overlay.isNyan
-        color: overlay.effectiveColor
-        opacity: overlay.bgOpacity
+        color: overlay.displayColor
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
         Behavior on color { ColorAnimation { duration: 200 } }
     }
 
@@ -260,12 +298,12 @@ Item {
         id: diagCanvas
         anchors.fill: parent
         visible: overlay.hasDiag && !overlay.focusEnhanced && !overlay.isNyan
-        opacity: overlay.bgOpacity
+        opacity: overlay.bgOpacity * overlay.minimizedDimFactor
 
         onVisibleChanged: if (visible) requestPaint()
-        property color diagColor: overlay.effectiveColor
+        property color diagColor: overlay.displayColor
         property int diagWidth: overlay.borderSize
-        property string diagMode: overlay.colorMode
+        property string diagMode: overlay.effectiveMode
         onDiagColorChanged: requestPaint()
         onDiagWidthChanged: requestPaint()
         onDiagModeChanged: requestPaint()

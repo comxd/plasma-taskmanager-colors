@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "パネルからウィジェットを非表示"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "タスクマネージャーカラーについて"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "パネルに配置する必要があります"
 
@@ -227,8 +231,16 @@ msgstr ""
 "バーレイ。"
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "作者"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"このプラズモイドは自由時間に開発・メンテナンスしています。お役に立てているな"
+"ら、少額の寄付が開発の継続に役立ちます！"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -326,6 +338,10 @@ msgid "Configure how colors are displayed on task manager entries."
 msgstr "タスクマネージャーのエントリでの色の表示方法を設定します。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "外観"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "モード"
 
@@ -378,8 +394,64 @@ msgstr ""
 "背景 + 上部アクセントライン）。"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "ウィジェットの表示"
+msgid "Minimized windows:"
+msgstr "最小化ウィンドウ:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "通常（変更なし）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "オーバーレイを非表示"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "オーバーレイを暗くする"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "彩度を下げる（グレースケール）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "カスタムスタイル…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr "最小化ウィンドウでのカラーオーバーレイの動作。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "最小化スタイル："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr "ウィンドウが最小化されているとき、別の表示モードを使用します。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr ""
+"現在の通常モードは無効です——同じ形状の効果には「暗くする」または「彩度を下げ"
+"る」を使用してください。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "エフェクト："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "なし"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "オーバーレイの彩度を下げる"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "ウィジェット"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -392,8 +464,10 @@ msgid ""
 "it → uncheck this option. Tip: a global shortcut can open this popup even "
 "when hidden."
 msgstr ""
-"ウィジェットアイコンは非表示です。カラー機能は引き続き動作します。再表示するには：パネルを右クリック → 編集モードに入る → "
-"ウィジェットが再表示される → 右クリック → このオプションのチェックを外す。ヒント：非表示でもグローバルショートカットでこのポップアップを開けます。"
+"ウィジェットアイコンは非表示です。カラー機能は引き続き動作します。再表示する"
+"には：パネルを右クリック → 編集モードに入る → ウィジェットが再表示される → 右"
+"クリック → このオプションのチェックを外す。ヒント：非表示でもグローバルショー"
+"トカットでこのポップアップを開けます。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid ""
@@ -401,7 +475,10 @@ msgid ""
 "the background. Also available via right-click on the widget icon. Tip: set "
 "a global shortcut to open this popup even when hidden."
 msgstr ""
-"パネルからウィジェットアイコンを非表示にします。カラー機能はバックグラウンドで通常通り動作し続けます。ウィジェットアイコンの右クリックからも利用できます。ヒント：非表示でもこのポップアップを開けるグローバルショートカットを設定してください。"
+"パネルからウィジェットアイコンを非表示にします。カラー機能はバックグラウンド"
+"で通常通り動作し続けます。ウィジェットアイコンの右クリックからも利用できま"
+"す。ヒント：非表示でもこのポップアップを開けるグローバルショートカットを設定"
+"してください。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Configure Keyboard Shortcut…"
@@ -411,7 +488,9 @@ msgstr "キーボードショートカットを設定…"
 msgid ""
 "Opens the widget configuration dialog where you can set a global shortcut to "
 "toggle this popup."
-msgstr "ウィジェット設定ダイアログを開き、このポップアップを切り替えるグローバルショートカットを設定できます。"
+msgstr ""
+"ウィジェット設定ダイアログを開き、このポップアップを切り替えるグローバル"
+"ショートカットを設定できます。"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""
@@ -434,6 +513,12 @@ msgstr "ウィンドウ色の上書き"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "アプリの色にリセット"
+
+#~ msgid "Author"
+#~ msgstr "作者"
+
+#~ msgid "Widget visibility"
+#~ msgstr "ウィジェットの表示"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "

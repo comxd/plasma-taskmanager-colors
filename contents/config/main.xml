@@ -51,6 +51,22 @@
     <entry name="hideWidget" type="Bool">
       <default>false</default>
     </entry>
+    <!-- normal, hide, dim, desaturate, custom -->
+    <entry name="minimizedMode" type="String">
+      <default>normal</default>
+    </entry>
+    <!-- Custom color mode for minimized windows (empty = same as normal) -->
+    <entry name="minimizedColorMode" type="String">
+      <default></default>
+    </entry>
+    <!-- Whether to also dim overlay when using custom minimized mode -->
+    <entry name="minimizedDim" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- Whether to desaturate overlay when using custom minimized mode -->
+    <entry name="minimizedDesaturate" type="Bool">
+      <default>false</default>
+    </entry>
     <!-- JSON: { "appId": "#rrggbb", ... } -->
     <entry name="appColorMap" type="String">
       <default>{}</default>

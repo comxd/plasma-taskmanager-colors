@@ -31,9 +31,11 @@ Canvas {
     required property string nyanStyle
     required property int nyanWaveOffset
     required property real bgOpacity
+    required property var nyanColors   // 6 Qt.rgba values (may be desaturated)
 
     opacity: focusEnhanced ? 0.8 : bgOpacity
 
+    onNyanColorsChanged: if (visible) requestPaint()
     onNyanStepChanged: if (visible && nyanStyle !== "wave") requestPaint()
     onNyanScrollChanged: if (visible && nyanStyle === "wave") requestPaint()
     onNyanStyleChanged: if (visible) requestPaint()
@@ -103,16 +105,13 @@ Canvas {
         var n = 6, bandH = h / n;
 
         if (nyanStyle === "wave") {
-            var colors = [
-                [1, 0, 0], [1, 0.6, 0], [1, 1, 0],
-                [0.2, 1, 0], [0, 0.6, 1], [0.4, 0.2, 1]
-            ];
+            var colors = nyanColors;
             var amp = Math.max(3, h * 0.08);
             var freq = Math.PI * 4 / w;
             var stp = Math.max(2, Math.floor(w / 30));
             var phase = nyanScroll * Math.PI * 8;
             for (var i = 0; i < n; i++) {
-                ctx.fillStyle = Qt.rgba(colors[i][0], colors[i][1], colors[i][2], 1);
+                ctx.fillStyle = Qt.rgba(colors[i].r, colors[i].g, colors[i].b, 1);
                 ctx.beginPath();
                 if (i === 0) {
                     ctx.moveTo(0, -amp);
@@ -137,24 +136,19 @@ Canvas {
                 ctx.fill();
             }
         } else if (nyanStyle === "original") {
-            var origColors = ["#FD1B00", "#FD9B01", "#FDEF01", "#20DB01", "#008AFC", "#6D3FFC"];
             var oAmp = Math.max(2, Math.min(h * 0.06, 4));
             var dir = (nyanStep % 2 === 0) ? 1 : -1;
             for (var k = 0; k < n; k++) {
                 var yOff = (k % 2 === 0 ? 1 : -1) * oAmp * dir;
-                ctx.fillStyle = origColors[k];
+                ctx.fillStyle = Qt.rgba(nyanColors[k].r, nyanColors[k].g, nyanColors[k].b, 1);
                 ctx.fillRect(0, k * bandH + yOff, w, bandH + 1);
             }
         } else {
             // Flat: color-shifting bands
-            var fColors = [
-                [1, 0, 0], [1, 0.6, 0], [1, 1, 0],
-                [0.2, 1, 0], [0, 0.6, 1], [0.4, 0.2, 1]
-            ];
             var offset = nyanWaveOffset;
             for (var j = 0; j < n; j++) {
                 var ci = (j + nyanStep + offset) % n;
-                ctx.fillStyle = Qt.rgba(fColors[ci][0], fColors[ci][1], fColors[ci][2], 1);
+                ctx.fillStyle = Qt.rgba(nyanColors[ci].r, nyanColors[ci].g, nyanColors[ci].b, 1);
                 ctx.fillRect(0, j * bandH, w, bandH + 1);
             }
         }

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "패널에서 위젯 숨기기"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "작업 관리자 색상 정보"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "패널에 배치해야 합니다"
 
@@ -225,8 +229,16 @@ msgid ""
 msgstr "Plasma 작업 관리자용 애플리케이션별 및 창별 색상 오버레이."
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "작성자"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"이 플라즈모이드는 여가 시간에 개발 및 유지 관리됩니다. 유용하게 사용하고 계시"
+"다면 소액 기부가 개발 지속에 도움이 됩니다!"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -323,6 +335,10 @@ msgid "Configure how colors are displayed on task manager entries."
 msgstr "작업 관리자 항목에 색상이 표시되는 방식을 구성합니다."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "외관"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "모드"
 
@@ -375,8 +391,64 @@ msgstr ""
 "선)."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "위젯 가시성"
+msgid "Minimized windows:"
+msgstr "최소화된 창:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "보통 (변경 없음)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "오버레이 숨기기"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "오버레이 어둡게"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "채도 낮추기 (회색조)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "사용자 정의 스타일…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr "최소화된 창에서 색상 오버레이의 동작 방식."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "최소화 스타일:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr "창이 최소화되었을 때 다른 표시 모드를 사용합니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr ""
+"현재 일반 모드가 비활성화되었습니다 — 같은 모양 효과를 위해 어둡게 또는 채도 "
+"낮추기를 사용하세요."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "효과:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "없음"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "오버레이 채도 낮추기"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "위젯"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -389,9 +461,10 @@ msgid ""
 "it → uncheck this option. Tip: a global shortcut can open this popup even "
 "when hidden."
 msgstr ""
-"위젯 아이콘이 숨겨져 있습니다. 색상 기능은 계속 작동합니다. 다시 표시하려면: 패널을 마우스 오른쪽 버튼으로 클릭 → 편집 모드 진입 "
-"→ 위젯이 다시 나타남 → 마우스 오른쪽 버튼으로 클릭 → 이 옵션의 체크 해제. 팁: 숨겨져 있어도 전역 단축키로 이 팝업을 열 수 "
-"있습니다."
+"위젯 아이콘이 숨겨져 있습니다. 색상 기능은 계속 작동합니다. 다시 표시하려면: "
+"패널을 마우스 오른쪽 버튼으로 클릭 → 편집 모드 진입 → 위젯이 다시 나타남 → 마"
+"우스 오른쪽 버튼으로 클릭 → 이 옵션의 체크 해제. 팁: 숨겨져 있어도 전역 단축"
+"키로 이 팝업을 열 수 있습니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid ""
@@ -399,8 +472,9 @@ msgid ""
 "the background. Also available via right-click on the widget icon. Tip: set "
 "a global shortcut to open this popup even when hidden."
 msgstr ""
-"패널에서 위젯 아이콘을 숨깁니다. 색상 기능은 백그라운드에서 정상적으로 계속 작동합니다. 위젯 아이콘을 마우스 오른쪽 버튼으로 클릭해서도 "
-"사용할 수 있습니다. 팁: 숨겨져 있어도 이 팝업을 열 수 있도록 전역 단축키를 설정하세요."
+"패널에서 위젯 아이콘을 숨깁니다. 색상 기능은 백그라운드에서 정상적으로 계속 "
+"작동합니다. 위젯 아이콘을 마우스 오른쪽 버튼으로 클릭해서도 사용할 수 있습니"
+"다. 팁: 숨겨져 있어도 이 팝업을 열 수 있도록 전역 단축키를 설정하세요."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Configure Keyboard Shortcut…"
@@ -410,7 +484,8 @@ msgstr "키보드 단축키 설정…"
 msgid ""
 "Opens the widget configuration dialog where you can set a global shortcut to "
 "toggle this popup."
-msgstr "이 팝업을 전환하는 전역 단축키를 설정할 수 있는 위젯 구성 대화 상자를 엽니다."
+msgstr ""
+"이 팝업을 전환하는 전역 단축키를 설정할 수 있는 위젯 구성 대화 상자를 엽니다."
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""
@@ -429,6 +504,12 @@ msgstr "창 색상 재정의"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "앱 색상으로 초기화"
+
+#~ msgid "Author"
+#~ msgstr "작성자"
+
+#~ msgid "Widget visibility"
+#~ msgstr "위젯 가시성"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "

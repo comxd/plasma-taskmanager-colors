@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-07 02:04+0100\n"
+"POT-Creation-Date: 2026-03-17 03:05+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -200,6 +200,10 @@ msgid "Hide widget from panel"
 msgstr "Widget in der Leiste ausblenden"
 
 #: contents/ui/main.qml
+msgid "About Task Manager Colors"
+msgstr "Über Fensterleiste Farben"
+
+#: contents/ui/main.qml
 msgid "Must be placed in a panel"
 msgstr "Muss in einer Leiste platziert werden"
 
@@ -227,8 +231,16 @@ msgstr ""
 "Fensterleiste."
 
 #: contents/ui/tabs/AboutTab.qml
-msgid "Author"
-msgstr "Autor"
+msgid ""
+"This plasmoid is developed and maintained on my free time. If you find it "
+"useful, a small donation helps keep it going!"
+msgstr ""
+"Dieses Plasmoid wird in meiner Freizeit entwickelt und gepflegt. Wenn Sie es "
+"nützlich finden, hilft eine kleine Spende, es am Laufen zu halten!"
+
+#: contents/ui/tabs/AboutTab.qml
+msgid "Buy me a coffee"
+msgstr "Buy me a coffee"
 
 #: contents/ui/tabs/ApplicationsTab.qml
 msgid ""
@@ -329,6 +341,10 @@ msgstr ""
 "werden."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Appearance"
+msgstr "Erscheinungsbild"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Mode"
 msgstr "Modus"
 
@@ -384,8 +400,64 @@ msgstr ""
 "Hintergrund + obere Akzentlinie)."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Widget visibility"
-msgstr "Widget-Sichtbarkeit"
+msgid "Minimized windows:"
+msgstr "Minimierte Fenster:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Normal (no change)"
+msgstr "Normal (keine Änderung)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide overlay"
+msgstr "Überlagerung ausblenden"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Dim overlay"
+msgstr "Überlagerung abdunkeln"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate (grayscale)"
+msgstr "Entsättigen (Graustufen)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom style…"
+msgstr "Benutzerdefinierter Stil…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How color overlays behave on minimized windows."
+msgstr "Verhalten der Farbüberlagerungen bei minimierten Fenstern."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Minimized style:"
+msgstr "Minimiert-Stil:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Use a different display mode when windows are minimized."
+msgstr "Einen anderen Anzeigemodus verwenden, wenn Fenster minimiert sind."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Current normal mode is disabled — use Dim or Desaturate for same-shape "
+"effects."
+msgstr ""
+"Der aktuelle Normalmodus ist deaktiviert — verwenden Sie Abdunkeln oder "
+"Entsättigen für gleichförmige Effekte."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Effect:"
+msgstr "Effekt:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "None"
+msgstr "Kein"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturate overlay"
+msgstr "Überlagerung entsättigen"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Widget"
+msgstr "Widget"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hide widget icon from panel"
@@ -448,6 +520,12 @@ msgstr "Fensterfarbe überschreiben"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset to app color"
 msgstr "Auf App-Farbe zurücksetzen"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid "Widget visibility"
+#~ msgstr "Widget-Sichtbarkeit"
 
 #~ msgid ""
 #~ "The widget icon is hidden. Colors continue to work. To show it again: "
