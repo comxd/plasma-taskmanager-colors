@@ -2,7 +2,6 @@
 # Shared QEMU monitor sendkey helpers for host scripts
 #
 # Usage:
-#   MONITOR_SOCK="/tmp/task-manager-colors-vm-monitor.sock"
 #   source "$(dirname "$0")/lib/sendkey.sh"
 #
 # Requires:
