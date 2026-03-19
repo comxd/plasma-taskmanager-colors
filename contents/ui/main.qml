@@ -478,7 +478,7 @@ PlasmoidItem {
 
     fullRepresentation: Item {
         id: fullRep
-        Layout.preferredWidth: Kirigami.Units.gridUnit * 22
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 26
         Layout.preferredHeight: Kirigami.Units.gridUnit * 24
         Layout.minimumWidth: Kirigami.Units.gridUnit * 18
         Layout.minimumHeight: Kirigami.Units.gridUnit * 14
