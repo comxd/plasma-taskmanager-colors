@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -409,8 +409,54 @@ msgstr ""
 "ます。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "テーマ装飾（非アクティブ）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "非アクティブなタスクボタンに表示する Plasma テーマの枠線を選択します。すべてのチェックを外すと装飾が非表示になります。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "上の枠線"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "下の枠線"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "左の枠線"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "右の枠線"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "テーマ装飾（ホバー）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "ホバー時に表示する Plasma テーマの枠線を選択します。すべてのチェックを外すと装飾が非表示になります。"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "フォーカスウィンドウ"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "テーマ装飾（フォーカス）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "フォーカスされたタスクに表示する Plasma テーマの枠線を選択します。すべてのチェックを外すと装飾が非表示になります。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -633,18 +679,6 @@ msgstr ""
 "てください。"
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "（アプリ nyan）"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "（自動カラー）"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "（アプリカラー）"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "カスタムウィンドウ上書き"
 
@@ -683,6 +717,47 @@ msgstr "アプリの色にリセット"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "ウィンドウの上書きをリセット"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "テーマの枠線（非アクティブ）"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr "非アクティブなタスクに表示する Plasma テーマの枠線を選択します。"
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "テーマの枠線（フォーカス）"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr "フォーカスされたタスクに表示する Plasma テーマの枠線を選択します。"
+
+#~ msgid "Customize normal borders"
+#~ msgstr "通常時の枠線をカスタマイズ"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "フォーカス時の枠線をカスタマイズ"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "Plasma のタスク装飾を無効にする"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr "非アクティブなタスクボタンの既定の Plasma 背景を除去します。"
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "Plasma のフォーカスハイライトを無効にする"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr ""
+#~ "フォーカスされたタスクに表示される Plasma の既定のハイライト効果を除去しま"
+#~ "す。"
+
+#~ msgid "(app nyan)"
+#~ msgstr "（アプリ nyan）"
+
+#~ msgid "(auto color)"
+#~ msgstr "（自動カラー）"
+
+#~ msgid "(app color)"
+#~ msgstr "（アプリカラー）"
 
 #~ msgid "Button tint"
 #~ msgstr "ボタン着色"

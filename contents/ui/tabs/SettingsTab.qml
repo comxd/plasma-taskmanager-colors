@@ -47,6 +47,10 @@ StackLayout {
         return modeLabels[value] || value;
     }
 
+    function toggleBit(value, bit, on) {
+        return on ? (value | bit) : (value & ~bit);
+    }
+
     // ════════════════════════════════════════
     // ── Page 0: Settings content ──
     // ════════════════════════════════════════
@@ -279,6 +283,86 @@ StackLayout {
                     color: Kirigami.Theme.disabledTextColor
                     wrapMode: Text.Wrap; Layout.fillWidth: true
                 }
+
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
+
+                Controls.CheckBox {
+                    text: i18n("Theme decoration (inactive)")
+                    checked: plasmoid.configuration.plasmaNormalDecoration >= 0
+                    onToggled: plasmoid.configuration.plasmaNormalDecoration = checked ? 15 : -1
+                }
+                Controls.Label {
+                    text: i18n("Select which Plasma theme borders to show on inactive task buttons. Uncheck all to hide decoration.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+                Flow {
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    spacing: Kirigami.Units.smallSpacing
+                    visible: plasmoid.configuration.plasmaNormalDecoration >= 0
+                    Controls.CheckBox {
+                        text: i18n("Top border")
+                        checked: (plasmoid.configuration.plasmaNormalDecoration & 1) !== 0
+                        onToggled: plasmoid.configuration.plasmaNormalDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaNormalDecoration, 1, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Bottom border")
+                        checked: (plasmoid.configuration.plasmaNormalDecoration & 2) !== 0
+                        onToggled: plasmoid.configuration.plasmaNormalDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaNormalDecoration, 2, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Left border")
+                        checked: (plasmoid.configuration.plasmaNormalDecoration & 4) !== 0
+                        onToggled: plasmoid.configuration.plasmaNormalDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaNormalDecoration, 4, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Right border")
+                        checked: (plasmoid.configuration.plasmaNormalDecoration & 8) !== 0
+                        onToggled: plasmoid.configuration.plasmaNormalDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaNormalDecoration, 8, checked)
+                    }
+                }
+
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
+
+                Controls.CheckBox {
+                    text: i18n("Theme decoration (hover)")
+                    checked: plasmoid.configuration.plasmaHoverDecoration >= 0
+                    onToggled: plasmoid.configuration.plasmaHoverDecoration = checked ? 15 : -1
+                }
+                Controls.Label {
+                    text: i18n("Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+                Flow {
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    spacing: Kirigami.Units.smallSpacing
+                    visible: plasmoid.configuration.plasmaHoverDecoration >= 0
+                    Controls.CheckBox {
+                        text: i18n("Top border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 1) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 1, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Bottom border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 2) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 2, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Left border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 4) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 4, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Right border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 8) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 8, checked)
+                    }
+                }
             }
 
             // ════════════════════════════════════════
@@ -317,6 +401,45 @@ StackLayout {
                 Layout.leftMargin: Kirigami.Units.smallSpacing
                 spacing: Kirigami.Units.smallSpacing
                 visible: settingsFlickable.focusedExpanded
+
+                Controls.CheckBox {
+                    text: i18n("Theme decoration (focused)")
+                    checked: plasmoid.configuration.plasmaFocusDecoration >= 0
+                    onToggled: plasmoid.configuration.plasmaFocusDecoration = checked ? 15 : -1
+                }
+                Controls.Label {
+                    text: i18n("Select which Plasma theme borders to show on focused tasks. Uncheck all to hide decoration.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+                Flow {
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    spacing: Kirigami.Units.smallSpacing
+                    visible: plasmoid.configuration.plasmaFocusDecoration >= 0
+                    Controls.CheckBox {
+                        text: i18n("Top border")
+                        checked: (plasmoid.configuration.plasmaFocusDecoration & 1) !== 0
+                        onToggled: plasmoid.configuration.plasmaFocusDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaFocusDecoration, 1, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Bottom border")
+                        checked: (plasmoid.configuration.plasmaFocusDecoration & 2) !== 0
+                        onToggled: plasmoid.configuration.plasmaFocusDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaFocusDecoration, 2, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Left border")
+                        checked: (plasmoid.configuration.plasmaFocusDecoration & 4) !== 0
+                        onToggled: plasmoid.configuration.plasmaFocusDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaFocusDecoration, 4, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Right border")
+                        checked: (plasmoid.configuration.plasmaFocusDecoration & 8) !== 0
+                        onToggled: plasmoid.configuration.plasmaFocusDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaFocusDecoration, 8, checked)
+                    }
+                }
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: 2; Layout.bottomMargin: 2 }
 
                 RowLayout {
                     Layout.fillWidth: true

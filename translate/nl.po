@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -412,8 +412,54 @@ msgstr ""
 "gegroepeerd."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "Themadecoratie (inactief)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "Selecteer welke Plasma-themaranden worden weergegeven op inactieve taakknoppen. Alles uitvinken om decoratie te verbergen."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "Bovenrand"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "Onderrand"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "Linkerrand"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "Rechterrand"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Themadecoratie (hover)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "Selecteer welke Plasma-themaranden worden weergegeven bij zweven. Alles uitvinken om decoratie te verbergen."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Gefocust venster"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "Themadecoratie (gefocust)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "Selecteer welke Plasma-themaranden worden weergegeven bij gefocuste taken. Alles uitvinken om decoratie te verbergen."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -638,18 +684,6 @@ msgstr ""
 "overschrijvingen."
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "(app-nyan)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "(automatische kleur)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "(app-kleur)"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "Aangepaste vensteroverschrijving"
 
@@ -688,6 +722,49 @@ msgstr "Herstellen naar app-kleur"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Vensteroverschrijvingen resetten"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "Themaranden (inactief)"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr ""
+#~ "Selecteer welke Plasma-themaranden worden weergegeven bij inactieve taken."
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "Themaranden (gefocust)"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr ""
+#~ "Selecteer welke Plasma-themaranden worden weergegeven bij gefocuste taken."
+
+#~ msgid "Customize normal borders"
+#~ msgstr "Normale randen aanpassen"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "Focusranden aanpassen"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "Plasma-taakdecoratie uitschakelen"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr ""
+#~ "Verwijdert de standaard Plasma-achtergrond op inactieve taakknoppen."
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "Plasma-focusmarkering uitschakelen"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr ""
+#~ "Verwijdert het standaard Plasma-markeringseffect op gefocuste taken."
+
+#~ msgid "(app nyan)"
+#~ msgstr "(app-nyan)"
+
+#~ msgid "(auto color)"
+#~ msgstr "(automatische kleur)"
+
+#~ msgid "(app color)"
+#~ msgstr "(app-kleur)"
 
 #~ msgid "Button tint"
 #~ msgstr "Knoptint"

@@ -30,6 +30,9 @@ KCM.SimpleKCM {
     property int cfg_focusedBorderWidth
     property double cfg_focusedOpacity
     property int cfg_focusedBorderRadius
+    property int cfg_plasmaFocusDecoration
+    property int cfg_plasmaNormalDecoration
+    property int cfg_plasmaHoverDecoration
     property double cfg_minimizedOpacity
     property int cfg_minimizedBorderRadius
     property string cfg_pinnedBehavior

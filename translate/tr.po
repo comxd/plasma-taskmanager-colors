@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -413,8 +413,54 @@ msgstr ""
 "gösterir."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "Tema süslemesi (etkin değil)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "Etkin olmayan görev düğmelerinde hangi Plasma tema kenarlıklarının gösterileceğini seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "Üst kenarlık"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "Alt kenarlık"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "Sol kenarlık"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "Sağ kenarlık"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Tema süslemesi (üzerine gelme)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "Üzerine gelindiğinde hangi Plasma tema kenarlıklarının gösterileceğini seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Odaklanan pencere"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "Tema süslemesi (odaklanmış)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "Odaklanmış görevlerde hangi Plasma tema kenarlıklarının gösterileceğini seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -636,18 +682,6 @@ msgstr ""
 "açın."
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "(uygulama nyan)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "(otomatik renk)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "(uygulama rengi)"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "Özel pencere geçersiz kılma"
 
@@ -686,6 +720,52 @@ msgstr "Uygulama rengine sıfırla"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Pencere geçersiz kılmalarını sıfırla"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "Tema kenarlıkları (etkin değil)"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr ""
+#~ "Etkin olmayan görevlerde hangi Plasma tema kenarlıklarının "
+#~ "gösterileceğini seçin."
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "Tema kenarlıkları (odaklanmış)"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr ""
+#~ "Odaklanmış görevlerde hangi Plasma tema kenarlıklarının gösterileceğini "
+#~ "seçin."
+
+#~ msgid "Customize normal borders"
+#~ msgstr "Normal kenarlıkları özelleştir"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "Odak kenarlıklarını özelleştir"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "Plasma görev süslemesini devre dışı bırak"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr ""
+#~ "Etkin olmayan görev düğmelerindeki varsayılan Plasma arka planını "
+#~ "kaldırır."
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "Plasma odak vurgusunu devre dışı bırak"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr ""
+#~ "Odaklanmış görevlerdeki varsayılan Plasma vurgulama efektini kaldırır."
+
+#~ msgid "(app nyan)"
+#~ msgstr "(uygulama nyan)"
+
+#~ msgid "(auto color)"
+#~ msgstr "(otomatik renk)"
+
+#~ msgid "(app color)"
+#~ msgstr "(uygulama rengi)"
 
 #~ msgid "Button tint"
 #~ msgstr "Düğme tonu"

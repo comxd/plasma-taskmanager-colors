@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -403,8 +403,54 @@ msgid ""
 msgstr "إظهار نقاط صغيرة عند تجميع عدة نوافذ تحت مهمة واحدة."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "زخرفة السمة (غير نشط)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "اختيار حدود سمة Plasma التي تُعرض على أزرار المهام غير النشطة. إلغاء تحديد الكل لإخفاء الزخرفة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "الحد العلوي"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "الحد السفلي"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "الحد الأيسر"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "الحد الأيمن"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "زخرفة السمة (تمرير)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "اختيار حدود سمة Plasma التي تُعرض عند التمرير. إلغاء تحديد الكل لإخفاء الزخرفة."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "النافذة المُركَّزة"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "زخرفة السمة (مُركَّز)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "اختيار حدود سمة Plasma التي تُعرض على المهام المُركَّز عليها. إلغاء تحديد الكل لإخفاء الزخرفة."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -619,18 +665,6 @@ msgid "No windows detected — open some windows to use per-window overrides."
 msgstr "لم يتم اكتشاف نوافذ — افتح نوافذ لاستخدام التجاوزات لكل نافذة."
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "(nyan التطبيق)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "(لون تلقائي)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "(لون التطبيق)"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "تجاوز نافذة مخصص"
 
@@ -669,6 +703,45 @@ msgstr "إعادة التعيين إلى لون التطبيق"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "إعادة تعيين تجاوزات النوافذ"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "حدود السمة (غير نشط)"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr "اختيار حدود سمة Plasma التي تُعرض على المهام غير النشطة."
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "حدود السمة (مُركَّز)"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr "اختيار حدود سمة Plasma التي تُعرض على المهام المُركَّز عليها."
+
+#~ msgid "Customize normal borders"
+#~ msgstr "تخصيص الحدود العادية"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "تخصيص حدود التركيز"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "تعطيل زخرفة مهام Plasma"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr "يزيل خلفية Plasma الافتراضية على أزرار المهام غير النشطة."
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "تعطيل تمييز التركيز في Plasma"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr "يزيل تأثير التمييز الافتراضي في Plasma على المهام المركّز عليها."
+
+#~ msgid "(app nyan)"
+#~ msgstr "(nyan التطبيق)"
+
+#~ msgid "(auto color)"
+#~ msgstr "(لون تلقائي)"
+
+#~ msgid "(app color)"
+#~ msgstr "(لون التطبيق)"
 
 #~ msgid "Button tint"
 #~ msgstr "تلوين الزر"

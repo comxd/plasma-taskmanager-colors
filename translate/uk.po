@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -410,8 +410,54 @@ msgstr ""
 "Показувати маленькі точки, коли кілька вікон згруповані під одним завданням."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "Оформлення теми (неактивні)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "Обрати, які межі теми Plasma відображати на неактивних кнопках завдань. Зніміть усі прапорці, щоб приховати оформлення."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "Верхня межа"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "Нижня межа"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "Ліва межа"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "Права межа"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Оформлення теми (наведення)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "Обрати, які межі теми Plasma відображати при наведенні. Зніміть усі прапорці, щоб приховати оформлення."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Активне вікно"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "Оформлення теми (у фокусі)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "Обрати, які межі теми Plasma відображати на активних завданнях. Зніміть усі прапорці, щоб приховати оформлення."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -635,18 +681,6 @@ msgstr ""
 "Вікна не виявлено — відкрийте вікна для використання перевизначень по вікнах."
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "(nyan додатка)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "(автоколір)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "(колір додатка)"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "Власне перевизначення вікна"
 
@@ -685,6 +719,46 @@ msgstr "Скинути до кольору додатку"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Скинути перевизначення вікон"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "Межі теми (неактивні)"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr "Обрати, які межі теми Plasma відображати на неактивних завданнях."
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "Межі теми (у фокусі)"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr "Обрати, які межі теми Plasma відображати на активних завданнях."
+
+#~ msgid "Customize normal borders"
+#~ msgstr "Налаштувати звичайні межі"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "Налаштувати межі при фокусі"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "Вимкнути оформлення завдань Plasma"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr "Прибирає стандартне тло Plasma на кнопках неактивних завдань."
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "Вимкнути підсвічування фокусу Plasma"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr ""
+#~ "Прибирає стандартний ефект підсвічування Plasma на активних завданнях."
+
+#~ msgid "(app nyan)"
+#~ msgstr "(nyan додатка)"
+
+#~ msgid "(auto color)"
+#~ msgstr "(автоколір)"
+
+#~ msgid "(app color)"
+#~ msgstr "(колір додатка)"
 
 #~ msgid "Button tint"
 #~ msgstr "Тонування кнопки"

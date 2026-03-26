@@ -28,6 +28,9 @@ Item {
     property int focusedBorderRadius: -1
     property real minimizedOpacity: -1
     property int minimizedBorderRadius: -1
+    property int plasmaFocusDecoration: -1   // -1=default, 0-15=border bitmask (0=hide all)
+    property int plasmaNormalDecoration: -1
+    property int plasmaHoverDecoration: -1
     property bool panelIsVertical: false
 
     property bool isMinimized: false
@@ -189,6 +192,56 @@ Item {
         NumberAnimation { target: overlay; property: "opacity"; to: 1.0; duration: 300; easing.type: Easing.InOutQuad }
         NumberAnimation { target: overlay; property: "opacity"; to: 0.4; duration: 300; easing.type: Easing.InOutQuad }
         onFinished: { overlay.opacity = 1.0; overlay.pulseHighlight = false; }
+    }
+
+    // ── Plasma decoration control (3-state × 2-mode) ──
+    // -1 = default (don't modify), 0-15 = border bitmask (0 = hide all borders)
+    property var _savedBorders: null
+    property bool needsDecorationControl: plasmaFocusDecoration !== -1 || plasmaNormalDecoration !== -1 || plasmaHoverDecoration !== -1
+
+    Connections {
+        target: (overlay.needsDecorationControl && overlay.parent && overlay.parent.hasOwnProperty("prefix")) ? overlay.parent : null
+        function onPrefixChanged() {
+            overlay._applyDecoration();
+        }
+    }
+
+    function _applyDecoration() {
+        if (!parent || !parent.hasOwnProperty("enabledBorders")) return;
+
+        // Save original on first call
+        if (_savedBorders === null) _savedBorders = parent.enabledBorders;
+
+        // Determine current state — hover > focus > normal
+        var isHovered = parent.hasOwnProperty("isHovered") ? parent.isHovered : false;
+        var decoration = -1;
+        if (isHovered && plasmaHoverDecoration !== -1) {
+            decoration = plasmaHoverDecoration;
+        } else if (taskIsActive && plasmaFocusDecoration !== -1) {
+            decoration = plasmaFocusDecoration;
+        } else if (!taskIsActive && !isMinimized && plasmaNormalDecoration !== -1) {
+            decoration = plasmaNormalDecoration;
+        }
+
+        // Apply: >= 0 = custom bitmask (0 hides all borders), -1 = restore default
+        if (decoration >= 0) {
+            parent.enabledBorders = decoration;
+        } else {
+            parent.enabledBorders = _savedBorders !== null ? _savedBorders : 15;
+        }
+    }
+
+    onTaskIsActiveChanged: _applyDecoration()
+    onIsMinimizedChanged: _applyDecoration()
+    onPlasmaFocusDecorationChanged: _applyDecoration()
+    onPlasmaNormalDecorationChanged: _applyDecoration()
+    onPlasmaHoverDecorationChanged: _applyDecoration()
+    Component.onCompleted: _applyDecoration()
+    Component.onDestruction: {
+        try {
+            if (parent && parent.hasOwnProperty("enabledBorders") && _savedBorders !== null)
+                parent.enabledBorders = _savedBorders;
+        } catch(e) {}
     }
 
     // Background fill (hidden when nyan rainbow canvas is active)
