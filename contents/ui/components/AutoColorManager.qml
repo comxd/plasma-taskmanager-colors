@@ -128,12 +128,14 @@ Item {
 
         if (_queue.length === 0) {
             drainTimer.stop();
+            queueDrained();
             return;
         }
 
         if (!autoEnabled) {
             _queue = [];
             drainTimer.stop();
+            queueDrained();
             return;
         }
 
