@@ -80,7 +80,7 @@ StackLayout {
                     property bool isNyanWindow: windowOverride.endsWith(":nyan")
                     property bool isNyanInherited: isNyanApp && !isNyanWindow && windowOverride === ""
                     property string appColor: modelData.overlay ? String(modelData.overlay.overlayColor) : "transparent"
-                    property bool hasInheritedColor: !hasWindowOverride && appColor !== "transparent" && appColor !== ""
+                    property bool hasInheritedColor: !hasWindowOverride && appColor !== "transparent" && appColor !== "" && appColor !== "#00000000"
                     property bool isManualApp: modelData.appId in windowsTab.colorMapCache
                     property string autoColor: (windowsTab.autoColorCache[modelData.appId]) || ""
                     property bool isAutoInherited: hasInheritedColor && !isManualApp && autoColor !== ""
