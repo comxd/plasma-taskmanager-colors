@@ -102,27 +102,31 @@ StackLayout {
             // ── Appearance section ──
             // ════════════════════════════════════════
 
-            Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-            Controls.ItemDelegate {
+            Controls.AbstractButton {
                 Layout.fillWidth: true
-                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
-                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                topPadding: Kirigami.Units.mediumSpacing
+                bottomPadding: Kirigami.Units.mediumSpacing
+                leftPadding: Kirigami.Units.mediumSpacing
+                rightPadding: Kirigami.Units.mediumSpacing
+                hoverEnabled: true
                 onClicked: settingsFlickable.appearanceExpanded = !settingsFlickable.appearanceExpanded
+                background: Rectangle {
+                    implicitHeight: 0
+                    implicitWidth: 0
+                    color: parent.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1) : "transparent"
+                }
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Icon {
-                        source: settingsFlickable.appearanceExpanded ? "arrow-down" : "arrow-right"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        Layout.alignment: Qt.AlignVCenter
+                        source: settingsFlickable.appearanceExpanded ? "arrow-down" : "arrow-right"
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: i18n("Appearance")
                         font.bold: true
-                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
+                        wrapMode: Text.Wrap
                     }
                 }
             }
@@ -354,27 +358,31 @@ StackLayout {
             // ── Focused window section ──
             // ════════════════════════════════════════
 
-            Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-            Controls.ItemDelegate {
+            Controls.AbstractButton {
                 Layout.fillWidth: true
-                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
-                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                topPadding: Kirigami.Units.mediumSpacing
+                bottomPadding: Kirigami.Units.mediumSpacing
+                leftPadding: Kirigami.Units.mediumSpacing
+                rightPadding: Kirigami.Units.mediumSpacing
+                hoverEnabled: true
                 onClicked: settingsFlickable.focusedExpanded = !settingsFlickable.focusedExpanded
+                background: Rectangle {
+                    implicitHeight: 0
+                    implicitWidth: 0
+                    color: parent.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1) : "transparent"
+                }
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Icon {
-                        source: settingsFlickable.focusedExpanded ? "arrow-down" : "arrow-right"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        Layout.alignment: Qt.AlignVCenter
+                        source: settingsFlickable.focusedExpanded ? "arrow-down" : "arrow-right"
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: i18n("Focused window")
                         font.bold: true
-                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
+                        wrapMode: Text.Wrap
                     }
                 }
             }
@@ -609,27 +617,31 @@ StackLayout {
             // ── Minimized window section ──
             // ════════════════════════════════════════
 
-            Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-            Controls.ItemDelegate {
+            Controls.AbstractButton {
                 Layout.fillWidth: true
-                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
-                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                topPadding: Kirigami.Units.mediumSpacing
+                bottomPadding: Kirigami.Units.mediumSpacing
+                leftPadding: Kirigami.Units.mediumSpacing
+                rightPadding: Kirigami.Units.mediumSpacing
+                hoverEnabled: true
                 onClicked: settingsFlickable.minimizedExpanded = !settingsFlickable.minimizedExpanded
+                background: Rectangle {
+                    implicitHeight: 0
+                    implicitWidth: 0
+                    color: parent.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1) : "transparent"
+                }
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Icon {
-                        source: settingsFlickable.minimizedExpanded ? "arrow-down" : "arrow-right"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        Layout.alignment: Qt.AlignVCenter
+                        source: settingsFlickable.minimizedExpanded ? "arrow-down" : "arrow-right"
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: i18n("Minimized window")
                         font.bold: true
-                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
+                        wrapMode: Text.Wrap
                     }
                 }
             }
@@ -871,27 +883,31 @@ StackLayout {
             // ── Hover window section ──
             // ════════════════════════════════════════
 
-            Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-            Controls.ItemDelegate {
+            Controls.AbstractButton {
                 Layout.fillWidth: true
-                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
-                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                topPadding: Kirigami.Units.mediumSpacing
+                bottomPadding: Kirigami.Units.mediumSpacing
+                leftPadding: Kirigami.Units.mediumSpacing
+                rightPadding: Kirigami.Units.mediumSpacing
+                hoverEnabled: true
                 onClicked: settingsFlickable.hoverExpanded = !settingsFlickable.hoverExpanded
+                background: Rectangle {
+                    implicitHeight: 0
+                    implicitWidth: 0
+                    color: parent.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1) : "transparent"
+                }
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Icon {
-                        source: settingsFlickable.hoverExpanded ? "arrow-down" : "arrow-right"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        Layout.alignment: Qt.AlignVCenter
+                        source: settingsFlickable.hoverExpanded ? "arrow-down" : "arrow-right"
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: i18n("Hover window")
                         font.bold: true
-                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
+                        wrapMode: Text.Wrap
                     }
                 }
             }
@@ -1129,27 +1145,31 @@ StackLayout {
             // ── Behavior section ──
             // ════════════════════════════════════════
 
-            Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-            Controls.ItemDelegate {
+            Controls.AbstractButton {
                 Layout.fillWidth: true
-                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
-                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                topPadding: Kirigami.Units.mediumSpacing
+                bottomPadding: Kirigami.Units.mediumSpacing
+                leftPadding: Kirigami.Units.mediumSpacing
+                rightPadding: Kirigami.Units.mediumSpacing
+                hoverEnabled: true
                 onClicked: settingsFlickable.behaviorExpanded = !settingsFlickable.behaviorExpanded
+                background: Rectangle {
+                    implicitHeight: 0
+                    implicitWidth: 0
+                    color: parent.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1) : "transparent"
+                }
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Icon {
-                        source: settingsFlickable.behaviorExpanded ? "arrow-down" : "arrow-right"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        Layout.alignment: Qt.AlignVCenter
+                        source: settingsFlickable.behaviorExpanded ? "arrow-down" : "arrow-right"
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: i18n("Behavior")
                         font.bold: true
-                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
+                        wrapMode: Text.Wrap
                     }
                 }
             }
@@ -1225,27 +1245,31 @@ StackLayout {
             // ── Widget section ──
             // ════════════════════════════════════════
 
-            Item { height: Kirigami.Units.smallSpacing; width: 1 }
-
-            Controls.ItemDelegate {
+            Controls.AbstractButton {
                 Layout.fillWidth: true
-                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
-                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                topPadding: Kirigami.Units.mediumSpacing
+                bottomPadding: Kirigami.Units.mediumSpacing
+                leftPadding: Kirigami.Units.mediumSpacing
+                rightPadding: Kirigami.Units.mediumSpacing
+                hoverEnabled: true
                 onClicked: settingsFlickable.widgetExpanded = !settingsFlickable.widgetExpanded
+                background: Rectangle {
+                    implicitHeight: 0
+                    implicitWidth: 0
+                    color: parent.hovered ? Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.1) : "transparent"
+                }
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Icon {
-                        source: settingsFlickable.widgetExpanded ? "arrow-down" : "arrow-right"
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-                        Layout.alignment: Qt.AlignVCenter
+                        source: settingsFlickable.widgetExpanded ? "arrow-down" : "arrow-right"
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: i18n("Widget")
                         font.bold: true
-                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
+                        wrapMode: Text.Wrap
                     }
                 }
             }
