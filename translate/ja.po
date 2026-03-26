@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -239,6 +239,30 @@ msgid "(pinned)"
 msgstr "（ピン留め）"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr "このアプリの自動カラーは無効です — クリックで再有効化"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr "アイコンから色を自動抽出済み — クリックで無効化"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "アイコンから色を抽出中…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "自動カラーは手動カラーで上書きされています"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "自動"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "%1 の色"
 
@@ -362,6 +386,29 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "角の丸み。自動は現在のテーマに合わせます。最大 = 正円。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "色を柔らかくする"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr ""
+"現在のテーマの明るさに合わせて色を調整します。鮮やかな色をより穏やかにしま"
+"す。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "ウィンドウ数インジケーターを表示"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr ""
+"複数のウィンドウが1つのタスクにグループ化されている場合に小さなドットを表示し"
+"ます。"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "フォーカスウィンドウ"
 
@@ -426,6 +473,25 @@ msgid "How color overlays behave on minimized windows."
 msgstr "最小化ウィンドウでのカラーオーバーレイの動作。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "彩度低下スタイル:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "グレースケール"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "部分的（色相を維持）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr ""
+"グレースケールはすべての色を除去します。部分的は色相を維持しますが彩度を下げ"
+"ます。"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "最小化スタイル："
 
@@ -468,6 +534,34 @@ msgstr "実行中のみ"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "ウィンドウが開いていなくてもピン留めされたお気に入りに色を表示します。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "自動カラー:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"各アプリケーションのアイコンから主要な色を自動的に抽出して適用します。手動カ"
+"ラーや Nyan モードが設定されていないアプリにのみ適用されます。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "色を抽出中…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "自動カラーを更新"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr ""
+"すべてのアプリケーションのアイコンカラーを再抽出します。アイコンテーマの変更"
+"後に便利です。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -539,6 +633,46 @@ msgstr ""
 "てください。"
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "（アプリ nyan）"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "（自動カラー）"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "（アプリカラー）"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "カスタムウィンドウ上書き"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "カスタム nyan 上書き"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "Nyan はアプリから継承 — クリックで上書き"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "アイコンから自動抽出 — クリックで上書き"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "アプリから色を継承 — クリックで上書き"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "クリックで色を設定"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "継承"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "ウィンドウ色の上書き"
 
@@ -549,6 +683,9 @@ msgstr "アプリの色にリセット"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "ウィンドウの上書きをリセット"
+
+#~ msgid "Button tint"
+#~ msgstr "ボタン着色"
 
 #~ msgid "General:"
 #~ msgstr "一般:"

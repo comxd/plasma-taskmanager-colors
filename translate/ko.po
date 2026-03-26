@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -237,6 +237,30 @@ msgid "(pinned)"
 msgstr "(고정됨)"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr "이 앱의 자동 색상이 비활성화됨 — 클릭하여 다시 활성화"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr "아이콘에서 색상 자동 추출됨 — 클릭하여 비활성화"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "아이콘에서 색상 추출 중…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "자동 색상이 수동 색상으로 대체됨"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "자동"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "%1의 색상"
 
@@ -359,6 +383,27 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "모서리 둥글기. 자동은 현재 테마에 맞춤. 최대 = 완벽한 원."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "색상 부드럽게"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr ""
+"현재 테마의 밝기에 맞게 색상을 조정합니다. 선명한 색상을 덜 거슬리게 만듭니"
+"다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "창 개수 표시기 표시"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr "여러 창이 하나의 작업으로 그룹화될 때 작은 점을 표시합니다."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "포커스 창"
 
@@ -423,6 +468,24 @@ msgid "How color overlays behave on minimized windows."
 msgstr "최소화된 창에서 색상 오버레이의 동작 방식."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "채도 감소 스타일:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "회색조"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "부분적 (색상 유지)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr ""
+"회색조는 모든 색상을 제거합니다. 부분적은 색상을 유지하지만 채도를 줄입니다."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "최소화 스타일:"
 
@@ -465,6 +528,34 @@ msgstr "실행 중일 때만"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "창이 열려 있지 않아도 고정된 즐겨찾기에 색상을 표시합니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "자동 색상:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"각 애플리케이션 아이콘에서 주요 색상을 자동으로 추출하여 적용합니다. 수동 색"
+"상이나 Nyan 모드가 없는 앱에만 적용됩니다."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "색상 추출 중…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "자동 색상 새로고침"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr ""
+"모든 애플리케이션의 아이콘 색상을 다시 추출합니다. 아이콘 테마를 변경한 후에 "
+"유용합니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -530,6 +621,46 @@ msgid "No windows detected — open some windows to use per-window overrides."
 msgstr "창이 감지되지 않음 — 창을 열어 창별 재정의를 사용하세요."
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "(앱 nyan)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "(자동 색상)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "(앱 색상)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "사용자 지정 창 재정의"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "사용자 지정 nyan 재정의"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "앱에서 Nyan 상속됨 — 클릭하여 재정의"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "아이콘에서 자동 추출됨 — 클릭하여 재정의"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "앱에서 색상 상속됨 — 클릭하여 재정의"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "클릭하여 색상 설정"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "상속"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "창 색상 재정의"
 
@@ -540,6 +671,9 @@ msgstr "앱 색상으로 초기화"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "창 재정의 초기화"
+
+#~ msgid "Button tint"
+#~ msgstr "버튼 색조"
 
 #~ msgid "General:"
 #~ msgstr "일반:"

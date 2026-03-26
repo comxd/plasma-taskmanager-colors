@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -235,6 +235,30 @@ msgid "(pinned)"
 msgstr "(مثبت)"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr "اللون التلقائي معطّل لهذا التطبيق — انقر لإعادة التفعيل"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr "تم استخراج اللون تلقائيًا من الأيقونة — انقر للتعطيل"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "جارٍ استخراج اللون من الأيقونة…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "اللون التلقائي مُستبدَل بلون يدوي"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "تلقائي"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "لون لـ: %1"
 
@@ -359,6 +383,26 @@ msgstr ""
 "تدوير الزوايا. التلقائي يتطابق مع السمة الحالية. الحد الأقصى = دائرة مثالية."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "تخفيف الألوان"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr ""
+"يُكيّف الألوان لتتوافق مع سطوع السمة الحالية. يجعل الألوان الزاهية أقل حدة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "إظهار مؤشرات عدد النوافذ"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr "إظهار نقاط صغيرة عند تجميع عدة نوافذ تحت مهمة واحدة."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "النافذة المُركَّزة"
 
@@ -423,6 +467,23 @@ msgid "How color overlays behave on minimized windows."
 msgstr "سلوك تراكبات الألوان على النوافذ المصغّرة."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "نمط إزالة التشبع:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "تدرج رمادي"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "جزئي (الاحتفاظ بالدرجة)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr "التدرج الرمادي يزيل كل الألوان. الجزئي يحتفظ بالدرجة لكن يقلل التشبع."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "نمط التصغير:"
 
@@ -465,6 +526,33 @@ msgstr "فقط عند التشغيل"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "إظهار اللون على المفضلة المثبتة حتى بدون نوافذ مفتوحة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "اللون التلقائي:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"استخراج وتطبيق اللون السائد تلقائيًا من أيقونة كل تطبيق. ينطبق فقط على "
+"التطبيقات بدون لون يدوي أو وضع Nyan."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "جارٍ استخراج الألوان…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "تحديث الألوان التلقائية"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr ""
+"إعادة استخراج ألوان الأيقونات لجميع التطبيقات. مفيد بعد تغيير سمة الأيقونات."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -531,6 +619,46 @@ msgid "No windows detected — open some windows to use per-window overrides."
 msgstr "لم يتم اكتشاف نوافذ — افتح نوافذ لاستخدام التجاوزات لكل نافذة."
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "(nyan التطبيق)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "(لون تلقائي)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "(لون التطبيق)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "تجاوز نافذة مخصص"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "تجاوز nyan مخصص"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "Nyan موروث من التطبيق — انقر للتجاوز"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "مستخرج تلقائيًا من الأيقونة — انقر للتجاوز"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "لون موروث من التطبيق — انقر للتجاوز"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "انقر لتعيين اللون"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "موروث"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "تجاوز لون النافذة"
 
@@ -541,6 +669,9 @@ msgstr "إعادة التعيين إلى لون التطبيق"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "إعادة تعيين تجاوزات النوافذ"
+
+#~ msgid "Button tint"
+#~ msgstr "تلوين الزر"
 
 #~ msgid "General:"
 #~ msgstr "عام:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -234,6 +234,30 @@ msgid "(pinned)"
 msgstr "（固定）"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr "此应用的自动颜色已禁用 — 点击重新启用"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr "颜色已从图标自动提取 — 点击禁用"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "正在从图标提取颜色…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "自动颜色已被手动颜色覆盖"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "自动"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "颜色：%1"
 
@@ -354,6 +378,25 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "圆角弧度。自动匹配当前主题。最大 = 完美圆形。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "柔化颜色"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr "使颜色适应当前主题的亮度。让鲜艳的颜色不那么刺眼。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "显示窗口数量指示器"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr "当多个窗口分组在同一任务下时显示小圆点。"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "聚焦窗口"
 
@@ -418,6 +461,23 @@ msgid "How color overlays behave on minimized windows."
 msgstr "最小化窗口上颜色叠加层的行为方式。"
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "去饱和样式："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "灰度"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "部分（保留色相）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr "灰度移除所有颜色。部分保留色相但降低饱和度。"
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "最小化样式："
 
@@ -460,6 +520,32 @@ msgstr "仅在运行时"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "即使没有打开窗口，也在固定收藏上显示颜色。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "自动颜色："
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"自动从每个应用程序图标中提取并应用主色调。仅适用于没有手动颜色或 Nyan 模式的"
+"应用。"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "正在提取颜色…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "刷新自动颜色"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr "重新提取所有应用程序的图标颜色。更换图标主题后很有用。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -522,6 +608,46 @@ msgid "No windows detected — open some windows to use per-window overrides."
 msgstr "未检测到窗口——请打开窗口以使用单窗口覆盖。"
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "（应用 nyan）"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "（自动颜色）"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "（应用颜色）"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "自定义窗口覆盖"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "自定义 nyan 覆盖"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "Nyan 继承自应用 — 点击覆盖"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "从图标自动提取 — 点击覆盖"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "颜色继承自应用 — 点击覆盖"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "点击设置颜色"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "继承"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "窗口颜色覆盖"
 
@@ -532,6 +658,9 @@ msgstr "重置为应用颜色"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "重置窗口覆盖"
+
+#~ msgid "Button tint"
+#~ msgstr "按钮着色"
 
 #~ msgid "General:"
 #~ msgstr "常规："

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -239,6 +239,30 @@ msgid "(pinned)"
 msgstr "(fijada)"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr "Color automático desactivado para esta app — clic para reactivar"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr "Color extraído automáticamente del icono — clic para desactivar"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "Extrayendo color del icono…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "Color automático reemplazado por color manual"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "auto"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "Color para: %1"
 
@@ -366,6 +390,29 @@ msgstr ""
 "perfecto."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "Suavizar colores"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr ""
+"Adapta los colores al brillo del tema actual. Hace que los colores vivos "
+"sean menos agresivos."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "Mostrar indicadores de cantidad de ventanas"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr ""
+"Mostrar pequeños puntos cuando varias ventanas están agrupadas bajo una "
+"misma tarea."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Ventana enfocada"
 
@@ -432,6 +479,25 @@ msgstr ""
 "Comportamiento de las superposiciones de color en ventanas minimizadas."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "Estilo de desaturación:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "Escala de grises"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "Parcial (conservar tono)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr ""
+"Escala de grises elimina todo el color. Parcial conserva el tono pero reduce "
+"la saturación."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "Estilo minimizado:"
 
@@ -476,6 +542,34 @@ msgstr "Solo en ejecución"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "Mostrar color en favoritos fijados incluso sin ventanas abiertas."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "Color automático:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"Extraer y aplicar automáticamente un color dominante del icono de cada "
+"aplicación. Solo se aplica a apps sin color manual ni modo Nyan."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "Extrayendo colores…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "Actualizar colores automáticos"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr ""
+"Volver a extraer los colores de los iconos de todas las aplicaciones. Útil "
+"después de cambiar el tema de iconos."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -546,6 +640,46 @@ msgstr ""
 "No se detectaron ventanas — abra ventanas para usar anulaciones por ventana."
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "(nyan de la app)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "(color automático)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "(color de la app)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "Anulación de ventana personalizada"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "Anulación nyan personalizada"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "Nyan heredado de la aplicación — clic para anular"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "Extraído automáticamente del icono — clic para anular"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "Color heredado de la aplicación — clic para anular"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "Clic para establecer color"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "heredado"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "Anulación de color de ventana"
 
@@ -556,6 +690,9 @@ msgstr "Restablecer al color de la aplicación"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Restablecer anulaciones de ventana"
+
+#~ msgid "Button tint"
+#~ msgstr "Tinte de botón"
 
 #~ msgid "General:"
 #~ msgstr "General:"

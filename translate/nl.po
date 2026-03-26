@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -238,6 +238,33 @@ msgid "(pinned)"
 msgstr "(vastgezet)"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr ""
+"Automatische kleur uitgeschakeld voor deze app — klik om opnieuw in te "
+"schakelen"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr ""
+"Kleur automatisch uit pictogram geëxtraheerd — klik om uit te schakelen"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "Kleur uit pictogram extraheren…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "Automatische kleur overschreven door handmatige kleur"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "auto"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "Kleur voor: %1"
 
@@ -362,6 +389,29 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "Hoekafronding. Auto past bij het huidige thema. Max = perfecte cirkel."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "Kleuren verzachten"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr ""
+"Past kleuren aan de helderheid van het huidige thema aan. Maakt felle "
+"kleuren minder schel."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "Vensteraantal-indicatoren tonen"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr ""
+"Kleine puntjes tonen wanneer meerdere vensters onder één taak zijn "
+"gegroepeerd."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Gefocust venster"
 
@@ -426,6 +476,25 @@ msgid "How color overlays behave on minimized windows."
 msgstr "Gedrag van kleuroverlays bij geminimaliseerde vensters."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "Desaturatiestijl:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "Grijstinten"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "Gedeeltelijk (tint behouden)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr ""
+"Grijstinten verwijdert alle kleur. Gedeeltelijk behoudt de tint maar "
+"vermindert de verzadiging."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "Geminimaliseerde stijl:"
 
@@ -469,6 +538,34 @@ msgstr "Alleen bij uitvoering"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "Kleur tonen op vastgezette favorieten, ook zonder geopende vensters."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "Automatische kleur:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"Automatisch een dominante kleur uit elk toepassingspictogram extraheren en "
+"toepassen. Geldt alleen voor apps zonder handmatige kleur of Nyan-modus."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "Kleuren extraheren…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "Automatische kleuren vernieuwen"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr ""
+"Pictogramkleuren opnieuw extraheren voor alle toepassingen. Handig na het "
+"wijzigen van het pictogramthema."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -541,6 +638,46 @@ msgstr ""
 "overschrijvingen."
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "(app-nyan)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "(automatische kleur)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "(app-kleur)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "Aangepaste vensteroverschrijving"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "Aangepaste nyan-overschrijving"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "Nyan overgenomen van app — klik om te overschrijven"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "Automatisch uit pictogram geëxtraheerd — klik om te overschrijven"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "Kleur overgenomen van app — klik om te overschrijven"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "Klik om kleur in te stellen"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "overgenomen"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "Vensterkleur overschrijven"
 
@@ -551,6 +688,9 @@ msgstr "Herstellen naar app-kleur"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Vensteroverschrijvingen resetten"
+
+#~ msgid "Button tint"
+#~ msgstr "Knoptint"
 
 #~ msgid "General:"
 #~ msgstr "Algemeen:"
