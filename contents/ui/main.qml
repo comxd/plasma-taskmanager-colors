@@ -340,6 +340,14 @@ PlasmoidItem {
         let focBorderW = plasmoid.configuration.focusedBorderWidth;
         let focOpacity = plasmoid.configuration.focusedOpacity;
         let focRadius = plasmoid.configuration.focusedBorderRadius;
+        let hovMode = plasmoid.configuration.hoverMode || "normal";
+        let hovColorMode = (hovMode === "custom") ? (plasmoid.configuration.hoverColorMode || "") : "";
+        if (hovColorMode && root.isVertical && verticalSwap[hovColorMode]) hovColorMode = verticalSwap[hovColorMode];
+        let hovAutoBorderW = plasmoid.configuration.hoverAutoBorderWidth;
+        let hovBorderW = plasmoid.configuration.hoverBorderWidth;
+        let hovOpacity = plasmoid.configuration.hoverOpacity;
+        let hovRadius = plasmoid.configuration.hoverBorderRadius;
+
         let minMode = plasmoid.configuration.minimizedMode || "normal";
         let minColorMode = (minMode === "custom") ? (plasmoid.configuration.minimizedColorMode || "") : "";
         if (minColorMode && root.isVertical && verticalSwap[minColorMode]) minColorMode = verticalSwap[minColorMode];
@@ -467,6 +475,16 @@ PlasmoidItem {
                 effectiveFocBorderW = Math.min(effectiveFocBorderW, root.computedMaxBorder);
             }
 
+            let effectiveHovBorderW = -1;
+            if (hovColorMode && hovColorMode !== "background") {
+                effectiveHovBorderW = hovBorderW;
+                if (hovAutoBorderW && svg) {
+                    let hovMargin = autoMarginFor(svg, hovColorMode);
+                    if (hovMargin > 0) effectiveHovBorderW = hovMargin;
+                }
+                effectiveHovBorderW = Math.min(effectiveHovBorderW, root.computedMaxBorder);
+            }
+
             let effectiveRadius = cfgRadius >= 0 ? cfgRadius : 0;
             if (cfgRadius < 0 && svg) {
                 let r = Math.min(svg.fixedMargins?.top ?? 0, svg.fixedMargins?.left ?? 0);
@@ -492,6 +510,11 @@ PlasmoidItem {
                 focusedBorderSize: effectiveFocBorderW,
                 focusedOpacity: focOpacity,
                 focusedBorderRadius: focRadius >= 0 ? Math.min(focRadius, root.computedMaxRadius) : -1,
+                hoverMode: hovMode,
+                hoverColorMode: hovColorMode,
+                hoverBorderSize: effectiveHovBorderW,
+                hoverOpacity: hovOpacity,
+                hoverBorderRadius: hovRadius >= 0 ? Math.min(hovRadius, root.computedMaxRadius) : -1,
                 minimizedOpacity: minOpacity,
                 minimizedBorderRadius: minRadius >= 0 ? Math.min(minRadius, root.computedMaxRadius) : -1,
                 panelIsVertical: root.isVertical,
@@ -571,6 +594,8 @@ PlasmoidItem {
             plasmoid.configuration.focusedColorMode = "";
         if (plasmoid.configuration.minimizedColorMode === "tint")
             plasmoid.configuration.minimizedColorMode = "";
+        if (plasmoid.configuration.hoverColorMode === "tint")
+            plasmoid.configuration.hoverColorMode = "";
         applyDebounce.restart();
         updatePlasmoidStatus();
         hideWidgetAction.checked = plasmoid.configuration.hideWidget;
@@ -590,6 +615,12 @@ PlasmoidItem {
         function onPlasmaFocusDecorationChanged() { applyDebounce.restart(); }
         function onPlasmaNormalDecorationChanged() { applyDebounce.restart(); }
         function onPlasmaHoverDecorationChanged() { applyDebounce.restart(); }
+        function onHoverModeChanged() { applyDebounce.restart(); }
+        function onHoverColorModeChanged() { applyDebounce.restart(); }
+        function onHoverBorderWidthChanged() { applyDebounce.restart(); }
+        function onHoverAutoBorderWidthChanged() { applyDebounce.restart(); }
+        function onHoverOpacityChanged() { applyDebounce.restart(); }
+        function onHoverBorderRadiusChanged() { applyDebounce.restart(); }
         function onMinimizedOpacityChanged() { applyDebounce.restart(); }
         function onMinimizedBorderRadiusChanged() { applyDebounce.restart(); }
         function onBorderRadiusChanged() { applyDebounce.restart(); }

@@ -68,6 +68,7 @@ StackLayout {
         property bool appearanceExpanded: false
         property bool focusedExpanded: false
         property bool minimizedExpanded: false
+        property bool hoverExpanded: false
         property bool behaviorExpanded: false
         property bool widgetExpanded: false
 
@@ -324,45 +325,6 @@ StackLayout {
                     }
                 }
 
-                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
-
-                Controls.CheckBox {
-                    text: i18n("Theme decoration (hover)")
-                    checked: plasmoid.configuration.plasmaHoverDecoration >= 0
-                    onToggled: plasmoid.configuration.plasmaHoverDecoration = checked ? 15 : -1
-                }
-                Controls.Label {
-                    text: i18n("Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration.")
-                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
-                    color: Kirigami.Theme.disabledTextColor
-                    wrapMode: Text.Wrap; Layout.fillWidth: true
-                }
-                Flow {
-                    Layout.fillWidth: true
-                    Layout.leftMargin: Kirigami.Units.gridUnit
-                    spacing: Kirigami.Units.smallSpacing
-                    visible: plasmoid.configuration.plasmaHoverDecoration >= 0
-                    Controls.CheckBox {
-                        text: i18n("Top border")
-                        checked: (plasmoid.configuration.plasmaHoverDecoration & 1) !== 0
-                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 1, checked)
-                    }
-                    Controls.CheckBox {
-                        text: i18n("Bottom border")
-                        checked: (plasmoid.configuration.plasmaHoverDecoration & 2) !== 0
-                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 2, checked)
-                    }
-                    Controls.CheckBox {
-                        text: i18n("Left border")
-                        checked: (plasmoid.configuration.plasmaHoverDecoration & 4) !== 0
-                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 4, checked)
-                    }
-                    Controls.CheckBox {
-                        text: i18n("Right border")
-                        checked: (plasmoid.configuration.plasmaHoverDecoration & 8) !== 0
-                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 8, checked)
-                    }
-                }
             }
 
             // ════════════════════════════════════════
@@ -872,6 +834,253 @@ StackLayout {
             }
 
             // ════════════════════════════════════════
+            // ── Hover window section ──
+            // ════════════════════════════════════════
+
+            Item { height: Kirigami.Units.smallSpacing; width: 1 }
+
+            Controls.ItemDelegate {
+                Layout.fillWidth: true
+                verticalPadding: 0; horizontalPadding: 0; topInset: 0; bottomInset: 0
+                implicitHeight: Kirigami.Units.gridUnit * 1.5
+                onClicked: settingsFlickable.hoverExpanded = !settingsFlickable.hoverExpanded
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+                    Kirigami.Icon {
+                        source: settingsFlickable.hoverExpanded ? "arrow-down" : "arrow-right"
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                        Layout.alignment: Qt.AlignVCenter
+                    }
+                    Controls.Label {
+                        text: i18n("Hover window")
+                        font.bold: true
+                        font.pixelSize: Kirigami.Theme.defaultFont.pixelSize * 1.1
+                        Layout.fillWidth: true
+                        Layout.alignment: Qt.AlignVCenter
+                    }
+                }
+            }
+
+            Kirigami.Separator { Layout.fillWidth: true }
+
+            ColumnLayout {
+                Layout.fillWidth: true
+                Layout.leftMargin: Kirigami.Units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
+                visible: settingsFlickable.hoverExpanded
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    Controls.Label { text: i18n("Hover window:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
+                    Controls.ComboBox {
+                        id: hoverModeCombo
+                        Layout.fillWidth: true
+                        model: [
+                            { value: "normal", text: i18n("Normal (no change)") },
+                            { value: "hide", text: i18n("Hide overlay") },
+                            { value: "background", text: i18n("Background (80%)") },
+                            { value: "custom", text: i18n("Custom style\u2026") }
+                        ]
+                        textRole: "text"; valueRole: "value"
+                        Component.onCompleted: currentIndex = indexOfValue(plasmoid.configuration.hoverMode)
+                        onActivated: {
+                            plasmoid.configuration.hoverMode = currentValue;
+                            if (currentValue === "custom" && !plasmoid.configuration.hoverColorMode) {
+                                plasmoid.configuration.hoverColorMode = "frame";
+                            }
+                        }
+                    }
+                }
+                Controls.Label {
+                    text: i18n("How the color overlay behaves when hovering over a task.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+
+                // -- Custom hover style options --
+                ColumnLayout {
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    spacing: Kirigami.Units.smallSpacing
+                    visible: plasmoid.configuration.hoverMode === "custom"
+
+                    RowLayout {
+                        Layout.fillWidth: true
+                        Controls.Label { text: i18n("Hover style:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
+                        Controls.ItemDelegate {
+                            Layout.fillWidth: true
+                            padding: Kirigami.Units.smallSpacing
+                            Kirigami.Theme.colorSet: Kirigami.Theme.View
+                            Kirigami.Theme.inherit: false
+                            background: Rectangle {
+                                color: Kirigami.Theme.backgroundColor
+                                border.color: Kirigami.Theme.separatorColor || Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.2)
+                                border.width: 1
+                                radius: Kirigami.Units.smallSpacing
+                            }
+                            contentItem: RowLayout {
+                                spacing: Kirigami.Units.smallSpacing
+                                Controls.Label {
+                                    text: settingsTab.modeLabelFor(plasmoid.configuration.hoverColorMode || "frame")
+                                    Layout.fillWidth: true
+                                    elide: Text.ElideRight
+                                }
+                                Kirigami.Icon {
+                                    source: "arrow-down"
+                                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                                }
+                            }
+                            onClicked: {
+                                settingsTab.currentIndex = 4;
+                                hoverModePicker.activate();
+                            }
+                        }
+                    }
+
+                    // -- Hover thickness --
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        spacing: 0
+                        visible: plasmoid.configuration.hoverColorMode !== "background"
+                              && plasmoid.configuration.hoverColorMode !== ""
+
+                        Controls.Label { text: i18n("Thickness"); font.bold: true }
+                        RowLayout {
+                            Layout.fillWidth: true
+                            Controls.Slider {
+                                id: hovBorderSlider; Layout.fillWidth: true
+                                from: -1; to: settingsTab.computedMaxBorder; stepSize: 1
+                                value: plasmoid.configuration.hoverAutoBorderWidth ? -1 : plasmoid.configuration.hoverBorderWidth
+                                onMoved: {
+                                    if (value < 0) {
+                                        plasmoid.configuration.hoverAutoBorderWidth = true;
+                                    } else {
+                                        plasmoid.configuration.hoverAutoBorderWidth = false;
+                                        plasmoid.configuration.hoverBorderWidth = value;
+                                    }
+                                }
+                            }
+                            Controls.Label {
+                                text: hovBorderSlider.value < 0 ? i18n("Auto") : hovBorderSlider.value + "px"
+                                Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+                            }
+                        }
+                        Controls.Label {
+                            text: i18n("Border thickness for hovered windows.")
+                            font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                            color: Kirigami.Theme.disabledTextColor
+                            wrapMode: Text.Wrap; Layout.fillWidth: true
+                        }
+                    }
+
+                    // -- Hover opacity --
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        spacing: 0
+
+                        Controls.CheckBox {
+                            id: hovOpacityCheck
+                            text: i18n("Custom opacity")
+                            checked: plasmoid.configuration.hoverOpacity >= 0
+                            onToggled: {
+                                if (!checked) plasmoid.configuration.hoverOpacity = -1;
+                                else plasmoid.configuration.hoverOpacity = 0.8;
+                            }
+                        }
+                        RowLayout {
+                            Layout.fillWidth: true
+                            visible: hovOpacityCheck.checked
+                            Controls.Slider {
+                                id: hovOpacitySlider; Layout.fillWidth: true
+                                from: 0.1; to: 1.0; stepSize: 0.05
+                                value: plasmoid.configuration.hoverOpacity >= 0 ? plasmoid.configuration.hoverOpacity : 0.8
+                                onMoved: plasmoid.configuration.hoverOpacity = value
+                            }
+                            Controls.Label {
+                                text: Math.round(hovOpacitySlider.value * 100) + "%"
+                                Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+                            }
+                        }
+                    }
+
+                    // -- Hover corners --
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        spacing: 0
+                        visible: ["frame", "background", "background+frame"].indexOf(plasmoid.configuration.hoverColorMode) >= 0
+
+                        Controls.CheckBox {
+                            id: hovRadiusCheck
+                            text: i18n("Custom corners")
+                            checked: plasmoid.configuration.hoverBorderRadius >= 0
+                            onToggled: {
+                                if (!checked) plasmoid.configuration.hoverBorderRadius = -1;
+                                else plasmoid.configuration.hoverBorderRadius = 0;
+                            }
+                        }
+                        RowLayout {
+                            Layout.fillWidth: true
+                            visible: hovRadiusCheck.checked
+                            Controls.Slider {
+                                id: hovRadiusSlider; Layout.fillWidth: true
+                                from: 0; to: settingsTab.computedMaxRadius; stepSize: 1
+                                value: plasmoid.configuration.hoverBorderRadius >= 0 ? plasmoid.configuration.hoverBorderRadius : 0
+                                onMoved: plasmoid.configuration.hoverBorderRadius = value
+                            }
+                            Controls.Label {
+                                text: hovRadiusSlider.value + "px"
+                                Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+                            }
+                        }
+                    }
+                }
+
+                // -- Theme decoration (hover) --
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: 2; Layout.bottomMargin: 2 }
+
+                Controls.CheckBox {
+                    text: i18n("Theme decoration (hover)")
+                    checked: plasmoid.configuration.plasmaHoverDecoration >= 0
+                    onToggled: plasmoid.configuration.plasmaHoverDecoration = checked ? 15 : -1
+                }
+                Controls.Label {
+                    text: i18n("Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+                Flow {
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.gridUnit
+                    spacing: Kirigami.Units.smallSpacing
+                    visible: plasmoid.configuration.plasmaHoverDecoration >= 0
+                    Controls.CheckBox {
+                        text: i18n("Top border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 1) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 1, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Bottom border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 2) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 2, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Left border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 4) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 4, checked)
+                    }
+                    Controls.CheckBox {
+                        text: i18n("Right border")
+                        checked: (plasmoid.configuration.plasmaHoverDecoration & 8) !== 0
+                        onToggled: plasmoid.configuration.plasmaHoverDecoration = settingsTab.toggleBit(plasmoid.configuration.plasmaHoverDecoration, 8, checked)
+                    }
+                }
+            }
+
+            // ════════════════════════════════════════
             // ── Behavior section ──
             // ════════════════════════════════════════
 
@@ -1089,6 +1298,23 @@ StackLayout {
 
         onModeSelected: function(value) {
             plasmoid.configuration.focusedColorMode = value;
+            settingsTab.currentIndex = 0;
+        }
+        onBackRequested: settingsTab.currentIndex = 0
+    }
+
+    // ════════════════════════════════════════
+    // ── Page 4: Hover color mode picker ──
+    // ════════════════════════════════════════
+
+    Components.ModePicker {
+        id: hoverModePicker
+        title: i18n("Hover style")
+        activeMode: plasmoid.configuration.hoverColorMode || "frame"
+        disabledMode: ""
+
+        onModeSelected: function(value) {
+            plasmoid.configuration.hoverColorMode = value;
             settingsTab.currentIndex = 0;
         }
         onBackRequested: settingsTab.currentIndex = 0

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -421,7 +421,9 @@ msgstr "Theme-Dekoration (inaktiv)"
 msgid ""
 "Select which Plasma theme borders to show on inactive task buttons. Uncheck "
 "all to hide decoration."
-msgstr "Auswählen, welche Plasma-Theme-Ränder bei inaktiven Aufgabenschaltflächen angezeigt werden. Alle abwählen, um die Dekoration auszublenden."
+msgstr ""
+"Auswählen, welche Plasma-Theme-Ränder bei inaktiven Aufgabenschaltflächen "
+"angezeigt werden. Alle abwählen, um die Dekoration auszublenden."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -440,16 +442,6 @@ msgid "Right border"
 msgstr "Rechter Rand"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Theme-Dekoration (Hover)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "Auswählen, welche Plasma-Theme-Ränder beim Überfahren angezeigt werden. Alle abwählen, um die Dekoration auszublenden."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Fokussiertes Fenster"
 
@@ -461,7 +453,9 @@ msgstr "Theme-Dekoration (fokussiert)"
 msgid ""
 "Select which Plasma theme borders to show on focused tasks. Uncheck all to "
 "hide decoration."
-msgstr "Auswählen, welche Plasma-Theme-Ränder bei fokussierten Aufgaben angezeigt werden. Alle abwählen, um die Dekoration auszublenden."
+msgstr ""
+"Auswählen, welche Plasma-Theme-Ränder bei fokussierten Aufgaben angezeigt "
+"werden. Alle abwählen, um die Dekoration auszublenden."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -568,6 +562,38 @@ msgid "Border thickness for minimized windows."
 msgstr "Rahmenstärke für minimierte Fenster."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr "Hover-Fenster"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr "Hover-Fenster:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr "Verhalten der Farbüberlagerung beim Überfahren einer Aufgabe."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr "Hover-Stil:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr "Randstärke für überfahrene Fenster."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Theme-Dekoration (Hover)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr ""
+"Auswählen, welche Plasma-Theme-Ränder beim Überfahren angezeigt werden. Alle "
+"abwählen, um die Dekoration auszublenden."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr "Verhalten"
 
@@ -672,6 +698,10 @@ msgstr "Minimiert-Stil"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
 msgstr "Fokus-Stil"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
+msgstr "Hover-Stil"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

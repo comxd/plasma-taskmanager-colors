@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -402,14 +402,6 @@ msgid "Right border"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr ""
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid "Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration."
-msgstr ""
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr ""
 
@@ -522,6 +514,34 @@ msgid "Border thickness for minimized windows."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr ""
 
@@ -595,6 +615,10 @@ msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
 msgstr ""
 
 #: contents/ui/tabs/WindowsTab.qml
