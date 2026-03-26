@@ -9,6 +9,7 @@
 
 import QtQuick
 import org.kde.kirigami as Kirigami
+import "../utils/colorUtils.js" as ColorUtils
 
 Item {
     id: iconExtractor
@@ -45,13 +46,6 @@ Item {
         imageColors.source = iconName;
     }
 
-    function colorToHex(c) {
-        let r = Math.round(c.r * 255);
-        let g = Math.round(c.g * 255);
-        let b = Math.round(c.b * 255);
-        return "#" + ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1);
-    }
-
     function _reset() {
         busyTimeout.stop();
         pendingAppId = "";
@@ -85,7 +79,7 @@ Item {
                 return;
             }
 
-            let hex = iconExtractor.colorToHex(c);
+            let hex = ColorUtils.colorToHex(c);
 
             try {
                 if (iconExtractor.pendingOverlay && iconExtractor.pendingOverlay.parent) {
