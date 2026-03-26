@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -415,7 +415,9 @@ msgstr "Оформление темы (неактивные)"
 msgid ""
 "Select which Plasma theme borders to show on inactive task buttons. Uncheck "
 "all to hide decoration."
-msgstr "Выбрать, какие границы темы Plasma показывать на неактивных кнопках задач. Снять все флажки, чтобы скрыть оформление."
+msgstr ""
+"Выбрать, какие границы темы Plasma показывать на неактивных кнопках задач. "
+"Снять все флажки, чтобы скрыть оформление."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -434,16 +436,6 @@ msgid "Right border"
 msgstr "Правая граница"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Оформление темы (при наведении)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "Выбрать, какие границы темы Plasma показывать при наведении. Снять все флажки, чтобы скрыть оформление."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Активное окно"
 
@@ -455,7 +447,9 @@ msgstr "Оформление темы (в фокусе)"
 msgid ""
 "Select which Plasma theme borders to show on focused tasks. Uncheck all to "
 "hide decoration."
-msgstr "Выбрать, какие границы темы Plasma показывать на активных задачах. Снять все флажки, чтобы скрыть оформление."
+msgstr ""
+"Выбрать, какие границы темы Plasma показывать на активных задачах. Снять все "
+"флажки, чтобы скрыть оформление."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -561,6 +555,38 @@ msgid "Border thickness for minimized windows."
 msgstr "Толщина рамки для свёрнутых окон."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr "Окно при наведении"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr "Окно при наведении:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr "Поведение цветового наложения при наведении на задачу."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr "Стиль наведения:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr "Толщина границы при наведении на окна."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Оформление темы (при наведении)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr ""
+"Выбрать, какие границы темы Plasma показывать при наведении. Снять все "
+"флажки, чтобы скрыть оформление."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr "Поведение"
 
@@ -664,6 +690,10 @@ msgstr "Стиль для свёрнутых"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
 msgstr "Стиль фокуса"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
+msgstr "Стиль наведения"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

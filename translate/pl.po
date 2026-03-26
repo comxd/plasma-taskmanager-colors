@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -418,7 +418,9 @@ msgstr "Dekoracja tematu (nieaktywne)"
 msgid ""
 "Select which Plasma theme borders to show on inactive task buttons. Uncheck "
 "all to hide decoration."
-msgstr "Wybierz, które obramowania tematu Plasma wyświetlać na nieaktywnych przyciskach zadań. Odznacz wszystkie, aby ukryć dekorację."
+msgstr ""
+"Wybierz, które obramowania tematu Plasma wyświetlać na nieaktywnych "
+"przyciskach zadań. Odznacz wszystkie, aby ukryć dekorację."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -437,16 +439,6 @@ msgid "Right border"
 msgstr "Prawe obramowanie"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Dekoracja tematu (najechanie)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "Wybierz, które obramowania tematu Plasma wyświetlać przy najechaniu. Odznacz wszystkie, aby ukryć dekorację."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Okno z fokusem"
 
@@ -458,7 +450,9 @@ msgstr "Dekoracja tematu (z fokusem)"
 msgid ""
 "Select which Plasma theme borders to show on focused tasks. Uncheck all to "
 "hide decoration."
-msgstr "Wybierz, które obramowania tematu Plasma wyświetlać na aktywnych zadaniach. Odznacz wszystkie, aby ukryć dekorację."
+msgstr ""
+"Wybierz, które obramowania tematu Plasma wyświetlać na aktywnych zadaniach. "
+"Odznacz wszystkie, aby ukryć dekorację."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -564,6 +558,38 @@ msgid "Border thickness for minimized windows."
 msgstr "Grubość obramowania dla zminimalizowanych okien."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr "Okno przy najechaniu"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr "Okno przy najechaniu:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr "Zachowanie nakładki kolorów przy najechaniu na zadanie."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr "Styl najechania:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr "Grubość obramowania przy najechaniu na okna."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Dekoracja tematu (najechanie)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr ""
+"Wybierz, które obramowania tematu Plasma wyświetlać przy najechaniu. Odznacz "
+"wszystkie, aby ukryć dekorację."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr "Zachowanie"
 
@@ -666,6 +692,10 @@ msgstr "Styl zminimalizowanych"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
 msgstr "Styl fokusu"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
+msgstr "Styl najechania"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

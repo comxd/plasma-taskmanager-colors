@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -410,7 +410,9 @@ msgstr "زخرفة السمة (غير نشط)"
 msgid ""
 "Select which Plasma theme borders to show on inactive task buttons. Uncheck "
 "all to hide decoration."
-msgstr "اختيار حدود سمة Plasma التي تُعرض على أزرار المهام غير النشطة. إلغاء تحديد الكل لإخفاء الزخرفة."
+msgstr ""
+"اختيار حدود سمة Plasma التي تُعرض على أزرار المهام غير النشطة. إلغاء تحديد "
+"الكل لإخفاء الزخرفة."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -429,16 +431,6 @@ msgid "Right border"
 msgstr "الحد الأيمن"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "زخرفة السمة (تمرير)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "اختيار حدود سمة Plasma التي تُعرض عند التمرير. إلغاء تحديد الكل لإخفاء الزخرفة."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "النافذة المُركَّزة"
 
@@ -450,7 +442,9 @@ msgstr "زخرفة السمة (مُركَّز)"
 msgid ""
 "Select which Plasma theme borders to show on focused tasks. Uncheck all to "
 "hide decoration."
-msgstr "اختيار حدود سمة Plasma التي تُعرض على المهام المُركَّز عليها. إلغاء تحديد الكل لإخفاء الزخرفة."
+msgstr ""
+"اختيار حدود سمة Plasma التي تُعرض على المهام المُركَّز عليها. إلغاء تحديد الكل "
+"لإخفاء الزخرفة."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -554,6 +548,38 @@ msgid "Border thickness for minimized windows."
 msgstr "سمك الحدود للنوافذ المُصغَّرة."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr "نافذة التمرير"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr "نافذة التمرير:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr "سلوك طبقة اللون عند التمرير فوق مهمة."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr "نمط التمرير:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr "سمك الحد للنوافذ عند التمرير."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "زخرفة السمة (تمرير)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr ""
+"اختيار حدود سمة Plasma التي تُعرض عند التمرير. إلغاء تحديد الكل لإخفاء "
+"الزخرفة."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr "السلوك"
 
@@ -653,6 +679,10 @@ msgstr "نمط التصغير"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
 msgstr "نمط التركيز"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
+msgstr "نمط التمرير"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

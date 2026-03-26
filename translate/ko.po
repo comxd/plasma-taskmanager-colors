@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -411,7 +411,9 @@ msgstr "테마 장식 (비활성)"
 msgid ""
 "Select which Plasma theme borders to show on inactive task buttons. Uncheck "
 "all to hide decoration."
-msgstr "비활성 작업 버튼에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장식이 숨겨집니다."
+msgstr ""
+"비활성 작업 버튼에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하"
+"면 장식이 숨겨집니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -430,16 +432,6 @@ msgid "Right border"
 msgstr "오른쪽 테두리"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "테마 장식 (호버)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "호버 시 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장식이 숨겨집니다."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "포커스 창"
 
@@ -451,7 +443,9 @@ msgstr "테마 장식 (포커스)"
 msgid ""
 "Select which Plasma theme borders to show on focused tasks. Uncheck all to "
 "hide decoration."
-msgstr "포커스된 작업에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장식이 숨겨집니다."
+msgstr ""
+"포커스된 작업에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장"
+"식이 숨겨집니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -556,6 +550,38 @@ msgid "Border thickness for minimized windows."
 msgstr "최소화된 창의 테두리 두께."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr "호버 창"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr "호버 창:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr "작업 위에 마우스를 올렸을 때 색상 오버레이의 동작 방식."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr "호버 스타일:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr "호버 시 창의 테두리 두께."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "테마 장식 (호버)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr ""
+"호버 시 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장식이 숨"
+"겨집니다."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr "동작"
 
@@ -655,6 +681,10 @@ msgstr "최소화 스타일"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
 msgstr "포커스 스타일"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
+msgstr "호버 스타일"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""

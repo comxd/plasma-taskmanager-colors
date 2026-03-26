@@ -69,6 +69,25 @@
     <entry name="minimizedBorderRadius" type="Int">
       <default>-1</default>
     </entry>
+    <!-- Hover window mode: normal/hide/background/custom -->
+    <entry name="hoverMode" type="String">
+      <default>normal</default>
+    </entry>
+    <entry name="hoverColorMode" type="String">
+      <default></default>
+    </entry>
+    <entry name="hoverAutoBorderWidth" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="hoverBorderWidth" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="hoverOpacity" type="Double">
+      <default>-1</default>
+    </entry>
+    <entry name="hoverBorderRadius" type="Int">
+      <default>-1</default>
+    </entry>
     <!-- always: color pinned+running, runningOnly: only when window is open -->
     <entry name="pinnedBehavior" type="String">
       <default>runningOnly</default>

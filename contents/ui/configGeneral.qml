@@ -35,6 +35,12 @@ KCM.SimpleKCM {
     property int cfg_plasmaHoverDecoration
     property double cfg_minimizedOpacity
     property int cfg_minimizedBorderRadius
+    property string cfg_hoverMode
+    property string cfg_hoverColorMode
+    property bool cfg_hoverAutoBorderWidth
+    property int cfg_hoverBorderWidth
+    property double cfg_hoverOpacity
+    property int cfg_hoverBorderRadius
     property string cfg_pinnedBehavior
     property double cfg_rainbowSpeed
     property string cfg_rainbowStyle

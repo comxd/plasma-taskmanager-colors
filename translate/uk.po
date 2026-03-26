@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:00+0100\n"
+"POT-Creation-Date: 2026-03-27 01:37+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -417,7 +417,9 @@ msgstr "Оформлення теми (неактивні)"
 msgid ""
 "Select which Plasma theme borders to show on inactive task buttons. Uncheck "
 "all to hide decoration."
-msgstr "Обрати, які межі теми Plasma відображати на неактивних кнопках завдань. Зніміть усі прапорці, щоб приховати оформлення."
+msgstr ""
+"Обрати, які межі теми Plasma відображати на неактивних кнопках завдань. "
+"Зніміть усі прапорці, щоб приховати оформлення."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -436,16 +438,6 @@ msgid "Right border"
 msgstr "Права межа"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Оформлення теми (наведення)"
-
-#: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "Обрати, які межі теми Plasma відображати при наведенні. Зніміть усі прапорці, щоб приховати оформлення."
-
-#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Активне вікно"
 
@@ -457,7 +449,9 @@ msgstr "Оформлення теми (у фокусі)"
 msgid ""
 "Select which Plasma theme borders to show on focused tasks. Uncheck all to "
 "hide decoration."
-msgstr "Обрати, які межі теми Plasma відображати на активних завданнях. Зніміть усі прапорці, щоб приховати оформлення."
+msgstr ""
+"Обрати, які межі теми Plasma відображати на активних завданнях. Зніміть усі "
+"прапорці, щоб приховати оформлення."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -563,6 +557,38 @@ msgid "Border thickness for minimized windows."
 msgstr "Товщина рамки для мінімізованих вікон."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window"
+msgstr "Вікно при наведенні"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover window:"
+msgstr "Вікно при наведенні:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "How the color overlay behaves when hovering over a task."
+msgstr "Поведінка кольорового накладання при наведенні на завдання."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style:"
+msgstr "Стиль наведення:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Border thickness for hovered windows."
+msgstr "Товщина межі для вікон при наведенні."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Оформлення теми (наведення)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr ""
+"Обрати, які межі теми Plasma відображати при наведенні. Зніміть усі "
+"прапорці, щоб приховати оформлення."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
 msgstr "Поведінка"
 
@@ -666,6 +692,10 @@ msgstr "Стиль для згорнутих"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused style"
 msgstr "Стиль фокусу"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hover style"
+msgstr "Стиль наведення"
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid ""
