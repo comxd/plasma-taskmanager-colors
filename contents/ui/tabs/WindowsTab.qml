@@ -20,6 +20,8 @@ StackLayout {
     required property var usedColors       // root.usedColors
     required property bool extractorBusy   // iconExtractor.busy
     required property var activeOverlays   // root.activeOverlays
+    required property var colorMapCache    // root.colorMapCache
+    required property var autoColorCache   // autoColorManager.autoColorCache
 
     // Signals for root to handle
     signal extractColorForWindow(var overlay, var iconName)
@@ -70,11 +72,32 @@ StackLayout {
                     width: windowListView.width - (winScrollBar.visible ? winScrollBar.width + Kirigami.Units.smallSpacing : 0)
                     spacing: 0
 
+                    // Inherited state computation
+                    property string windowOverride: modelData.overlay ? modelData.overlay.windowColorOverride : ""
+                    property string cleanOverride: windowOverride.endsWith(":nyan") ? windowOverride.slice(0, -5) : windowOverride
+                    property bool hasWindowOverride: cleanOverride !== "" || windowOverride.endsWith(":nyan")
+                    property bool isNyanApp: modelData.overlay ? modelData.overlay.isNyanApp : false
+                    property bool isNyanWindow: windowOverride.endsWith(":nyan")
+                    property bool isNyanInherited: isNyanApp && !isNyanWindow && windowOverride === ""
+                    property string appColor: modelData.overlay ? String(modelData.overlay.overlayColor) : "transparent"
+                    property bool hasInheritedColor: !hasWindowOverride && appColor !== "transparent" && appColor !== ""
+                    property bool isManualApp: modelData.appId in windowsTab.colorMapCache
+                    property string autoColor: (windowsTab.autoColorCache[modelData.appId]) || ""
+                    property bool isAutoInherited: hasInheritedColor && !isManualApp && autoColor !== ""
+
                     RowLayout {
                         Layout.fillWidth: true
                         Layout.topMargin: Kirigami.Units.mediumSpacing
                         Layout.bottomMargin: Kirigami.Units.mediumSpacing
                         spacing: Kirigami.Units.mediumSpacing
+
+                        HoverHandler {
+                            onHoveredChanged: {
+                                if (hovered && modelData.overlay) {
+                                    modelData.overlay.pulseHighlight = true;
+                                }
+                            }
+                        }
 
                         Kirigami.Icon {
                             source: modelData.iconName || modelData.appId
@@ -106,29 +129,49 @@ StackLayout {
                             implicitWidth: Kirigami.Units.gridUnit * 2.5
                             implicitHeight: Kirigami.Units.gridUnit * 1.5
 
-                            property string rawOverride: modelData.overlay?.windowColorOverride ?? ""
-                            property string currentOverride: rawOverride.replace(/:nyan$/, "")
-                            property bool winNyan: rawOverride.endsWith(":nyan")
-
                             visible: !!modelData.overlay
                             enabled: !!modelData.overlay
 
+                            Controls.ToolTip.text: {
+                                if (cleanOverride) return i18n("Custom window override");
+                                if (isNyanWindow) return i18n("Custom nyan override");
+                                if (isNyanInherited) return i18n("Nyan inherited from app — click to override");
+                                if (isAutoInherited) return i18n("Auto-extracted from icon — click to override");
+                                if (hasInheritedColor) return i18n("Color inherited from app — click to override");
+                                return i18n("Click to set color");
+                            }
+                            Controls.ToolTip.visible: hovered
+
                             contentItem: Item {}
                             background: Rectangle {
-                                color: parent.currentOverride
-                                    ? parent.currentOverride
-                                    : Qt.rgba(Kirigami.Theme.backgroundColor.r,
-                                               Kirigami.Theme.backgroundColor.g,
-                                               Kirigami.Theme.backgroundColor.b, 0.5)
+                                color: {
+                                    if (cleanOverride) return cleanOverride;
+                                    if (hasInheritedColor && !hasWindowOverride) return appColor;
+                                    return Qt.rgba(Kirigami.Theme.backgroundColor.r,
+                                                   Kirigami.Theme.backgroundColor.g,
+                                                   Kirigami.Theme.backgroundColor.b, 0.5);
+                                }
                                 radius: 3
                                 border.color: Kirigami.Theme.textColor
                                 border.width: 1
 
                                 Text {
                                     anchors.centerIn: parent
-                                    text: parent.parent.currentOverride ? "" : "+"
-                                    color: Kirigami.Theme.textColor
-                                    font.pixelSize: Kirigami.Theme.defaultFont.pixelSize
+                                    property color swatchColor: parent.color
+                                    text: {
+                                        if (cleanOverride) return "";
+                                        if (isNyanWindow || isNyanInherited) return i18n("nyan");
+                                        if (hasInheritedColor && !hasWindowOverride) return i18n("inherit");
+                                        return "+";
+                                    }
+                                    color: {
+                                        if (hasInheritedColor && !hasWindowOverride) {
+                                            let luma = 0.299 * swatchColor.r + 0.587 * swatchColor.g + 0.114 * swatchColor.b;
+                                            return luma < 0.5 ? "white" : "black";
+                                        }
+                                        return Kirigami.Theme.textColor;
+                                    }
+                                    font.pixelSize: (isNyanWindow || isNyanInherited || (hasInheritedColor && !hasWindowOverride)) ? Kirigami.Theme.smallFont.pixelSize : Kirigami.Theme.defaultFont.pixelSize
                                 }
                             }
 
@@ -136,7 +179,7 @@ StackLayout {
                                 winColorPicker.targetOverlay = modelData.overlay;
                                 winColorPicker.targetIconName = modelData.iconName || modelData.appId;
                                 winColorPicker.title = i18n("Window color override");
-                                winColorPicker.isNyan = winNyan;
+                                winColorPicker.isNyan = isNyanWindow;
                                 windowsTab.currentIndex = 1;
                                 winColorPicker.activate();
                             }

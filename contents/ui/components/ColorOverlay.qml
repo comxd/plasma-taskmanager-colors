@@ -8,6 +8,8 @@
 */
 
 import QtQuick
+import org.kde.kirigami as Kirigami
+import "../utils/colorUtils.js" as ColorUtils
 
 Item {
     id: overlay
@@ -33,6 +35,10 @@ Item {
     property string minimizedColorMode: ""
     property bool minimizedDim: false
     property bool minimizedDesaturate: false
+    property string desaturationStyle: "grayscale"
+    property bool softenColors: false
+    property int childCount: 0
+    property bool showWindowCount: true
 
     property string windowColorOverride: ""
     property string windowTitle: ""
@@ -50,6 +56,9 @@ Item {
     property var effectiveNyanColors: {
         if (isMinimized && (minimizedMode === "desaturate" || (minimizedMode === "custom" && minimizedDesaturate))) {
             return nyanColors.map(function(c) {
+                if (desaturationStyle === "partial") {
+                    return ColorUtils.desaturatePartial(c, 0.3);
+                }
                 var gray = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
                 return Qt.rgba(gray, gray, gray, c.a);
             });
@@ -74,11 +83,24 @@ Item {
     property bool hiddenByMinimized: isMinimized && minimizedMode === "hide"
     property real minimizedDimFactor: (isMinimized && (minimizedMode === "dim" || (minimizedMode === "custom" && minimizedDim))) ? 0.35 : 1.0
     property color displayColor: {
+        var c = effectiveColor;
+        // Step 1: desaturation for minimized
         if (isMinimized && (minimizedMode === "desaturate" || (minimizedMode === "custom" && minimizedDesaturate))) {
-            let gray = 0.299 * effectiveColor.r + 0.587 * effectiveColor.g + 0.114 * effectiveColor.b;
-            return Qt.rgba(gray, gray, gray, effectiveColor.a);
+            if (desaturationStyle === "partial") {
+                c = ColorUtils.desaturatePartial(c, 0.3);
+            } else {
+                let gray = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
+                c = Qt.rgba(gray, gray, gray, c.a);
+            }
         }
-        return effectiveColor;
+        // Step 2: theme-adaptive softening
+        if (softenColors) {
+            var bg = Kirigami.Theme.backgroundColor;
+            var bgLuma = 0.299 * bg.r + 0.587 * bg.g + 0.114 * bg.b;
+            var tintColor = bgLuma < 0.5 ? Qt.rgba(1,1,1,1) : Qt.rgba(0,0,0,1);
+            c = ColorUtils.tintWithAlpha(c, tintColor, 0.38);
+        }
+        return c;
     }
 
     // Effective color mode (focused takes priority over minimized)
@@ -156,6 +178,19 @@ Item {
     visible: !hiddenByFocus && !hasNoColor && !hiddenByMinimized
     z: focusEnhanced ? 1 : -1
 
+    // Pulse highlight (triggered from Windows tab hover)
+    property bool pulseHighlight: false
+    onPulseHighlightChanged: if (pulseHighlight) pulseAnim.start()
+
+    SequentialAnimation {
+        id: pulseAnim
+        running: false
+        loops: 2
+        NumberAnimation { target: overlay; property: "opacity"; to: 1.0; duration: 300; easing.type: Easing.InOutQuad }
+        NumberAnimation { target: overlay; property: "opacity"; to: 0.4; duration: 300; easing.type: Easing.InOutQuad }
+        onFinished: { overlay.opacity = 1.0; overlay.pulseHighlight = false; }
+    }
+
     // Background fill (hidden when nyan rainbow canvas is active)
     Rectangle {
         anchors.fill: parent
@@ -168,6 +203,31 @@ Item {
             overlay.effectiveOpacity * overlay.minimizedDimFactor
         )
         Behavior on color { ColorAnimation { duration: 200 } }
+    }
+
+    // ── Window count segment indicators ──
+    Row {
+        id: segmentRow
+        visible: overlay.showWindowCount && overlay.childCount > 1 && !overlay.hasNoColor && !overlay.hiddenByFocus && !overlay.hiddenByMinimized && !overlay.isNyan
+        anchors.horizontalCenter: overlay.panelIsVertical ? undefined : parent.horizontalCenter
+        anchors.verticalCenter: overlay.panelIsVertical ? parent.verticalCenter : undefined
+        anchors.bottom: overlay.panelIsVertical ? undefined : parent.bottom
+        anchors.right: overlay.panelIsVertical ? parent.right : undefined
+        anchors.bottomMargin: overlay.panelIsVertical ? 0 : 2
+        anchors.rightMargin: overlay.panelIsVertical ? 2 : 0
+        spacing: 2
+        z: 2
+
+        Repeater {
+            model: Math.min(overlay.childCount, 5)
+            Rectangle {
+                width: overlay.panelIsVertical ? 3 : Math.max(4, Math.min(8, (overlay.width - segmentRow.spacing * (Math.min(overlay.childCount, 5) - 1)) / Math.min(overlay.childCount, 5)))
+                height: overlay.panelIsVertical ? Math.max(4, Math.min(8, (overlay.height - segmentRow.spacing * (Math.min(overlay.childCount, 5) - 1)) / Math.min(overlay.childCount, 5))) : 3
+                radius: 1
+                color: Qt.darker(overlay.displayColor, 1.3)
+                opacity: overlay.effectiveOpacity
+            }
+        }
     }
 
     // ── Nyan Cat rainbow: background (flat mode) ──

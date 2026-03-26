@@ -20,6 +20,9 @@ StackLayout {
     required property var colorMapCache    // root.colorMapCache
     required property var usedColors       // root.usedColors
     required property bool extractorBusy   // iconExtractor.busy
+    required property bool autoColorEnabled   // plasmoid.configuration.autoColorEnabled
+    required property var autoColorCache      // autoColorManager.autoColorCache
+    required property var autoSkippedApps      // root.parsedSkipList (pre-parsed array)
 
     // Signals for root to handle
     signal setAppColor(string appId, string color)
@@ -27,6 +30,7 @@ StackLayout {
     signal toggleNyan(string appId, bool enable)
     signal extractColorFromIcon(string appId, var iconName)
     signal resetAllColors()
+    signal toggleAutoSkip(string appId, bool skip)
 
     // Connected by root to close picker on extraction complete
     signal extractionComplete()
@@ -72,6 +76,14 @@ StackLayout {
                     width: taskListView.width - (appScrollBar.visible ? appScrollBar.width + Kirigami.Units.smallSpacing : 0)
                     spacing: 0
 
+                    // Auto color computed properties
+                    property bool isSkipped: applicationsTab.autoSkippedApps.indexOf(modelData.appId) >= 0
+                    property string autoColor: (applicationsTab.autoColorCache[modelData.appId]) || ""
+                    property string rawColor: applicationsTab.colorMapCache[modelData.appId] || ""
+                    property bool isAutoActive: applicationsTab.autoColorEnabled && autoColor !== "" && rawColor === "" && !isSkipped
+                    property bool isAutoPending: applicationsTab.autoColorEnabled && autoColor === "" && rawColor === "" && !isSkipped
+                    property bool isAutoOverridden: applicationsTab.autoColorEnabled && rawColor !== ""
+
                     RowLayout {
                         Layout.fillWidth: true
                         Layout.topMargin: Kirigami.Units.mediumSpacing
@@ -112,6 +124,39 @@ StackLayout {
                         }
 
                         Controls.Button {
+                            flat: true
+                            visible: applicationsTab.autoColorEnabled
+                            implicitWidth: autoLabel.implicitWidth + Kirigami.Units.smallSpacing * 4
+                            implicitHeight: Kirigami.Units.gridUnit * 1.5
+                            enabled: isAutoActive || isSkipped
+                            onClicked: applicationsTab.toggleAutoSkip(modelData.appId, !isSkipped)
+
+                            Controls.ToolTip.text: {
+                                if (isSkipped) return i18n("Auto color disabled for this app — click to re-enable");
+                                if (isAutoActive) return i18n("Color auto-extracted from icon — click to disable");
+                                if (isAutoPending) return i18n("Extracting color from icon…");
+                                if (isAutoOverridden) return i18n("Auto color overridden by manual color");
+                                return "";
+                            }
+                            Controls.ToolTip.visible: hovered && Controls.ToolTip.text !== ""
+
+                            contentItem: Controls.Label {
+                                id: autoLabel
+                                text: i18n("auto")
+                                font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                                font.strikeout: isSkipped || isAutoOverridden
+                                font.italic: isAutoPending
+                                color: {
+                                    if (isAutoActive) return Kirigami.Theme.positiveTextColor;
+                                    return Kirigami.Theme.disabledTextColor;
+                                }
+                                opacity: isSkipped ? 0.5 : 1.0
+                                horizontalAlignment: Text.AlignHCenter
+                                verticalAlignment: Text.AlignVCenter
+                            }
+                        }
+
+                        Controls.Button {
                             implicitWidth: Kirigami.Units.gridUnit * 2.5
                             implicitHeight: Kirigami.Units.gridUnit * 1.5
 
@@ -122,18 +167,23 @@ StackLayout {
 
                             contentItem: Item {}
                             background: Rectangle {
-                                color: parent.assignedColor
-                                    ? parent.assignedColor
-                                    : Kirigami.Theme.backgroundColor
+                                color: parent.assignedColor ? parent.assignedColor
+                                     : (autoColor && applicationsTab.autoColorEnabled) ? autoColor
+                                     : Kirigami.Theme.backgroundColor
                                 radius: 3
                                 border.color: Kirigami.Theme.textColor
                                 border.width: 1
 
                                 Text {
                                     anchors.centerIn: parent
-                                    text: parent.parent.assignedColor ? "" : "+"
+                                    text: {
+                                        if (parent.parent.assignedColor) return "";
+                                        if (autoColor && applicationsTab.autoColorEnabled) return "";
+                                        if (parent.parent.isNyan) return i18n("nyan");
+                                        return "+";
+                                    }
                                     color: Kirigami.Theme.textColor
-                                    font.pixelSize: Kirigami.Theme.defaultFont.pixelSize
+                                    font.pixelSize: (parent.parent.isNyan && !parent.parent.assignedColor) ? Kirigami.Theme.smallFont.pixelSize : Kirigami.Theme.defaultFont.pixelSize
                                 }
                             }
 

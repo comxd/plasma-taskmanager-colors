@@ -19,6 +19,9 @@ StackLayout {
     // Dynamic max values from task delegate dimensions
     required property int computedMaxRadius
     required property int computedMaxBorder
+    required property bool autoQueueBusy   // autoColorManager.queueBusy
+
+    signal refreshAutoColors()
 
     currentIndex: 0
 
@@ -247,6 +250,34 @@ StackLayout {
                         color: Kirigami.Theme.disabledTextColor
                         wrapMode: Text.Wrap; Layout.fillWidth: true
                     }
+                }
+
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
+
+                Controls.CheckBox {
+                    text: i18n("Soften colors")
+                    checked: plasmoid.configuration.softenColors
+                    onToggled: plasmoid.configuration.softenColors = checked
+                }
+                Controls.Label {
+                    text: i18n("Adapts colors to match the current theme brightness. Makes vivid colors less harsh.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
+
+                Controls.CheckBox {
+                    text: i18n("Show window count indicators")
+                    checked: plasmoid.configuration.showWindowCount
+                    onToggled: plasmoid.configuration.showWindowCount = checked
+                }
+                Controls.Label {
+                    text: i18n("Show small segment dots when multiple windows are grouped under one task.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
                 }
             }
 
@@ -522,6 +553,32 @@ StackLayout {
                     wrapMode: Text.Wrap; Layout.fillWidth: true
                 }
 
+                // -- Desaturation style --
+                RowLayout {
+                    Layout.fillWidth: true
+                    visible: plasmoid.configuration.minimizedMode === "desaturate" ||
+                             (plasmoid.configuration.minimizedMode === "custom" && plasmoid.configuration.minimizedDesaturate)
+                    Controls.Label { text: i18n("Desaturation style:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 6 }
+                    Controls.ComboBox {
+                        Layout.fillWidth: true
+                        model: [
+                            { value: "grayscale", text: i18n("Grayscale") },
+                            { value: "partial", text: i18n("Partial (keep hue)") }
+                        ]
+                        textRole: "text"; valueRole: "value"
+                        currentIndex: plasmoid.configuration.desaturationStyle === "partial" ? 1 : 0
+                        onActivated: plasmoid.configuration.desaturationStyle = currentValue
+                    }
+                }
+                Controls.Label {
+                    visible: plasmoid.configuration.minimizedMode === "desaturate" ||
+                             (plasmoid.configuration.minimizedMode === "custom" && plasmoid.configuration.minimizedDesaturate)
+                    text: i18n("Grayscale removes all color. Partial keeps the hue but reduces saturation.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+
                 // -- Custom minimized style options --
                 ColumnLayout {
                     Layout.fillWidth: true
@@ -745,6 +802,42 @@ StackLayout {
                 }
                 Controls.Label {
                     text: i18n("Show color on pinned favorites even when no window is open.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+
+                // -- Auto color from icon --
+                Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
+
+                RowLayout {
+                    Layout.fillWidth: true
+                    Controls.Label { text: i18n("Auto color:"); Layout.preferredWidth: Kirigami.Units.gridUnit * 6 }
+                    Controls.Switch {
+                        checked: plasmoid.configuration.autoColorEnabled
+                        onToggled: plasmoid.configuration.autoColorEnabled = checked
+                    }
+                }
+                Controls.Label {
+                    text: i18n("Automatically extract and apply a dominant color from each application icon. Only applies to apps without a manual color or Nyan mode.")
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    color: Kirigami.Theme.disabledTextColor
+                    wrapMode: Text.Wrap; Layout.fillWidth: true
+                }
+
+                // Refresh button — visible only when auto is enabled
+                Controls.Button {
+                    visible: plasmoid.configuration.autoColorEnabled
+                    enabled: !settingsTab.autoQueueBusy
+                    flat: true
+                    icon.name: "view-refresh"
+                    text: settingsTab.autoQueueBusy ? i18n("Extracting colors…") : i18n("Refresh auto colors")
+                    onClicked: settingsTab.refreshAutoColors()
+                    Layout.topMargin: Kirigami.Units.smallSpacing
+                }
+                Controls.Label {
+                    visible: plasmoid.configuration.autoColorEnabled
+                    text: i18n("Re-extract icon colors for all applications. Useful after changing icon themes.")
                     font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     color: Kirigami.Theme.disabledTextColor
                     wrapMode: Text.Wrap; Layout.fillWidth: true

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-19 02:29+0100\n"
+"POT-Creation-Date: 2026-03-22 22:33+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -237,6 +237,32 @@ msgid "(pinned)"
 msgstr "(připnuto)"
 
 #: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color disabled for this app — click to re-enable"
+msgstr ""
+"Automatická barva pro tuto aplikaci je vypnuta — klikněte pro opětovné "
+"zapnutí"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Color auto-extracted from icon — click to disable"
+msgstr "Barva automaticky extrahována z ikony — klikněte pro vypnutí"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Extracting color from icon…"
+msgstr "Extrahování barvy z ikony…"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "Auto color overridden by manual color"
+msgstr "Automatická barva přepsána ruční barvou"
+
+#: contents/ui/tabs/ApplicationsTab.qml
+msgid "auto"
+msgstr "auto"
+
+#: contents/ui/tabs/ApplicationsTab.qml contents/ui/tabs/WindowsTab.qml
+msgid "nyan"
+msgstr "nyan"
+
+#: contents/ui/tabs/ApplicationsTab.qml
 msgid "Color for: %1"
 msgstr "Barva pro: %1"
 
@@ -361,6 +387,25 @@ msgid "Corner rounding. Auto matches current theme. Max = perfect circle."
 msgstr "Zaoblení rohů. Auto odpovídá aktuálnímu motivu. Max = dokonalý kruh."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Soften colors"
+msgstr "Zjemnit barvy"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Adapts colors to match the current theme brightness. Makes vivid colors less "
+"harsh."
+msgstr "Přizpůsobí barvy jasu aktuálního motivu. Živé barvy budou méně ostré."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Show window count indicators"
+msgstr "Zobrazit ukazatele počtu oken"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Show small segment dots when multiple windows are grouped under one task."
+msgstr "Zobrazit malé tečky, když je více oken seskupeno pod jedním úkolem."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Zaměřené okno"
 
@@ -425,6 +470,25 @@ msgid "How color overlays behave on minimized windows."
 msgstr "Chování barevných překrytí u minimalizovaných oken."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Desaturation style:"
+msgstr "Styl desaturace:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Grayscale"
+msgstr "Odstíny šedi"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Partial (keep hue)"
+msgstr "Částečná (zachovat odstín)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Grayscale removes all color. Partial keeps the hue but reduces saturation."
+msgstr ""
+"Odstíny šedi odstraní veškerou barvu. Částečná zachová odstín, ale sníží "
+"sytost."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Minimized style:"
 msgstr "Styl minimalizovaných:"
 
@@ -467,6 +531,34 @@ msgstr "Pouze za běhu"
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Show color on pinned favorites even when no window is open."
 msgstr "Zobrazit barvu na připnutých oblíbených i bez otevřených oken."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Auto color:"
+msgstr "Automatická barva:"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Automatically extract and apply a dominant color from each application icon. "
+"Only applies to apps without a manual color or Nyan mode."
+msgstr ""
+"Automaticky extrahovat a aplikovat dominantní barvu z ikony každé aplikace. "
+"Platí pouze pro aplikace bez ruční barvy nebo režimu Nyan."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Extracting colors…"
+msgstr "Extrahování barev…"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Refresh auto colors"
+msgstr "Obnovit automatické barvy"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Re-extract icon colors for all applications. Useful after changing icon "
+"themes."
+msgstr ""
+"Znovu extrahovat barvy ikon pro všechny aplikace. Užitečné po změně motivu "
+"ikon."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Widget"
@@ -535,6 +627,46 @@ msgid "No windows detected — open some windows to use per-window overrides."
 msgstr "Nebyla zjištěna žádná okna — otevřete okna pro přepsání po oknech."
 
 #: contents/ui/tabs/WindowsTab.qml
+msgid "(app nyan)"
+msgstr "(nyan aplikace)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(auto color)"
+msgstr "(automatická barva)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "(app color)"
+msgstr "(barva aplikace)"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom window override"
+msgstr "Vlastní přepsání okna"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Custom nyan override"
+msgstr "Vlastní přepsání nyan"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Nyan inherited from app — click to override"
+msgstr "Nyan zděděn z aplikace — klikněte pro přepsání"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Auto-extracted from icon — click to override"
+msgstr "Automaticky extrahováno z ikony — klikněte pro přepsání"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Color inherited from app — click to override"
+msgstr "Barva zděděna z aplikace — klikněte pro přepsání"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "Click to set color"
+msgstr "Klikněte pro nastavení barvy"
+
+#: contents/ui/tabs/WindowsTab.qml
+msgid "inherit"
+msgstr "zděděno"
+
+#: contents/ui/tabs/WindowsTab.qml
 msgid "Window color override"
 msgstr "Přepsání barvy okna"
 
@@ -545,6 +677,9 @@ msgstr "Obnovit na barvu aplikace"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Obnovit přepsání oken"
+
+#~ msgid "Button tint"
+#~ msgstr "Zabarvení tlačítka"
 
 #~ msgid "General:"
 #~ msgstr "Obecné:"

@@ -125,6 +125,7 @@ PlasmoidItem {
     property int computedMaxRadius: 24   // Updated dynamically from task delegate size
     property int computedMaxBorder: 10  // 50% of task height
     property var colorMapCache: ({})    // Cached parsed colorMap (avoids JSON.parse per delegate)
+    property var parsedSkipList: []     // Parsed autoColorSkippedApps (avoids JSON.parse per delegate)
     property var activeOverlays: []     // Track all created overlays for reliable cleanup
 
     // ── Global Nyan Cat state (single timer for all overlays) ──
@@ -190,6 +191,9 @@ PlasmoidItem {
             let isMinimized = false;
             try { isMinimized = item.model?.IsMinimized ?? false; } catch(e) {}
 
+            let childCount = 0;
+            try { childCount = item.model?.ChildCount ?? 0; } catch(e) {}
+
             results.push({
                 item: item,
                 appId: item.appId || "",
@@ -199,7 +203,8 @@ PlasmoidItem {
                 isWindow: item.isWindow || false,
                 isRunning: isRunning,
                 isActive: isActive,
-                isMinimized: isMinimized
+                isMinimized: isMinimized,
+                childCount: childCount
             });
         }
 
@@ -260,6 +265,12 @@ PlasmoidItem {
         }
     }
 
+    Components.AutoColorManager {
+        id: autoColorManager
+        autoEnabled: plasmoid.configuration.autoColorEnabled
+        onQueueDrained: applyDebounce.restart()
+    }
+
     function removeAllOverlays() {
         for (let o of root.activeOverlays) {
             if (o) { o.visible = false; o.destroy(); }
@@ -300,6 +311,16 @@ PlasmoidItem {
         }
         let colorMap = getColorMap();
         root.colorMapCache = colorMap;
+
+        let skipList = [];
+        try { skipList = JSON.parse(plasmoid.configuration.autoColorSkippedApps); } catch(e) {}
+        if (!Array.isArray(skipList)) skipList = [];
+        root.parsedSkipList = skipList;
+
+        // Update auto color cache BEFORE per-task loop so autoColorCache is current
+        if (plasmoid.configuration.autoColorEnabled) {
+            autoColorManager.updateTaskList(tasks, colorMap);
+        }
 
         let verticalSwap = { "top": "left", "bottom": "right", "left": "top", "right": "bottom",
                              "top+bottom": "left+right", "left+right": "top+bottom" };
@@ -394,7 +415,17 @@ PlasmoidItem {
         let nyanIndex = 0;
         for (let t of tasks) {
             let rawColor = colorMap[t.appId] || "";
-            let hasAppColor = rawColor !== "";
+            let hasManualColor = rawColor !== "";
+
+            // Auto color: fill in when no manual color exists and not skipped
+            let isSkipped = skipList.indexOf(t.appId) >= 0;
+            if (!rawColor && !isSkipped && plasmoid.configuration.autoColorEnabled) {
+                let autoHex = autoColorManager.autoColorCache[t.appId];
+                if (autoHex) rawColor = autoHex;
+            }
+
+            // B1: skip only blocks auto colors, not manual ones
+            let hasAppColor = hasManualColor || (rawColor !== "" && !isSkipped);
 
             // Skip non-running tasks: no overlay needed for pinned launchers
             // without app color, or when pinnedBehavior is "runningOnly"
@@ -470,6 +501,10 @@ PlasmoidItem {
                 minimizedColorMode: minColorMode,
                 minimizedDim: minDim,
                 minimizedDesaturate: minDesaturate,
+                desaturationStyle: plasmoid.configuration.desaturationStyle,
+                softenColors: plasmoid.configuration.softenColors,
+                childCount: t.childCount || 0,
+                showWindowCount: plasmoid.configuration.showWindowCount,
                 isNyanApp: isNyan,
                 nyanStyle: plasmoid.configuration.rainbowStyle,
                 nyanWaveOffset: nyanIndex % 6,
@@ -502,6 +537,7 @@ PlasmoidItem {
         root.hasNyanOverlays = liveOverlays.some(function(o) { return o.isNyan; });
         windowList.sort((a, b) => (a.windowTitle || a.appName).localeCompare(b.windowTitle || b.appName));
         root.detectedWindows = windowList;
+
     }
 
     // ── Reactive task tracking (no polling) ──
@@ -524,7 +560,18 @@ PlasmoidItem {
         onTriggered: applyColors()
     }
 
-    Component.onCompleted: { applyDebounce.restart(); updatePlasmoidStatus(); hideWidgetAction.checked = plasmoid.configuration.hideWidget; }
+    Component.onCompleted: {
+        // One-time cleanup: "tint" mode was removed — reset stale KConfig values
+        if (plasmoid.configuration.colorMode === "tint")
+            plasmoid.configuration.colorMode = "background";
+        if (plasmoid.configuration.focusedColorMode === "tint")
+            plasmoid.configuration.focusedColorMode = "";
+        if (plasmoid.configuration.minimizedColorMode === "tint")
+            plasmoid.configuration.minimizedColorMode = "";
+        applyDebounce.restart();
+        updatePlasmoidStatus();
+        hideWidgetAction.checked = plasmoid.configuration.hideWidget;
+    }
     Component.onDestruction: removeAllOverlays()
 
     Connections {
@@ -545,6 +592,9 @@ PlasmoidItem {
         function onMinimizedColorModeChanged() { applyDebounce.restart(); }
         function onMinimizedDimChanged() { applyDebounce.restart(); }
         function onMinimizedDesaturateChanged() { applyDebounce.restart(); }
+        function onDesaturationStyleChanged() { applyDebounce.restart(); }
+        function onSoftenColorsChanged() { applyDebounce.restart(); }
+        function onShowWindowCountChanged() { applyDebounce.restart(); }
         function onMinimizedBorderWidthChanged() { applyDebounce.restart(); }
         function onMinimizedAutoBorderWidthChanged() { applyDebounce.restart(); }
         function onAutoBorderWidthChanged() { applyDebounce.restart(); }
@@ -553,6 +603,10 @@ PlasmoidItem {
         function onRainbowStyleChanged() { applyDebounce.restart(); }
         function onBackgroundOpacityChanged() { applyDebounce.restart(); }
         function onIsEnabledChanged() { applyDebounce.restart(); }
+        function onAutoColorEnabledChanged() { applyDebounce.restart(); }
+        // onAutoColorCacheChanged intentionally omitted — persistTimer writes trigger it,
+        // causing infinite loop: write → handler → applyColors → updateTaskList → persistTimer → write
+        function onAutoColorSkippedAppsChanged() { applyDebounce.restart(); }
     }
 
     // ── UI: Popup for color assignment ──
@@ -637,12 +691,24 @@ PlasmoidItem {
                         colorMapCache: root.colorMapCache
                         usedColors: root.usedColors
                         extractorBusy: iconExtractor.busy
+                        autoColorEnabled: plasmoid.configuration.autoColorEnabled
+                        autoColorCache: autoColorManager.autoColorCache
+                        autoSkippedApps: root.parsedSkipList
 
                         onSetAppColor: function(appId, color) { root.setAppColor(appId, color); }
                         onRemoveAppColor: function(appId) { root.removeAppColor(appId); }
                         onToggleNyan: function(appId, enable) { root.toggleNyan(appId, enable); }
                         onExtractColorFromIcon: function(appId, iconName) { iconExtractor.extractForApp(appId, iconName); }
                         onResetAllColors: { plasmoid.configuration.appColorMap = "{}"; root.applyColors(); }
+                        onToggleAutoSkip: function(appId, skip) {
+                            let list = root.parsedSkipList.slice();
+                            if (skip && list.indexOf(appId) < 0) {
+                                list.push(appId);
+                            } else if (!skip) {
+                                list = list.filter(id => id !== appId);
+                            }
+                            plasmoid.configuration.autoColorSkippedApps = JSON.stringify(list);
+                        }
 
                         Connections {
                             target: iconExtractor
@@ -656,6 +722,8 @@ PlasmoidItem {
                         usedColors: root.usedColors
                         extractorBusy: iconExtractor.busy
                         activeOverlays: root.activeOverlays
+                        colorMapCache: root.colorMapCache
+                        autoColorCache: autoColorManager.autoColorCache
 
                         onExtractColorForWindow: function(overlay, iconName) { iconExtractor.extractForWindow(overlay, iconName); }
                         onNyanOverlaysChanged: {
@@ -677,6 +745,8 @@ PlasmoidItem {
                     Tabs.SettingsTab {
                         computedMaxRadius: root.computedMaxRadius
                         computedMaxBorder: root.computedMaxBorder
+                        autoQueueBusy: autoColorManager.queueBusy
+                        onRefreshAutoColors: { autoColorManager.triggerFullRefresh(); applyDebounce.restart(); }
                     }
 
                     Tabs.NyanTab {
