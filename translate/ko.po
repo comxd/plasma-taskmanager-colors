@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -404,16 +404,24 @@ msgid ""
 msgstr "여러 창이 하나의 작업으로 그룹화될 때 작은 점을 표시합니다."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "테마 장식 (비활성)"
+msgid "Theme decoration (inactive):"
+msgstr "테마 장식 (비활성):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"비활성 작업 버튼에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하"
-"면 장식이 숨겨집니다."
+msgid "Default (keep Plasma theme)"
+msgstr "기본값 (Plasma 테마 유지)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "사용자 정의 테두리"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "모든 장식 숨기기"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "비활성 작업 버튼의 Plasma 테마 장식을 제어합니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -436,16 +444,12 @@ msgid "Focused window"
 msgstr "포커스 창"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "테마 장식 (포커스)"
+msgid "Theme decoration (focused):"
+msgstr "테마 장식 (포커스):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"포커스된 작업에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장"
-"식이 숨겨집니다."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "포커스된 작업 버튼의 Plasma 테마 장식을 제어합니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -570,16 +574,12 @@ msgid "Border thickness for hovered windows."
 msgstr "호버 시 창의 테두리 두께."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "테마 장식 (호버)"
+msgid "Theme decoration (hover):"
+msgstr "테마 장식 (호버):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"호버 시 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장식이 숨"
-"겨집니다."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "작업 버튼 위에 마우스를 올렸을 때 Plasma 테마 장식을 제어합니다."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -735,6 +735,36 @@ msgstr "앱 색상으로 초기화"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "창 재정의 초기화"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "테마 장식 (비활성)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "비활성 작업 버튼에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제"
+#~ "하면 장식이 숨겨집니다."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "테마 장식 (포커스)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "포커스된 작업에 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하"
+#~ "면 장식이 숨겨집니다."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "테마 장식 (호버)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "호버 시 표시할 Plasma 테마 테두리를 선택합니다. 모두 선택 해제하면 장식이 "
+#~ "숨겨집니다."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "테마 테두리 (비활성)"

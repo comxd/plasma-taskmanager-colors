@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -408,16 +408,24 @@ msgstr ""
 "задачей."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "Оформление темы (неактивные)"
+msgid "Theme decoration (inactive):"
+msgstr "Оформление темы (неактивные):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"Выбрать, какие границы темы Plasma показывать на неактивных кнопках задач. "
-"Снять все флажки, чтобы скрыть оформление."
+msgid "Default (keep Plasma theme)"
+msgstr "По умолчанию (сохранить тему Plasma)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "Настраиваемые границы"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "Скрыть всё оформление"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "Управляет оформлением темы Plasma на неактивных кнопках задач."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -440,16 +448,12 @@ msgid "Focused window"
 msgstr "Активное окно"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "Оформление темы (в фокусе)"
+msgid "Theme decoration (focused):"
+msgstr "Оформление темы (в фокусе):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"Выбрать, какие границы темы Plasma показывать на активных задачах. Снять все "
-"флажки, чтобы скрыть оформление."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "Управляет оформлением темы Plasma на активных кнопках задач."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -575,16 +579,12 @@ msgid "Border thickness for hovered windows."
 msgstr "Толщина границы при наведении на окна."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Оформление темы (при наведении)"
+msgid "Theme decoration (hover):"
+msgstr "Оформление темы (при наведении):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"Выбрать, какие границы темы Plasma показывать при наведении. Снять все "
-"флажки, чтобы скрыть оформление."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "Управляет оформлением темы Plasma при наведении на кнопки задач."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -748,6 +748,36 @@ msgstr "Сбросить на цвет приложения"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Сбросить переопределения окон"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "Оформление темы (неактивные)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "Выбрать, какие границы темы Plasma показывать на неактивных кнопках "
+#~ "задач. Снять все флажки, чтобы скрыть оформление."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "Оформление темы (в фокусе)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "Выбрать, какие границы темы Plasma показывать на активных задачах. Снять "
+#~ "все флажки, чтобы скрыть оформление."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "Оформление темы (при наведении)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "Выбрать, какие границы темы Plasma показывать при наведении. Снять все "
+#~ "флажки, чтобы скрыть оформление."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "Границы темы (неактивные)"

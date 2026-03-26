@@ -51,6 +51,18 @@ StackLayout {
         return on ? (value | bit) : (value & ~bit);
     }
 
+    // Decoration config value → ComboBox index: -1=0(Default), 0-15=1(Custom), -2=2(Hide all)
+    function decorationToIndex(value) {
+        if (value === -2) return 2;
+        if (value >= 0) return 1;
+        return 0;
+    }
+    function indexToDecoration(index, currentValue) {
+        if (index === 2) return -2;
+        if (index === 1) return (currentValue >= 0 ? currentValue : 15);
+        return -1;
+    }
+
     // ════════════════════════════════════════
     // ── Page 0: Settings content ──
     // ════════════════════════════════════════
@@ -287,13 +299,24 @@ StackLayout {
 
                 Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: Kirigami.Units.smallSpacing; Layout.bottomMargin: Kirigami.Units.smallSpacing }
 
-                Controls.CheckBox {
-                    text: i18n("Theme decoration (inactive)")
-                    checked: plasmoid.configuration.plasmaNormalDecoration >= 0
-                    onToggled: plasmoid.configuration.plasmaNormalDecoration = checked ? 15 : -1
+                RowLayout {
+                    Layout.fillWidth: true
+                    Controls.Label { text: i18n("Theme decoration (inactive):"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
+                    Controls.ComboBox {
+                        id: normalDecoCombo
+                        Layout.fillWidth: true
+                        model: [
+                            { text: i18n("Default (keep Plasma theme)") },
+                            { text: i18n("Custom borders") },
+                            { text: i18n("Hide all decoration") }
+                        ]
+                        textRole: "text"
+                        Component.onCompleted: currentIndex = settingsTab.decorationToIndex(plasmoid.configuration.plasmaNormalDecoration)
+                        onActivated: plasmoid.configuration.plasmaNormalDecoration = settingsTab.indexToDecoration(currentIndex, plasmoid.configuration.plasmaNormalDecoration)
+                    }
                 }
                 Controls.Label {
-                    text: i18n("Select which Plasma theme borders to show on inactive task buttons. Uncheck all to hide decoration.")
+                    text: i18n("Controls the Plasma theme decoration on inactive task buttons.")
                     font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     color: Kirigami.Theme.disabledTextColor
                     wrapMode: Text.Wrap; Layout.fillWidth: true
@@ -364,13 +387,24 @@ StackLayout {
                 spacing: Kirigami.Units.smallSpacing
                 visible: settingsFlickable.focusedExpanded
 
-                Controls.CheckBox {
-                    text: i18n("Theme decoration (focused)")
-                    checked: plasmoid.configuration.plasmaFocusDecoration >= 0
-                    onToggled: plasmoid.configuration.plasmaFocusDecoration = checked ? 15 : -1
+                RowLayout {
+                    Layout.fillWidth: true
+                    Controls.Label { text: i18n("Theme decoration (focused):"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
+                    Controls.ComboBox {
+                        id: focusDecoCombo
+                        Layout.fillWidth: true
+                        model: [
+                            { text: i18n("Default (keep Plasma theme)") },
+                            { text: i18n("Custom borders") },
+                            { text: i18n("Hide all decoration") }
+                        ]
+                        textRole: "text"
+                        Component.onCompleted: currentIndex = settingsTab.decorationToIndex(plasmoid.configuration.plasmaFocusDecoration)
+                        onActivated: plasmoid.configuration.plasmaFocusDecoration = settingsTab.indexToDecoration(currentIndex, plasmoid.configuration.plasmaFocusDecoration)
+                    }
                 }
                 Controls.Label {
-                    text: i18n("Select which Plasma theme borders to show on focused tasks. Uncheck all to hide decoration.")
+                    text: i18n("Controls the Plasma theme decoration on focused task buttons.")
                     font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     color: Kirigami.Theme.disabledTextColor
                     wrapMode: Text.Wrap; Layout.fillWidth: true
@@ -1041,13 +1075,24 @@ StackLayout {
                 // -- Theme decoration (hover) --
                 Kirigami.Separator { Layout.fillWidth: true; Layout.topMargin: 2; Layout.bottomMargin: 2 }
 
-                Controls.CheckBox {
-                    text: i18n("Theme decoration (hover)")
-                    checked: plasmoid.configuration.plasmaHoverDecoration >= 0
-                    onToggled: plasmoid.configuration.plasmaHoverDecoration = checked ? 15 : -1
+                RowLayout {
+                    Layout.fillWidth: true
+                    Controls.Label { text: i18n("Theme decoration (hover):"); Layout.preferredWidth: Kirigami.Units.gridUnit * 9 }
+                    Controls.ComboBox {
+                        id: hoverDecoCombo
+                        Layout.fillWidth: true
+                        model: [
+                            { text: i18n("Default (keep Plasma theme)") },
+                            { text: i18n("Custom borders") },
+                            { text: i18n("Hide all decoration") }
+                        ]
+                        textRole: "text"
+                        Component.onCompleted: currentIndex = settingsTab.decorationToIndex(plasmoid.configuration.plasmaHoverDecoration)
+                        onActivated: plasmoid.configuration.plasmaHoverDecoration = settingsTab.indexToDecoration(currentIndex, plasmoid.configuration.plasmaHoverDecoration)
+                    }
                 }
                 Controls.Label {
-                    text: i18n("Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration.")
+                    text: i18n("Controls the Plasma theme decoration when hovering over task buttons.")
                     font.pixelSize: Kirigami.Theme.smallFont.pixelSize
                     color: Kirigami.Theme.disabledTextColor
                     wrapMode: Text.Wrap; Layout.fillWidth: true

@@ -224,9 +224,20 @@ PlasmoidItem {
         if (!taskItem?.children) return null;
         for (let i = 0; i < taskItem.children.length; i++) {
             let child = taskItem.children[i];
+            // Primary: check imagePath (normal case)
             if (child.hasOwnProperty("imagePath") &&
                 String(child.imagePath).indexOf("widgets/tasks") >= 0) {
                 return child;
+            }
+        }
+        // Fallback: if imagePath was cleared by us, find via overlay sentinel
+        for (let i = 0; i < taskItem.children.length; i++) {
+            let child = taskItem.children[i];
+            if (child.hasOwnProperty("enabledBorders") &&
+                child.hasOwnProperty("prefix") && child.children) {
+                for (let j = 0; j < child.children.length; j++) {
+                    if (child.children[j].taskManagerColorsOverlay) return child;
+                }
             }
         }
         return null;

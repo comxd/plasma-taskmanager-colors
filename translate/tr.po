@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -413,16 +413,24 @@ msgstr ""
 "gösterir."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "Tema süslemesi (etkin değil)"
+msgid "Theme decoration (inactive):"
+msgstr "Tema süslemesi (etkin değil):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"Etkin olmayan görev düğmelerinde hangi Plasma tema kenarlıklarının "
-"gösterileceğini seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+msgid "Default (keep Plasma theme)"
+msgstr "Varsayılan (Plasma temasını koru)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "Özel kenarlıklar"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "Tüm süslemeyi gizle"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "Etkin olmayan görev düğmelerindeki Plasma tema süslemesini kontrol eder."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -445,16 +453,12 @@ msgid "Focused window"
 msgstr "Odaklanan pencere"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "Tema süslemesi (odaklanmış)"
+msgid "Theme decoration (focused):"
+msgstr "Tema süslemesi (odaklanmış):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"Odaklanmış görevlerde hangi Plasma tema kenarlıklarının gösterileceğini "
-"seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "Odaklanmış görev düğmelerindeki Plasma tema süslemesini kontrol eder."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -580,16 +584,12 @@ msgid "Border thickness for hovered windows."
 msgstr "Üzerine gelinen pencereler için kenarlık kalınlığı."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Tema süslemesi (üzerine gelme)"
+msgid "Theme decoration (hover):"
+msgstr "Tema süslemesi (üzerine gelme):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"Üzerine gelindiğinde hangi Plasma tema kenarlıklarının gösterileceğini "
-"seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "Görev düğmelerinin üzerine gelindiğinde Plasma tema süslemesini kontrol eder."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -750,6 +750,36 @@ msgstr "Uygulama rengine sıfırla"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Pencere geçersiz kılmalarını sıfırla"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "Tema süslemesi (etkin değil)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "Etkin olmayan görev düğmelerinde hangi Plasma tema kenarlıklarının "
+#~ "gösterileceğini seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "Tema süslemesi (odaklanmış)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "Odaklanmış görevlerde hangi Plasma tema kenarlıklarının gösterileceğini "
+#~ "seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "Tema süslemesi (üzerine gelme)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "Üzerine gelindiğinde hangi Plasma tema kenarlıklarının gösterileceğini "
+#~ "seçin. Süslemeyi gizlemek için tümünün işaretini kaldırın."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "Tema kenarlıkları (etkin değil)"

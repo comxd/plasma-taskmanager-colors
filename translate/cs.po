@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -406,16 +406,24 @@ msgid ""
 msgstr "Zobrazit malé tečky, když je více oken seskupeno pod jedním úkolem."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "Dekorace tématu (neaktivní)"
+msgid "Theme decoration (inactive):"
+msgstr "Dekorace tématu (neaktivní):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"Vybrat, které okraje tématu Plasma zobrazit na neaktivních tlačítkách úloh. "
-"Odškrtnutím všech skryjete dekoraci."
+msgid "Default (keep Plasma theme)"
+msgstr "Výchozí (ponechat téma Plasma)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "Vlastní okraje"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "Skrýt veškerou dekoraci"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "Ovládá dekoraci tématu Plasma na neaktivních tlačítkách úloh."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -438,16 +446,12 @@ msgid "Focused window"
 msgstr "Zaměřené okno"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "Dekorace tématu (zaměřené)"
+msgid "Theme decoration (focused):"
+msgstr "Dekorace tématu (zaměřené):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"Vybrat, které okraje tématu Plasma zobrazit u zaměřených úloh. Odškrtnutím "
-"všech skryjete dekoraci."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "Ovládá dekoraci tématu Plasma na zaměřených tlačítkách úloh."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -573,16 +577,12 @@ msgid "Border thickness for hovered windows."
 msgstr "Tloušťka okraje při najetí na okna."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Dekorace tématu (najetí)"
+msgid "Theme decoration (hover):"
+msgstr "Dekorace tématu (najetí):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"Vybrat, které okraje tématu Plasma zobrazit při najetí. Odškrtnutím všech "
-"skryjete dekoraci."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "Ovládá dekoraci tématu Plasma při najetí na tlačítka úloh."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -741,6 +741,36 @@ msgstr "Obnovit na barvu aplikace"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Obnovit přepsání oken"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "Dekorace tématu (neaktivní)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "Vybrat, které okraje tématu Plasma zobrazit na neaktivních tlačítkách "
+#~ "úloh. Odškrtnutím všech skryjete dekoraci."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "Dekorace tématu (zaměřené)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "Vybrat, které okraje tématu Plasma zobrazit u zaměřených úloh. "
+#~ "Odškrtnutím všech skryjete dekoraci."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "Dekorace tématu (najetí)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "Vybrat, které okraje tématu Plasma zobrazit při najetí. Odškrtnutím všech "
+#~ "skryjete dekoraci."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "Okraje tématu (neaktivní)"
