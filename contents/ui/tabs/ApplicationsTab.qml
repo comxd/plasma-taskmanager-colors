@@ -44,7 +44,7 @@ StackLayout {
     Item {
         ColumnLayout {
             anchors.fill: parent
-            anchors.margins: Kirigami.Units.largeSpacing * 2
+            anchors.margins: Kirigami.Units.mediumSpacing
             spacing: Kirigami.Units.smallSpacing
 
             Controls.Label {
@@ -54,6 +54,7 @@ StackLayout {
                 color: Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
                 Layout.fillWidth: true
+                Layout.topMargin: Kirigami.Units.smallSpacing
             }
 
             Item { height: Kirigami.Units.smallSpacing; width: 1 }

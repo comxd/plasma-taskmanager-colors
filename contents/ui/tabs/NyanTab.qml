@@ -40,6 +40,7 @@ Flickable {
             text: i18n("Configure the rainbow animation effect. Enable it per-app using the switch next to each color button in the Applications tab.")
             color: Kirigami.Theme.disabledTextColor
             wrapMode: Text.Wrap; Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.smallSpacing
         }
 
         Item { height: Kirigami.Units.smallSpacing; width: 1 }
