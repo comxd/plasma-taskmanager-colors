@@ -41,6 +41,12 @@ KCM.SimpleKCM {
     property string cfg_minimizedColorMode
     property bool cfg_minimizedDim
     property bool cfg_minimizedDesaturate
+    property string cfg_desaturationStyle
+    property bool cfg_softenColors
+    property bool cfg_showWindowCount
+    property bool cfg_autoColorEnabled
+    property string cfg_autoColorCache
+    property string cfg_autoColorSkippedApps
 
     Kirigami.FormLayout {
         id: formLayout

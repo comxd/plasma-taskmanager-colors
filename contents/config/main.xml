@@ -95,9 +95,33 @@
     <entry name="minimizedDesaturate" type="Bool">
       <default>false</default>
     </entry>
+    <!-- grayscale or partial (HSL, keeps hue) -->
+    <entry name="desaturationStyle" type="String">
+      <default>grayscale</default>
+    </entry>
+    <!-- Soften colors: tint toward theme brightness -->
+    <entry name="softenColors" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- Show segment dots for grouped windows -->
+    <entry name="showWindowCount" type="Bool">
+      <default>true</default>
+    </entry>
     <!-- JSON: { "appId": "#rrggbb", ... } -->
     <entry name="appColorMap" type="String">
       <default>{}</default>
+    </entry>
+    <!-- Auto color from icon: global toggle -->
+    <entry name="autoColorEnabled" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- JSON: { "appId": { "color": "#rrggbb", "lastSeen": 1234567890 } } -->
+    <entry name="autoColorCache" type="String">
+      <default>{}</default>
+    </entry>
+    <!-- JSON array of appIds excluded from auto color: ["appId1", "appId2"] -->
+    <entry name="autoColorSkippedApps" type="String">
+      <default>[]</default>
     </entry>
   </group>
 </kcfg>
