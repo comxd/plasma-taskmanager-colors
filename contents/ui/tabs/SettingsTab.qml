@@ -96,7 +96,11 @@ StackLayout {
                 color: Kirigami.Theme.disabledTextColor
                 wrapMode: Text.Wrap
                 Layout.fillWidth: true
+                Layout.topMargin: Kirigami.Units.smallSpacing
             }
+
+            Item { height: Kirigami.Units.smallSpacing; width: 1 }
+            Kirigami.Separator { Layout.fillWidth: true }
 
             // ════════════════════════════════════════
             // ── Appearance section ──
