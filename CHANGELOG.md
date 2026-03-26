@@ -4,6 +4,40 @@ All notable changes to Task Manager Colors will be documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.0] — 2026-03-26
+
+### Added
+
+- Auto color from icon: global toggle that automatically extracts and applies the dominant color from each app's icon
+- Auto color indicator in Applications tab with 4 states (active, pending, skipped, overridden)
+- Per-app auto color skip list (disable auto for specific apps)
+- Refresh button to re-extract all auto colors (useful after icon theme changes)
+- Soften colors toggle: adapts overlay colors to match current theme brightness
+- HSL partial desaturation option for minimized windows (keeps hue, reduces saturation)
+- Window count segment indicators for grouped windows (up to 5 dots)
+- Overlay pulse animation when hovering a window in the Windows tab
+- "inherit" label on WindowsTab swatch for inherited colors with contextual tooltips
+- "nyan" label on swatch for nyan-only apps/windows (both tabs)
+- Shared color utilities: rgbToHsl, hslToRgb, desaturatePartial, tintWithAlpha
+- Per-state Plasma decoration control: customize theme borders or hide all decoration for focused, normal, and hover states
+- Hover window mode: full collapsible section with hide/background/custom style options (mirrors focused/minimized modes)
+- Priority-aware state management: hover > focused > minimized > normal for all overlay properties
+
+### Changed
+
+- WindowsTab swatch redesigned with 6 visual states and inherited color display
+- Auto indicator button uses flat style with pointer cursor for better UX
+- Desaturation style selector: grayscale (classic) or partial (HSL, keeps hue)
+
+### Fixed
+
+- Auto-color reactivation delay when re-enabling after skip
+- CPU loop (28% constant) caused by persistTimer ↔ config change handler feedback
+- Race condition on stale paletteChanged results via job sequence counters
+- hasAppColor incorrectly blocking manual colors for skipped apps
+- drainTimer polling waste (changed to repeat: false)
+- Collapsible section headers: proper vertical centering and hover fill
+
 ## [1.1.0] — 2026-03-19
 
 ### Added
@@ -61,6 +95,7 @@ Initial release for KDE Plasma 6.
 - 15 language translations (fr, de, es, pt_BR, ru, zh_CN, ja, ko, it, nl, pl, tr, ar, uk, cs)
 - CI/CD with GitHub Actions (validate, lint, build, release on tag)
 
+[1.2.0]: https://github.com/comxd/plasma-taskmanager-colors/releases/tag/v1.2.0
 [1.1.0]: https://github.com/comxd/plasma-taskmanager-colors/releases/tag/v1.1.0
 [1.0.1]: https://github.com/comxd/plasma-taskmanager-colors/releases/tag/v1.0.1
 [1.0.0]: https://github.com/comxd/plasma-taskmanager-colors/releases/tag/v1.0.0

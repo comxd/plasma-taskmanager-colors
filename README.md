@@ -21,7 +21,12 @@
 - **Per-window overrides** — temporarily override colors on individual windows
 - **13 display modes** — frame, top/bottom/left/right lines, center, background, background+frame, diagonal variants
 - **Nyan Cat rainbow** — animated rainbow effect with flat and wave modes, per-app or per-window
-- **Icon color extraction** — auto-detect dominant color from app icons
+- **Auto color from icon** — automatically extract and apply dominant icon color for all apps
+- **Icon color extraction** — manual per-app color extraction from icons
+- **Soften colors** — theme-adaptive tinting for better readability
+- **Window count indicators** — segment dots for grouped windows
+- **Hover window mode** — custom overlay style on hover (hide/background/custom)
+- **Plasma decoration control** — per-state theme border customization (focused/normal/hover)
 - **Adjustable opacity** — works on all styles (borders, backgrounds, diagonals, nyan)
 - **Vertical panel support** — auto-adapts orientation
 - **Theme-aware** — auto border radius and thickness from your Plasma theme
