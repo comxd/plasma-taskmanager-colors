@@ -503,6 +503,9 @@ PlasmoidItem {
                 minimizedDesaturate: minDesaturate,
                 desaturationStyle: plasmoid.configuration.desaturationStyle,
                 softenColors: plasmoid.configuration.softenColors,
+                plasmaFocusDecoration: plasmoid.configuration.plasmaFocusDecoration,
+                plasmaNormalDecoration: plasmoid.configuration.plasmaNormalDecoration,
+                plasmaHoverDecoration: plasmoid.configuration.plasmaHoverDecoration,
                 childCount: t.childCount || 0,
                 showWindowCount: plasmoid.configuration.showWindowCount,
                 isNyanApp: isNyan,
@@ -584,6 +587,9 @@ PlasmoidItem {
         function onFocusedAutoBorderWidthChanged() { applyDebounce.restart(); }
         function onFocusedOpacityChanged() { applyDebounce.restart(); }
         function onFocusedBorderRadiusChanged() { applyDebounce.restart(); }
+        function onPlasmaFocusDecorationChanged() { applyDebounce.restart(); }
+        function onPlasmaNormalDecorationChanged() { applyDebounce.restart(); }
+        function onPlasmaHoverDecorationChanged() { applyDebounce.restart(); }
         function onMinimizedOpacityChanged() { applyDebounce.restart(); }
         function onMinimizedBorderRadiusChanged() { applyDebounce.restart(); }
         function onBorderRadiusChanged() { applyDebounce.restart(); }

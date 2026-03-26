@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -378,7 +378,47 @@ msgid "Show small segment dots when multiple windows are grouped under one task.
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select which Plasma theme borders to show on inactive task buttons. Uncheck all to hide decoration."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration."
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Select which Plasma theme borders to show on focused tasks. Uncheck all to hide decoration."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
@@ -563,18 +603,6 @@ msgstr ""
 
 #: contents/ui/tabs/WindowsTab.qml
 msgid "No windows detected — open some windows to use per-window overrides."
-msgstr ""
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr ""
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr ""
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
 msgstr ""
 
 #: contents/ui/tabs/WindowsTab.qml

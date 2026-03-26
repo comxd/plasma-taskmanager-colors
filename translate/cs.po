@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -406,8 +406,54 @@ msgid ""
 msgstr "Zobrazit malé tečky, když je více oken seskupeno pod jedním úkolem."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "Dekorace tématu (neaktivní)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "Vybrat, které okraje tématu Plasma zobrazit na neaktivních tlačítkách úloh. Odškrtnutím všech skryjete dekoraci."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "Horní okraj"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "Dolní okraj"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "Levý okraj"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "Pravý okraj"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Dekorace tématu (najetí)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "Vybrat, které okraje tématu Plasma zobrazit při najetí. Odškrtnutím všech skryjete dekoraci."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Zaměřené okno"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "Dekorace tématu (zaměřené)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "Vybrat, které okraje tématu Plasma zobrazit u zaměřených úloh. Odškrtnutím všech skryjete dekoraci."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -627,18 +673,6 @@ msgid "No windows detected — open some windows to use per-window overrides."
 msgstr "Nebyla zjištěna žádná okna — otevřete okna pro přepsání po oknech."
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "(nyan aplikace)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "(automatická barva)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "(barva aplikace)"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "Vlastní přepsání okna"
 
@@ -677,6 +711,45 @@ msgstr "Obnovit na barvu aplikace"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Obnovit přepsání oken"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "Okraje tématu (neaktivní)"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr "Vybrat, které okraje tématu Plasma zobrazit u neaktivních úloh."
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "Okraje tématu (zaměřené)"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr "Vybrat, které okraje tématu Plasma zobrazit u zaměřených úloh."
+
+#~ msgid "Customize normal borders"
+#~ msgstr "Přizpůsobit normální okraje"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "Přizpůsobit okraje při zaměření"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "Zakázat dekoraci úloh v Plasma"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr "Odstraní výchozí pozadí Plasma na neaktivních tlačítkách úloh."
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "Zakázat zvýraznění zaměření v Plasma"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr "Odstraní výchozí efekt zvýraznění Plasma u zaměřených úloh."
+
+#~ msgid "(app nyan)"
+#~ msgstr "(nyan aplikace)"
+
+#~ msgid "(auto color)"
+#~ msgstr "(automatická barva)"
+
+#~ msgid "(app color)"
+#~ msgstr "(barva aplikace)"
 
 #~ msgid "Button tint"
 #~ msgstr "Zabarvení tlačítka"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-22 22:33+0100\n"
+"POT-Creation-Date: 2026-03-27 01:00+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -413,8 +413,54 @@ msgstr ""
 "misma tarea."
 
 #: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (inactive)"
+msgstr "Decoración del tema (inactivo)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
+"all to hide decoration."
+msgstr "Seleccionar qué bordes del tema Plasma mostrar en los botones de tareas inactivos. Desmarcar todos para ocultar la decoración."
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Top border"
+msgstr "Borde superior"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Bottom border"
+msgstr "Borde inferior"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Left border"
+msgstr "Borde izquierdo"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Right border"
+msgstr "Borde derecho"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (hover)"
+msgstr "Decoración del tema (hover)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
+"decoration."
+msgstr "Seleccionar qué bordes del tema Plasma mostrar al pasar el cursor. Desmarcar todos para ocultar la decoración."
+
+#: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window"
 msgstr "Ventana enfocada"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Theme decoration (focused)"
+msgstr "Decoración del tema (enfocado)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid ""
+"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
+"hide decoration."
+msgstr "Seleccionar qué bordes del tema Plasma mostrar en las tareas con foco. Desmarcar todos para ocultar la decoración."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -640,18 +686,6 @@ msgstr ""
 "No se detectaron ventanas — abra ventanas para usar anulaciones por ventana."
 
 #: contents/ui/tabs/WindowsTab.qml
-msgid "(app nyan)"
-msgstr "(nyan de la app)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(auto color)"
-msgstr "(color automático)"
-
-#: contents/ui/tabs/WindowsTab.qml
-msgid "(app color)"
-msgstr "(color de la app)"
-
-#: contents/ui/tabs/WindowsTab.qml
 msgid "Custom window override"
 msgstr "Anulación de ventana personalizada"
 
@@ -690,6 +724,51 @@ msgstr "Restablecer al color de la aplicación"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Restablecer anulaciones de ventana"
+
+#~ msgid "Theme borders (inactive)"
+#~ msgstr "Bordes del tema (inactivo)"
+
+#~ msgid "Select which Plasma theme borders to show on inactive tasks."
+#~ msgstr ""
+#~ "Seleccionar qué bordes del tema Plasma mostrar en las tareas inactivas."
+
+#~ msgid "Theme borders (focused)"
+#~ msgstr "Bordes del tema (enfocado)"
+
+#~ msgid "Select which Plasma theme borders to show on focused tasks."
+#~ msgstr ""
+#~ "Seleccionar qué bordes del tema Plasma mostrar en las tareas con foco."
+
+#~ msgid "Customize normal borders"
+#~ msgstr "Personalizar bordes normales"
+
+#~ msgid "Customize focus borders"
+#~ msgstr "Personalizar bordes de foco"
+
+#~ msgid "Disable Plasma task decoration"
+#~ msgstr "Desactivar la decoración de tareas de Plasma"
+
+#~ msgid "Removes the default Plasma background on inactive task buttons."
+#~ msgstr ""
+#~ "Elimina el fondo predeterminado de Plasma en los botones de tareas "
+#~ "inactivas."
+
+#~ msgid "Disable Plasma focus highlight"
+#~ msgstr "Desactivar el resaltado de foco de Plasma"
+
+#~ msgid "Removes the default Plasma highlight effect on focused tasks."
+#~ msgstr ""
+#~ "Elimina el efecto de resaltado predeterminado de Plasma en las tareas con "
+#~ "foco."
+
+#~ msgid "(app nyan)"
+#~ msgstr "(nyan de la app)"
+
+#~ msgid "(auto color)"
+#~ msgstr "(color automático)"
+
+#~ msgid "(app color)"
+#~ msgstr "(color de la app)"
 
 #~ msgid "Button tint"
 #~ msgstr "Tinte de botón"

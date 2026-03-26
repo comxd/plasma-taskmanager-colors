@@ -53,6 +53,16 @@
     <entry name="focusedBorderRadius" type="Int">
       <default>-1</default>
     </entry>
+    <!-- Plasma decoration per state: -1=default, 0-15=border bitmask (0=hide all) -->
+    <entry name="plasmaFocusDecoration" type="Int">
+      <default>-1</default>
+    </entry>
+    <entry name="plasmaNormalDecoration" type="Int">
+      <default>-1</default>
+    </entry>
+    <entry name="plasmaHoverDecoration" type="Int">
+      <default>-1</default>
+    </entry>
     <entry name="minimizedOpacity" type="Double">
       <default>-1</default>
     </entry>
