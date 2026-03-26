@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -397,15 +397,24 @@ msgid ""
 msgstr "当多个窗口分组在同一任务下时显示小圆点。"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "主题装饰（非活动）"
+msgid "Theme decoration (inactive):"
+msgstr "主题装饰（非活动）："
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"选择在非活动任务按钮上显示哪些 Plasma 主题边框。全部取消勾选可隐藏装饰。"
+msgid "Default (keep Plasma theme)"
+msgstr "默认（保持 Plasma 主题）"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "自定义边框"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "隐藏所有装饰"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "控制非活动任务按钮上的 Plasma 主题装饰。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -428,15 +437,12 @@ msgid "Focused window"
 msgstr "聚焦窗口"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "主题装饰（焦点）"
+msgid "Theme decoration (focused):"
+msgstr "主题装饰（焦点）："
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"选择在获得焦点的任务上显示哪些 Plasma 主题边框。全部取消勾选可隐藏装饰。"
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "控制获得焦点的任务按钮上的 Plasma 主题装饰。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -560,14 +566,12 @@ msgid "Border thickness for hovered windows."
 msgstr "悬停窗口的边框粗细。"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "主题装饰（悬停）"
+msgid "Theme decoration (hover):"
+msgstr "主题装饰（悬停）："
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr "选择悬停时显示哪些 Plasma 主题边框。全部取消勾选可隐藏装饰。"
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "控制悬停在任务按钮上时的 Plasma 主题装饰。"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -718,6 +722,32 @@ msgstr "重置为应用颜色"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "重置窗口覆盖"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "主题装饰（非活动）"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "选择在非活动任务按钮上显示哪些 Plasma 主题边框。全部取消勾选可隐藏装饰。"
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "主题装饰（焦点）"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "选择在获得焦点的任务上显示哪些 Plasma 主题边框。全部取消勾选可隐藏装饰。"
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "主题装饰（悬停）"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr "选择悬停时显示哪些 Plasma 主题边框。全部取消勾选可隐藏装饰。"
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "主题边框（非活动）"

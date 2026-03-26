@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -413,16 +413,24 @@ msgstr ""
 "tarefa."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "Decoração do tema (inativo)"
+msgid "Theme decoration (inactive):"
+msgstr "Decoração do tema (inativo):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"Selecionar quais bordas do tema Plasma exibir nos botões de tarefas "
-"inativos. Desmarcar todos para ocultar a decoração."
+msgid "Default (keep Plasma theme)"
+msgstr "Padrão (manter tema Plasma)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "Bordas personalizadas"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "Ocultar toda a decoração"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "Controla a decoração do tema Plasma nos botões de tarefas inativos."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -445,16 +453,12 @@ msgid "Focused window"
 msgstr "Janela em foco"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "Decoração do tema (em foco)"
+msgid "Theme decoration (focused):"
+msgstr "Decoração do tema (em foco):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"Selecionar quais bordas do tema Plasma exibir nas tarefas com foco. "
-"Desmarcar todos para ocultar a decoração."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "Controla a decoração do tema Plasma nos botões de tarefas com foco."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -570,7 +574,8 @@ msgstr "Janela ao passar:"
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "How the color overlay behaves when hovering over a task."
-msgstr "Como a sobreposição de cor se comporta ao passar o mouse sobre uma tarefa."
+msgstr ""
+"Como a sobreposição de cor se comporta ao passar o mouse sobre uma tarefa."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Hover style:"
@@ -581,16 +586,12 @@ msgid "Border thickness for hovered windows."
 msgstr "Espessura da borda para janelas ao passar o mouse."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Decoração do tema (hover)"
+msgid "Theme decoration (hover):"
+msgstr "Decoração do tema (hover):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"Selecionar quais bordas do tema Plasma exibir ao passar o mouse. Desmarcar "
-"todos para ocultar a decoração."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "Controla a decoração do tema Plasma ao passar o mouse sobre os botões de tarefas."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -751,6 +752,36 @@ msgstr "Redefinir para cor do aplicativo"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Redefinir substituições de janela"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "Decoração do tema (inativo)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "Selecionar quais bordas do tema Plasma exibir nos botões de tarefas "
+#~ "inativos. Desmarcar todos para ocultar a decoração."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "Decoração do tema (em foco)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "Selecionar quais bordas do tema Plasma exibir nas tarefas com foco. "
+#~ "Desmarcar todos para ocultar a decoração."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "Decoração do tema (hover)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "Selecionar quais bordas do tema Plasma exibir ao passar o mouse. "
+#~ "Desmarcar todos para ocultar a decoração."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "Bordas do tema (inativo)"

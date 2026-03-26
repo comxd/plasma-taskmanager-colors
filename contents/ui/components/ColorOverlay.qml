@@ -33,7 +33,7 @@ Item {
     property int hoverBorderRadius: -1
     property real minimizedOpacity: -1
     property int minimizedBorderRadius: -1
-    property int plasmaFocusDecoration: -1   // -1=default, 0-15=border bitmask (0=hide all)
+    property int plasmaFocusDecoration: -1   // -1=default, -2=hide all, 0-15=border bitmask
     property int plasmaNormalDecoration: -1
     property int plasmaHoverDecoration: -1
     property bool panelIsVertical: false
@@ -225,9 +225,10 @@ Item {
         onFinished: { overlay.opacity = 1.0; overlay.pulseHighlight = false; }
     }
 
-    // ── Plasma decoration control (3-state × 2-mode) ──
-    // -1 = default (don't modify), 0-15 = border bitmask (0 = hide all borders)
+    // ── Plasma decoration control (3-state × 3-mode) ──
+    // -1 = default, -2 = hide all (clear imagePath), 0-15 = border bitmask
     property var _savedBorders: null
+    property string _savedImagePath: ""
     property bool needsDecorationControl: plasmaFocusDecoration !== -1 || plasmaNormalDecoration !== -1 || plasmaHoverDecoration !== -1
 
     Connections {
@@ -238,10 +239,13 @@ Item {
     }
 
     function _applyDecoration() {
-        if (!parent || !parent.hasOwnProperty("enabledBorders")) return;
+        if (!parent) return;
 
-        // Save original on first call
-        if (_savedBorders === null) _savedBorders = parent.enabledBorders;
+        // Save originals on first call
+        if (_savedBorders === null && parent.hasOwnProperty("enabledBorders"))
+            _savedBorders = parent.enabledBorders;
+        if (_savedImagePath === "" && parent.hasOwnProperty("imagePath"))
+            _savedImagePath = String(parent.imagePath);
 
         // Determine current state — hover > focus > normal
         var isHovered = parent.hasOwnProperty("isHovered") ? parent.isHovered : false;
@@ -254,11 +258,25 @@ Item {
             decoration = plasmaNormalDecoration;
         }
 
-        // Apply: >= 0 = custom bitmask (0 hides all borders), -1 = restore default
-        if (decoration >= 0) {
-            parent.enabledBorders = decoration;
+        // Apply
+        if (decoration === -2) {
+            // Hide all: clear imagePath to suppress entire FrameSvg
+            if (parent.hasOwnProperty("imagePath") && parent.imagePath !== "")
+                parent.imagePath = "";
+            if (parent.hasOwnProperty("enabledBorders"))
+                parent.enabledBorders = 0;
+        } else if (decoration >= 0) {
+            // Custom borders: restore imagePath if we cleared it, set bitmask
+            if (parent.hasOwnProperty("imagePath") && parent.imagePath === "" && _savedImagePath)
+                parent.imagePath = _savedImagePath;
+            if (parent.hasOwnProperty("enabledBorders"))
+                parent.enabledBorders = decoration;
         } else {
-            parent.enabledBorders = _savedBorders !== null ? _savedBorders : 15;
+            // Default: restore both
+            if (parent.hasOwnProperty("imagePath") && parent.imagePath === "" && _savedImagePath)
+                parent.imagePath = _savedImagePath;
+            if (parent.hasOwnProperty("enabledBorders") && _savedBorders !== null)
+                parent.enabledBorders = _savedBorders;
         }
     }
 
@@ -270,8 +288,12 @@ Item {
     Component.onCompleted: _applyDecoration()
     Component.onDestruction: {
         try {
-            if (parent && parent.hasOwnProperty("enabledBorders") && _savedBorders !== null)
-                parent.enabledBorders = _savedBorders;
+            if (parent) {
+                if (parent.hasOwnProperty("imagePath") && _savedImagePath && parent.imagePath === "")
+                    parent.imagePath = _savedImagePath;
+                if (parent.hasOwnProperty("enabledBorders") && _savedBorders !== null)
+                    parent.enabledBorders = _savedBorders;
+            }
         } catch(e) {}
     }
 

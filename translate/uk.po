@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -410,16 +410,24 @@ msgstr ""
 "Показувати маленькі точки, коли кілька вікон згруповані під одним завданням."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "Оформлення теми (неактивні)"
+msgid "Theme decoration (inactive):"
+msgstr "Оформлення теми (неактивні):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"Обрати, які межі теми Plasma відображати на неактивних кнопках завдань. "
-"Зніміть усі прапорці, щоб приховати оформлення."
+msgid "Default (keep Plasma theme)"
+msgstr "Типово (зберегти тему Plasma)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "Власні межі"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "Приховати все оформлення"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "Керує оформленням теми Plasma на неактивних кнопках завдань."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -442,16 +450,12 @@ msgid "Focused window"
 msgstr "Активне вікно"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "Оформлення теми (у фокусі)"
+msgid "Theme decoration (focused):"
+msgstr "Оформлення теми (у фокусі):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"Обрати, які межі теми Plasma відображати на активних завданнях. Зніміть усі "
-"прапорці, щоб приховати оформлення."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "Керує оформленням теми Plasma на кнопках завдань у фокусі."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -577,16 +581,12 @@ msgid "Border thickness for hovered windows."
 msgstr "Товщина межі для вікон при наведенні."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Оформлення теми (наведення)"
+msgid "Theme decoration (hover):"
+msgstr "Оформлення теми (наведення):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"Обрати, які межі теми Plasma відображати при наведенні. Зніміть усі "
-"прапорці, щоб приховати оформлення."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "Керує оформленням теми Plasma при наведенні на кнопки завдань."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -749,6 +749,36 @@ msgstr "Скинути до кольору додатку"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Скинути перевизначення вікон"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "Оформлення теми (неактивні)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "Обрати, які межі теми Plasma відображати на неактивних кнопках завдань. "
+#~ "Зніміть усі прапорці, щоб приховати оформлення."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "Оформлення теми (у фокусі)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "Обрати, які межі теми Plasma відображати на активних завданнях. Зніміть "
+#~ "усі прапорці, щоб приховати оформлення."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "Оформлення теми (наведення)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "Обрати, які межі теми Plasma відображати при наведенні. Зніміть усі "
+#~ "прапорці, щоб приховати оформлення."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "Межі теми (неактивні)"

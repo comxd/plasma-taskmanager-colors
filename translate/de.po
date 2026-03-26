@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: colors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: 2026-03-06 05:08\n"
 "Last-Translator: David DIVERRES <david@comexpertise.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -414,16 +414,24 @@ msgstr ""
 "gruppiert sind."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
-msgstr "Theme-Dekoration (inaktiv)"
+msgid "Theme decoration (inactive):"
+msgstr "Theme-Dekoration (inaktiv):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on inactive task buttons. Uncheck "
-"all to hide decoration."
-msgstr ""
-"Auswählen, welche Plasma-Theme-Ränder bei inaktiven Aufgabenschaltflächen "
-"angezeigt werden. Alle abwählen, um die Dekoration auszublenden."
+msgid "Default (keep Plasma theme)"
+msgstr "Standard (Plasma-Theme beibehalten)"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr "Benutzerdefinierte Ränder"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr "Alle Dekoration ausblenden"
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
+msgstr "Steuert die Plasma-Theme-Dekoration auf inaktiven Aufgabenschaltflächen."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Top border"
@@ -446,16 +454,12 @@ msgid "Focused window"
 msgstr "Fokussiertes Fenster"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
-msgstr "Theme-Dekoration (fokussiert)"
+msgid "Theme decoration (focused):"
+msgstr "Theme-Dekoration (fokussiert):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show on focused tasks. Uncheck all to "
-"hide decoration."
-msgstr ""
-"Auswählen, welche Plasma-Theme-Ränder bei fokussierten Aufgaben angezeigt "
-"werden. Alle abwählen, um die Dekoration auszublenden."
+msgid "Controls the Plasma theme decoration on focused task buttons."
+msgstr "Steuert die Plasma-Theme-Dekoration auf fokussierten Aufgabenschaltflächen."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Focused window:"
@@ -582,16 +586,12 @@ msgid "Border thickness for hovered windows."
 msgstr "Randstärke für überfahrene Fenster."
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
-msgstr "Theme-Dekoration (Hover)"
+msgid "Theme decoration (hover):"
+msgstr "Theme-Dekoration (Hover):"
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid ""
-"Select which Plasma theme borders to show when hovering. Uncheck all to hide "
-"decoration."
-msgstr ""
-"Auswählen, welche Plasma-Theme-Ränder beim Überfahren angezeigt werden. Alle "
-"abwählen, um die Dekoration auszublenden."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
+msgstr "Steuert die Plasma-Theme-Dekoration beim Überfahren von Aufgabenschaltflächen."
 
 #: contents/ui/tabs/SettingsTab.qml
 msgid "Behavior"
@@ -756,6 +756,36 @@ msgstr "Auf App-Farbe zurücksetzen"
 #: contents/ui/tabs/WindowsTab.qml
 msgid "Reset window overrides"
 msgstr "Fenster-Überschreibungen zurücksetzen"
+
+#~ msgid "Theme decoration (inactive)"
+#~ msgstr "Theme-Dekoration (inaktiv)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on inactive task buttons. "
+#~ "Uncheck all to hide decoration."
+#~ msgstr ""
+#~ "Auswählen, welche Plasma-Theme-Ränder bei inaktiven Aufgabenschaltflächen "
+#~ "angezeigt werden. Alle abwählen, um die Dekoration auszublenden."
+
+#~ msgid "Theme decoration (focused)"
+#~ msgstr "Theme-Dekoration (fokussiert)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show on focused tasks. Uncheck all "
+#~ "to hide decoration."
+#~ msgstr ""
+#~ "Auswählen, welche Plasma-Theme-Ränder bei fokussierten Aufgaben angezeigt "
+#~ "werden. Alle abwählen, um die Dekoration auszublenden."
+
+#~ msgid "Theme decoration (hover)"
+#~ msgstr "Theme-Dekoration (Hover)"
+
+#~ msgid ""
+#~ "Select which Plasma theme borders to show when hovering. Uncheck all to "
+#~ "hide decoration."
+#~ msgstr ""
+#~ "Auswählen, welche Plasma-Theme-Ränder beim Überfahren angezeigt werden. "
+#~ "Alle abwählen, um die Dekoration auszublenden."
 
 #~ msgid "Theme borders (inactive)"
 #~ msgstr "Theme-Ränder (inaktiv)"

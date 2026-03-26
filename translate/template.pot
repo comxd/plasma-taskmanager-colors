@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: taskmanagercolors\n"
 "Report-Msgid-Bugs-To: https://www.comexpertise.com\n"
-"POT-Creation-Date: 2026-03-27 01:37+0100\n"
+"POT-Creation-Date: 2026-03-27 02:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -378,11 +378,23 @@ msgid "Show small segment dots when multiple windows are grouped under one task.
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (inactive)"
+msgid "Theme decoration (inactive):"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Select which Plasma theme borders to show on inactive task buttons. Uncheck all to hide decoration."
+msgid "Default (keep Plasma theme)"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Custom borders"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Hide all decoration"
+msgstr ""
+
+#: contents/ui/tabs/SettingsTab.qml
+msgid "Controls the Plasma theme decoration on inactive task buttons."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
@@ -406,11 +418,11 @@ msgid "Focused window"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (focused)"
+msgid "Theme decoration (focused):"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Select which Plasma theme borders to show on focused tasks. Uncheck all to hide decoration."
+msgid "Controls the Plasma theme decoration on focused task buttons."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
@@ -534,11 +546,11 @@ msgid "Border thickness for hovered windows."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Theme decoration (hover)"
+msgid "Theme decoration (hover):"
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
-msgid "Select which Plasma theme borders to show when hovering. Uncheck all to hide decoration."
+msgid "Controls the Plasma theme decoration when hovering over task buttons."
 msgstr ""
 
 #: contents/ui/tabs/SettingsTab.qml
