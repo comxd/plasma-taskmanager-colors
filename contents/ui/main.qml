@@ -16,6 +16,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.taskmanager as TaskManager
 import "components" as Components
 import "tabs" as Tabs
+import "utils/colorUtils.js" as ColorUtils
 
 PlasmoidItem {
     id: root
@@ -100,6 +101,79 @@ PlasmoidItem {
         plasmoid.configuration.appColorMap = JSON.stringify(map);
     }
 
+    function getWindowRules() {
+        try {
+            let rules = JSON.parse(plasmoid.configuration.windowColorMap);
+            return Array.isArray(rules) ? rules : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function findRuleIndex(rules, appId, match) {
+        return rules.findIndex(r => r.appId === appId && r.match === match);
+    }
+
+    function saveWindowRules(rules) {
+        plasmoid.configuration.windowColorMap = JSON.stringify(rules);
+    }
+
+    function _upsertWindowRule(rules, appId, match, color) {
+        let idx = findRuleIndex(rules, appId, match);
+        let isEmpty = ColorUtils.stripNyan(color) === "" && !ColorUtils.hasNyan(color);
+        if (match === "" || isEmpty) {
+            if (idx >= 0) rules.splice(idx, 1);
+        } else if (idx >= 0) {
+            rules[idx].color = color;
+        } else {
+            rules.push({ appId: appId, match: match, color: color });
+        }
+    }
+
+    function setWindowColor(appId, match, color) {
+        let rules = getWindowRules();
+        let idx = findRuleIndex(rules, appId, match);
+        let existing = idx >= 0 ? rules[idx].color : "";
+        let newColor = ColorUtils.hasNyan(existing) && !ColorUtils.hasNyan(color)
+            ? ColorUtils.withNyan(color || "")
+            : (color || "");
+        _upsertWindowRule(rules, appId, match, newColor);
+        saveWindowRules(rules);
+    }
+
+    function removeWindowColor(appId, match) {
+        let rules = getWindowRules().filter(r => !(r.appId === appId && r.match === match));
+        saveWindowRules(rules);
+    }
+
+    function toggleWindowNyan(appId, match, enable) {
+        if (match === "") return;
+        let rules = getWindowRules();
+        let idx = findRuleIndex(rules, appId, match);
+        let base = ColorUtils.stripNyan(idx >= 0 ? rules[idx].color : "");
+        _upsertWindowRule(rules, appId, match, enable ? ColorUtils.withNyan(base) : base);
+        saveWindowRules(rules);
+    }
+
+    function renameWindowRule(appId, oldMatch, newMatch) {
+        if (oldMatch === newMatch || newMatch === "") return;
+        let rules = getWindowRules();
+        let oi = findRuleIndex(rules, appId, oldMatch);
+        if (oi < 0) return;
+        let color = rules[oi].color;
+        rules.splice(oi, 1);
+        let ni = findRuleIndex(rules, appId, newMatch);
+        if (ni >= 0) rules[ni].color = color;
+        else rules.push({ appId: appId, match: newMatch, color: color });
+        saveWindowRules(rules);
+    }
+
+    property var windowTracking: ({})
+
+    property bool _pendingWindowResolution: false
+    property int _resettleCount: 0
+    readonly property int _resettleMaxPasses: 8
+
     // ── Panel tree traversal (Panel Colorizer technique) ──
 
     property Item panelLayout: {
@@ -125,6 +199,7 @@ PlasmoidItem {
     property int computedMaxRadius: 24   // Updated dynamically from task delegate size
     property int computedMaxBorder: 10  // 50% of task height
     property var colorMapCache: ({})    // Cached parsed colorMap (avoids JSON.parse per delegate)
+    property var windowColorMapCache: []
     property var parsedSkipList: []     // Parsed autoColorSkippedApps (avoids JSON.parse per delegate)
     property var activeOverlays: []     // Track all created overlays for reliable cleanup
 
@@ -194,6 +269,12 @@ PlasmoidItem {
             let childCount = 0;
             try { childCount = item.model?.ChildCount ?? 0; } catch(e) {}
 
+            let winId = "";
+            try {
+                let ids = item.model?.WinIdList;
+                if (ids && ids.length > 0) winId = String(ids[0]);
+            } catch(e) {}
+
             results.push({
                 item: item,
                 appId: item.appId || "",
@@ -204,7 +285,8 @@ PlasmoidItem {
                 isRunning: isRunning,
                 isActive: isActive,
                 isMinimized: isMinimized,
-                childCount: childCount
+                childCount: childCount,
+                winId: winId
             });
         }
 
@@ -270,9 +352,8 @@ PlasmoidItem {
         onAppColorExtracted: function(appId, hex) {
             root.setAppColor(appId, hex);
         }
-        onWindowColorExtracted: function(overlay, hex) {
-            let hadNyan = overlay.windowColorOverride.endsWith(":nyan");
-            overlay.windowColorOverride = hex + (hadNyan ? ":nyan" : "");
+        onWindowColorExtracted: function(appId, match, hex) {
+            root.setWindowColor(appId, match, hex);
         }
     }
 
@@ -298,6 +379,7 @@ PlasmoidItem {
 
     function applyColors() {
         if (onDesktop) return;
+        root._pendingWindowResolution = false;
 
         let tm = findTaskManagerWidget();
         if (!tm) {
@@ -322,6 +404,7 @@ PlasmoidItem {
         }
         let colorMap = getColorMap();
         root.colorMapCache = colorMap;
+        root.windowColorMapCache = getWindowRules();
 
         let skipList = [];
         try { skipList = JSON.parse(plasmoid.configuration.autoColorSkippedApps); } catch(e) {}
@@ -432,6 +515,9 @@ PlasmoidItem {
         let windowList = [];
         let liveOverlays = [];
         let nyanIndex = 0;
+        let pendingResolution = false;
+        let prevTracking = root.windowTracking;
+        let newTracking = {};
         for (let t of tasks) {
             let rawColor = colorMap[t.appId] || "";
             let hasManualColor = rawColor !== "";
@@ -507,9 +593,43 @@ PlasmoidItem {
             let assignedColor = isNyan ? rawColor.slice(0, -5) : (hasAppColor ? rawColor : "");
             let overlayColorVal = assignedColor || "transparent";
 
+            let winOverride = "";
+            let wid = t.winId || "";
+            let curTitle = t.windowTitle || "";
+            let rules = root.windowColorMapCache;
+            if (wid !== "") {
+                let boundMatch = prevTracking[wid];
+                if (boundMatch !== undefined) {
+                    let ri = findRuleIndex(rules, t.appId, boundMatch);
+                    if (ri >= 0) {
+                        winOverride = rules[ri].color || "";
+                        if (curTitle !== "" && curTitle !== boundMatch) {
+                            renameWindowRule(t.appId, boundMatch, curTitle);
+                            boundMatch = curTitle;
+                        }
+                        newTracking[wid] = boundMatch;
+                    }
+                } else {
+                    let ri = findRuleIndex(rules, t.appId, curTitle);
+                    if (ri >= 0 && curTitle !== "") {
+                        winOverride = rules[ri].color || "";
+                        newTracking[wid] = curTitle;
+                    }
+                }
+            } else {
+                let ri = findRuleIndex(rules, t.appId, curTitle);
+                if (ri >= 0 && curTitle !== "") winOverride = rules[ri].color || "";
+            }
+
+            if (t.isRunning && winOverride === "" &&
+                rules.some(function(r) { return r.appId === t.appId; })) {
+                pendingResolution = true;
+            }
+
             let existing = findExistingOverlay(t.item);
             let props = {
                 hasAppColor: hasAppColor,
+                windowColorOverride: winOverride,
                 overlayColor: overlayColorVal,
                 colorMode: mode,
                 borderRadius: effectiveRadius,
@@ -551,9 +671,7 @@ PlasmoidItem {
             };
             if (isNyan) nyanIndex++;
             if (existing) {
-                let savedOverride = existing.windowColorOverride;
                 Object.keys(props).forEach(k => existing[k] = props[k]);
-                existing.windowColorOverride = savedOverride;
             } else {
                 let parentItem = svg || t.item;
                 existing = overlayComponent.createObject(parentItem, props);
@@ -566,10 +684,14 @@ PlasmoidItem {
                     appName: t.appName,
                     iconName: t.iconName || t.appId,
                     windowTitle: t.windowTitle || t.appName,
+                    winId: wid,
                     overlay: existing
                 });
             }
         }
+        root.windowTracking = newTracking;
+        root._pendingWindowResolution = pendingResolution;
+        root.windowColorMapCache = getWindowRules();
         root.activeOverlays = liveOverlays;
         root.hasNyanOverlays = liveOverlays.some(function(o) { return o.isNyan; });
         windowList.sort((a, b) => (a.windowTitle || a.appName).localeCompare(b.windowTitle || b.appName));
@@ -581,7 +703,7 @@ PlasmoidItem {
 
     TaskManager.TasksModel {
         id: tasksModel
-        onCountChanged: applyDebounce.restart()
+        onCountChanged: { applyDebounce.restart(); startResettle(); }
         onActiveTaskChanged: applyDebounce.restart()
         onDataChanged: applyDebounce.restart()
     }
@@ -597,6 +719,26 @@ PlasmoidItem {
         onTriggered: applyColors()
     }
 
+    Timer {
+        id: resettleTimer
+        interval: 350
+        repeat: true
+        onTriggered: {
+            root._resettleCount++;
+            applyColors();
+            if (!root._pendingWindowResolution ||
+                root._resettleCount >= root._resettleMaxPasses) {
+                resettleTimer.stop();
+            }
+        }
+    }
+
+    function startResettle() {
+        if (getWindowRules().length === 0) return;
+        root._resettleCount = 0;
+        resettleTimer.restart();
+    }
+
     Component.onCompleted: {
         // One-time cleanup: "tint" mode was removed — reset stale KConfig values
         if (plasmoid.configuration.colorMode === "tint")
@@ -608,6 +750,7 @@ PlasmoidItem {
         if (plasmoid.configuration.hoverColorMode === "tint")
             plasmoid.configuration.hoverColorMode = "";
         applyDebounce.restart();
+        startResettle();
         updatePlasmoidStatus();
         hideWidgetAction.checked = plasmoid.configuration.hideWidget;
     }
@@ -616,6 +759,7 @@ PlasmoidItem {
     Connections {
         target: plasmoid.configuration
         function onAppColorMapChanged() { applyDebounce.restart(); }
+        function onWindowColorMapChanged() { applyDebounce.restart(); }
         function onColorModeChanged() { applyDebounce.restart(); }
         function onFocusedModeChanged() { applyDebounce.restart(); }
         function onFocusedColorModeChanged() { applyDebounce.restart(); }
@@ -769,20 +913,15 @@ PlasmoidItem {
                         detectedWindows: root.detectedWindows
                         usedColors: root.usedColors
                         extractorBusy: iconExtractor.busy
-                        activeOverlays: root.activeOverlays
                         colorMapCache: root.colorMapCache
+                        windowColorMapCache: root.windowColorMapCache
                         autoColorCache: autoColorManager.autoColorCache
 
-                        onExtractColorForWindow: function(overlay, iconName) { iconExtractor.extractForWindow(overlay, iconName); }
-                        onNyanOverlaysChanged: {
-                            root.hasNyanOverlays = root.activeOverlays.some(function(o) { return o.isNyan; });
-                        }
-                        onResetWindowOverrides: {
-                            for (let o of root.activeOverlays) {
-                                if (o) o.windowColorOverride = "";
-                            }
-                            root.applyColors();
-                        }
+                        onSetWindowColor: function(appId, match, color) { root.setWindowColor(appId, match, color); }
+                        onRemoveWindowColor: function(appId, match) { root.removeWindowColor(appId, match); }
+                        onToggleWindowNyan: function(appId, match, enable) { root.toggleWindowNyan(appId, match, enable); }
+                        onExtractColorForWindow: function(appId, match, iconName) { iconExtractor.extractForWindow(appId, match, iconName); }
+                        onResetWindowOverrides: { plasmoid.configuration.windowColorMap = "[]"; }
 
                         Connections {
                             target: iconExtractor
