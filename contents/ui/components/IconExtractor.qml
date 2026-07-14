@@ -18,7 +18,8 @@ Item {
     width: 0; height: 0
 
     property string pendingAppId: ""
-    property var pendingOverlay: null
+    property string pendingMatch: ""
+    property bool pendingIsWindow: false
     property bool busy: false
 
     // Emitted when extraction succeeds — parent should wire this to close pickers
@@ -26,22 +27,23 @@ Item {
 
     // Emitted with the result so parent can apply it
     signal appColorExtracted(string appId, string hex)
-    signal windowColorExtracted(var overlay, string hex)
+    signal windowColorExtracted(string appId, string match, string hex)
 
     function extractForApp(appId, iconName) {
         if (busy) return;
         busy = true;
         pendingAppId = appId;
-        pendingOverlay = null;
+        pendingIsWindow = false;
         busyTimeout.restart();
         imageColors.source = iconName;
     }
 
-    function extractForWindow(overlay, iconName) {
+    function extractForWindow(appId, match, iconName) {
         if (busy) return;
         busy = true;
-        pendingAppId = "";
-        pendingOverlay = overlay;
+        pendingAppId = appId;
+        pendingMatch = match;
+        pendingIsWindow = true;
         busyTimeout.restart();
         imageColors.source = iconName;
     }
@@ -49,7 +51,8 @@ Item {
     function _reset() {
         busyTimeout.stop();
         pendingAppId = "";
-        pendingOverlay = null;
+        pendingMatch = "";
+        pendingIsWindow = false;
         busy = false;
     }
 
@@ -82,8 +85,8 @@ Item {
             let hex = ColorUtils.colorToHex(c);
 
             try {
-                if (iconExtractor.pendingOverlay && iconExtractor.pendingOverlay.parent) {
-                    iconExtractor.windowColorExtracted(iconExtractor.pendingOverlay, hex);
+                if (iconExtractor.pendingIsWindow) {
+                    iconExtractor.windowColorExtracted(iconExtractor.pendingAppId, iconExtractor.pendingMatch, hex);
                 } else if (iconExtractor.pendingAppId) {
                     iconExtractor.appColorExtracted(iconExtractor.pendingAppId, hex);
                 }

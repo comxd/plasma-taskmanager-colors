@@ -140,6 +140,10 @@
     <entry name="appColorMap" type="String">
       <default>{}</default>
     </entry>
+    <!-- JSON array of persistent per-window rules: [{ "appId": "...", "match": "...", "color": "#rrggbb[:nyan]" }] -->
+    <entry name="windowColorMap" type="String">
+      <default>[]</default>
+    </entry>
     <!-- Auto color from icon: global toggle -->
     <entry name="autoColorEnabled" type="Bool">
       <default>false</default>

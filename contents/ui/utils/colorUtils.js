@@ -3,6 +3,18 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+function hasNyan(color) {
+    return (color || "").endsWith(":nyan");
+}
+
+function stripNyan(color) {
+    return (color || "").replace(/:nyan$/, "");
+}
+
+function withNyan(base) {
+    return (base || "") + ":nyan";
+}
+
 function colorToHex(c) {
     var r = Math.round(c.r * 255);
     var g = Math.round(c.g * 255);
